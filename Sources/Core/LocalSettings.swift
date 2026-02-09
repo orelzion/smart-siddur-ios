@@ -181,4 +181,18 @@ final class LocalSettings {
         get { defaults.bool(forKey: "allow_tracking") }
         set { defaults.set(newValue, forKey: "allow_tracking") }
     }
+    
+    // MARK: - Prayer Settings for Cache
+    
+    /// Current nusach setting as string for API calls
+    var nusachString: String {
+        get { defaults.string(forKey: "nusach_string") ?? "ashkenaz" }
+        set { defaults.set(newValue, forKey: "nusach_string") }
+    }
+    
+    /// Selected location name for prayer context
+    var locationName: String? {
+        get { defaults.string(forKey: "location_name") }
+        set { defaults.set(newValue, forKey: "location_name") }
+    }
 }
