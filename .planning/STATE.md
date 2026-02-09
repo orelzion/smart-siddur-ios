@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-08)
 
 **Core value:** Reliable, offline-first prayer assembly with correct halachic logic -- the right prayer text, with the right insertions, for the right day, available without network.
-**Current focus:** Phase 2 - iOS Core (02-01, 02-02 complete, 02-03 next)
+**Current focus:** Phase 2 complete. Ready for Phase 3 - Prayer + Monetization.
 
 ## Current Position
 
-Phase: 2 of 3 (iOS Core)
-Plan: 2 of 3 in Phase 2 (02-02 complete)
-Status: In progress -- 02-02 complete, ready for 02-03
-Last activity: 2026-02-09 -- Completed 02-02-PLAN.md (Settings and Location)
+Phase: 2 of 3 (iOS Core) -- COMPLETE
+Plan: 3 of 3 in Phase 2 (02-03 complete)
+Status: Phase 2 complete, ready for Phase 3
+Last activity: 2026-02-09 -- Completed 02-03-PLAN.md (Zmanim + Calendar)
 
-Progress: [#####░░░░░] 55% (5/9 plans) + 1 quick task
+Progress: [######░░░░] 66% (6/9 plans) + 1 quick task
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5 + 1 quick task
+- Total plans completed: 6 + 1 quick task
 - Average duration: ~35 min (phase plans), ~13 min (quick tasks)
-- Total execution time: ~2h 32m
+- Total execution time: ~3h 10m
 
 **By Phase:**
 
@@ -29,12 +29,12 @@ Progress: [#####░░░░░] 55% (5/9 plans) + 1 quick task
 |-------|-------|-----------|----------|
 | 01-backend-foundation | 3 | 3 | ~40min |
 | quick tasks | 1 | 1 | ~13min |
-| 02-ios-core | 3 | 2 | ~9min |
+| 02-ios-core | 3 | 3 | ~20min |
 | 03-prayer-monetization | 3 | 0 | - |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (content seeding), quick/001 (iOS project init), 02-01 (iOS auth), 02-02 (settings + location)
-- Trend: iOS plans executing faster than backend (established patterns + Swift infrastructure)
+- Last 5 plans: quick/001 (iOS project init), 02-01 (iOS auth), 02-02 (settings + location), 02-03 (zmanim + calendar)
+- Trend: iOS plans running faster than backend; 02-03 took ~38min due to KosherSwift integration + checkpoint UX fixes
 
 *Updated after each plan completion*
 
@@ -61,6 +61,12 @@ Recent decisions affecting current work:
 - [02-02]: Separate LocationManagerDelegate class to avoid @Observable + NSObject/lazy conflicts
 - [02-02]: Bounding box + Haversine client-side sort for GPS nearest city (simple, avoids custom SQL)
 - [02-02]: Single-field updateSingleSetting for optimistic updates (reduces payload, avoids race conditions)
+- [02-03]: KosherSwift.GeoLocation qualified import to avoid name collision with app's GeoLocation model
+- [02-03]: Opinion-mapped method dispatch: each user opinion enum maps to specific KosherSwift API method
+- [02-03]: Cross-tab navigation via zmanimDateOverride + selectedTab on DependencyContainer
+- [02-03]: Chronological sorting of zmanim list for natural day-flow reading experience
+- [02-03]: Segmented control for calendar mode toggle (per user feedback during checkpoint)
+- [02-03]: DayDetailSheet shows only sunrise/sunset + "View Full Zmanim" navigation (per user feedback)
 
 ### Pending Todos
 
@@ -68,15 +74,25 @@ None.
 
 ### Blockers/Concerns
 
-None. Settings and location complete, ready for prayer assembly (02-03).
+None. Phase 2 (iOS Core) is complete. All three plans executed:
+- 02-01: Auth (Apple + Google + Anonymous)
+- 02-02: Settings + Location
+- 02-03: Zmanim + Calendar
+
+Ready for Phase 3 (Prayer Assembly + Monetization).
 
 ## Session Continuity
 
-Last session: 2026-02-09 14:41 UTC
-Stopped at: Completed 02-02-PLAN.md (Settings and Location)
+Last session: 2026-02-09 15:22 UTC
+Stopped at: Completed 02-03-PLAN.md (Zmanim + Calendar)
 Resume file: None
 
-Auth, settings, and location all working. DependencyContainer holds authRepository, settingsRepository, locationRepository, localSettings.
-Settings tab shows full 10-section settings screen. Location picker searches 141K cities. GPS detection finds nearest city.
-First-launch prompt presents location picker when no saved location exists.
-Ready for 02-03 (prayer assembly / remaining iOS core features).
+Phase 2 complete. All iOS core features working:
+- Auth flow with Apple, Google, and Anonymous sign-in
+- Full settings system (16 local + 17 synced) with optimistic updates
+- Location picker with 141K city search and GPS detection
+- Zmanim display with KosherSwift, 8 essential + 8 comprehensive times, opinion-aware
+- Full calendar with Hebrew/Gregorian toggle, day markers, day detail sheets
+- DependencyContainer holds all repositories and services needed for Phase 3
+
+DependencyContainer now holds: authRepository, settingsRepository, locationRepository, localSettings, zmanimService, jewishCalendarService, selectedLocationName, zmanimDateOverride, selectedTab.
