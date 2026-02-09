@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E8689AF4CAD930D2FE0BCAC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 5C9DD471978E1AF86142D554 /* GoogleSignIn */; };
+		5ABECA8DB3B1D6963638C39A /* SmartSiddurApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA895637369AA1FC15DB420 /* SmartSiddurApp.swift */; };
+		68174EC5A17A377F2DBBF9C1 /* LocalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D140848EB01886C964C5964 /* LocalSettings.swift */; };
+		6B27EA3A961ADF97B16B29CD /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FDAC25B3D12302DE67E3FE /* DependencyContainer.swift */; };
+		9E260B8899496B5685C4A5EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D788C60F292529401CE615F /* AppDelegate.swift */; };
+		CAEE2AA5641DF1CF56913387 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 03A14704CCEFAEDDB63CE41E /* Supabase */; };
+		D3D15921765FC7F801F3EC5B /* AuthDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9E9351CC38B79875BD9364 /* AuthDTO.swift */; };
+		E74120B368A2E6E2837AF6BA /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0934B84EE6AED7E5C3F73690 /* UserProfile.swift */; };
+		EB6F72C8082DB9BAAD82CB15 /* SupabaseClient+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A14D3F8F320ED8FF320F /* SupabaseClient+Config.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00FDAC25B3D12302DE67E3FE /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		0934B84EE6AED7E5C3F73690 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		0DA895637369AA1FC15DB420 /* SmartSiddurApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSiddurApp.swift; sourceTree = "<group>"; };
+		3D140848EB01886C964C5964 /* LocalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSettings.swift; sourceTree = "<group>"; };
+		7D788C60F292529401CE615F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7F9E9351CC38B79875BD9364 /* AuthDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDTO.swift; sourceTree = "<group>"; };
+		B6666431E5392E8AE5C1670F /* SmartSiddur.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SmartSiddur.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D856A14D3F8F320ED8FF320F /* SupabaseClient+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SupabaseClient+Config.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B84E8FAF4887F3DA1CB7A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAEE2AA5641DF1CF56913387 /* Supabase in Frameworks */,
+				1E8689AF4CAD930D2FE0BCAC /* GoogleSignIn in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		101E8C91531844E510F87E5E /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				7F9E9351CC38B79875BD9364 /* AuthDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		25D046BD67F48E5A2976C1EB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				69305DBF231256F904AADE7F /* App */,
+				A3804EDA58C498988A865113 /* Core */,
+				E82CDFC93C8087D07188A752 /* Data */,
+				B83042DED4A4A75E99CFA1CD /* Features */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3E522E6A5996441F7410EA00 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				73215BD13EFFA2BD431787BB /* Domain */,
+				101E8C91531844E510F87E5E /* DTO */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6855F6EE8021CCC1846DBCA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B6666431E5392E8AE5C1670F /* SmartSiddur.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69305DBF231256F904AADE7F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7D788C60F292529401CE615F /* AppDelegate.swift */,
+				0DA895637369AA1FC15DB420 /* SmartSiddurApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		73215BD13EFFA2BD431787BB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0934B84EE6AED7E5C3F73690 /* UserProfile.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		7CF1F5757F7EFE4D1697C7D4 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				00FDAC25B3D12302DE67E3FE /* DependencyContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		A3804EDA58C498988A865113 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3D140848EB01886C964C5964 /* LocalSettings.swift */,
+				7CF1F5757F7EFE4D1697C7D4 /* DI */,
+				3E522E6A5996441F7410EA00 /* Models */,
+				C8464CFFE394E5A9B98A7596 /* Supabase */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B83042DED4A4A75E99CFA1CD /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		C8464CFFE394E5A9B98A7596 /* Supabase */ = {
+			isa = PBXGroup;
+			children = (
+				D856A14D3F8F320ED8FF320F /* SupabaseClient+Config.swift */,
+			);
+			path = Supabase;
+			sourceTree = "<group>";
+		};
+		E82CDFC93C8087D07188A752 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E8F5001257A4B69709EF95DE = {
+			isa = PBXGroup;
+			children = (
+				25D046BD67F48E5A2976C1EB /* Sources */,
+				6855F6EE8021CCC1846DBCA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50D70330E6EB9A16D2CA758C /* SmartSiddur */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CBF4A7124E356C8CFF4A2C7 /* Build configuration list for PBXNativeTarget "SmartSiddur" */;
+			buildPhases = (
+				D3AD1D648BEBE736C113F117 /* Sources */,
+				1B84E8FAF4887F3DA1CB7A06 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartSiddur;
+			packageProductDependencies = (
+				03A14704CCEFAEDDB63CE41E /* Supabase */,
+				5C9DD471978E1AF86142D554 /* GoogleSignIn */,
+			);
+			productName = SmartSiddur;
+			productReference = B6666431E5392E8AE5C1670F /* SmartSiddur.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5A915ED1BC5DDC1B87609C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 40112162CFBE6C0779A67127 /* Build configuration list for PBXProject "SmartSiddur" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E8F5001257A4B69709EF95DE;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				97126195E9BC30B53A1E3CDB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				DD526FB1F5B9D53E20EBFD65 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50D70330E6EB9A16D2CA758C /* SmartSiddur */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3AD1D648BEBE736C113F117 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E260B8899496B5685C4A5EB /* AppDelegate.swift in Sources */,
+				D3D15921765FC7F801F3EC5B /* AuthDTO.swift in Sources */,
+				6B27EA3A961ADF97B16B29CD /* DependencyContainer.swift in Sources */,
+				68174EC5A17A377F2DBBF9C1 /* LocalSettings.swift in Sources */,
+				5ABECA8DB3B1D6963638C39A /* SmartSiddurApp.swift in Sources */,
+				EB6F72C8082DB9BAAD82CB15 /* SupabaseClient+Config.swift in Sources */,
+				E74120B368A2E6E2837AF6BA /* UserProfile.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		083C58767B5EFD9B0B72C7C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6;
+			};
+			name = Release;
+		};
+		11F81FE41CAE8B971CB3DAFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6;
+			};
+			name = Debug;
+		};
+		81B97DF2747CBF44386F8985 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_GENERATION_MODE = GeneratedFile;
+				INFOPLIST_KEY_CFBundleDisplayName = SmartSiddur;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.orelzion.smartsiddur;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1751C6D750D87C213F96D1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_GENERATION_MODE = GeneratedFile;
+				INFOPLIST_KEY_CFBundleDisplayName = SmartSiddur;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.orelzion.smartsiddur;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3CBF4A7124E356C8CFF4A2C7 /* Build configuration list for PBXNativeTarget "SmartSiddur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81B97DF2747CBF44386F8985 /* Debug */,
+				A1751C6D750D87C213F96D1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		40112162CFBE6C0779A67127 /* Build configuration list for PBXProject "SmartSiddur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11F81FE41CAE8B971CB3DAFD /* Debug */,
+				083C58767B5EFD9B0B72C7C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		97126195E9BC30B53A1E3CDB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		DD526FB1F5B9D53E20EBFD65 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03A14704CCEFAEDDB63CE41E /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD526FB1F5B9D53E20EBFD65 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		5C9DD471978E1AF86142D554 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97126195E9BC30B53A1E3CDB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A5A915ED1BC5DDC1B87609C2 /* Project object */;
+}
