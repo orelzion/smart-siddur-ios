@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		0037917626E6D72F83FEE50B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B248124038FA5B8E8BCF9 /* LoginView.swift */; };
+		04606F4B99095758EE095A45 /* ZmanimOpinionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B03E5D6E0A814235CE3D9 /* ZmanimOpinionsView.swift */; };
 		0B3610930B6CD0B532C55435 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB910BAAB6D6BEEBBD8BBA83 /* AuthRepository.swift */; };
+		1D07BF67475C726898DA4C85 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2DBC1C05CA3CAB13D094FB /* SettingsView.swift */; };
 		1E8689AF4CAD930D2FE0BCAC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 5C9DD471978E1AF86142D554 /* GoogleSignIn */; };
+		2414038719CD0DAAE25B08EE /* NusachPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7189D62DDF29D26F64996C9 /* NusachPickerView.swift */; };
+		403F24566727FA724A5EE21C /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5BB229860E1384CA2941F2 /* UserLocation.swift */; };
 		47D22F198513CCFFE92D8B0A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0523703E01B2F5886B86E4EA /* HomeView.swift */; };
 		5ABECA8DB3B1D6963638C39A /* SmartSiddurApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA895637369AA1FC15DB420 /* SmartSiddurApp.swift */; };
 		68174EC5A17A377F2DBBF9C1 /* LocalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D140848EB01886C964C5964 /* LocalSettings.swift */; };
 		6B27EA3A961ADF97B16B29CD /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FDAC25B3D12302DE67E3FE /* DependencyContainer.swift */; };
+		78C11A5B7DEB088B03C26AC2 /* SettingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091EE7350B22B3AA91D8F59E /* SettingsRepository.swift */; };
 		85701BD138D50792AEF7D68F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0094A82EAB5AF180F650C087 /* AuthViewModel.swift */; };
 		9E260B8899496B5685C4A5EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D788C60F292529401CE615F /* AppDelegate.swift */; };
+		B1B5A9B922F67A2DB719C004 /* AppearanceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D4C931CACCF23F27D2C90 /* AppearanceSettingsView.swift */; };
+		C8AB458548FC9623C0708128 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2078DB86BBC6B8B0B2A491D3 /* LocationViewModel.swift */; };
 		CAEE2AA5641DF1CF56913387 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 03A14704CCEFAEDDB63CE41E /* Supabase */; };
 		CAFC92C96FECC0326670A2F1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C20F8C5D942DF43E1A2388 /* OnboardingView.swift */; };
 		D3D15921765FC7F801F3EC5B /* AuthDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9E9351CC38B79875BD9364 /* AuthDTO.swift */; };
+		D49EC94C20B621353FF618DB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F188B5E0CFB87D382A249D /* SettingsViewModel.swift */; };
+		D60BEB34B3B68E503313D148 /* SyncedUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BA6B7540E3CE8A8DB2CBF /* SyncedUserSettings.swift */; };
+		E0867DB1165C772EE478E883 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60503CEE65E7643F5D9B3D69 /* LocationRepository.swift */; };
 		E27283B277F7F6B5477677CE /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 40ECC7AA631B280CB92EFFCA /* GoogleSignInSwift */; };
 		E74120B368A2E6E2837AF6BA /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0934B84EE6AED7E5C3F73690 /* UserProfile.swift */; };
+		EA7761342A937F5F8E684CB2 /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FF0441106605277492A68D /* LocationPickerView.swift */; };
 		EB6F72C8082DB9BAAD82CB15 /* SupabaseClient+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A14D3F8F320ED8FF320F /* SupabaseClient+Config.swift */; };
+		EB71B064F23A703B8794AB9D /* GeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9822BEDB5C40021594FCCE46 /* GeoLocation.swift */; };
 		FC6B9A431ECA984D7F5E8D22 /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9CCA4B3024E5BB1947737 /* TabContainerView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,16 +41,28 @@
 		0094A82EAB5AF180F650C087 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		00FDAC25B3D12302DE67E3FE /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		0523703E01B2F5886B86E4EA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		091EE7350B22B3AA91D8F59E /* SettingsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRepository.swift; sourceTree = "<group>"; };
 		0934B84EE6AED7E5C3F73690 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		0DA895637369AA1FC15DB420 /* SmartSiddurApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSiddurApp.swift; sourceTree = "<group>"; };
+		154BA6B7540E3CE8A8DB2CBF /* SyncedUserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncedUserSettings.swift; sourceTree = "<group>"; };
+		1C5BB229860E1384CA2941F2 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		2078DB86BBC6B8B0B2A491D3 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		24FF0441106605277492A68D /* LocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
 		3D140848EB01886C964C5964 /* LocalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSettings.swift; sourceTree = "<group>"; };
 		46F9CCA4B3024E5BB1947737 /* TabContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerView.swift; sourceTree = "<group>"; };
 		47C20F8C5D942DF43E1A2388 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		60503CEE65E7643F5D9B3D69 /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
 		7D788C60F292529401CE615F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7F2DBC1C05CA3CAB13D094FB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7F9E9351CC38B79875BD9364 /* AuthDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDTO.swift; sourceTree = "<group>"; };
+		9822BEDB5C40021594FCCE46 /* GeoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLocation.swift; sourceTree = "<group>"; };
 		B6666431E5392E8AE5C1670F /* SmartSiddur.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SmartSiddur.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F188B5E0CFB87D382A249D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		C86D4C931CACCF23F27D2C90 /* AppearanceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettingsView.swift; sourceTree = "<group>"; };
 		CB910BAAB6D6BEEBBD8BBA83 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		D856A14D3F8F320ED8FF320F /* SupabaseClient+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SupabaseClient+Config.swift"; sourceTree = "<group>"; };
+		E54B03E5D6E0A814235CE3D9 /* ZmanimOpinionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZmanimOpinionsView.swift; sourceTree = "<group>"; };
+		F7189D62DDF29D26F64996C9 /* NusachPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NusachPickerView.swift; sourceTree = "<group>"; };
 		FB5B248124038FA5B8E8BCF9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				CB910BAAB6D6BEEBBD8BBA83 /* AuthRepository.swift */,
+				60503CEE65E7643F5D9B3D69 /* LocationRepository.swift */,
+				091EE7350B22B3AA91D8F59E /* SettingsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -121,6 +147,9 @@
 		73215BD13EFFA2BD431787BB /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				9822BEDB5C40021594FCCE46 /* GeoLocation.swift */,
+				154BA6B7540E3CE8A8DB2CBF /* SyncedUserSettings.swift */,
+				1C5BB229860E1384CA2941F2 /* UserLocation.swift */,
 				0934B84EE6AED7E5C3F73690 /* UserProfile.swift */,
 			);
 			path = Domain;
@@ -132,6 +161,18 @@
 				00FDAC25B3D12302DE67E3FE /* DependencyContainer.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		86203A1D261D715701ABBE83 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C86D4C931CACCF23F27D2C90 /* AppearanceSettingsView.swift */,
+				F7189D62DDF29D26F64996C9 /* NusachPickerView.swift */,
+				7F2DBC1C05CA3CAB13D094FB /* SettingsView.swift */,
+				C2F188B5E0CFB87D382A249D /* SettingsViewModel.swift */,
+				E54B03E5D6E0A814235CE3D9 /* ZmanimOpinionsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		A3804EDA58C498988A865113 /* Core */ = {
@@ -160,6 +201,8 @@
 			children = (
 				A7DE4F02B10A0B8A492628DA /* Auth */,
 				6C2754E2E156A146752C196D /* Home */,
+				E05068CAFCD623DE52522A29 /* Location */,
+				86203A1D261D715701ABBE83 /* Settings */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -170,6 +213,15 @@
 				D856A14D3F8F320ED8FF320F /* SupabaseClient+Config.swift */,
 			);
 			path = Supabase;
+			sourceTree = "<group>";
+		};
+		E05068CAFCD623DE52522A29 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				24FF0441106605277492A68D /* LocationPickerView.swift */,
+				2078DB86BBC6B8B0B2A491D3 /* LocationViewModel.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		E82CDFC93C8087D07188A752 /* Data */ = {
@@ -250,18 +302,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E260B8899496B5685C4A5EB /* AppDelegate.swift in Sources */,
+				B1B5A9B922F67A2DB719C004 /* AppearanceSettingsView.swift in Sources */,
 				D3D15921765FC7F801F3EC5B /* AuthDTO.swift in Sources */,
 				0B3610930B6CD0B532C55435 /* AuthRepository.swift in Sources */,
 				85701BD138D50792AEF7D68F /* AuthViewModel.swift in Sources */,
 				6B27EA3A961ADF97B16B29CD /* DependencyContainer.swift in Sources */,
+				EB71B064F23A703B8794AB9D /* GeoLocation.swift in Sources */,
 				47D22F198513CCFFE92D8B0A /* HomeView.swift in Sources */,
 				68174EC5A17A377F2DBBF9C1 /* LocalSettings.swift in Sources */,
+				EA7761342A937F5F8E684CB2 /* LocationPickerView.swift in Sources */,
+				E0867DB1165C772EE478E883 /* LocationRepository.swift in Sources */,
+				C8AB458548FC9623C0708128 /* LocationViewModel.swift in Sources */,
 				0037917626E6D72F83FEE50B /* LoginView.swift in Sources */,
+				2414038719CD0DAAE25B08EE /* NusachPickerView.swift in Sources */,
 				CAFC92C96FECC0326670A2F1 /* OnboardingView.swift in Sources */,
+				78C11A5B7DEB088B03C26AC2 /* SettingsRepository.swift in Sources */,
+				1D07BF67475C726898DA4C85 /* SettingsView.swift in Sources */,
+				D49EC94C20B621353FF618DB /* SettingsViewModel.swift in Sources */,
 				5ABECA8DB3B1D6963638C39A /* SmartSiddurApp.swift in Sources */,
 				EB6F72C8082DB9BAAD82CB15 /* SupabaseClient+Config.swift in Sources */,
+				D60BEB34B3B68E503313D148 /* SyncedUserSettings.swift in Sources */,
 				FC6B9A431ECA984D7F5E8D22 /* TabContainerView.swift in Sources */,
+				403F24566727FA724A5EE21C /* UserLocation.swift in Sources */,
 				E74120B368A2E6E2837AF6BA /* UserProfile.swift in Sources */,
+				04606F4B99095758EE095A45 /* ZmanimOpinionsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

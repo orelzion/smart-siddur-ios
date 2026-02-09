@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Post-auth container with tab navigation.
-/// Shows 3 tabs: Zmanim, Calendar, Settings (with user info + sign out).
+/// Shows 3 tabs: Zmanim, Calendar, Settings.
 struct TabContainerView: View {
     var body: some View {
         TabView {
@@ -39,10 +39,9 @@ struct TabContainerView: View {
                 Label("Calendar", systemImage: "calendar")
             }
 
-            // Tab 3: Settings / Account (includes sign out)
+            // Tab 3: Settings (full settings screen)
             NavigationStack {
-                HomeView()
-                    .navigationTitle("Account")
+                SettingsView()
             }
             .tabItem {
                 Label("Settings", systemImage: "gearshape")
