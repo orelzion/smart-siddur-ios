@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0037917626E6D72F83FEE50B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B248124038FA5B8E8BCF9 /* LoginView.swift */; };
+		0B3610930B6CD0B532C55435 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB910BAAB6D6BEEBBD8BBA83 /* AuthRepository.swift */; };
 		1E8689AF4CAD930D2FE0BCAC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 5C9DD471978E1AF86142D554 /* GoogleSignIn */; };
+		47D22F198513CCFFE92D8B0A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0523703E01B2F5886B86E4EA /* HomeView.swift */; };
 		5ABECA8DB3B1D6963638C39A /* SmartSiddurApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA895637369AA1FC15DB420 /* SmartSiddurApp.swift */; };
 		68174EC5A17A377F2DBBF9C1 /* LocalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D140848EB01886C964C5964 /* LocalSettings.swift */; };
 		6B27EA3A961ADF97B16B29CD /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FDAC25B3D12302DE67E3FE /* DependencyContainer.swift */; };
+		85701BD138D50792AEF7D68F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0094A82EAB5AF180F650C087 /* AuthViewModel.swift */; };
 		9E260B8899496B5685C4A5EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D788C60F292529401CE615F /* AppDelegate.swift */; };
 		CAEE2AA5641DF1CF56913387 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 03A14704CCEFAEDDB63CE41E /* Supabase */; };
 		CAFC92C96FECC0326670A2F1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C20F8C5D942DF43E1A2388 /* OnboardingView.swift */; };
@@ -23,7 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0094A82EAB5AF180F650C087 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		00FDAC25B3D12302DE67E3FE /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		0523703E01B2F5886B86E4EA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0934B84EE6AED7E5C3F73690 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		0DA895637369AA1FC15DB420 /* SmartSiddurApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSiddurApp.swift; sourceTree = "<group>"; };
 		3D140848EB01886C964C5964 /* LocalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSettings.swift; sourceTree = "<group>"; };
@@ -32,6 +37,7 @@
 		7D788C60F292529401CE615F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F9E9351CC38B79875BD9364 /* AuthDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDTO.swift; sourceTree = "<group>"; };
 		B6666431E5392E8AE5C1670F /* SmartSiddur.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SmartSiddur.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB910BAAB6D6BEEBBD8BBA83 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		D856A14D3F8F320ED8FF320F /* SupabaseClient+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SupabaseClient+Config.swift"; sourceTree = "<group>"; };
 		FB5B248124038FA5B8E8BCF9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +84,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		52265123437808802145B980 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CB910BAAB6D6BEEBBD8BBA83 /* AuthRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		6855F6EE8021CCC1846DBCA1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +112,7 @@
 		6C2754E2E156A146752C196D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0523703E01B2F5886B86E4EA /* HomeView.swift */,
 				46F9CCA4B3024E5BB1947737 /* TabContainerView.swift */,
 			);
 			path = Home;
@@ -133,6 +148,7 @@
 		A7DE4F02B10A0B8A492628DA /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				0094A82EAB5AF180F650C087 /* AuthViewModel.swift */,
 				FB5B248124038FA5B8E8BCF9 /* LoginView.swift */,
 				47C20F8C5D942DF43E1A2388 /* OnboardingView.swift */,
 			);
@@ -159,6 +175,7 @@
 		E82CDFC93C8087D07188A752 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				52265123437808802145B980 /* Repositories */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -234,7 +251,10 @@
 			files = (
 				9E260B8899496B5685C4A5EB /* AppDelegate.swift in Sources */,
 				D3D15921765FC7F801F3EC5B /* AuthDTO.swift in Sources */,
+				0B3610930B6CD0B532C55435 /* AuthRepository.swift in Sources */,
+				85701BD138D50792AEF7D68F /* AuthViewModel.swift in Sources */,
 				6B27EA3A961ADF97B16B29CD /* DependencyContainer.swift in Sources */,
+				47D22F198513CCFFE92D8B0A /* HomeView.swift in Sources */,
 				68174EC5A17A377F2DBBF9C1 /* LocalSettings.swift in Sources */,
 				0037917626E6D72F83FEE50B /* LoginView.swift in Sources */,
 				CAFC92C96FECC0326670A2F1 /* OnboardingView.swift in Sources */,
