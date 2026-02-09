@@ -18,7 +18,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Backend Foundation** - Deploy Supabase schema, seed all content and geo data, build prayer generation edge functions
 - [x] **Phase 2: iOS Core** - Auth, settings, location picker, and zmanim calculation
-- [ ] **Phase 3: Prayer Experience** - Prayer display with offline cache (all prayers free)
+- [x] **Phase 3: Prayer Experience** - Prayer display with offline cache (all prayers free)
 - [ ] **Phase 4: Monetization** - StoreKit subscriptions and premium feature gating
 
 ## Phase Details
@@ -97,5 +97,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Backend Foundation | 3/3 | ✓ Complete | 2026-02-09 |
 | 2. iOS Core | 3/3 | ✓ Complete | 2026-02-09 |
-| 3. Prayer Experience | 0/2 | Planning complete | - |
+| 3. Prayer Experience | 2/2 | Planned | 2026-02-09 |
 | 4. Monetization | 0/1 | Not started | - |
