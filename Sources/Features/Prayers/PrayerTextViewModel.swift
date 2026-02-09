@@ -80,8 +80,18 @@ final class PrayerTextViewModel {
             
             // Save to cache if available
             if let cacheService = cacheService {
-                // This would need to be done outside the view model
-                // CacheService.prefetchPrayers would handle this
+                // Generate settings hash and save prayer to cache
+                let settingsHash = SettingsHashGenerator.hash(
+                    nusach: localSettings.nusachString,
+                    locationId: localSettings.locationName,
+                    tfilaMode: localSettings.tfilaMode.rawValue
+                )
+                try? await cacheService.savePrayer(
+                    type: prayer.type,
+                    date: Date(),
+                    content: response.prayer,
+                    settingsHash: settingsHash
+                )
             }
             
             loadingState = .loaded(response.prayer)

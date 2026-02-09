@@ -85,6 +85,18 @@ final class PrayerCacheService: Observable {
         return try await refreshPrayer(type: type, date: date, settingsHash: settingsHash)
     }
     
+    /// Saves a prayer to cache after network fetch
+    /// Called by PrayerTextViewModel after successful network response
+    func savePrayer(
+        type: PrayerType,
+        date: Date,
+        content: PrayerText,
+        settingsHash: String? = nil
+    ) async throws {
+        let hash = settingsHash ?? generateSettingsHash()
+        try await cachePrayer(type: type, date: date, content: content, settingsHash: hash)
+    }
+    
     /// Invalidates all cached prayers
     func invalidateCache() async throws {
         let descriptor = FetchDescriptor<CachedPrayer>()
