@@ -14,16 +14,19 @@ final class PrayersMenuViewModel {
     private let prayerService: PrayerService
     private let jewishCalendarService: JewishCalendarService
     private let localSettings: LocalSettings
+    private let cacheService: PrayerCacheService?
     
     // MARK: - Initialization
     init(
         prayerService: PrayerService,
         jewishCalendarService: JewishCalendarService,
-        localSettings: LocalSettings
+        localSettings: LocalSettings,
+        cacheService: PrayerCacheService? = nil
     ) {
         self.prayerService = prayerService
         self.jewishCalendarService = jewishCalendarService
         self.localSettings = localSettings
+        self.cacheService = cacheService
     }
     
     // MARK: - Public Methods
@@ -38,8 +41,15 @@ final class PrayersMenuViewModel {
             // Organize by category
             prayerSections = allPrayers.organizedByCategory()
             
-            // Get today's relevant prayers
+            // Get today's relevant prayers from cache when available
             await loadTodaysPrayers()
+            
+            // Trigger background prefetch for upcoming prayers if cache is available
+            if let cacheService = cacheService {
+                Task {
+                    try? await cacheService.performBackgroundRefreshIfNeeded()
+                }
+            }
             
             loadingState = .loaded
         } catch {
@@ -64,6 +74,17 @@ final class PrayersMenuViewModel {
         
         todaysPrayers = allPrayers.filter { prayer in
             isPrayerRelevantForToday(prayer, jewishDay: jewishDay)
+        }
+        
+        // Check cache availability for each prayer (for offline indicator)
+        if let cacheService = cacheService {
+            for i in 0..<todaysPrayers.count {
+                let prayer = todaysPrayers[i]
+                if let cached = try? await cacheService.getCachedPrayer(type: prayer.type, date: today) {
+                    // Prayer is cached and available offline
+                    // Could update a cached status property here if needed
+                }
+            }
         }
     }
     

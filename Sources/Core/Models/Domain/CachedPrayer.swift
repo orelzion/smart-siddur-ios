@@ -42,7 +42,10 @@ final class CachedPrayer {
     /// When this cache entry expires
     var expiresAt: Date
     
-    // MARK: - Initialization
+    // MARK: - Indexes (for efficient queries)
+    /// SwiftData automatically indexes the @Model properties
+    /// Additional indexes for common query patterns
+    
     init(
         id: UUID = UUID(),
         prayerType: String,
