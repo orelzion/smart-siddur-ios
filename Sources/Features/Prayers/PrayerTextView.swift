@@ -4,12 +4,13 @@ struct PrayerTextView: View {
     let prayer: Prayer
     @State private var viewModel: PrayerTextViewModel
     @State private var showTableOfContents = false
-    @State private var scrollProxy: ScrollViewReader?
+    @State private var scrollProxy: ScrollViewProxy?
     
     init(prayer: Prayer) {
         self.prayer = prayer
         self._viewModel = State(initialValue: PrayerTextViewModel(
             prayerService: DependencyContainer.shared.prayerService,
+            cacheService: DependencyContainer.shared.prayerCacheService,
             localSettings: DependencyContainer.shared.localSettings
         ))
     }
@@ -201,7 +202,7 @@ private struct TableOfContentsView: View {
                         
                         Image(systemName: "chevron.left")
                             .font(.system(size: 12, weight: .semibold))
-                            .foregroundColor(.tertiary)
+                            .foregroundColor(.secondary)
                     }
                     .padding(.vertical, 4)
                 }

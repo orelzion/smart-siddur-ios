@@ -160,13 +160,13 @@ final class PrayerCacheService: Observable {
         SettingsHashGenerator.hash(
             nusach: getNusach(),
             locationId: localSettings.selectedLocationId,
-            tfilaMode: localSettings.tfilaMode?.rawValue
+            tfilaMode: localSettings.tfilaMode.rawValue
         )
     }
     
     private func getNusach() -> String {
-        // Get nusach from settings - placeholder until LocalSettings is updated
-        return "ashkenaz"
+        // Get nusach from settings - uses LocalSettings.nusachString
+        return localSettings.nusachString
     }
     
     private func findCachedPrayer(
@@ -197,15 +197,20 @@ final class PrayerCacheService: Observable {
         content: PrayerText,
         settingsHash: String
     ) async throws {
+        let startOfDay = Calendar.current.startOfDay(for: date)
+        let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
+        
         // Delete existing cache entry for this prayer
-        if let existing = try await findCachedPrayer(type: type, date: date, settingsHash: settingsHash) {
-            let descriptor = FetchDescriptor<CachedPrayer>(
-                predicate: #Predicate { $0.id == existing.id }
-            )
-            let prayers = try modelContext.fetch(descriptor)
-            for prayer in prayers {
-                modelContext.delete(prayer)
-            }
+        let deletePredicate = #Predicate<CachedPrayer> { prayer in
+            prayer.prayerType == type.rawValue &&
+            prayer.date >= startOfDay &&
+            prayer.date < endOfDay &&
+            prayer.settingsHash == settingsHash
+        }
+        let deleteDescriptor = FetchDescriptor<CachedPrayer>(predicate: deletePredicate)
+        let existingPrayers = try modelContext.fetch(deleteDescriptor)
+        for prayer in existingPrayers {
+            modelContext.delete(prayer)
         }
         
         // Encode content to JSON string
@@ -218,7 +223,7 @@ final class PrayerCacheService: Observable {
         // Create new cache entry
         let cachedPrayer = CachedPrayer(
             prayerType: type.rawValue,
-            date: Calendar.current.startOfDay(for: date),
+            date: startOfDay,
             nusach: getNusach(),
             locationId: localSettings.selectedLocationId,
             settingsHash: settingsHash,
@@ -243,7 +248,7 @@ final class PrayerCacheService: Observable {
                 date: date,
                 nusach: getNusach(),
                 location: nil, // TODO: Get location from settings
-                tfilaMode: localSettings.tfilaMode?.rawValue
+                tfilaMode: localSettings.tfilaMode.rawValue
             )
             
             try await cachePrayer(
@@ -310,28 +315,11 @@ extension LocalSettings {
     }
     
     /// Current nusach setting
-    var nusach: Nusach {
-        get { .ashkenaz } // TODO: Implement actual property
-        set { }          // TODO: Implement
-    }
-    
-    /// Current tfila mode setting
-    var tfilaMode: TfilaMode? {
-        get { nil } // TODO: Implement
-        set { }     // TODO: Implement
+    var nusach: String {
+        get { "ashkenaz" } // TODO: Get from LocalSettings
+        set { }            // TODO: Implement
     }
 }
 
-// MARK: - Placeholder Enums
-/// Placeholder enum for Nusach - should be replaced with actual implementation
-enum Nusach: String, Codable {
-    case ashkenaz = "ashkenaz"
-    case sefard = "sefard"
-    case edot = "edot"
-}
-
-/// Placeholder enum for TfilaMode - should be replaced with actual implementation  
-enum TfilaMode: String, Codable {
-    case standard = "standard"
-    case arizal = "arizal"
-}
+// MARK: - Placeholder Enums (Remove when LocalSettings enums are used)
+// These were duplicates of LocalSettings enums and have been removed

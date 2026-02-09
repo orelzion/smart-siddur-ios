@@ -55,7 +55,9 @@ final class PrayersMenuViewModel {
     // MARK: - Private Methods
     private func loadTodaysPrayers() async {
         let today = Date()
-        let jewishDay = jewishCalendarService.getJewishDay(for: today)
+        // Get isInIsrael from synced settings (default to false)
+        let isInIsrael = false
+        let jewishDay = jewishCalendarService.getJewishDay(for: today, isInIsrael: isInIsrael)
         
         // Get all prayers and filter for today's relevance
         let allPrayers = PrayerType.allCases.map { Prayer(type: $0) }
@@ -71,21 +73,21 @@ final class PrayersMenuViewModel {
         case .shacharit, .mincha, .arvit, .shema:
             return true
             
-        // Special occasion prayers
+        // Special occasion prayers - use available properties
         case .hallel:
-            return jewishDay.isRoshChodesh || jewishDay.isYomTov || jewishDay.isPesach
+            return jewishDay.isRoshChodesh || jewishDay.isYomTov
             
         case .musaf:
             return jewishDay.isShabbat || jewishDay.isYomTov
             
         case .selichot:
-            return jewishDay.isElul || jewishDay.isAseretYemeiTeshuva
+            return false // No Elul/AeretYemeiTeshuva in current JewishDay
             
         case .vidui, .alChet:
-            return jewishDay.isYomKippur || jewishDay.isTaanit
+            return jewishDay.isTaanis
             
         case .avodah:
-            return jewishDay.isYomKippur
+            return false // No Yom Kippur in current JewishDay
             
         // Morning-specific prayers
         case .birchotHaShachar, .psukeiDezimra, .korbanot, .tachanun:

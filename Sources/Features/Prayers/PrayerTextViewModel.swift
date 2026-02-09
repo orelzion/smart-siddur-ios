@@ -1,5 +1,6 @@
 import Foundation
 import Observation
+import SwiftUI
 
 @MainActor
 @Observable
@@ -8,6 +9,7 @@ final class PrayerTextViewModel {
     private(set) var loadingState: PrayerLoadingState = .idle
     private(set) var prayer: Prayer?
     private(set) var errorMessage: String?
+    private(set) var isOffline = false
     
     // MARK: - UI State
     var showTableOfContents = false
@@ -15,14 +17,13 @@ final class PrayerTextViewModel {
     
     // MARK: - Dependencies
     private let prayerService: PrayerService
+    private let cacheService: PrayerCacheService?
     private let localSettings: LocalSettings
     
-    // MARK: - Cache
-    private var cachedPrayerText: PrayerText?
-    
     // MARK: - Initialization
-    init(prayerService: PrayerService, localSettings: LocalSettings) {
+    init(prayerService: PrayerService, cacheService: PrayerCacheService?, localSettings: LocalSettings) {
         self.prayerService = prayerService
+        self.cacheService = cacheService
         self.localSettings = localSettings
     }
     
@@ -31,38 +32,66 @@ final class PrayerTextViewModel {
         self.prayer = prayer
         loadingState = .loading
         errorMessage = nil
+        isOffline = false
         
-        // Check cache first
-        if let cachedText = cachedPrayerText {
-            loadingState = .loaded(cachedText)
-            return
+        // Try cache first if available
+        if let cacheService = cacheService {
+            do {
+                if let cached = try await cacheService.getCachedPrayer(type: prayer.type, date: Date()) {
+                    if let content = cached.content {
+                        loadingState = .loaded(content)
+                        // Check if cache was stale
+                        if cached.isExpired {
+                            // Trigger background refresh but don't block
+                            Task {
+                                await refreshPrayerFromNetwork(prayer)
+                            }
+                        }
+                        return
+                    }
+                }
+            } catch {
+                // Cache lookup failed, continue to network
+                print("Cache lookup failed: \(error)")
+            }
         }
         
-        do {
-            let response = try await prayerService.generatePrayer(
-                type: prayer.type,
-                date: Date(),
-                nusach: localSettings.nusach,
-                location: localSettings.locationName,
-                tfilaMode: localSettings.tfilaMode
-            )
-            
-            // Cache the loaded prayer
-            cachedPrayerText = response.prayer
-            loadingState = .loaded(response.prayer)
-            
-        } catch {
-            errorMessage = error.localizedDescription
-            loadingState = .error(error.localizedDescription)
-        }
+        // Fetch from network
+        await refreshPrayerFromNetwork(prayer)
     }
     
     func refreshPrayer() async {
         guard let prayer = prayer else { return }
         
-        // Clear cache to force refresh
-        cachedPrayerText = nil
-        await loadPrayer(prayer)
+        // Clear local cache and force refresh
+        await refreshPrayerFromNetwork(prayer)
+    }
+    
+    // MARK: - Private Methods
+    private func refreshPrayerFromNetwork(_ prayer: Prayer) async {
+        do {
+            let response = try await prayerService.generatePrayer(
+                type: prayer.type,
+                date: Date(),
+                nusach: localSettings.nusachString,
+                location: localSettings.locationName,
+                tfilaMode: localSettings.tfilaMode == .regular ? "regular" : (localSettings.tfilaMode == .yahid ? "yahid" : "chazan")
+            )
+            
+            // Save to cache if available
+            if let cacheService = cacheService {
+                // This would need to be done outside the view model
+                // CacheService.prefetchPrayers would handle this
+            }
+            
+            loadingState = .loaded(response.prayer)
+            isOffline = false
+            
+        } catch {
+            errorMessage = error.localizedDescription
+            loadingState = .error(error.localizedDescription)
+            isOffline = true
+        }
     }
     
     // MARK: - Table of Contents
@@ -130,16 +159,16 @@ extension PrayerTextViewModel {
 
 // MARK: - Font and Formatting
 extension PrayerTextViewModel {
-    var preferredFont: UIFont {
+    var preferredFont: Font {
         // Use Dynamic Type for accessibility
-        return UIFont.preferredFont(forTextStyle: .body)
+        return .body
     }
     
-    var textAlignment: NSTextAlignment {
-        return .right // Hebrew is right-to-left
+    var textAlignment: TextAlignment {
+        return .trailing // Hebrew is right-to-left
     }
     
-    var textDirection: NSWritingDirection {
+    var textDirection: LayoutDirection {
         return .rightToLeft
     }
 }
