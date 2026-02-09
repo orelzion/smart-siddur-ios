@@ -5,11 +5,11 @@
 See: .planning/PROJECT.md (updated 2026-02-08)
 
 **Core value:** Reliable, offline-first prayer assembly with correct halachic logic -- the right prayer text, with the right insertions, for the right day, available without network.
-**Current focus:** Phase 2 complete. Ready for Phase 3 - Prayer + Monetization.
+**Current focus:** Phase 2 complete. Ready for Phase 3 - Prayer Experience.
 
 ## Current Position
 
-Phase: 2 of 3 (iOS Core) -- COMPLETE
+Phase: 2 of 4 (iOS Core) -- COMPLETE
 Plan: 3 of 3 in Phase 2 (02-03 complete)
 Status: Phase 2 complete, ready for Phase 3
 Last activity: 2026-02-09 -- Completed 02-03-PLAN.md (Zmanim + Calendar)
@@ -30,7 +30,8 @@ Progress: [######░░░░] 66% (6/9 plans) + 1 quick task
 | 01-backend-foundation | 3 | 3 | ~40min |
 | quick tasks | 1 | 1 | ~13min |
 | 02-ios-core | 3 | 3 | ~20min |
-| 03-prayer-monetization | 3 | 0 | - |
+| 03-prayer-experience | 2 | 0 | - |
+| 04-monetization | 1 | 0 | - |
 
 **Recent Trend:**
 - Last 5 plans: quick/001 (iOS project init), 02-01 (iOS auth), 02-02 (settings + location), 02-03 (zmanim + calendar)
@@ -45,7 +46,7 @@ Progress: [######░░░░] 66% (6/9 plans) + 1 quick task
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
-- [Roadmap]: 3-phase structure -- backend first, then iOS core, then prayer+monetization
+- [Roadmap]: 4-phase structure -- backend first, then iOS core, then prayer experience, then monetization
 - [Roadmap]: Within Phase 1, schema plan must complete first, then content seeding and edge functions can run in parallel
 - [Roadmap]: Notifications (NOTF), Calendar (CALR), Migration (MIGR), and Receipt Verification (RCPT) deferred to v2
 - [01-03]: Used kosher-zmanim@0.9.0 (latest available) -- getParsha() returns Parsha enum, not getParshaIndex()
@@ -79,7 +80,7 @@ None. Phase 2 (iOS Core) is complete. All three plans executed:
 - 02-02: Settings + Location
 - 02-03: Zmanim + Calendar
 
-Ready for Phase 3 (Prayer Assembly + Monetization).
+Ready for Phase 3 (Prayer Experience).
 
 ## Session Continuity
 

@@ -136,11 +136,11 @@
 | PRAY-03 | Phase 3 | Pending |
 | PRAY-04 | Phase 3 | Pending |
 | PRAY-05 | Phase 3 | Pending |
-| PRAY-06 | Phase 3 | Pending |
-| PURCH-01 | Phase 3 | Pending |
-| PURCH-02 | Phase 3 | Pending |
-| PURCH-03 | Phase 3 | Pending |
-| PURCH-04 | Phase 3 | Pending |
+| PRAY-06 | Phase 4 | Pending |
+| PURCH-01 | Phase 4 | Pending |
+| PURCH-02 | Phase 4 | Pending |
+| PURCH-03 | Phase 4 | Pending |
+| PURCH-04 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 36 total

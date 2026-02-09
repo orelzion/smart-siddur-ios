@@ -2,23 +2,24 @@
 
 ## Overview
 
-This roadmap delivers a complete iOS siddur app backed by Supabase in 3 phases. Phase 1 builds the entire backend (schema, seeded content, prayer generation edge functions) in this repo under `supabase/`. Phases 2-3 build the iOS app in a new SmartSiddur-iOS repo. Phase 2 builds foundational features (auth, settings, location, zmanim). Phase 3 delivers the core prayer experience with offline caching, premium subscriptions, and feature gating -- the app people actually open to daven. Phases are compressed for speed; within Phase 1, schema, content seeding, and edge functions can execute in parallel after the schema plan lands first.
+This roadmap delivers a complete iOS siddur app backed by Supabase in 4 phases. Phase 1 builds the entire backend (schema, seeded content, prayer generation edge functions) in this repo under `supabase/`. Phases 2-4 build the iOS app in a new SmartSiddur-iOS repo. Phase 2 builds foundational features (auth, settings, location, zmanim). Phase 3 delivers the core prayer experience with offline caching for all prayers. Phase 4 adds premium subscription and feature gating. Phases are compressed for speed; within Phase 1, schema, content seeding, and edge functions can execute in parallel after the schema plan lands first.
 
 **Repo split:**
 - **Phase 1**: This repo (SmartSiddur) — `supabase/` directory for migrations, edge functions, seeding scripts
-- **Phases 2-3**: New repo (SmartSiddur-iOS) — Xcode project with SwiftUI app
+- **Phases 2-4**: New repo (SmartSiddur-iOS) — Xcode project with SwiftUI app
 
 ## Phases
 
 **Phase Numbering:**
-- Integer phases (1, 2, 3): Planned milestone work
+- Integer phases (1, 2, 3, 4): Planned milestone work
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Backend Foundation** - Deploy Supabase schema, seed all content and geo data, build prayer generation edge functions
 - [ ] **Phase 2: iOS Core** - Auth, settings, location picker, and zmanim calculation
-- [ ] **Phase 3: Prayer Experience + Monetization** - Prayer display with offline cache, StoreKit subscriptions, and premium gating
+- [ ] **Phase 3: Prayer Experience** - Prayer display with offline cache (all prayers free)
+- [ ] **Phase 4: Monetization** - StoreKit subscriptions and premium feature gating
 
 ## Phase Details
 
@@ -56,31 +57,45 @@ Plans:
 - [ ] 02-02-PLAN.md -- Settings and Location (synced + local settings, location picker with server search, GPS auto-detect) [Wave 2, depends on 02-01]
 - [ ] 02-03-PLAN.md -- Zmanim + Calendar (KosherSwift zmanim, opinion-aware display, Hebrew/Gregorian calendar, day detail sheets) [Wave 3, depends on 02-02]
 
-### Phase 3: Prayer Experience + Monetization
-**Goal**: Users can open any prayer and see the correct text for today's date, nusach, and settings -- even in airplane mode -- with premium prayers gated behind a $4.99/year subscription
+### Phase 3: Prayer Experience
+**Goal**: Users can open any prayer and see the correct text for today's date, nusach, and settings -- even in airplane mode
 **Depends on**: Phase 1 (edge functions for prayer generation, content for sync), Phase 2 (auth for user identity, settings/location for prayer requests)
-**Requirements**: PRAY-01, PRAY-02, PRAY-03, PRAY-04, PRAY-05, PRAY-06, PURCH-01, PURCH-02, PURCH-03, PURCH-04
+**Requirements**: PRAY-01, PRAY-02, PRAY-03, PRAY-04, PRAY-05
 **Success Criteria** (what must be TRUE):
   1. User can see a prayer menu and open any of the 26+ prayer types to view fully rendered text with correct nusach and calendar-sensitive insertions
   2. Prayers are pre-fetched for 14 days and display correctly in airplane mode with no network
   3. Changing settings (nusach, location) invalidates the cache and re-fetches prayers with the new parameters
-  4. Free users see core prayers (Shacharit, Mincha, Arvit, Birkat HaMazon, Omer) but premium prayers are gated behind subscription
-  5. User can purchase a $4.99/year subscription with 7-day trial, and legacy migrated users have permanent free premium access
-**Plans**: 3 plans
+  4. All prayers are available to all users (no premium gating in this phase)
+**Plans**: 2 plans
 
 Plans:
 - [ ] 03-01: Prayer list, display, and rendering (main menu, prayer text view, content delta sync)
 - [ ] 03-02: Offline cache and pre-fetch (14-day SwiftData cache, background refresh, cache invalidation)
-- [ ] 03-03: StoreKit 2 subscriptions and premium gating (purchase flow, trial, legacy support, feature matrix)
+
+### Phase 4: Monetization
+**Goal**: Generate sustainable revenue while maintaining free access to core prayers
+**Depends on**: Phase 3 (prayer experience must be complete before monetizing)
+**Requirements**: PRAY-06, PURCH-01, PURCH-02, PURCH-03, PURCH-04
+**Success Criteria** (what must be TRUE):
+  1. Premium prayers are gated behind $4.99/year subscription
+  2. Free users see core prayers (Shacharit, Mincha, Arvit, Birkat HaMazon, Omer)
+  3. User can purchase a $4.99/year subscription with 7-day trial
+  4. Legacy migrated users have permanent free premium access
+  5. Premium status is checked via is_premium_user() function
+**Plans**: 1 plan
+
+Plans:
+- [ ] 04-01: StoreKit 2 subscriptions and premium gating (purchase flow, trial, legacy support, feature matrix)
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 (Within Phase 1, plans 01-01 executes first, then 01-02 and 01-03 can run in parallel)
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Backend Foundation | 3/3 | ✓ Complete | 2026-02-09 |
 | 2. iOS Core | 3/3 | ✓ Complete | 2026-02-09 |
-| 3. Prayer Experience + Monetization | 0/3 | Not started | - |
+| 3. Prayer Experience | 0/2 | Not started | - |
+| 4. Monetization | 0/1 | Not started | - |
