@@ -38,6 +38,7 @@ Progress: [######░░░░] 66% (6/9 plans) + 1 quick task
 - Trend: iOS plans running faster than backend; 02-03 took ~38min due to KosherSwift integration + checkpoint UX fixes
 
 *Updated after each plan completion*
+| Phase 03-prayer-experience P01 | 5min | 5 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -68,6 +69,10 @@ Recent decisions affecting current work:
 - [02-03]: Chronological sorting of zmanim list for natural day-flow reading experience
 - [02-03]: Segmented control for calendar mode toggle (per user feedback during checkpoint)
 - [02-03]: DayDetailSheet shows only sunrise/sunset + "View Full Zmanim" navigation (per user feedback)
+- [Phase 03-prayer-experience]: Used @Observable pattern for prayer view models consistent with existing codebase — Maintains consistency with Zmanim and Calendar views
+- [Phase 03-prayer-experience]: Organized prayers by time of day with Today section for current relevance — Provides intuitive navigation and highlights today's relevant prayers
+- [Phase 03-prayer-experience]: Hebrew-only display with nikud and teamim, no translations per user decisions — Aligns with user feedback from previous phases
+- [Phase 03-prayer-experience]: Full scrolling text view rather than pagination for better reading experience — Improves user experience for prayer reading
 
 ### Pending Todos
 
