@@ -9,7 +9,8 @@ struct TabContainerView: View {
     @State private var hasCheckedLocation = false
 
     var body: some View {
-        TabView {
+        @Bindable var container = container
+        TabView(selection: $container.selectedTab) {
             // Tab 1: Zmanim
             NavigationStack {
                 ZmanimView()
@@ -17,6 +18,7 @@ struct TabContainerView: View {
             .tabItem {
                 Label("Zmanim", systemImage: "clock")
             }
+            .tag(0)
 
             // Tab 2: Calendar
             NavigationStack {
@@ -25,6 +27,7 @@ struct TabContainerView: View {
             .tabItem {
                 Label("Calendar", systemImage: "calendar")
             }
+            .tag(1)
 
             // Tab 3: Settings (full settings screen)
             NavigationStack {
@@ -33,6 +36,7 @@ struct TabContainerView: View {
             .tabItem {
                 Label("Settings", systemImage: "gearshape")
             }
+            .tag(2)
         }
         .sheet(isPresented: $showLocationSetup) {
             NavigationStack {

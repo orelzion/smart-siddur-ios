@@ -82,23 +82,23 @@ struct CalendarView: View {
 
             Spacer()
 
-            // Month title
-            VStack(spacing: 2) {
+            // Month title + mode picker
+            VStack(spacing: 4) {
                 Text(viewModel.monthTitle)
                     .font(.headline)
 
-                // Toggle button
-                Button {
-                    viewModel.calendarMode = viewModel.calendarMode == .gregorianPrimary
-                        ? .hebrewPrimary
-                        : .gregorianPrimary
-                } label: {
-                    Text(viewModel.calendarMode == .gregorianPrimary ? "\u{05E2}\u{05D1}\u{05E8}\u{05D9}" : "Gregorian")
-                        .font(.caption)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 2)
-                        .background(Capsule().fill(Color.accentColor.opacity(0.15)))
+                // Segmented control for calendar mode
+                Picker("Calendar Mode", selection: Binding(
+                    get: { viewModel.calendarMode },
+                    set: { viewModel.calendarMode = $0 }
+                )) {
+                    Text("Gregorian")
+                        .tag(CalendarMode.gregorianPrimary)
+                    Text("\u{05E2}\u{05D1}\u{05E8}\u{05D9}")
+                        .tag(CalendarMode.hebrewPrimary)
                 }
+                .pickerStyle(.segmented)
+                .frame(width: 180)
             }
 
             Spacer()

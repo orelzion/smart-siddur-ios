@@ -34,12 +34,13 @@ final class ZmanimViewModel {
         !shabbatTimes.isEmpty
     }
 
-    /// Filtered list based on showAllTimes toggle.
+    /// Filtered list based on showAllTimes toggle, sorted chronologically by time.
     var displayedZmanim: [ZmanTime] {
-        if showAllTimes {
-            return zmanimList
-        } else {
-            return zmanimList.filter(\.isEssential)
+        let filtered = showAllTimes ? zmanimList : zmanimList.filter(\.isEssential)
+        return filtered.sorted { a, b in
+            let timeA = a.time ?? .distantFuture
+            let timeB = b.time ?? .distantFuture
+            return timeA < timeB
         }
     }
 

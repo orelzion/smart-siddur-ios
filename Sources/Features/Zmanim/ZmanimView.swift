@@ -28,6 +28,14 @@ struct ZmanimView: View {
                 await vm.loadZmanim()
             }
         }
+        .onChange(of: container.zmanimDateOverride) { _, newDate in
+            guard let newDate, let viewModel else { return }
+            viewModel.selectedDate = newDate
+            container.zmanimDateOverride = nil
+            Task {
+                await viewModel.loadZmanim()
+            }
+        }
     }
 
     @ViewBuilder
