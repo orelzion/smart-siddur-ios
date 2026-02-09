@@ -35,6 +35,8 @@
 	<string>588019731888-mmffrv6ll397fp8bko10in41pdtm17c0.apps.googleusercontent.com</string>
 	<key>GIDServerClientID</key>
 	<string>588019731888-aet2ntuciv5o93peaosp9ak9ldmmkqqc.apps.googleusercontent.com</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>SmartSiddur uses your location to find the nearest city for accurate zmanim (prayer times) calculation.</string>
 	<key>UILaunchScreen</key>
 	<dict/>
 	<key>UISupportedInterfaceOrientations</key>
