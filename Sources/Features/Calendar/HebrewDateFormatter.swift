@@ -6,14 +6,18 @@ enum HebrewDateFormatterUtil {
 
     // MARK: - Hebrew Month Names
 
-    private static let hebrewMonthNames = [
+    /// Base Hebrew month names.
+    /// NOTE: In Swift's Hebrew calendar (used by KosherSwift), Adar in a non-leap year
+    /// returns month 7 (ADAR_II), not month 6 (ADAR). Month 6 is only used in leap years.
+    /// The hebrewMonthName() function handles this mapping correctly.
+    private static let hebrewMonthNames: [Int: String] = [
         1: "\u{05EA}\u{05E9}\u{05E8}\u{05D9}",      // Tishrei
         2: "\u{05D7}\u{05E9}\u{05D5}\u{05DF}",       // Cheshvan
         3: "\u{05DB}\u{05E1}\u{05DC}\u{05D5}",       // Kislev
         4: "\u{05D8}\u{05D1}\u{05EA}",                // Tevet
         5: "\u{05E9}\u{05D1}\u{05D8}",                // Shevat
-        6: "\u{05D0}\u{05D3}\u{05E8}",                // Adar
-        7: "\u{05D0}\u{05D3}\u{05E8} \u{05D1}'",     // Adar II
+        6: "\u{05D0}\u{05D3}\u{05E8}",                // Adar (only used in leap years as Adar I base)
+        7: "\u{05D0}\u{05D3}\u{05E8}",                // Adar (non-leap: plain Adar)
         8: "\u{05E0}\u{05D9}\u{05E1}\u{05DF}",       // Nissan
         9: "\u{05D0}\u{05D9}\u{05D9}\u{05E8}",       // Iyar
         10: "\u{05E1}\u{05D9}\u{05D5}\u{05DF}",      // Sivan
@@ -28,14 +32,16 @@ enum HebrewDateFormatterUtil {
         7: "\u{05D0}\u{05D3}\u{05E8} \u{05D1}'",     // Adar II
     ]
 
-    static let englishMonthNames = [
+    /// Base English month names.
+    /// Same note as Hebrew: month 7 = plain Adar in non-leap years.
+    static let englishMonthNames: [Int: String] = [
         1: "Tishrei",
         2: "Cheshvan",
         3: "Kislev",
         4: "Tevet",
         5: "Shevat",
         6: "Adar",
-        7: "Adar II",
+        7: "Adar",
         8: "Nissan",
         9: "Iyar",
         10: "Sivan",

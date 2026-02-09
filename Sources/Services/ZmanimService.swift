@@ -44,22 +44,22 @@ struct ZmanimService: Sendable {
 
         // -- Essential zmanim (isEssential = true) --
 
-        // 1. Alot HaShachar (Dawn)
+        // 1. Dawn (Alot HaShachar)
         let alotTime = dawnTime(calendar: calendar, opinion: opinions.dawnOpinion)
         zmanim.append(ZmanTime(
             id: "alot",
-            name: "Alot HaShachar",
+            name: "Dawn",
             hebrewName: "\u{05E2}\u{05DC}\u{05D5}\u{05EA} \u{05D4}\u{05E9}\u{05D7}\u{05E8}",
             time: alotTime,
             category: .dawn,
             isEssential: true
         ))
 
-        // 2. Netz HaChama (Sunrise)
+        // 2. Sunrise (Netz HaChama)
         let sunriseTime = sunrise(calendar: calendar, opinion: opinions.sunriseOpinion)
         zmanim.append(ZmanTime(
             id: "netz",
-            name: "Netz HaChama",
+            name: "Sunrise",
             hebrewName: "\u{05E0}\u{05E5} \u{05D4}\u{05D7}\u{05DE}\u{05D4}",
             time: sunriseTime,
             category: .morning,
@@ -90,10 +90,10 @@ struct ZmanimService: Sendable {
             isEssential: true
         ))
 
-        // 5. Chatzot (Midday)
+        // 5. Midday (Chatzot)
         zmanim.append(ZmanTime(
             id: "chatzot",
-            name: "Chatzot",
+            name: "Midday",
             hebrewName: "\u{05D7}\u{05E6}\u{05D5}\u{05EA}",
             time: calendar.getChatzos(),
             category: .midday,
@@ -110,21 +110,21 @@ struct ZmanimService: Sendable {
             isEssential: true
         ))
 
-        // 7. Shkia (Sunset)
+        // 7. Sunset (Shkia)
         zmanim.append(ZmanTime(
             id: "shkia",
-            name: "Shkia",
+            name: "Sunset",
             hebrewName: "\u{05E9}\u{05E7}\u{05D9}\u{05E2}\u{05D4}",
             time: calendar.getElevationAdjustedSunset(),
             category: .evening,
             isEssential: true
         ))
 
-        // 8. Tzeit HaKochavim (Nightfall)
+        // 8. Nightfall (Tzeit HaKochavim)
         let tzeitTime = nightfall(calendar: calendar, opinion: opinions.duskOpinion)
         zmanim.append(ZmanTime(
             id: "tzeit",
-            name: "Tzeit HaKochavim",
+            name: "Nightfall",
             hebrewName: "\u{05E6}\u{05D0}\u{05EA} \u{05D4}\u{05DB}\u{05D5}\u{05DB}\u{05D1}\u{05D9}\u{05DD}",
             time: tzeitTime,
             category: .night,
@@ -133,11 +133,11 @@ struct ZmanimService: Sendable {
 
         // -- Comprehensive additions (isEssential = false) --
 
-        // 9. Misheyakir (earliest tallit/tefillin)
+        // 9. Tallit & Tefillin (Misheyakir - earliest time)
         zmanim.append(ZmanTime(
             id: "misheyakir",
-            name: "Misheyakir",
-            hebrewName: "\u{05DE}\u{05E9}\u{05D9}\u{05D9}\u{05DB}\u{05D9}\u{05E8}",
+            name: "Tallit & Tefillin",
+            hebrewName: "\u{05D6}\u{05DE}\u{05DF} \u{05E6}\u{05D9}\u{05E6}\u{05D9}\u{05EA} \u{05D5}\u{05EA}\u{05E4}\u{05D9}\u{05DC}\u{05D9}\u{05DF}",
             time: calendar.getMisheyakir11Point5Degrees(),
             category: .dawn,
             isEssential: false
@@ -186,31 +186,31 @@ struct ZmanimService: Sendable {
             isEssential: false
         ))
 
-        // 14. Tzeit 72 min
+        // 14. Nightfall 72 min
         zmanim.append(ZmanTime(
             id: "tzeit72",
-            name: "Tzeit 72 min",
+            name: "Nightfall 72 min",
             hebrewName: "\u{05E6}\u{05D0}\u{05EA} 72 \u{05D3}\u{05E7}\u{05D5}\u{05EA}",
             time: calendar.getTzais72(),
             category: .night,
             isEssential: false
         ))
 
-        // 15. Tzeit Rabenu Tam
+        // 15. Nightfall Rabenu Tam
         zmanim.append(ZmanTime(
             id: "tzeitRabenuTam",
-            name: "Tzeit Rabenu Tam",
+            name: "Nightfall Rabenu Tam",
             hebrewName: "\u{05E6}\u{05D0}\u{05EA} \u{05E8}\u{05D1}\u{05E0}\u{05D5} \u{05EA}\u{05DD}",
             time: calendar.getTzais72(),
             category: .night,
             isEssential: false
         ))
 
-        // 16. Chatzot HaLaila (Midnight)
+        // 16. Midnight (Chatzot HaLaila)
         let midnightTime = solarMidnight(calendar: calendar)
         zmanim.append(ZmanTime(
             id: "chatzotHalaila",
-            name: "Chatzot HaLaila",
+            name: "Midnight",
             hebrewName: "\u{05D7}\u{05E6}\u{05D5}\u{05EA} \u{05D4}\u{05DC}\u{05D9}\u{05DC}\u{05D4}",
             time: midnightTime,
             category: .night,
