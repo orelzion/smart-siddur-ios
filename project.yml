@@ -1,6 +1,6 @@
 name: SmartSiddur
 options:
-  bundleIdPrefix: com.orelzion
+  bundleIdPrefix: com.karriapps
   deploymentTarget:
     iOS: "17.0"
   xcodeVersion: "16.0"
@@ -29,7 +29,7 @@ targets:
           - "**/.gitkeep"
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.orelzion.smartsiddur
+        PRODUCT_BUNDLE_IDENTIFIER: com.karriapps.smartsiddurlite
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_GENERATION_MODE: GeneratedFile
         INFOPLIST_KEY_UILaunchScreen_Generation: true
