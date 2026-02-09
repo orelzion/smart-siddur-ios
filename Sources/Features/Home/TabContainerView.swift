@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Post-auth container with tab navigation.
-/// Shows 3 tabs: Zmanim, Calendar, Settings.
+/// Shows 4 tabs: Zmanim, Calendar, Prayers, Settings.
 /// On first launch (no saved location), presents LocationPickerView with GPS auto-detect.
 struct TabContainerView: View {
     @Environment(DependencyContainer.self) private var container
@@ -29,14 +29,27 @@ struct TabContainerView: View {
             }
             .tag(1)
 
-            // Tab 3: Settings (full settings screen)
+            // Tab 3: Prayers
+            NavigationStack {
+                PrayersMenuView(viewModel: PrayersMenuViewModel(
+                    prayerService: container.prayerService,
+                    jewishCalendarService: container.jewishCalendarService,
+                    localSettings: container.localSettings
+                ))
+            }
+            .tabItem {
+                Label("Prayers", systemImage: "book")
+            }
+            .tag(2)
+
+            // Tab 4: Settings (full settings screen)
             NavigationStack {
                 SettingsView()
             }
             .tabItem {
                 Label("Settings", systemImage: "gearshape")
             }
-            .tag(2)
+            .tag(3)
         }
         .sheet(isPresented: $showLocationSetup) {
             NavigationStack {

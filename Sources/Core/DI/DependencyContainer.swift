@@ -12,6 +12,7 @@ final class DependencyContainer {
     let locationRepository: LocationRepository
     let zmanimService: ZmanimService
     let jewishCalendarService: JewishCalendarService
+    let prayerService: PrayerService
 
     /// Currently selected location name, updated by LocationViewModel.
     var selectedLocationName: String?
@@ -20,8 +21,11 @@ final class DependencyContainer {
     /// Set by CalendarView's "View Full Zmanim" action, consumed by ZmanimView.
     var zmanimDateOverride: Date?
 
-    /// Currently selected tab index (0=Zmanim, 1=Calendar, 2=Settings).
+    /// Currently selected tab index (0=Zmanim, 1=Calendar, 2=Prayers, 3=Settings).
     var selectedTab: Int = 0
+    
+    /// Shared instance for easy access
+    static let shared = DependencyContainer()
 
     init() {
         self.supabase = SupabaseConfig.client
@@ -31,5 +35,6 @@ final class DependencyContainer {
         self.locationRepository = LocationRepository(supabase: SupabaseConfig.client)
         self.zmanimService = ZmanimService()
         self.jewishCalendarService = JewishCalendarService()
+        self.prayerService = PrayerService(supabase: SupabaseConfig.client)
     }
 }
