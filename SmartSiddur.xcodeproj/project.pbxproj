@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0037917626E6D72F83FEE50B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B248124038FA5B8E8BCF9 /* LoginView.swift */; };
 		1E8689AF4CAD930D2FE0BCAC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 5C9DD471978E1AF86142D554 /* GoogleSignIn */; };
 		5ABECA8DB3B1D6963638C39A /* SmartSiddurApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA895637369AA1FC15DB420 /* SmartSiddurApp.swift */; };
 		68174EC5A17A377F2DBBF9C1 /* LocalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D140848EB01886C964C5964 /* LocalSettings.swift */; };
 		6B27EA3A961ADF97B16B29CD /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FDAC25B3D12302DE67E3FE /* DependencyContainer.swift */; };
 		9E260B8899496B5685C4A5EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D788C60F292529401CE615F /* AppDelegate.swift */; };
 		CAEE2AA5641DF1CF56913387 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 03A14704CCEFAEDDB63CE41E /* Supabase */; };
+		CAFC92C96FECC0326670A2F1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C20F8C5D942DF43E1A2388 /* OnboardingView.swift */; };
 		D3D15921765FC7F801F3EC5B /* AuthDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9E9351CC38B79875BD9364 /* AuthDTO.swift */; };
+		E27283B277F7F6B5477677CE /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 40ECC7AA631B280CB92EFFCA /* GoogleSignInSwift */; };
 		E74120B368A2E6E2837AF6BA /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0934B84EE6AED7E5C3F73690 /* UserProfile.swift */; };
 		EB6F72C8082DB9BAAD82CB15 /* SupabaseClient+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A14D3F8F320ED8FF320F /* SupabaseClient+Config.swift */; };
+		FC6B9A431ECA984D7F5E8D22 /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9CCA4B3024E5BB1947737 /* TabContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,10 +27,13 @@
 		0934B84EE6AED7E5C3F73690 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		0DA895637369AA1FC15DB420 /* SmartSiddurApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSiddurApp.swift; sourceTree = "<group>"; };
 		3D140848EB01886C964C5964 /* LocalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSettings.swift; sourceTree = "<group>"; };
+		46F9CCA4B3024E5BB1947737 /* TabContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerView.swift; sourceTree = "<group>"; };
+		47C20F8C5D942DF43E1A2388 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		7D788C60F292529401CE615F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F9E9351CC38B79875BD9364 /* AuthDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDTO.swift; sourceTree = "<group>"; };
 		B6666431E5392E8AE5C1670F /* SmartSiddur.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SmartSiddur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D856A14D3F8F320ED8FF320F /* SupabaseClient+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SupabaseClient+Config.swift"; sourceTree = "<group>"; };
+		FB5B248124038FA5B8E8BCF9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 			files = (
 				CAEE2AA5641DF1CF56913387 /* Supabase in Frameworks */,
 				1E8689AF4CAD930D2FE0BCAC /* GoogleSignIn in Frameworks */,
+				E27283B277F7F6B5477677CE /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +95,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		6C2754E2E156A146752C196D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				46F9CCA4B3024E5BB1947737 /* TabContainerView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		73215BD13EFFA2BD431787BB /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,9 +130,20 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		A7DE4F02B10A0B8A492628DA /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FB5B248124038FA5B8E8BCF9 /* LoginView.swift */,
+				47C20F8C5D942DF43E1A2388 /* OnboardingView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		B83042DED4A4A75E99CFA1CD /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				A7DE4F02B10A0B8A492628DA /* Auth */,
+				6C2754E2E156A146752C196D /* Home */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -162,6 +189,7 @@
 			packageProductDependencies = (
 				03A14704CCEFAEDDB63CE41E /* Supabase */,
 				5C9DD471978E1AF86142D554 /* GoogleSignIn */,
+				40ECC7AA631B280CB92EFFCA /* GoogleSignInSwift */,
 			);
 			productName = SmartSiddur;
 			productReference = B6666431E5392E8AE5C1670F /* SmartSiddur.app */;
@@ -208,8 +236,11 @@
 				D3D15921765FC7F801F3EC5B /* AuthDTO.swift in Sources */,
 				6B27EA3A961ADF97B16B29CD /* DependencyContainer.swift in Sources */,
 				68174EC5A17A377F2DBBF9C1 /* LocalSettings.swift in Sources */,
+				0037917626E6D72F83FEE50B /* LoginView.swift in Sources */,
+				CAFC92C96FECC0326670A2F1 /* OnboardingView.swift in Sources */,
 				5ABECA8DB3B1D6963638C39A /* SmartSiddurApp.swift in Sources */,
 				EB6F72C8082DB9BAAD82CB15 /* SupabaseClient+Config.swift in Sources */,
+				FC6B9A431ECA984D7F5E8D22 /* TabContainerView.swift in Sources */,
 				E74120B368A2E6E2837AF6BA /* UserProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +460,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DD526FB1F5B9D53E20EBFD65 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
+		};
+		40ECC7AA631B280CB92EFFCA /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97126195E9BC30B53A1E3CDB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 		5C9DD471978E1AF86142D554 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;

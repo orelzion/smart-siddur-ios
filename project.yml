@@ -41,3 +41,5 @@ targets:
         product: Supabase
       - package: GoogleSignIn
         product: GoogleSignIn
+      - package: GoogleSignIn
+        product: GoogleSignInSwift
