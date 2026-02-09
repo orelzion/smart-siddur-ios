@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-02-08)
 
 ## Current Position
 
-Phase: 2 of 4 (iOS Core) -- COMPLETE
-Plan: 3 of 3 in Phase 2 (02-03 complete)
-Status: Phase 2 complete, ready for Phase 3
-Last activity: 2026-02-09 -- Completed 02-03-PLAN.md (Zmanim + Calendar)
+Phase: 3 of 4 (Prayer Experience)
+Plan: 2 of 2 in Phase 3 (03-02 complete)
+Status: Phase 3 complete - Offline prayer cache with pre-fetch implemented
+Last activity: 2026-02-09 -- Completed 03-02-PLAN.md (Offline cache and pre-fetch)
 
-Progress: [######░░░░] 66% (6/9 plans) + 1 quick task
+Progress: [████████░░] 89% (8/9 plans) + 1 quick task
 
 ## Performance Metrics
 
@@ -30,15 +30,16 @@ Progress: [######░░░░] 66% (6/9 plans) + 1 quick task
 | 01-backend-foundation | 3 | 3 | ~40min |
 | quick tasks | 1 | 1 | ~13min |
 | 02-ios-core | 3 | 3 | ~20min |
-| 03-prayer-experience | 2 | 0 | - |
+| 03-prayer-experience | 2 | 2 | ~5min |
 | 04-monetization | 1 | 0 | - |
 
 **Recent Trend:**
-- Last 5 plans: quick/001 (iOS project init), 02-01 (iOS auth), 02-02 (settings + location), 02-03 (zmanim + calendar)
-- Trend: iOS plans running faster than backend; 02-03 took ~38min due to KosherSwift integration + checkpoint UX fixes
+- Last 5 plans: 02-01 (iOS auth), 02-02 (settings + location), 02-03 (zmanim + calendar), 03-01 (prayer views), 03-02 (offline cache)
+- Trend: Phase 3 plans completed quickly as they enhanced existing Phase 3-01 infrastructure
 
 *Updated after each plan completion*
 | Phase 03-prayer-experience P01 | 5min | 5 tasks | 9 files |
+| Phase 03-prayer-experience P02 | ~3min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -80,25 +81,28 @@ None.
 
 ### Blockers/Concerns
 
-None. Phase 2 (iOS Core) is complete. All three plans executed:
-- 02-01: Auth (Apple + Google + Anonymous)
-- 02-02: Settings + Location
-- 02-03: Zmanim + Calendar
+None. Phase 3 (Prayer Experience) is complete. All plans executed:
+- 03-01: Prayer views (menu, text display, navigation)
+- 03-02: Offline cache and pre-fetch
 
-Ready for Phase 3 (Prayer Experience).
+Ready for Phase 4 (Monetization).
 
 ## Session Continuity
 
-Last session: 2026-02-09 15:22 UTC
-Stopped at: Completed 02-03-PLAN.md (Zmanim + Calendar)
+Last session: 2026-02-09 21:38 UTC
+Stopped at: Completed 03-02-PLAN.md (Offline cache and pre-fetch)
 Resume file: None
 
-Phase 2 complete. All iOS core features working:
-- Auth flow with Apple, Google, and Anonymous sign-in
-- Full settings system (16 local + 17 synced) with optimistic updates
-- Location picker with 141K city search and GPS detection
-- Zmanim display with KosherSwift, 8 essential + 8 comprehensive times, opinion-aware
-- Full calendar with Hebrew/Gregorian toggle, day markers, day detail sheets
-- DependencyContainer holds all repositories and services needed for Phase 3
+Phase 3 complete. All Prayer Experience features working:
+- Prayer menu organized by time of day with today's relevant prayers highlighted
+- Full prayer text view with scrolling display and table of contents
+- Offline prayer cache with SwiftData persistence
+- 14-day pre-fetch for upcoming prayers
+- Automatic cache invalidation when settings change (nusach, location, tfilaMode)
+- Background refresh on app launch
+- Cache cleanup and size management (50MB limit)
+- SwiftData model with proper indexes and migration handling
 
-DependencyContainer now holds: authRepository, settingsRepository, locationRepository, localSettings, zmanimService, jewishCalendarService, selectedLocationName, zmanimDateOverride, selectedTab.
+Phase 3 complete. Ready for Phase 4 (Monetization).
+
+DependencyContainer now holds: authRepository, settingsRepository, locationRepository, localSettings, zmanimService, jewishCalendarService, prayerService, prayerCacheService, selectedLocationName, zmanimDateOverride, selectedTab.
