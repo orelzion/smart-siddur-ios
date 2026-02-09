@@ -17,7 +17,7 @@ This roadmap delivers a complete iOS siddur app backed by Supabase in 4 phases. 
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Backend Foundation** - Deploy Supabase schema, seed all content and geo data, build prayer generation edge functions
-- [ ] **Phase 2: iOS Core** - Auth, settings, location picker, and zmanim calculation
+- [x] **Phase 2: iOS Core** - Auth, settings, location picker, and zmanim calculation
 - [ ] **Phase 3: Prayer Experience** - Prayer display with offline cache (all prayers free)
 - [ ] **Phase 4: Monetization** - StoreKit subscriptions and premium feature gating
 
@@ -53,9 +53,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 02-01-PLAN.md -- iOS project setup + Auth flow (Xcode project, supabase-swift SPM, Apple/Google/Anonymous auth, session persistence, tab shell) [Wave 1]
-- [ ] 02-02-PLAN.md -- Settings and Location (synced + local settings, location picker with server search, GPS auto-detect) [Wave 2, depends on 02-01]
-- [ ] 02-03-PLAN.md -- Zmanim + Calendar (KosherSwift zmanim, opinion-aware display, Hebrew/Gregorian calendar, day detail sheets) [Wave 3, depends on 02-02]
+- [x] 02-01-PLAN.md -- iOS project setup + Auth flow (Xcode project, supabase-swift SPM, Apple/Google/Anonymous auth, session persistence, tab shell) [Wave 1]
+- [x] 02-02-PLAN.md -- Settings and Location (synced + local settings, location picker with server search, GPS auto-detect) [Wave 2, depends on 02-01]
+- [x] 02-03-PLAN.md -- Zmanim + Calendar (KosherSwift zmanim, opinion-aware display, Hebrew/Gregorian calendar, day detail sheets) [Wave 3, depends on 02-02]
 
 ### Phase 3: Prayer Experience
 **Goal**: Users can open any prayer and see the correct text for today's date, nusach, and settings -- even in airplane mode
@@ -69,8 +69,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: Prayer list, display, and rendering (main menu, prayer text view, content delta sync)
-- [ ] 03-02: Offline cache and pre-fetch (14-day SwiftData cache, background refresh, cache invalidation)
+- [x] 03-01-PLAN.md -- Prayer list, display, and rendering (main menu, prayer text view, backend integration) [Wave 1]
+- [x] 03-02-PLAN.md -- Offline cache and pre-fetch (14-day SwiftData cache, background refresh, cache invalidation) [Wave 2, depends on 03-01]
 
 ### Phase 4: Monetization
 **Goal**: Generate sustainable revenue while maintaining free access to core prayers
@@ -97,5 +97,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Backend Foundation | 3/3 | ✓ Complete | 2026-02-09 |
 | 2. iOS Core | 3/3 | ✓ Complete | 2026-02-09 |
-| 3. Prayer Experience | 0/2 | Not started | - |
+| 3. Prayer Experience | 0/2 | Planning complete | - |
 | 4. Monetization | 0/1 | Not started | - |
