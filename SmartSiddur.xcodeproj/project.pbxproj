@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		0037917626E6D72F83FEE50B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B248124038FA5B8E8BCF9 /* LoginView.swift */; };
 		04606F4B99095758EE095A45 /* ZmanimOpinionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B03E5D6E0A814235CE3D9 /* ZmanimOpinionsView.swift */; };
+		0920D050C025882BD359CD69 /* HebrewDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A477F29649B330823AE01025 /* HebrewDateFormatter.swift */; };
 		0B3610930B6CD0B532C55435 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB910BAAB6D6BEEBBD8BBA83 /* AuthRepository.swift */; };
+		1B398DC70FEB5091141D02DC /* DayDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495F9C18BF77A011860FB874 /* DayDetailSheet.swift */; };
 		1D07BF67475C726898DA4C85 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2DBC1C05CA3CAB13D094FB /* SettingsView.swift */; };
 		1E8689AF4CAD930D2FE0BCAC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 5C9DD471978E1AF86142D554 /* GoogleSignIn */; };
 		2414038719CD0DAAE25B08EE /* NusachPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7189D62DDF29D26F64996C9 /* NusachPickerView.swift */; };
 		315224180FAF1B2D3797828F /* JewishCalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F110AD93AABB1CBAF701C8B1 /* JewishCalendarService.swift */; };
+		392CD262248A5AFA0E40DB78 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9287ABCEAB7EA9FD2666F9 /* CalendarView.swift */; };
 		403F24566727FA724A5EE21C /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5BB229860E1384CA2941F2 /* UserLocation.swift */; };
 		47D22F198513CCFFE92D8B0A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0523703E01B2F5886B86E4EA /* HomeView.swift */; };
 		51919BBF0E680BF7E806BE4A /* JewishDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C865A793AF63FAAB5ADD55 /* JewishDay.swift */; };
@@ -21,6 +24,7 @@
 		6688A91835FC8CCEE177A78F /* KosherSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C01B83C381A3E98C7CABA6B7 /* KosherSwift */; };
 		68174EC5A17A377F2DBBF9C1 /* LocalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D140848EB01886C964C5964 /* LocalSettings.swift */; };
 		6B27EA3A961ADF97B16B29CD /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FDAC25B3D12302DE67E3FE /* DependencyContainer.swift */; };
+		72E8A641C60B901B599E068A /* CalendarGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54EAA15EB64CB014D21243A /* CalendarGridView.swift */; };
 		78C11A5B7DEB088B03C26AC2 /* SettingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091EE7350B22B3AA91D8F59E /* SettingsRepository.swift */; };
 		85701BD138D50792AEF7D68F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0094A82EAB5AF180F650C087 /* AuthViewModel.swift */; };
 		93849A62923F1CCECBCD5BED /* ZmanRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5BF69A6053C5964DF11812 /* ZmanRowView.swift */; };
@@ -28,6 +32,7 @@
 		9E260B8899496B5685C4A5EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D788C60F292529401CE615F /* AppDelegate.swift */; };
 		B09A92C15DBC6766425B25D4 /* ZmanTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3129614457AC2378B65F96 /* ZmanTime.swift */; };
 		B1B5A9B922F67A2DB719C004 /* AppearanceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D4C931CACCF23F27D2C90 /* AppearanceSettingsView.swift */; };
+		B88D7AB3CD1F1893CBF9A8C9 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766675CCCC9F7BB7FBC69B1B /* CalendarViewModel.swift */; };
 		C8AB458548FC9623C0708128 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2078DB86BBC6B8B0B2A491D3 /* LocationViewModel.swift */; };
 		CAEE2AA5641DF1CF56913387 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 03A14704CCEFAEDDB63CE41E /* Supabase */; };
 		CAFC92C96FECC0326670A2F1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C20F8C5D942DF43E1A2388 /* OnboardingView.swift */; };
@@ -60,7 +65,9 @@
 		3D140848EB01886C964C5964 /* LocalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSettings.swift; sourceTree = "<group>"; };
 		46F9CCA4B3024E5BB1947737 /* TabContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerView.swift; sourceTree = "<group>"; };
 		47C20F8C5D942DF43E1A2388 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		495F9C18BF77A011860FB874 /* DayDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailSheet.swift; sourceTree = "<group>"; };
 		60503CEE65E7643F5D9B3D69 /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
+		766675CCCC9F7BB7FBC69B1B /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		7B1853EE3C275561D121A355 /* ZmanimViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZmanimViewModel.swift; sourceTree = "<group>"; };
 		7D788C60F292529401CE615F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F2DBC1C05CA3CAB13D094FB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -68,6 +75,9 @@
 		8C2C550E8EC12715FEE7F711 /* ZmanimService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZmanimService.swift; sourceTree = "<group>"; };
 		8E3129614457AC2378B65F96 /* ZmanTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZmanTime.swift; sourceTree = "<group>"; };
 		9822BEDB5C40021594FCCE46 /* GeoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLocation.swift; sourceTree = "<group>"; };
+		A477F29649B330823AE01025 /* HebrewDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebrewDateFormatter.swift; sourceTree = "<group>"; };
+		AB9287ABCEAB7EA9FD2666F9 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		B54EAA15EB64CB014D21243A /* CalendarGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarGridView.swift; sourceTree = "<group>"; };
 		B6666431E5392E8AE5C1670F /* SmartSiddur.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SmartSiddur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F188B5E0CFB87D382A249D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		C86D4C931CACCF23F27D2C90 /* AppearanceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceSettingsView.swift; sourceTree = "<group>"; };
@@ -228,12 +238,25 @@
 			isa = PBXGroup;
 			children = (
 				A7DE4F02B10A0B8A492628DA /* Auth */,
+				C02E15551B3B9B4A9B3D9B5D /* Calendar */,
 				6C2754E2E156A146752C196D /* Home */,
 				E05068CAFCD623DE52522A29 /* Location */,
 				86203A1D261D715701ABBE83 /* Settings */,
 				FF0C1335FA91B446256A4F08 /* Zmanim */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		C02E15551B3B9B4A9B3D9B5D /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				B54EAA15EB64CB014D21243A /* CalendarGridView.swift */,
+				AB9287ABCEAB7EA9FD2666F9 /* CalendarView.swift */,
+				766675CCCC9F7BB7FBC69B1B /* CalendarViewModel.swift */,
+				495F9C18BF77A011860FB874 /* DayDetailSheet.swift */,
+				A477F29649B330823AE01025 /* HebrewDateFormatter.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		C8464CFFE394E5A9B98A7596 /* Supabase */ = {
@@ -347,8 +370,13 @@
 				D3D15921765FC7F801F3EC5B /* AuthDTO.swift in Sources */,
 				0B3610930B6CD0B532C55435 /* AuthRepository.swift in Sources */,
 				85701BD138D50792AEF7D68F /* AuthViewModel.swift in Sources */,
+				72E8A641C60B901B599E068A /* CalendarGridView.swift in Sources */,
+				392CD262248A5AFA0E40DB78 /* CalendarView.swift in Sources */,
+				B88D7AB3CD1F1893CBF9A8C9 /* CalendarViewModel.swift in Sources */,
+				1B398DC70FEB5091141D02DC /* DayDetailSheet.swift in Sources */,
 				6B27EA3A961ADF97B16B29CD /* DependencyContainer.swift in Sources */,
 				EB71B064F23A703B8794AB9D /* GeoLocation.swift in Sources */,
+				0920D050C025882BD359CD69 /* HebrewDateFormatter.swift in Sources */,
 				47D22F198513CCFFE92D8B0A /* HomeView.swift in Sources */,
 				315224180FAF1B2D3797828F /* JewishCalendarService.swift in Sources */,
 				51919BBF0E680BF7E806BE4A /* JewishDay.swift in Sources */,

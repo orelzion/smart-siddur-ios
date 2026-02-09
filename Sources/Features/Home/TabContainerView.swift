@@ -18,18 +18,9 @@ struct TabContainerView: View {
                 Label("Zmanim", systemImage: "clock")
             }
 
-            // Tab 2: Calendar (placeholder)
+            // Tab 2: Calendar
             NavigationStack {
-                VStack(spacing: 16) {
-                    Image(systemName: "calendar")
-                        .font(.system(size: 48))
-                        .foregroundStyle(.blue)
-                    Text("Calendar")
-                        .font(.title2)
-                    Text("Coming soon")
-                        .foregroundStyle(.secondary)
-                }
-                .navigationTitle("Calendar")
+                CalendarView()
             }
             .tabItem {
                 Label("Calendar", systemImage: "calendar")
