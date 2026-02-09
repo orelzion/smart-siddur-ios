@@ -1,5 +1,6 @@
 import SwiftUI
 import Auth
+import GoogleSignIn
 
 @main
 struct SmartSiddurApp: App {
@@ -34,7 +35,7 @@ struct SmartSiddurApp: App {
                 }
             }
             .onOpenURL { url in
-                // Handle OAuth callback URLs (Google Sign-In, etc.)
+                GIDSignIn.sharedInstance.handle(url)
             }
         }
     }

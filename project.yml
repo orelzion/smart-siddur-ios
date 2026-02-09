@@ -30,12 +30,20 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.karriapps.smartsiddurlite
-        GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_GENERATION_MODE: GeneratedFile
-        INFOPLIST_KEY_UILaunchScreen_Generation: true
-        INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationPortrait"
-        INFOPLIST_KEY_CFBundleDisplayName: "SmartSiddur"
         SWIFT_STRICT_CONCURRENCY: complete
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: "SmartSiddur"
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UILaunchScreen: {}
+        GIDClientID: "588019731888-mmffrv6ll397fp8bko10in41pdtm17c0.apps.googleusercontent.com"
+        GIDServerClientID: "588019731888-aet2ntuciv5o93peaosp9ak9ldmmkqqc.apps.googleusercontent.com"
+        CFBundleURLTypes:
+          - CFBundleTypeRole: Editor
+            CFBundleURLSchemes:
+              - "com.googleusercontent.apps.588019731888-mmffrv6ll397fp8bko10in41pdtm17c0"
     dependencies:
       - package: Supabase
         product: Supabase
