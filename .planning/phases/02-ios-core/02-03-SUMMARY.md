@@ -65,6 +65,8 @@ key-decisions:
   - "Chronological sorting of zmanim by time rather than insertion order for natural day flow"
   - "Segmented control for calendar mode toggle instead of button for clear active-state indication"
   - "zmanimDateOverride + selectedTab on DependencyContainer for calendar-to-zmanim cross-tab navigation"
+  - "English primary names for common zmanim (Sunrise, Sunset, etc.) with Hebrew subtitles; halachic terms kept as transliteration"
+  - "KosherSwift month 7 = plain Adar in non-leap years (Swift Hebrew calendar quirk), leap year override for Adar I/II"
 
 patterns-established:
   - "Cross-tab navigation: set shared state on DependencyContainer, onChange triggers in destination tab"
@@ -111,6 +113,7 @@ Each task was committed atomically:
 1. **Task 1: Build ZmanimService and zmanim display screen** - `732f564` (feat)
 2. **Task 2: Build calendar screen with Hebrew/Gregorian views and day details** - `23930fa` (feat)
 3. **UX fixes from checkpoint review** - `d8155cf` (fix)
+4. **Post-completion fixes: Adar month name bug + English zman names** - `d061b5c` (fix)
 
 ## Files Created/Modified
 
@@ -160,6 +163,16 @@ Per user testing feedback (3 issues):
 3. **Calendar mode segmented control** -- Replaced ambiguous toggle button with segmented control showing active state
 
 These were committed as a separate fix commit (`d8155cf`) following the checkpoint review.
+
+### Post-Completion Fixes (d061b5c)
+
+Per user testing feedback (3 issues):
+
+1. **[Rule 1 - Bug] Adar month name in non-leap years** -- KosherSwift's Swift Hebrew calendar returns month 7 (ADAR_II) for regular Adar in non-leap years. The `hebrewMonthNames` dictionary mapped month 7 to "אדר ב'" which is wrong for 5786 (non-leap year). Fixed by mapping month 7 to plain "אדר" in the base dictionary; leap year override dictionary correctly provides "אדר א'" / "אדר ב'" when needed. Same fix applied to English month names (month 7 now "Adar" instead of "Adar II" in base).
+
+2. **English zman display names** -- Replaced Hebrew transliterations with English for common terms that have clear English equivalents: Alot HaShachar -> "Dawn", Netz HaChama -> "Sunrise", Chatzot -> "Midday", Shkia -> "Sunset", Tzeit HaKochavim -> "Nightfall", Chatzot HaLaila -> "Midnight", Tzeit 72 min -> "Nightfall 72 min", Tzeit Rabenu Tam -> "Nightfall Rabenu Tam". Hebrew names retained as subtitles in ZmanRowView. Halachic terms without clear English equivalents kept as-is (Sof Zman Shma, Mincha Gedola, Mincha Ketana, Plag HaMincha).
+
+3. **Misheyakir renamed to Tallit & Tefillin** -- Changed display name from "Misheyakir" / "משייכיר" to "Tallit & Tefillin" / "זמן ציצית ותפילין" to better communicate what this time means to users.
 
 ## Issues Encountered
 
