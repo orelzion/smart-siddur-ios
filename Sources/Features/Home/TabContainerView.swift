@@ -10,18 +10,9 @@ struct TabContainerView: View {
 
     var body: some View {
         TabView {
-            // Tab 1: Zmanim (placeholder)
+            // Tab 1: Zmanim
             NavigationStack {
-                VStack(spacing: 16) {
-                    Image(systemName: "sun.horizon")
-                        .font(.system(size: 48))
-                        .foregroundStyle(.orange)
-                    Text("Zmanim")
-                        .font(.title2)
-                    Text("Coming soon")
-                        .foregroundStyle(.secondary)
-                }
-                .navigationTitle("Zmanim")
+                ZmanimView()
             }
             .tabItem {
                 Label("Zmanim", systemImage: "clock")

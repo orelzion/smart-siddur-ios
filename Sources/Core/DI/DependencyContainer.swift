@@ -10,6 +10,8 @@ final class DependencyContainer {
     let settingsRepository: SettingsRepository
     let localSettings: LocalSettings
     let locationRepository: LocationRepository
+    let zmanimService: ZmanimService
+    let jewishCalendarService: JewishCalendarService
 
     /// Currently selected location name, updated by LocationViewModel.
     var selectedLocationName: String?
@@ -20,5 +22,7 @@ final class DependencyContainer {
         self.settingsRepository = SettingsRepository(supabase: SupabaseConfig.client)
         self.localSettings = LocalSettings.shared
         self.locationRepository = LocationRepository(supabase: SupabaseConfig.client)
+        self.zmanimService = ZmanimService()
+        self.jewishCalendarService = JewishCalendarService()
     }
 }
