@@ -22,8 +22,8 @@ final class CachedPrayer {
     /// Nusach used for this prayer (ashkenaz, sefard, etc.)
     var nusach: String
     
-    /// Location identifier for geo-specific prayers
-    var locationId: UUID?
+    /// Location identifier for geo-specific prayers (stored as location name string)
+    var locationId: String?
     
     /// Hash of settings that affect prayer content (nusach, location, tfilaMode)
     var settingsHash: String
@@ -51,7 +51,7 @@ final class CachedPrayer {
         prayerType: String,
         date: Date,
         nusach: String,
-        locationId: UUID? = nil,
+        locationId: String? = nil,
         settingsHash: String,
         content: String,
         contentVersion: Int = 1,
@@ -112,7 +112,7 @@ struct CachedPrayerDomain {
     let prayerType: PrayerType
     let date: Date
     let nusach: String
-    let locationId: UUID?
+    let locationId: String?
     let settingsHash: String
     let content: PrayerText?
     let contentVersion: Int
@@ -163,10 +163,10 @@ enum CacheConfig {
 /// Generates settings hash for cache invalidation based on relevant settings
 struct SettingsHashGenerator {
     /// Generates hash string from relevant settings
-    static func hash(nusach: String, locationId: UUID?, tfilaMode: String?) -> String {
+    static func hash(nusach: String, locationId: String?, tfilaMode: String?) -> String {
         let components = [
             nusach,
-            locationId?.uuidString ?? "default",
+            locationId ?? "default",
             tfilaMode ?? "default"
         ]
         
@@ -182,5 +182,4 @@ struct SettingsHashGenerator {
     }
 }
 
-// MARK: - CommonCrypto Bridge
-import CommonCrypto
+// MARK: - CommonCrypto Bridge (import at top)

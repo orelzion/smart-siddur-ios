@@ -178,38 +178,13 @@ final class PrayerCacheService: Observable {
             lastRefreshDate: lastRefreshDate
         )
     }
-}
-    
-    /// Gets cache statistics for debugging
-    func getCacheStats() async throws -> CacheStats {
-        let descriptor = FetchDescriptor<CachedPrayer>()
-        let allPrayers = try modelContext.fetch(descriptor)
-        
-        let now = Date()
-        let expired = allPrayers.filter { $0.expiresAt < now }.count
-        let valid = allPrayers.count - expired
-        
-        return CacheStats(
-            totalEntries: allPrayers.count,
-            validEntries: valid,
-            expiredEntries: expired,
-            lastRefresh: lastRefreshDate
-        )
-    }
     
     // MARK: - Private Methods
-    
-    private func performFullPrefetch() async throws {
-        let today = Calendar.current.startOfDay(for: Date())
-        let endDate = Calendar.current.date(byAdding: .day, value: CacheConfig.preFetchDays, to: today)!
-        
-        try await prefetchPrayers(from: today, to: endDate)
-    }
     
     private func generateSettingsHash() -> String {
         SettingsHashGenerator.hash(
             nusach: getNusach(),
-            locationId: localSettings.selectedLocationId,
+            locationId: localSettings.locationName,
             tfilaMode: localSettings.tfilaMode.rawValue
         )
     }
@@ -275,7 +250,7 @@ final class PrayerCacheService: Observable {
             prayerType: type.rawValue,
             date: startOfDay,
             nusach: getNusach(),
-            locationId: localSettings.selectedLocationId,
+            locationId: nil,
             settingsHash: settingsHash,
             content: contentString,
             contentVersion: currentContentVersion,
@@ -315,82 +290,25 @@ final class PrayerCacheService: Observable {
         }
     }
     
-    private func fetchContentVersion() async throws -> Int {
-        // TODO: Implement content version checking from backend
-        return 1
-    }
+    // MARK: - Cache Errors
     
-    // MARK: - Cache Cleanup
-    
-    /// Removes all expired cache entries
-    func cleanupExpiredEntries() async throws {
-        let predicate = #Predicate<CachedPrayer> { prayer in
-            prayer.expiresAt < Date()
-        }
+    enum CacheError: LocalizedError {
+        case encodingFailed
+        case decodingFailed
+        case notFound
+        case saveFailed(String)
         
-        let descriptor = FetchDescriptor<CachedPrayer>(predicate: predicate)
-        let expiredPrayers = try modelContext.fetch(descriptor)
-        
-        for prayer in expiredPrayers {
-            modelContext.delete(prayer)
-        }
-        
-        try modelContext.save()
-    }
-    
-    /// Performs full cache maintenance: removes expired entries and enforces size limits
-    func performMaintenance() async throws {
-        // First, remove expired entries
-        try await cleanupExpiredEntries()
-        
-        // Then, check cache size and remove oldest entries if over limit
-        let stats = try await getCacheStatistics()
-        
-        if stats.totalSizeBytes > CacheConfig.maxCacheSize {
-            // Remove oldest entries until under size limit
-            try await enforceCacheSizeLimit()
-        }
-    }
-    
-    /// Removes oldest cached entries until cache size is under limit
-    private func enforceCacheSizeLimit() async throws {
-        let descriptor = FetchDescriptor<CachedPrayer>(
-            sortBy: [SortDescriptor(\.cachedAt, order: .forward)]
-        )
-        
-        let allPrayers = try modelContext.fetch(descriptor)
-        var currentSize = allPrayers.reduce(0) { $0 + $1.content.count }
-        
-        // Remove oldest entries until under limit
-        for prayer in allPrayers {
-            if currentSize <= CacheConfig.maxCacheSize {
-                break
+        var errorDescription: String? {
+            switch self {
+            case .encodingFailed:
+                return "Failed to encode prayer content for caching"
+            case .decodingFailed:
+                return "Failed to decode cached prayer content"
+            case .notFound:
+                return "Cached prayer not found"
+            case .saveFailed(let reason):
+                return "Failed to save cache: \(reason)"
             }
-            currentSize -= prayer.content.count
-            modelContext.delete(prayer)
-        }
-        
-        try modelContext.save()
-    }
-}
-
-// MARK: - Cache Errors
-enum CacheError: LocalizedError {
-    case encodingFailed
-    case decodingFailed
-    case notFound
-    case saveFailed(String)
-    
-    var errorDescription: String? {
-        switch self {
-        case .encodingFailed:
-            return "Failed to encode prayer content for caching"
-        case .decodingFailed:
-            return "Failed to decode cached prayer content"
-        case .notFound:
-            return "Cached prayer not found"
-        case .saveFailed(let reason):
-            return "Failed to save cache: \(reason)"
         }
     }
 }
@@ -414,6 +332,3 @@ struct CacheStatistics {
         return formatter.string(fromByteCount: Int64(totalSizeBytes))
     }
 }
-
-// MARK: - Placeholder Enums (Remove when LocalSettings enums are used)
-// These were duplicates of LocalSettings enums and have been removed

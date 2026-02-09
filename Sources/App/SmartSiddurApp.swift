@@ -1,5 +1,4 @@
 import SwiftUI
-import Auth
 import GoogleSignIn
 import SwiftData
 
@@ -22,25 +21,22 @@ struct SmartSiddurApp: App {
                 }
             }
             .environment(container)
-            .modelContainer(for: [CachedPrayer.self]) {
+            .modelContainer(for: [CachedPrayer.self]) { result in
                 // Configure SwiftData model container with migration handling
                 let schema = Schema([CachedPrayer.self])
                 let modelConfiguration = ModelConfiguration(
                     schema: schema,
                     isStoredInMemoryOnly: false,
                     allowsSave: true,
-                    groupContainer: .applicationDefault,
                     cloudKitDatabase: .none
                 )
                 
-                return ModelContainer(
-                    for: schema,
-                    configurations: [modelConfiguration],
-                    onDegrade: { error in
-                        // Handle migration failures gracefully
-                        print("SwiftData migration note: \(error.localizedDescription)")
-                    }
-                )
+                switch result {
+                case .success(let container):
+                    DependencyContainer.modelContainer = container
+                case .failure(let error):
+                    print("SwiftData initialization failed: \(error.localizedDescription)")
+                }
             }
             .task {
                 for await (event, session) in container.supabase.auth.authStateChanges {
@@ -59,9 +55,6 @@ struct SmartSiddurApp: App {
                 // Perform background cache refresh on app launch
                 if let cacheService = container.prayerCacheService {
                     try? await cacheService.performBackgroundRefreshIfNeeded()
-                    
-                    // Perform periodic cache maintenance
-                    try? await cacheService.performMaintenance()
                 }
             }
             .onOpenURL { url in
