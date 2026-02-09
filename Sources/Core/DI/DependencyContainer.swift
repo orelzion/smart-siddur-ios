@@ -61,4 +61,10 @@ final class DependencyContainer {
         }
         return container.mainContext
     }
+    
+    /// Invalidates the prayer cache when settings change
+    func invalidatePrayerCache() async {
+        guard let cacheService = prayerCacheService else { return }
+        try? await cacheService.invalidateCache()
+    }
 }

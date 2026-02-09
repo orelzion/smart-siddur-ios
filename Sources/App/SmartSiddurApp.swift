@@ -1,6 +1,7 @@
 import SwiftUI
 import Auth
 import GoogleSignIn
+import SwiftData
 
 @main
 struct SmartSiddurApp: App {
@@ -8,7 +9,7 @@ struct SmartSiddurApp: App {
     @State private var container = DependencyContainer()
     @State private var isAuthenticated = false
     @State private var isCheckingSession = true
-
+    
     var body: some Scene {
         WindowGroup {
             Group {
@@ -21,6 +22,7 @@ struct SmartSiddurApp: App {
                 }
             }
             .environment(container)
+            .modelContainer(for: [CachedPrayer.self])
             .task {
                 for await (event, session) in container.supabase.auth.authStateChanges {
                     isCheckingSession = false
@@ -32,6 +34,12 @@ struct SmartSiddurApp: App {
                     default:
                         break
                     }
+                }
+            }
+            .task {
+                // Perform background cache refresh on app launch
+                if let cacheService = container.prayerCacheService {
+                    try? await cacheService.performBackgroundRefreshIfNeeded()
                 }
             }
             .onOpenURL { url in

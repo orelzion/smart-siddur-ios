@@ -18,12 +18,16 @@ final class SettingsViewModel {
 
     let localSettings: LocalSettings
     private let settingsRepository: SettingsRepositoryProtocol
+    
+    /// Reference to DependencyContainer for cache invalidation
+    private weak var dependencyContainer: DependencyContainer?
 
     // MARK: - Init
 
-    init(settingsRepository: SettingsRepositoryProtocol, localSettings: LocalSettings) {
+    init(settingsRepository: SettingsRepositoryProtocol, localSettings: LocalSettings, dependencyContainer: DependencyContainer? = nil) {
         self.settingsRepository = settingsRepository
         self.localSettings = localSettings
+        self.dependencyContainer = dependencyContainer
     }
 
     // MARK: - Load
@@ -42,13 +46,25 @@ final class SettingsViewModel {
         }
     }
 
+    // MARK: - Cache Invalidation Helper
+    
+    /// Invalidates prayer cache when prayer-relevant settings change
+    private func invalidatePrayerCacheIfNeeded() async {
+        await dependencyContainer?.invalidatePrayerCache()
+    }
+    
     // MARK: - Synced Setting Updates (Optimistic)
 
     /// Update nusach with optimistic local update, then push to Supabase.
+    /// Also invalidates prayer cache since nusach affects prayer content.
     func updateNusach(_ nusach: Nusach) {
         let previous = syncedSettings.nusach
         syncedSettings.nusach = nusach
         pushSingleSetting("nusach", value: nusach.rawValue, rollback: { self.syncedSettings.nusach = previous })
+        // Invalidate cache since nusach affects prayer content
+        Task {
+            await invalidatePrayerCacheIfNeeded()
+        }
     }
 
     func updateIsWoman(_ value: Bool) {
@@ -67,6 +83,10 @@ final class SettingsViewModel {
         let previous = syncedSettings.isInIsrael
         syncedSettings.isInIsrael = value
         pushSingleSetting("is_in_israel", value: value, rollback: { self.syncedSettings.isInIsrael = previous })
+        // Invalidate cache since location affects prayers
+        Task {
+            await invalidatePrayerCacheIfNeeded()
+        }
     }
 
     func updateIsMizrochnik(_ value: Bool) {
