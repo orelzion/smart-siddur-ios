@@ -30,8 +30,7 @@ final class PrayerService {
             let response: PrayerResponse = try await supabase.functions.invoke(
                 "generate-prayer",
                 options: FunctionInvokeOptions(
-                    headers: ["Content-Type": "application/json"],
-                    body: try JSONEncoder().encode(request)
+                    body: request
                 )
             )
             return response
@@ -60,8 +59,7 @@ final class PrayerService {
             let response: PrayerBatchResponse = try await supabase.functions.invoke(
                 "generate-prayer-batch",
                 options: FunctionInvokeOptions(
-                    headers: ["Content-Type": "application/json"],
-                    body: try JSONEncoder().encode(request)
+                    body: request
                 )
             )
             return response.prayers
