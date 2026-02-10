@@ -11,7 +11,8 @@ struct PrayerTextView: View {
         self._viewModel = State(initialValue: PrayerTextViewModel(
             prayerService: DependencyContainer.shared.prayerService,
             cacheService: DependencyContainer.shared.prayerCacheService,
-            localSettings: DependencyContainer.shared.localSettings
+            localSettings: DependencyContainer.shared.localSettings,
+            locationRepository: DependencyContainer.shared.locationRepository
         ))
     }
     

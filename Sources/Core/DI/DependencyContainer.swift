@@ -47,7 +47,8 @@ final class DependencyContainer {
             self.prayerCacheService = PrayerCacheService(
                 modelContext: modelContext,
                 prayerService: prayerService,
-                localSettings: localSettings
+                localSettings: localSettings,
+                locationRepository: locationRepository
             )
         } else {
             self.prayerCacheService = nil

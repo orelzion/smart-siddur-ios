@@ -89,42 +89,51 @@ final class PrayersMenuViewModel {
     }
     
     private func isPrayerRelevantForToday(_ prayer: Prayer, jewishDay: JewishDay) -> Bool {
-        // Daily prayers are always relevant
         switch prayer.type {
-        case .shacharit, .mincha, .arvit, .shema:
+        // Daily prayers are always relevant
+        case .shacharit, .mincha, .arvit:
             return true
             
-        // Special occasion prayers - use available properties
-        case .hallel:
-            return jewishDay.isRoshChodesh || jewishDay.isYomTov
+        // Prayers relevant every day
+        case .mazon, .asherYatzar, .blessings, .threefold, .haderech:
+            return true
             
+        // Evening-related
+        case .alMita, .chatzot:
+            return true
+            
+        // Musaf on Shabbat/Yom Tov/Rosh Chodesh
         case .musaf:
-            return jewishDay.isShabbat || jewishDay.isYomTov
+            return jewishDay.isShabbat || jewishDay.isYomTov || jewishDay.isRoshChodesh
             
-        case .selichot:
-            return false // No Elul/AeretYemeiTeshuva in current JewishDay
+        // Torah reading on relevant days
+        case .torahReading:
+            return jewishDay.isShabbat || jewishDay.isYomTov || jewishDay.isRoshChodesh
             
-        case .vidui, .alChet:
+        // Havdala after Shabbat
+        case .havdala:
+            return jewishDay.isShabbat
+            
+        // Omer counting between Pesach and Shavuot
+        case .omer:
+            return jewishDay.omerDay != nil
+            
+        // Chanukah
+        case .hanuka:
+            return false // Could check holiday name in jewishDay
+            
+        // Selichot in Elul / Aseret Yemei Teshuva
+        case .slihot:
+            return false // No Elul info in current JewishDay
+            
+        // Kinot for Tisha B'Av
+        case .kinot:
             return jewishDay.isTaanis
             
-        case .avodah:
-            return false // No Yom Kippur in current JewishDay
-            
-        // Morning-specific prayers
-        case .birchotHaShachar, .psukeiDezimra, .korbanot, .tachanun:
-            return true
-            
-        // Afternoon-specific prayers
-        case .minchaGedola, .minchaKetana, .neilat:
-            return true
-            
-        // Evening-specific prayers
-        case .kriatShemaAlHaMitah, .chatzot:
-            return true
-            
-        // Always include special prayers that might be relevant
-        case .kriatHaTorah, .aleinu, .kaddish, .barchu, .kedusha, .amidah, .ashrei, .lamnatzeach:
-            return true
+        // Special occasion prayers — not daily
+        case .levana, .mila, .shevaBrachot, .maaser, .hala,
+             .lagBaomer, .ilanot, .nedarim, .ushpizin:
+            return false
         }
     }
     
@@ -174,46 +183,41 @@ extension PrayersMenuViewModel {
     }
     
     private func prayerOrderValue(_ type: PrayerType) -> Int {
-        // Define prayer importance/sequence order
+        // Define prayer importance/sequence order within each category
         switch type {
-        // Morning prayers - main service first
+        // Morning prayer
         case .shacharit: return 0
-        case .birchotHaShachar: return 1
-        case .korbanot: return 2
-        case .psukeiDezimra: return 3
-        case .tachanun: return 4
         
-        // Afternoon prayers
+        // Afternoon prayer
         case .mincha: return 0
-        case .minchaGedola: return 1
-        case .minchaKetana: return 2
-        case .neilat: return 3
         
         // Evening prayers
         case .arvit: return 0
-        case .kriatShemaAlHaMitah: return 1
+        case .alMita: return 1
         case .chatzot: return 2
         
-        // Special prayers - by importance
+        // Special prayers - by frequency/importance
         case .musaf: return 0
-        case .hallel: return 1
-        case .kriatHaTorah: return 2
-        case .amidah: return 3
-        case .kedusha: return 4
-        case .kaddish: return 5
-        case .aleinu: return 6
-        case .ashrei: return 7
-        case .shema: return 8
-        case .barchu: return 9
-        
-        // Penitential prayers
-        case .vidui: return 0
-        case .alChet: return 1
-        case .selichot: return 2
-        case .avodah: return 3
-        
-        // Other special prayers
-        case .lamnatzeach: return 0
+        case .torahReading: return 1
+        case .mazon: return 2
+        case .asherYatzar: return 3
+        case .blessings: return 4
+        case .threefold: return 5
+        case .omer: return 6
+        case .havdala: return 7
+        case .haderech: return 8
+        case .levana: return 9
+        case .hanuka: return 10
+        case .slihot: return 11
+        case .kinot: return 12
+        case .mila: return 13
+        case .shevaBrachot: return 14
+        case .maaser: return 15
+        case .hala: return 16
+        case .lagBaomer: return 17
+        case .ilanot: return 18
+        case .nedarim: return 19
+        case .ushpizin: return 20
         }
     }
 }

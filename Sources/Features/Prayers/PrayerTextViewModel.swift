@@ -19,12 +19,14 @@ final class PrayerTextViewModel {
     private let prayerService: PrayerService
     private let cacheService: PrayerCacheService?
     private let localSettings: LocalSettings
+    private let locationRepository: LocationRepositoryProtocol
     
     // MARK: - Initialization
-    init(prayerService: PrayerService, cacheService: PrayerCacheService?, localSettings: LocalSettings) {
+    init(prayerService: PrayerService, cacheService: PrayerCacheService?, localSettings: LocalSettings, locationRepository: LocationRepositoryProtocol) {
         self.prayerService = prayerService
         self.cacheService = cacheService
         self.localSettings = localSettings
+        self.locationRepository = locationRepository
     }
     
     // MARK: - Public Methods
@@ -70,17 +72,30 @@ final class PrayerTextViewModel {
     // MARK: - Private Methods
     private func refreshPrayerFromNetwork(_ prayer: Prayer) async {
         do {
+            // Get location info
+            let location: PrayerLocationInfo
+            if let selectedLoc = try? await locationRepository.getSelectedLocation() {
+                location = PrayerLocationInfo(from: selectedLoc)
+            } else {
+                location = .defaultLocation
+            }
+            
+            let settings = PrayerSettings(from: localSettings)
+            
             let response = try await prayerService.generatePrayer(
                 type: prayer.type,
                 date: Date(),
                 nusach: localSettings.nusachString,
-                location: localSettings.locationName,
-                tfilaMode: localSettings.tfilaMode == .regular ? "regular" : (localSettings.tfilaMode == .yahid ? "yahid" : "chazan")
+                location: location,
+                tfilaMode: localSettings.tfilaMode.rawValue,
+                settings: settings
             )
+            
+            // Convert PrayerResponse items to PrayerText for rendering
+            let prayerText = PrayerText(from: response.items)
             
             // Save to cache if available
             if let cacheService = cacheService {
-                // Generate settings hash and save prayer to cache
                 let settingsHash = SettingsHashGenerator.hash(
                     nusach: localSettings.nusachString,
                     locationId: localSettings.locationName,
@@ -89,12 +104,12 @@ final class PrayerTextViewModel {
                 try? await cacheService.savePrayer(
                     type: prayer.type,
                     date: Date(),
-                    content: response.prayer,
+                    content: response.items,
                     settingsHash: settingsHash
                 )
             }
             
-            loadingState = .loaded(response.prayer)
+            loadingState = .loaded(prayerText)
             isOffline = false
             
         } catch {

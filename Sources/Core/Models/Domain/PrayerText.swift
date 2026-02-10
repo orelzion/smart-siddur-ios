@@ -12,15 +12,15 @@ struct PrayerText: Codable {
         let content: String
         let order: Int
         
-var displayTitle: String {
-        if let hebrewTitle = hebrewTitle, !hebrewTitle.isEmpty {
-            return hebrewTitle
+        var displayTitle: String {
+            if let hebrewTitle = hebrewTitle, !hebrewTitle.isEmpty {
+                return hebrewTitle
+            }
+            if let title = title, !title.isEmpty {
+                return title
+            }
+            return ""
         }
-        if let title = title, !title.isEmpty {
-            return title
-        }
-        return ""
-    }
     }
     
     struct TextMetadata: Codable {
@@ -37,6 +37,26 @@ var displayTitle: String {
             self.textDirection = textDirection
             self.source = source
         }
+    }
+    
+    /// Creates a PrayerText adapter from PrayerResponse items
+    init(from items: [PrayerTextItem]) {
+        self.sections = items.sorted(by: { $0.sortOrder < $1.sortOrder }).map { item in
+            PrayerSection(
+                id: item.id,
+                title: item.title,
+                hebrewTitle: item.title, // Backend provides Hebrew titles
+                content: item.text,
+                order: item.sortOrder
+            )
+        }
+        self.metadata = TextMetadata()
+    }
+    
+    /// Creates a PrayerText from sections and metadata directly
+    init(sections: [PrayerSection], metadata: TextMetadata) {
+        self.sections = sections
+        self.metadata = metadata
     }
 }
 

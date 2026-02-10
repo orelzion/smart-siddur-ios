@@ -11,16 +11,18 @@ final class PrayerCacheService: Observable {
     private let modelContext: ModelContext
     private let prayerService: PrayerService
     private let localSettings: LocalSettings
+    private let locationRepository: LocationRepositoryProtocol
     
     // MARK: - Cache State
     private var lastRefreshDate: Date?
     private var currentContentVersion: Int = 1
     
     // MARK: - Initialization
-    init(modelContext: ModelContext, prayerService: PrayerService, localSettings: LocalSettings) {
+    init(modelContext: ModelContext, prayerService: PrayerService, localSettings: LocalSettings, locationRepository: LocationRepositoryProtocol) {
         self.modelContext = modelContext
         self.prayerService = prayerService
         self.localSettings = localSettings
+        self.locationRepository = locationRepository
     }
     
     // MARK: - Public API
@@ -29,26 +31,42 @@ final class PrayerCacheService: Observable {
     func prefetchPrayers(from startDate: Date, to endDate: Date) async throws {
         let settingsHash = generateSettingsHash()
         let nusach = getNusach()
+        let location = await getLocationInfo()
+        let settings = PrayerSettings(from: localSettings)
+        let tfilaModeString = localSettings.tfilaMode.rawValue
         
         // Get content version from backend
         currentContentVersion = try await fetchContentVersion()
         
-        // Generate prayers for each day in range
-        let responses = try await prayerService.generatePrayerBatch(
-            from: startDate,
-            to: endDate,
-            nusach: nusach
+        // Calculate number of days
+        let calendar = Calendar.current
+        let days = max(1, calendar.dateComponents([.day], from: startDate, to: endDate).day ?? 1)
+        
+        // Main daily prayers to pre-fetch
+        let prayerTypes: [PrayerType] = [.shacharit, .mincha, .arvit]
+        
+        // Generate prayers using batch API
+        let batchResponse = try await prayerService.generatePrayerBatch(
+            prayerTypes: prayerTypes,
+            startDate: startDate,
+            days: days,
+            nusach: nusach,
+            location: location,
+            tfilaMode: tfilaModeString,
+            settings: settings
         )
         
-        // Cache each prayer
-        for response in responses {
-            let prayerType = response.metadata.specialOccasion ?? "daily"
-            let date = response.metadata.date
-            
+        // Cache each prayer from batch response
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.timeZone = .current
+        
+        for entry in batchResponse.prayers {
+            let entryDate = dateFormatter.date(from: entry.date) ?? startDate
             try await cachePrayer(
-                type: PrayerType(rawValue: prayerType) ?? .shacharit,
-                date: date,
-                content: response.prayer,
+                type: PrayerType(rawValue: entry.prayerType) ?? .shacharit,
+                date: entryDate,
+                content: entry.items,
                 settingsHash: settingsHash
             )
         }
@@ -90,7 +108,7 @@ final class PrayerCacheService: Observable {
     func savePrayer(
         type: PrayerType,
         date: Date,
-        content: PrayerText,
+        content: [PrayerTextItem],
         settingsHash: String? = nil
     ) async throws {
         let hash = settingsHash ?? generateSettingsHash()
@@ -206,6 +224,14 @@ final class PrayerCacheService: Observable {
         return localSettings.nusachString
     }
     
+    /// Gets PrayerLocationInfo from the selected location, or default
+    private func getLocationInfo() async -> PrayerLocationInfo {
+        if let selectedLoc = try? await locationRepository.getSelectedLocation() {
+            return PrayerLocationInfo(from: selectedLoc)
+        }
+        return .defaultLocation
+    }
+    
     private func findCachedPrayer(
         type: PrayerType,
         date: Date,
@@ -213,9 +239,10 @@ final class PrayerCacheService: Observable {
     ) async throws -> CachedPrayerDomain? {
         let startOfDay = Calendar.current.startOfDay(for: date)
         let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
+        let typeRaw = type.rawValue
         
         let predicate = #Predicate<CachedPrayer> { prayer in
-            prayer.prayerType == type.rawValue &&
+            prayer.prayerType == typeRaw &&
             prayer.date >= startOfDay &&
             prayer.date < endOfDay &&
             prayer.settingsHash == settingsHash
@@ -231,15 +258,16 @@ final class PrayerCacheService: Observable {
     private func cachePrayer(
         type: PrayerType,
         date: Date,
-        content: PrayerText,
+        content: [PrayerTextItem],
         settingsHash: String
     ) async throws {
         let startOfDay = Calendar.current.startOfDay(for: date)
         let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
         
         // Delete existing cache entry for this prayer
+        let typeRaw = type.rawValue
         let deletePredicate = #Predicate<CachedPrayer> { prayer in
-            prayer.prayerType == type.rawValue &&
+            prayer.prayerType == typeRaw &&
             prayer.date >= startOfDay &&
             prayer.date < endOfDay &&
             prayer.settingsHash == settingsHash
@@ -250,7 +278,7 @@ final class PrayerCacheService: Observable {
             modelContext.delete(prayer)
         }
         
-        // Encode content to JSON string
+        // Encode items as JSON string
         let encoder = JSONEncoder()
         let contentData = try encoder.encode(content)
         guard let contentString = String(data: contentData, encoding: .utf8) else {
@@ -280,18 +308,22 @@ final class PrayerCacheService: Observable {
         settingsHash: String
     ) async throws -> CachedPrayerDomain? {
         do {
+            let location = await getLocationInfo()
+            let settings = PrayerSettings(from: localSettings)
+            
             let response = try await prayerService.generatePrayer(
                 type: type,
                 date: date,
                 nusach: getNusach(),
-                location: nil, // TODO: Get location from settings
-                tfilaMode: localSettings.tfilaMode.rawValue
+                location: location,
+                tfilaMode: localSettings.tfilaMode.rawValue,
+                settings: settings
             )
             
             try await cachePrayer(
                 type: type,
                 date: date,
-                content: response.prayer,
+                content: response.items,
                 settingsHash: settingsHash
             )
             

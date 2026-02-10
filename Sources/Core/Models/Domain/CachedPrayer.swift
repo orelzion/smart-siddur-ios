@@ -83,9 +83,15 @@ final class CachedPrayer {
     }
     
     // MARK: - Content Decoding
-    /// Decodes the cached content as PrayerText
+    /// Decodes the cached content as PrayerText.
+    /// Tries [PrayerTextItem] (new format) first, falls back to PrayerText (legacy).
     var decodedContent: PrayerText? {
         guard let data = content.data(using: .utf8) else { return nil }
+        // Try new format: [PrayerTextItem]
+        if let items = try? JSONDecoder().decode([PrayerTextItem].self, from: data) {
+            return PrayerText(from: items)
+        }
+        // Fallback: legacy PrayerText format
         return try? JSONDecoder().decode(PrayerText.self, from: data)
     }
     
@@ -147,7 +153,7 @@ enum CacheConfig {
     
     /// Prayer types considered calendar-sensitive (require shorter expiration)
     static let calendarSensitivePrayers: Set<PrayerType> = [
-        .hallel, .musaf, .selichot
+        .musaf, .slihot, .omer, .kinot, .hanuka
     ]
     
     /// Determines expiration duration for a prayer type

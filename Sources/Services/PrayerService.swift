@@ -15,15 +15,19 @@ final class PrayerService {
         type: PrayerType,
         date: Date = Date(),
         nusach: String,
-        location: String? = nil,
-        tfilaMode: String? = nil
+        location: PrayerLocationInfo,
+        tfilaMode: String,
+        settings: PrayerSettings
     ) async throws -> PrayerResponse {
+        let dateString = Self.formatDate(date)
+        
         let request = PrayerRequest(
-            type: type,
-            date: date,
+            prayerType: type.rawValue,
+            date: dateString,
             nusach: nusach,
+            tfilaMode: tfilaMode,
             location: location,
-            tfilaMode: tfilaMode
+            settings: settings
         )
         
         do {
@@ -41,18 +45,24 @@ final class PrayerService {
     
     // MARK: - Generate Prayer Batch
     func generatePrayerBatch(
-        from startDate: Date,
-        to endDate: Date,
+        prayerTypes: [PrayerType],
+        startDate: Date,
+        days: Int,
         nusach: String,
-        location: String? = nil,
-        tfilaMode: String? = nil
-    ) async throws -> [PrayerResponse] {
+        location: PrayerLocationInfo,
+        tfilaMode: String,
+        settings: PrayerSettings
+    ) async throws -> PrayerBatchResponse {
+        let dateString = Self.formatDate(startDate)
+        
         let request = PrayerBatchRequest(
-            startDate: startDate,
-            endDate: endDate,
+            prayerTypes: prayerTypes.map { $0.rawValue },
+            startDate: dateString,
+            days: days,
             nusach: nusach,
+            tfilaMode: tfilaMode,
             location: location,
-            tfilaMode: tfilaMode
+            settings: settings
         )
         
         do {
@@ -62,67 +72,89 @@ final class PrayerService {
                     body: request
                 )
             )
-            return response.prayers
+            return response
         } catch {
             throw PrayerError.batchGenerationFailed(error.localizedDescription)
         }
     }
     
-    // MARK: - Get Today's Prayers
-    func getTodaysPrayers(
-        nusach: String,
-        location: String? = nil,
-        tfilaMode: String? = nil
-    ) async throws -> [PrayerResponse] {
-        let today = Calendar.current.startOfDay(for: Date())
-        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: today)!
-        
-        let todayPrayerTypes = PrayerType.allCases.filter { type in
-            // For now, return all prayer types
-            // In the future, this could be filtered based on calendar
-            return true
-        }
-        
-        var responses: [PrayerResponse] = []
-        
-        for type in todayPrayerTypes {
-            do {
-                let response = try await generatePrayer(
-                    type: type,
-                    date: today,
-                    nusach: nusach,
-                    location: location,
-                    tfilaMode: tfilaMode
-                )
-                responses.append(response)
-            } catch {
-                // Log error but continue with other prayers
-                print("Failed to generate prayer \(type.displayName): \(error)")
+    // MARK: - Helpers
+    
+    /// Format date as YYYY-MM-DD for the backend
+    private static func formatDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.timeZone = .current
+        return formatter.string(from: date)
+    }
+    
+    // Helper method to sort prayers by time of day
+    func sortPrayersByTimeOfDay(_ prayers: [Prayer]) -> [Prayer] {
+        return prayers.sorted { lhs, rhs in
+            let lhsOrder = timeOfDayOrder(for: lhs.category)
+            let rhsOrder = timeOfDayOrder(for: rhs.category)
+            
+            if lhsOrder != rhsOrder {
+                return lhsOrder < rhsOrder
             }
+            
+            return lhs.displayName < rhs.displayName
         }
-        
-        return responses
+    }
+    
+    private func timeOfDayOrder(for category: PrayerCategory) -> Int {
+        switch category {
+        case .morning: return 0
+        case .afternoon: return 1
+        case .evening: return 2
+        case .special: return 3
+        }
     }
 }
 
-// MARK: - Batch Request/Response Models
+// MARK: - Batch Request/Response Models (matches backend)
 struct PrayerBatchRequest: Codable {
-    let startDate: Date
-    let endDate: Date
+    let prayerTypes: [String]
+    let startDate: String
+    let days: Int
     let nusach: String
-    let location: String?
-    let tfilaMode: String?
+    let tfilaMode: String
+    let location: PrayerLocationInfo
+    let settings: PrayerSettings
+    
+    enum CodingKeys: String, CodingKey {
+        case prayerTypes = "prayer_types"
+        case startDate = "start_date"
+        case days, nusach
+        case tfilaMode = "tfila_mode"
+        case location, settings
+    }
 }
 
 struct PrayerBatchResponse: Codable {
-    let prayers: [PrayerResponse]
-    let metadata: BatchMetadata
+    let prayers: [PrayerBatchEntry]
+    let generatedAt: String
+    let contentVersion: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case prayers
+        case generatedAt = "generated_at"
+        case contentVersion = "content_version"
+    }
 }
 
-struct BatchMetadata: Codable {
-    let generatedAt: Date
-    let count: Int
-    let dateRange: String
+struct PrayerBatchEntry: Codable {
+    let date: String
+    let prayerType: String
+    let items: [PrayerTextItem]
+    let menu: [MenuEntry]
+    let metadata: PrayerResponseMetadata
+    
+    enum CodingKeys: String, CodingKey {
+        case date
+        case prayerType = "prayer_type"
+        case items, menu, metadata
+    }
 }
 
 // MARK: - Prayer Errors
@@ -142,41 +174,6 @@ enum PrayerError: LocalizedError {
             return "Invalid prayer request: \(message)"
         case .networkError(let message):
             return "Network error: \(message)"
-        }
-    }
-}
-
-// MARK: - Prayer Service Extensions
-extension PrayerService {
-    // Helper method to check if a prayer is relevant for today
-    private func isPrayerRelevantForToday(_ type: PrayerType, date: Date) -> Bool {
-        // This would integrate with JewishCalendarService to determine
-        // if a prayer is relevant for the current date (e.g., Hallel on Rosh Chodesh)
-        // For now, return all prayers
-        return true
-    }
-    
-    // Helper method to sort prayers by time of day
-    func sortPrayersByTimeOfDay(_ prayers: [Prayer]) -> [Prayer] {
-        return prayers.sorted { lhs, rhs in
-            let lhsOrder = timeOfDayOrder(for: lhs.category)
-            let rhsOrder = timeOfDayOrder(for: rhs.category)
-            
-            if lhsOrder != rhsOrder {
-                return lhsOrder < rhsOrder
-            }
-            
-            // Within same category, sort by display name
-            return lhs.displayName < rhs.displayName
-        }
-    }
-    
-    private func timeOfDayOrder(for category: PrayerCategory) -> Int {
-        switch category {
-        case .morning: return 0
-        case .afternoon: return 1
-        case .evening: return 2
-        case .special: return 3
         }
     }
 }

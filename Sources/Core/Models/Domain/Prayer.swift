@@ -1,137 +1,127 @@
 import Foundation
 
 // MARK: - Prayer Types
+/// Maps to backend PrayerType — only includes types the edge function supports
 enum PrayerType: String, CaseIterable, Identifiable, Codable {
-    // Morning prayers
-    case birchotHaShachar = "birchot_hashachar"
-    case psukeiDezimra = "psukei_dezimra"
     case shacharit = "shacharit"
-    case korbanot = "korbanot"
-    case tachanun = "tachanun"
-    
-    // Afternoon prayers
     case mincha = "mincha"
-    case minchaGedola = "mincha_gedola"
-    case minchaKetana = "mincha_ketana"
-    case neilat = "neilat"
-    
-    // Evening prayers
     case arvit = "arvit"
-    case kriatShemaAlHaMitah = "kriat_shema_al_ha_mitah"
+    case mazon = "mazon"
+    case omer = "omer"
+    case alMita = "al_mita"
     case chatzot = "chatzot"
-    
-    // Special occasion prayers
-    case hallel = "hallel"
+    case havdala = "havdala"
+    case hanuka = "hanuka"
+    case levana = "levana"
+    case haderech = "haderech"
+    case blessings = "blessings"
+    case threefold = "threefold"
+    case mila = "mila"
+    case shevaBrachot = "sheva_brachot"
+    case maaser = "maaser"
+    case hala = "hala"
+    case lagBaomer = "lag_baomer"
+    case ilanot = "ilanot"
+    case kinot = "kinot"
+    case slihot = "slihot"
+    case nedarim = "nedarim"
+    case asherYatzar = "asher_yatzar"
+    case ushpizin = "ushpizin"
+    case torahReading = "torah_reading"
     case musaf = "musaf"
-    case selichot = "selichot"
-    case vidui = "vidui"
-    case alChet = "al_chet"
-    case avodah = "avodah"
-    case kriatHaTorah = "kriat_ha_torah"
-    case aleinu = "aleinu"
-    case kaddish = "kaddish"
-    case barchu = "barchu"
-    case kedusha = "kedusha"
-    case shema = "shema"
-    case amidah = "amidah"
-    case ashrei = "ashrei"
-    case lamnatzeach = "lamnatzeach"
     
     var id: String { rawValue }
     
     var displayName: String {
         switch self {
-        case .birchotHaShachar: return "Birchot HaShachar"
-        case .psukeiDezimra: return "Psukei Dezimra"
         case .shacharit: return "Shacharit"
-        case .korbanot: return "Korbanot"
-        case .tachanun: return "Tachanun"
         case .mincha: return "Mincha"
-        case .minchaGedola: return "Mincha Gedola"
-        case .minchaKetana: return "Mincha Ketana"
-        case .neilat: return "Neilat"
         case .arvit: return "Arvit"
-        case .kriatShemaAlHaMitah: return "Kriat Shema Al HaMitah"
-        case .chatzot: return "Chatzot"
-        case .hallel: return "Hallel"
+        case .mazon: return "Birkat HaMazon"
+        case .omer: return "Sefirat HaOmer"
+        case .alMita: return "Kriat Shema Al HaMitah"
+        case .chatzot: return "Tikkun Chatzot"
+        case .havdala: return "Havdala"
+        case .hanuka: return "Chanukah"
+        case .levana: return "Birkat HaLevana"
+        case .haderech: return "Tefilat HaDerech"
+        case .blessings: return "Brachot"
+        case .threefold: return "Bracha Achrona"
+        case .mila: return "Brit Milah"
+        case .shevaBrachot: return "Sheva Brachot"
+        case .maaser: return "Maaser"
+        case .hala: return "Hafrashat Challah"
+        case .lagBaomer: return "Lag BaOmer"
+        case .ilanot: return "Birkat HaIlanot"
+        case .kinot: return "Kinot"
+        case .slihot: return "Selichot"
+        case .nedarim: return "Hatarat Nedarim"
+        case .asherYatzar: return "Asher Yatzar"
+        case .ushpizin: return "Ushpizin"
+        case .torahReading: return "Torah Reading"
         case .musaf: return "Musaf"
-        case .selichot: return "Selichot"
-        case .vidui: return "Vidui"
-        case .alChet: return "Al Chet"
-        case .avodah: return "Avodah"
-        case .kriatHaTorah: return "Kriat HaTorah"
-        case .aleinu: return "Aleinu"
-        case .kaddish: return "Kaddish"
-        case .barchu: return "Barchu"
-        case .kedusha: return "Kedusha"
-        case .shema: return "Shema"
-        case .amidah: return "Amidah"
-        case .ashrei: return "Ashrei"
-        case .lamnatzeach: return "Lamnatzeach"
         }
     }
     
     var hebrewName: String {
         switch self {
-        case .birchotHaShachar: return "ברכות השחר"
-        case .psukeiDezimra: return "פסוקי דזמרא"
         case .shacharit: return "שחרית"
-        case .korbanot: return "קרבנות"
-        case .tachanun: return "תחנון"
         case .mincha: return "מנחה"
-        case .minchaGedola: return "מנחה גדולה"
-        case .minchaKetana: return "מנחה קטנה"
-        case .neilat: return "נעילה"
         case .arvit: return "ערבית"
-        case .kriatShemaAlHaMitah: return "קריאת שמע על המיטה"
-        case .chatzot: return "חצות"
-        case .hallel: return "הלל"
+        case .mazon: return "ברכת המזון"
+        case .omer: return "ספירת העומר"
+        case .alMita: return "קריאת שמע על המיטה"
+        case .chatzot: return "תיקון חצות"
+        case .havdala: return "הבדלה"
+        case .hanuka: return "חנוכה"
+        case .levana: return "ברכת הלבנה"
+        case .haderech: return "תפילת הדרך"
+        case .blessings: return "ברכות"
+        case .threefold: return "ברכה אחרונה"
+        case .mila: return "ברית מילה"
+        case .shevaBrachot: return "שבע ברכות"
+        case .maaser: return "מעשר"
+        case .hala: return "הפרשת חלה"
+        case .lagBaomer: return "ל\"ג בעומר"
+        case .ilanot: return "ברכת האילנות"
+        case .kinot: return "קינות"
+        case .slihot: return "סליחות"
+        case .nedarim: return "התרת נדרים"
+        case .asherYatzar: return "אשר יצר"
+        case .ushpizin: return "אושפיזין"
+        case .torahReading: return "קריאת התורה"
         case .musaf: return "מוסף"
-        case .selichot: return "סליחות"
-        case .vidui: return "וידוי"
-        case .alChet: return "על חטא"
-        case .avodah: return "עבודה"
-        case .kriatHaTorah: return "קריאת התורה"
-        case .aleinu: return "עלינו לשבח"
-        case .kaddish: return "קדיש"
-        case .barchu: return "ברכו"
-        case .kedusha: return "קדושה"
-        case .shema: return "שמע"
-        case .amidah: return "עמידה"
-        case .ashrei: return "אשרי"
-        case .lamnatzeach: return "למנצח"
         }
     }
     
     var description: String {
         switch self {
-        case .birchotHaShachar: return "Morning blessings recited before Shacharit"
-        case .psukeiDezimra: return "Verses of praise recited before Shacharit"
         case .shacharit: return "The daily morning prayer service"
-        case .korbanot: return "Prayers related to Temple offerings"
-        case .tachanun: return "Supplicatory prayer recited after Amidah"
         case .mincha: return "The daily afternoon prayer service"
-        case .minchaGedola: return "The earlier time for Mincha prayer"
-        case .minchaKetana: return "The later time for Mincha prayer"
-        case .neilat: return "The closing prayer on Yom Kippur"
         case .arvit: return "The daily evening prayer service"
-        case .kriatShemaAlHaMitah: return "Shema recited before sleep"
+        case .mazon: return "Grace after meals"
+        case .omer: return "Counting of the Omer between Pesach and Shavuot"
+        case .alMita: return "Shema recited before sleep"
         case .chatzot: return "Midnight prayer service"
-        case .hallel: return "Psalms of praise recited on festivals"
-        case .musaf: return "Additional prayer service on Shabbat and festivals"
-        case .selichot: return "Penitential prayers recited in Elul and High Holidays"
-        case .vidui: return "Confession prayer recited on Yom Kippur and fast days"
-        case .alChet: return "Confession of sins recited on Yom Kippur"
-        case .avodah: return "Temple service description recited on Yom Kippur"
-        case .kriatHaTorah: return "Torah reading service"
-        case .aleinu: return "Concluding prayer of all services"
-        case .kaddish: return "Sanctification prayer recited by mourners"
-        case .barchu: return "Call to prayer before Shema and Amidah"
-        case .kedusha: return "Sanctification recited in Amidah repetition"
-        case .shema: return "Declaration of faith recited twice daily"
-        case .amidah: return "The central silent prayer"
-        case .ashrei: return "Psalm 145 recited in afternoon service"
-        case .lamnatzeach: return "Psalm for the conductor, recited in certain contexts"
+        case .havdala: return "Ceremony marking the end of Shabbat"
+        case .hanuka: return "Chanukah prayers and blessings"
+        case .levana: return "Blessing of the new moon"
+        case .haderech: return "Traveler's prayer"
+        case .blessings: return "Various blessings"
+        case .threefold: return "Concluding blessing after food"
+        case .mila: return "Circumcision ceremony prayers"
+        case .shevaBrachot: return "Seven blessings recited at a wedding"
+        case .maaser: return "Tithing prayers"
+        case .hala: return "Separating challah prayers"
+        case .lagBaomer: return "Lag BaOmer prayers"
+        case .ilanot: return "Blessing on blossoming trees in Nisan"
+        case .kinot: return "Lamentations for Tisha B'Av"
+        case .slihot: return "Penitential prayers"
+        case .nedarim: return "Annulment of vows"
+        case .asherYatzar: return "Blessing after using the restroom"
+        case .ushpizin: return "Sukkot prayers welcoming spiritual guests"
+        case .torahReading: return "Torah reading service"
+        case .musaf: return "Additional prayer on Shabbat and festivals"
         }
     }
 }
@@ -182,40 +172,198 @@ struct Prayer: Identifiable, Codable {
     
     private static func category(for type: PrayerType) -> PrayerCategory {
         switch type {
-        case .birchotHaShachar, .psukeiDezimra, .shacharit, .korbanot, .tachanun:
+        case .shacharit:
             return .morning
-        case .mincha, .minchaGedola, .minchaKetana, .neilat:
+        case .mincha:
             return .afternoon
-        case .arvit, .kriatShemaAlHaMitah, .chatzot:
+        case .arvit, .alMita, .chatzot:
             return .evening
-        case .hallel, .musaf, .selichot, .vidui, .alChet, .avodah, .kriatHaTorah, .aleinu, .kaddish, .barchu, .kedusha, .shema, .amidah, .ashrei, .lamnatzeach:
+        case .mazon, .omer, .havdala, .hanuka, .levana, .haderech, .blessings,
+             .threefold, .mila, .shevaBrachot, .maaser, .hala, .lagBaomer,
+             .ilanot, .kinot, .slihot, .nedarim, .asherYatzar, .ushpizin,
+             .torahReading, .musaf:
             return .special
         }
     }
 }
 
-// MARK: - Prayer Request/Response
-struct PrayerRequest: Codable {
-    let type: PrayerType
-    let date: Date
-    let nusach: String
-    let location: String?
-    let tfilaMode: String?
+// MARK: - Prayer Request/Response (matches backend GeneratePrayerRequest)
+
+/// Location info required by the edge function
+struct PrayerLocationInfo: Codable {
+    let latitude: Double
+    let longitude: Double
+    let elevation: Double
+    let timezoneId: String
+    let countryCode: String
+    let isInIsrael: Bool
     
     enum CodingKeys: String, CodingKey {
-        case type, date, nusach, location, tfilaMode
+        case latitude, longitude, elevation
+        case timezoneId = "timezone_id"
+        case countryCode = "country_code"
+        case isInIsrael = "is_in_israel"
+    }
+    
+    /// Create from a UserLocation
+    init(from location: UserLocation) {
+        self.latitude = location.latitude
+        self.longitude = location.longitude
+        self.elevation = location.elevation
+        self.timezoneId = location.timezoneId
+        self.countryCode = location.countryCode
+        self.isInIsrael = location.countryCode == "IL"
+    }
+    
+    /// Default location (Jerusalem)
+    static let defaultLocation = PrayerLocationInfo(
+        latitude: 31.7683,
+        longitude: 35.2137,
+        elevation: 754,
+        timezoneId: "Asia/Jerusalem",
+        countryCode: "IL",
+        isInIsrael: true
+    )
+    
+    init(latitude: Double, longitude: Double, elevation: Double, timezoneId: String, countryCode: String, isInIsrael: Bool) {
+        self.latitude = latitude
+        self.longitude = longitude
+        self.elevation = elevation
+        self.timezoneId = timezoneId
+        self.countryCode = countryCode
+        self.isInIsrael = isInIsrael
     }
 }
 
-struct PrayerResponse: Codable {
-    let prayer: PrayerText
-    let metadata: PrayerMetadata
+/// Settings required by the edge function
+struct PrayerSettings: Codable {
+    let isWoman: Bool
+    let isAvel: Bool
+    let noTahanun: Bool
+    let isVanenu: Bool
+    let nachemAlways: Bool
+    let talPreference: Bool
+    let isMizrochnik: Bool
+    let mukafMode: String
+    let sickName: String
+    let pasuk: String
+    let language: String
+    
+    enum CodingKeys: String, CodingKey {
+        case isWoman = "is_woman"
+        case isAvel = "is_avel"
+        case noTahanun = "no_tahanun"
+        case isVanenu = "is_vanenu"
+        case nachemAlways = "nachem_always"
+        case talPreference = "tal_preference"
+        case isMizrochnik = "is_mizrochnik"
+        case mukafMode = "mukaf_mode"
+        case sickName = "sick_name"
+        case pasuk
+        case language
+    }
+    
+    /// Create from LocalSettings
+    @MainActor
+    init(from localSettings: LocalSettings) {
+        self.isWoman = false // Not yet in LocalSettings
+        self.isAvel = localSettings.isAvel
+        self.noTahanun = localSettings.noTahanun
+        self.isVanenu = localSettings.isVanenu
+        self.nachemAlways = localSettings.nachemAlways
+        self.talPreference = false // Not yet in LocalSettings
+        self.isMizrochnik = false // Not yet in LocalSettings
+        self.mukafMode = "purim" // Default
+        self.sickName = "" // Not yet in LocalSettings
+        self.pasuk = "" // Not yet in LocalSettings
+        self.language = "hebrew"
+    }
 }
 
-struct PrayerMetadata: Codable {
-    let generatedAt: Date
+struct PrayerRequest: Codable {
+    let prayerType: String
+    let date: String // ISO 8601 YYYY-MM-DD
     let nusach: String
-    let date: Date
+    let tfilaMode: String
+    let location: PrayerLocationInfo
+    let settings: PrayerSettings
+    
+    enum CodingKeys: String, CodingKey {
+        case prayerType = "prayer_type"
+        case date, nusach
+        case tfilaMode = "tfila_mode"
+        case location, settings
+    }
+}
+
+/// Matches backend GeneratePrayerResponse
+struct PrayerResponse: Codable {
+    let prayerType: String
+    let generatedForDate: String
+    let items: [PrayerTextItem]
+    let menu: [MenuEntry]
+    let metadata: PrayerResponseMetadata
+    
+    enum CodingKeys: String, CodingKey {
+        case prayerType = "prayer_type"
+        case generatedForDate = "generated_for_date"
+        case items, menu, metadata
+    }
+}
+
+struct PrayerTextItem: Codable, Identifiable {
+    let id: String
+    let title: String?
+    let text: String
+    let expand: String // "expanded", "collapsed", "none"
+    let showTitle: Bool
+    let sortOrder: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case id, title, text, expand
+        case showTitle = "show_title"
+        case sortOrder = "sort_order"
+    }
+}
+
+struct MenuEntry: Codable, Identifiable {
+    let index: Int
+    let title: String
+    
+    var id: Int { index }
+}
+
+struct PrayerResponseMetadata: Codable {
+    let jewishDate: String
+    let isShabbat: Bool
+    let isYomTov: Bool
+    let isCholHamoed: Bool
+    let isRoshChodesh: Bool
+    let isTaanis: Bool
+    let yomTovName: String?
+    let parsha: String?
+    let omerDay: Int?
+    let contentVersion: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case jewishDate = "jewish_date"
+        case isShabbat = "is_shabbat"
+        case isYomTov = "is_yom_tov"
+        case isCholHamoed = "is_chol_hamoed"
+        case isRoshChodesh = "is_rosh_chodesh"
+        case isTaanis = "is_taanis"
+        case yomTovName = "yom_tov_name"
+        case parsha
+        case omerDay = "omer_day"
+        case contentVersion = "content_version"
+    }
+}
+
+// MARK: - Prayer Metadata (for backward compatibility with cache)
+struct PrayerMetadata: Codable {
+    let generatedAt: String
+    let nusach: String
+    let date: String
     let location: String?
     let specialOccasion: String?
 }
