@@ -10,6 +10,17 @@ final class PrayerService {
         self.supabase = supabase
     }
     
+    // MARK: - Auth Header Helper
+    /// Gets the current access token for Authorization header.
+    /// supabase-swift's FunctionsClient.setAuth() is called asynchronously
+    /// and may not fire before the first function invocation.
+    private func authHeaders() async -> [String: String] {
+        if let accessToken = try? await supabase.auth.session.accessToken {
+            return ["Authorization": "Bearer \(accessToken)"]
+        }
+        return [:]
+    }
+    
     // MARK: - Generate Single Prayer
     func generatePrayer(
         type: PrayerType,
@@ -31,9 +42,11 @@ final class PrayerService {
         )
         
         do {
+            let headers = await authHeaders()
             let response: PrayerResponse = try await supabase.functions.invoke(
                 "generate-prayer",
                 options: FunctionInvokeOptions(
+                    headers: headers,
                     body: request
                 )
             )
@@ -66,9 +79,11 @@ final class PrayerService {
         )
         
         do {
+            let headers = await authHeaders()
             let response: PrayerBatchResponse = try await supabase.functions.invoke(
                 "generate-prayer-batch",
                 options: FunctionInvokeOptions(
+                    headers: headers,
                     body: request
                 )
             )
