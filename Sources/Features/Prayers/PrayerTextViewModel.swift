@@ -15,18 +15,24 @@ final class PrayerTextViewModel {
     var showTableOfContents = false
     var currentScrollPosition: String?
     
+    // MARK: - Parsed HTML Cache
+    // Key is the stable PrayerSection.id (String), not DisplayablePrayerSection.id (UUID)
+    private(set) var parsedSections: [String: AttributedString] = [:]
+    
     // MARK: - Dependencies
     private let prayerService: PrayerService
     private let cacheService: PrayerCacheService?
     private let localSettings: LocalSettings
     private let locationRepository: LocationRepositoryProtocol
+    private let getSyncedSettings: () async -> SyncedUserSettings
     
     // MARK: - Initialization
-    init(prayerService: PrayerService, cacheService: PrayerCacheService?, localSettings: LocalSettings, locationRepository: LocationRepositoryProtocol) {
+    init(prayerService: PrayerService, cacheService: PrayerCacheService?, localSettings: LocalSettings, locationRepository: LocationRepositoryProtocol, getSyncedSettings: @escaping () async -> SyncedUserSettings = { SyncedUserSettings.defaults }) {
         self.prayerService = prayerService
         self.cacheService = cacheService
         self.localSettings = localSettings
         self.locationRepository = locationRepository
+        self.getSyncedSettings = getSyncedSettings
     }
     
     // MARK: - Public Methods
@@ -41,7 +47,10 @@ final class PrayerTextViewModel {
             do {
                 if let cached = try await cacheService.getCachedPrayer(type: prayer.type, date: Date()) {
                     if let content = cached.content {
+                        // Parse HTML content BEFORE updating UI state
+                        parseHTMLContent(for: content)
                         loadingState = .loaded(content)
+                        
                         // Check if cache was stale
                         if cached.isExpired {
                             // Trigger background refresh but don't block
@@ -80,7 +89,9 @@ final class PrayerTextViewModel {
                 location = .defaultLocation
             }
             
-            let settings = PrayerSettings(from: localSettings)
+            // Get synced settings (with fallback to defaults)
+            let syncedSettings = await getSyncedSettings()
+            let settings = PrayerSettings(from: localSettings, syncedSettings: syncedSettings)
             
             let response = try await prayerService.generatePrayer(
                 type: prayer.type,
@@ -109,6 +120,10 @@ final class PrayerTextViewModel {
                 )
             }
             
+            // Parse HTML content synchronously BEFORE updating UI state
+            // (lightweight parser is fast enough - typically sub-millisecond per section)
+            parseHTMLContent(for: prayerText)
+            
             loadingState = .loaded(prayerText)
             isOffline = false
             
@@ -116,6 +131,20 @@ final class PrayerTextViewModel {
             errorMessage = error.localizedDescription
             loadingState = .error(error.localizedDescription)
             isOffline = true
+        }
+    }
+    
+    /// Parses HTML content for all sections using lightweight parser
+    private func parseHTMLContent(for prayerText: PrayerText) {
+        // Clear existing cache
+        parsedSections.removeAll()
+        
+        // Parse each section's HTML using lightweight parser
+        for section in prayerText.displayableSections {
+            let html = section.content
+            let attributedString = AttributedString.fromPrayerHTML(html, baseFontSize: 20)
+            // Use the stable section.section.id (String) as the key
+            parsedSections[section.section.id] = attributedString
         }
     }
     
@@ -175,6 +204,10 @@ extension PrayerTextViewModel {
     
     func sectionContent(for section: DisplayablePrayerSection) -> String {
         return section.content
+    }
+    
+    func parsedSectionContent(for section: DisplayablePrayerSection) -> AttributedString? {
+        return parsedSections[section.section.id]
     }
     
     func isRepetitionSection(_ section: DisplayablePrayerSection) -> Bool {

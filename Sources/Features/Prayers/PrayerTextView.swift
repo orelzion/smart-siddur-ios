@@ -12,7 +12,8 @@ struct PrayerTextView: View {
             prayerService: DependencyContainer.shared.prayerService,
             cacheService: DependencyContainer.shared.prayerCacheService,
             localSettings: DependencyContainer.shared.localSettings,
-            locationRepository: DependencyContainer.shared.locationRepository
+            locationRepository: DependencyContainer.shared.locationRepository,
+            getSyncedSettings: { await DependencyContainer.shared.getSyncedSettings() }
         ))
     }
     
@@ -32,11 +33,6 @@ struct PrayerTextView: View {
             .navigationTitle(viewModel.prayerTitle)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Back") {
-                        // Navigation handled by NavigationLink
-                    }
-                }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack {
@@ -62,8 +58,11 @@ struct PrayerTextView: View {
                 TableOfContentsView(
                     items: viewModel.tableOfContentsItems,
                     onSelection: { sectionId in
-                        viewModel.scrollToSection(sectionId)
-                        scrollProxy?.scrollTo(sectionId, anchor: .top)
+                        showTableOfContents = false
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                            viewModel.scrollToSection(sectionId)
+                            scrollProxy?.scrollTo(sectionId, anchor: .top)
+                        }
                     }
                 )
             }
@@ -157,14 +156,20 @@ struct PrayerTextView: View {
                     .padding(.bottom, 4)
             }
             
-            // Section content
-            Text(viewModel.sectionContent(for: section))
-                .font(.system(size: 20, weight: .regular))
-                .foregroundColor(.primary)
-                .lineSpacing(4)
-                .multilineTextAlignment(.trailing)
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .environment(\.layoutDirection, .rightToLeft)
+            // Section content - render HTML using native SwiftUI Text
+            if let parsedContent = viewModel.parsedSectionContent(for: section) {
+                Text(parsedContent)
+                    .multilineTextAlignment(.trailing)
+                    .lineSpacing(4)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+            } else {
+                // Fallback to plain text (should rarely happen with synchronous parsing)
+                Text("error")
+                    .font(.system(size: 20))
+                    .multilineTextAlignment(.trailing)
+                    .lineSpacing(4)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+            }
             
             // Repetition indicator
             if viewModel.isRepetitionSection(section) {
@@ -211,19 +216,7 @@ private struct TableOfContentsView: View {
             }
             .navigationTitle("Table of Contents")
             .navigationBarTitleDisplayMode(.inline)
-            .environment(\.layoutDirection, .rightToLeft)
         }
-    }
-}
-
-// MARK: - Prayer Text Extensions
-extension PrayerTextView {
-    private var hebrewFont: UIFont {
-        // Use a Hebrew font if available, otherwise system font
-        if let hebrewFont = UIFont(name: "Arial Hebrew", size: 20) {
-            return hebrewFont
-        }
-        return UIFont.systemFont(ofSize: 20)
     }
 }
 
