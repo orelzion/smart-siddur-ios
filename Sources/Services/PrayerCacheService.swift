@@ -31,15 +31,21 @@ final class PrayerCacheService: Observable {
     
     /// Prefetches prayers for a date range using batch API
     func prefetchPrayers(from startDate: Date, to endDate: Date) async throws {
-        let settingsHash = generateSettingsHash()
-        let nusach = getNusach()
         let location = await getLocationInfo()
-        
+
         // Get synced settings (with fallback to defaults)
         let syncedSettings = await getSyncedSettings()
         let settings = PrayerSettings(from: localSettings, syncedSettings: syncedSettings)
+        let nusach = syncedSettings.nusach.rawValue
         let tfilaModeString = localSettings.tfilaMode.rawValue
-        
+
+        // Generate settings hash with synced nusach
+        let settingsHash = SettingsHashGenerator.hash(
+            nusach: nusach,
+            locationId: localSettings.locationName,
+            tfilaMode: tfilaModeString
+        )
+
         // Get content version from backend
         currentContentVersion = try await fetchContentVersion()
         
@@ -72,7 +78,8 @@ final class PrayerCacheService: Observable {
                 type: PrayerType(rawValue: entry.prayerType) ?? .shacharit,
                 date: entryDate,
                 content: entry.items,
-                settingsHash: settingsHash
+                settingsHash: settingsHash,
+                nusach: nusach
             )
         }
         
@@ -84,8 +91,8 @@ final class PrayerCacheService: Observable {
         type: PrayerType,
         date: Date
     ) async throws -> CachedPrayerDomain? {
-        let settingsHash = generateSettingsHash()
-        
+        let settingsHash = await generateSettingsHash()
+
         // Try to find cached prayer
         if let cached = try await findCachedPrayer(
             type: type,
@@ -103,7 +110,7 @@ final class PrayerCacheService: Observable {
             }
             return cached
         }
-        
+
         // Not cached - fetch from network
         return try await refreshPrayer(type: type, date: date, settingsHash: settingsHash)
     }
@@ -116,7 +123,12 @@ final class PrayerCacheService: Observable {
         content: [PrayerTextItem],
         settingsHash: String? = nil
     ) async throws {
-        let hash = settingsHash ?? generateSettingsHash()
+        let hash: String
+        if let settingsHash = settingsHash {
+            hash = settingsHash
+        } else {
+            hash = await generateSettingsHash()
+        }
         try await cachePrayer(type: type, date: date, content: content, settingsHash: hash)
     }
     
@@ -216,17 +228,14 @@ final class PrayerCacheService: Observable {
     
     // MARK: - Private Methods
     
-    private func generateSettingsHash() -> String {
-        SettingsHashGenerator.hash(
-            nusach: getNusach(),
+    private func generateSettingsHash() async -> String {
+        let syncedSettings = await getSyncedSettings()
+        let nusach = syncedSettings.nusach.rawValue
+        return SettingsHashGenerator.hash(
+            nusach: nusach,
             locationId: localSettings.locationName,
             tfilaMode: localSettings.tfilaMode.rawValue
         )
-    }
-    
-    private func getNusach() -> String {
-        // Get nusach from settings - uses LocalSettings.nusachString
-        return localSettings.nusachString
     }
     
     /// Gets PrayerLocationInfo from the selected location, or default
@@ -264,7 +273,8 @@ final class PrayerCacheService: Observable {
         type: PrayerType,
         date: Date,
         content: [PrayerTextItem],
-        settingsHash: String
+        settingsHash: String,
+        nusach: String? = nil
     ) async throws {
         let startOfDay = Calendar.current.startOfDay(for: date)
         let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
@@ -294,7 +304,7 @@ final class PrayerCacheService: Observable {
         let cachedPrayer = CachedPrayer(
             prayerType: type.rawValue,
             date: startOfDay,
-            nusach: getNusach(),
+            nusach: nusach ?? "edot",
             locationId: nil,
             settingsHash: settingsHash,
             content: contentString,
@@ -316,21 +326,23 @@ final class PrayerCacheService: Observable {
             let location = await getLocationInfo()
             let syncedSettings = await getSyncedSettings()
             let settings = PrayerSettings(from: localSettings, syncedSettings: syncedSettings)
-            
+            let nusach = syncedSettings.nusach.rawValue
+
             let response = try await prayerService.generatePrayer(
                 type: type,
                 date: date,
-                nusach: getNusach(),
+                nusach: nusach,
                 location: location,
                 tfilaMode: localSettings.tfilaMode.rawValue,
                 settings: settings
             )
-            
+
             try await cachePrayer(
                 type: type,
                 date: date,
                 content: response.items,
-                settingsHash: settingsHash
+                settingsHash: settingsHash,
+                nusach: nusach
             )
             
             return try await findCachedPrayer(type: type, date: date, settingsHash: settingsHash)

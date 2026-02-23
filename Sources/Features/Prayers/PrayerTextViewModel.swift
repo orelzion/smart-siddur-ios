@@ -88,27 +88,30 @@ final class PrayerTextViewModel {
             } else {
                 location = .defaultLocation
             }
-            
+
             // Get synced settings (with fallback to defaults)
             let syncedSettings = await getSyncedSettings()
             let settings = PrayerSettings(from: localSettings, syncedSettings: syncedSettings)
-            
+
+            // Use synced nusach (from settings), not local string default
+            let nusach = syncedSettings.nusach.rawValue
+
             let response = try await prayerService.generatePrayer(
                 type: prayer.type,
                 date: Date(),
-                nusach: localSettings.nusachString,
+                nusach: nusach,
                 location: location,
                 tfilaMode: localSettings.tfilaMode.rawValue,
                 settings: settings
             )
-            
+
             // Convert PrayerResponse items to PrayerText for rendering
             let prayerText = PrayerText(from: response.items)
-            
+
             // Save to cache if available
             if let cacheService = cacheService {
                 let settingsHash = SettingsHashGenerator.hash(
-                    nusach: localSettings.nusachString,
+                    nusach: nusach,
                     locationId: localSettings.locationName,
                     tfilaMode: localSettings.tfilaMode.rawValue
                 )
@@ -119,14 +122,14 @@ final class PrayerTextViewModel {
                     settingsHash: settingsHash
                 )
             }
-            
+
             // Parse HTML content synchronously BEFORE updating UI state
             // (lightweight parser is fast enough - typically sub-millisecond per section)
             parseHTMLContent(for: prayerText)
-            
+
             loadingState = .loaded(prayerText)
             isOffline = false
-            
+
         } catch {
             errorMessage = error.localizedDescription
             loadingState = .error(error.localizedDescription)
