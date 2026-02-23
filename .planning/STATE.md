@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-08)
 
 ## Current Position
 
-Phase: 3 of 6 (Unified Calendar/Zmanim Tab) - **NEW VISUAL REDESIGN PROJECT**
-Plan: 1 of 1 in Phase 3 (complete)
-Status: Phase 3 complete - Unified Calendar/Zmanim Tab (Month & Day Views with Gestures)
-Last activity: 2026-02-23 -- Completed Phase 3 Unified Calendar/Zmanim Tab
+Phase: 4 of 6 (Tab Structure Migration) - **NEW VISUAL REDESIGN PROJECT**
+Plan: 1 of 1 in Phase 4 (complete)
+Status: Phase 4 complete - Tab Structure Migration (3-tab layout with glass styling)
+Last activity: 2026-02-23 -- Completed Phase 4 Tab Structure Migration
 
-Progress: [███░░░░░░░░░░░░░░░░] 50% (3/6 phases) - Smart Siddur Visual Redesign
+Progress: [████░░░░░░░░░░░░░░░] 67% (4/6 phases) - Smart Siddur Visual Redesign
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6 + 1 quick task
-- Average duration: ~35 min (phase plans), ~13 min (quick tasks)
-- Total execution time: ~3h 10m
+- Total plans completed: 7 + 1 quick task
+- Average duration: ~27 min (phase plans), ~13 min (quick tasks)
+- Total execution time: ~3h 21m
 
 **By Phase:**
 
@@ -34,15 +34,17 @@ Progress: [███░░░░░░░░░░░░░░░░] 50% (3/6 p
 | 02-design-system | 1 | 1 | ~45min |
 | 02-home-tab | 1 | 1 | ~25min |
 | 03-calendar-zmanim | 1 | 1 | ~4min |
-| 04-monetization | 1 | 0 | - |
+| 04-tab-structure | 1 | 1 | ~1min |
+| 05-settings-restyling | 1 | 0 | - |
+| 06-polish-and-preview | 1 | 0 | - |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (iOS auth), 02-02 (settings + location), 02-03 (zmanim + calendar), 03-01 (prayer views), 03-02 (offline cache)
-- Trend: Phase 3 plans completed quickly as they enhanced existing Phase 3-01 infrastructure
+- Last 5 plans: 02-03 (zmanim + calendar), 03-01 (prayer views), 03-02 (offline cache), 04-01 (tab structure), 05-01 (settings restyling - next)
+- Trend: Rapid execution of visual redesign phases, leverage existing component infrastructure
 
 *Updated after each plan completion*
-| Phase 03-prayer-experience P01 | 5min | 5 tasks | 9 files |
-| Phase 03-prayer-experience P02 | ~3min | 2 tasks | 4 files |
+| Phase 03-calendar-zmanim P01 | ~4min | 5 tasks | 8 files |
+| Phase 04-tab-structure P01 | ~1min | 1 task | 1 file |
 
 ## Accumulated Context
 
@@ -81,6 +83,9 @@ Recent decisions affecting current work:
 - [Phase 02-home]: 9-window prayer classification (prep/halachic/extended/too-late) — Aligns with halachic precision and provides contextual guidance
 - [Phase 02-home]: Always-visible core prayers (Shacharit/Mincha/Arvit/Brachot) plus seasonal contextual suggestions — Ensures baseline consistency while adding relevant contextual prayers
 - [Phase 02-home]: Scene phase observation for background/foreground transitions — Prevents stale state when app returns from background/sleep
+- [Phase 04-tab-structure]: 3-tab layout (Home/Calendar/Settings) with consolidated navigation — Simplifies primary navigation, removes redundant Prayers tab, improves UX
+- [Phase 04-tab-structure]: Glass background + gold tint styling on TabView — Delivers premium glassmorphism aesthetic from Phase 1 design system
+- [Phase 04-tab-structure]: Light haptic feedback on tab switches — Provides tactile confirmation without disrupting user focus
 
 ### Pending Todos
 
@@ -88,22 +93,18 @@ None.
 
 ### Blockers/Concerns
 
-None. Phase 3 (Unified Calendar/Zmanim Tab) is complete. All tasks executed:
-- 3.1: Extended ZmanimService with specialZmanim() method
-- 3.2: Enhanced CalendarViewModel with dual view modes
-- 3.3: Month View implementation with 7-column grid
-- 3.4: Day View implementation with swipe navigation
-- 3.5: DayInfoCard component for day information display
+None. Phase 4 (Tab Structure Migration) is complete. All tasks executed:
+- 4.1: TabContainerView Restructure (4→3 tabs, glass styling, gold tint, haptic feedback)
 
-Ready for Phase 4 (Tab Structure Migration).
+Ready for Phase 5 (Settings Tab Restyling).
 
 ## Session Continuity
 
-Last session: 2026-02-23 15:35 UTC
-Stopped at: Completed Phase 3 - Unified Calendar/Zmanim Tab
+Last session: 2026-02-23 15:38 UTC
+Stopped at: Completed Phase 4 - Tab Structure Migration
 Resume file: None
 
-**Phase 3 Execution Completed**: Unified Calendar/Zmanim Tab
+**Phase 4 Execution Completed**: Tab Structure Migration
 
 Phase 3 complete. Unified Calendar/Zmanim Tab delivered:
 - **Extended ZmanimService** (specialZmanim method):
@@ -135,6 +136,23 @@ Phase 3 complete. Unified Calendar/Zmanim Tab delivered:
 - All components: light/dark theme support, glass morphism aesthetic, RTL support, smooth animations
 - Project source code compiles successfully
 
-Ready for Phase 4 (Tab Structure Migration).
+**Phase 4 Execution Completed**: Tab Structure Migration
 
-Unified Calendar/Zmanim Tab: Dual view modes, gesture navigation, special zmanim display, glass UI.
+Phase 4 complete. Tab Structure Migration delivered:
+- **TabContainerView Restructure**:
+  - Changed from 4 tabs (Zmanim, Calendar, Prayers, Settings) to 3 tabs
+  - Tab 1: Home (NewHomeView) - Prayer countdown, suggestions, all prayers
+  - Tab 2: Calendar/Zmanim (UnifiedCalendarView) - Dual mode calendar with special times
+  - Tab 3: Settings (SettingsView) - User preferences and location
+  - Removed PrayersMenuView tab (consolidated into Home)
+  - Applied dark gradient glass background (#0f172a to #020617)
+  - Gold accent tint color (#D9BA1B) on selected tabs
+  - Light haptic feedback (UIImpactFeedbackGenerator) on tab switch
+  - SF Symbol icons: house.fill, calendar, gearshape.fill
+  - Maintained location setup flow and RTL layout support
+- All components: glass morphism aesthetic, smooth navigation, haptic feedback
+- Project source code compiles successfully
+
+Ready for Phase 5 (Settings Tab Restyling).
+
+Tab Structure Migration: 3-tab layout with glass background, gold tinting, haptic feedback.
