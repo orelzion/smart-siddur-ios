@@ -12,17 +12,19 @@ final class PrayerCacheService: Observable {
     private let prayerService: PrayerService
     private let localSettings: LocalSettings
     private let locationRepository: LocationRepositoryProtocol
+    private let getSyncedSettings: () async -> SyncedUserSettings
     
     // MARK: - Cache State
     private var lastRefreshDate: Date?
     private var currentContentVersion: Int = 1
     
     // MARK: - Initialization
-    init(modelContext: ModelContext, prayerService: PrayerService, localSettings: LocalSettings, locationRepository: LocationRepositoryProtocol) {
+    init(modelContext: ModelContext, prayerService: PrayerService, localSettings: LocalSettings, locationRepository: LocationRepositoryProtocol, getSyncedSettings: @escaping () async -> SyncedUserSettings = { SyncedUserSettings.defaults }) {
         self.modelContext = modelContext
         self.prayerService = prayerService
         self.localSettings = localSettings
         self.locationRepository = locationRepository
+        self.getSyncedSettings = getSyncedSettings
     }
     
     // MARK: - Public API
@@ -32,7 +34,10 @@ final class PrayerCacheService: Observable {
         let settingsHash = generateSettingsHash()
         let nusach = getNusach()
         let location = await getLocationInfo()
-        let settings = PrayerSettings(from: localSettings)
+        
+        // Get synced settings (with fallback to defaults)
+        let syncedSettings = await getSyncedSettings()
+        let settings = PrayerSettings(from: localSettings, syncedSettings: syncedSettings)
         let tfilaModeString = localSettings.tfilaMode.rawValue
         
         // Get content version from backend
@@ -309,7 +314,8 @@ final class PrayerCacheService: Observable {
     ) async throws -> CachedPrayerDomain? {
         do {
             let location = await getLocationInfo()
-            let settings = PrayerSettings(from: localSettings)
+            let syncedSettings = await getSyncedSettings()
+            let settings = PrayerSettings(from: localSettings, syncedSettings: syncedSettings)
             
             let response = try await prayerService.generatePrayer(
                 type: type,

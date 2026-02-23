@@ -56,6 +56,8 @@ struct SmartSiddurApp: App {
                 if let cacheService = container.prayerCacheService {
                     try? await cacheService.performBackgroundRefreshIfNeeded()
                 }
+                // Schedule background refresh for future app launches
+                PrayerBackgroundTaskManager.shared.scheduleAppRefresh()
             }
             .onOpenURL { url in
                 GIDSignIn.sharedInstance.handle(url)

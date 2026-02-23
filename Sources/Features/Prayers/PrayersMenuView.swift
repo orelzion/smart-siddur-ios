@@ -145,18 +145,16 @@ struct PrayersMenuView: View {
     // MARK: - Helper Methods
     private func iconForCategory(_ category: PrayerCategory) -> String {
         switch category {
-        case .morning: return "sunrise"
-        case .afternoon: return "sun.max"
-        case .evening: return "moon"
+        case .daily: return "clock"
+        case .blessings: return "hands.sparkles"
         case .special: return "star.circle"
         }
     }
     
     private func colorForCategory(_ category: PrayerCategory) -> Color {
         switch category {
-        case .morning: return .orange
-        case .afternoon: return .yellow
-        case .evening: return .indigo
+        case .daily: return .blue
+        case .blessings: return .green
         case .special: return .purple
         }
     }
@@ -270,8 +268,10 @@ private struct PrayerCard: View {
     let viewModel = PrayersMenuViewModel(
         prayerService: container.prayerService,
         jewishCalendarService: container.jewishCalendarService,
-        localSettings: container.localSettings
+        zmanimService: container.zmanimService,
+        localSettings: container.localSettings,
+        syncedSettings: SyncedUserSettings.defaults
     )
     
-    return PrayersMenuView(viewModel: viewModel)
+    PrayersMenuView(viewModel: viewModel)
 }

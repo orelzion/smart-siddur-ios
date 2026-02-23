@@ -31,6 +31,8 @@ struct JewishDay: Identifiable, Sendable {
     let omerDay: Int?
     let dafYomi: String?
     let dayType: DayType
-
+    let yomTovIndex: Int
+    let isChanukah: Bool
+    
     var id: Date { gregorianDate }
 }

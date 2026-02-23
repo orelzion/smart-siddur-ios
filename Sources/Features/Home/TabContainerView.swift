@@ -34,7 +34,9 @@ struct TabContainerView: View {
                 PrayersMenuView(viewModel: PrayersMenuViewModel(
                     prayerService: container.prayerService,
                     jewishCalendarService: container.jewishCalendarService,
-                    localSettings: container.localSettings
+                    zmanimService: container.zmanimService,
+                    localSettings: container.localSettings,
+                    syncedSettings: SyncedUserSettings.defaults
                 ))
             }
             .tabItem {

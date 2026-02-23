@@ -47,6 +47,9 @@ struct JewishCalendarService: Sendable {
         } else {
             holiday = nil
         }
+        
+        // Chanukah
+        let isChanukah = jCal.isChanukah()
 
         // Day state
         let isShabbat = dayOfWeek == 7
@@ -99,7 +102,9 @@ struct JewishCalendarService: Sendable {
             isTaanis: isTaanis,
             omerDay: omerDay,
             dafYomi: dafYomi,
-            dayType: dayType
+            dayType: dayType,
+            yomTovIndex: yomTovIndex,
+            isChanukah: isChanukah
         )
     }
 

@@ -11,6 +11,7 @@ struct PrayerText: Codable {
         let hebrewTitle: String?
         let content: String
         let order: Int
+        let showTitle: Bool
         
         var displayTitle: String {
             if let hebrewTitle = hebrewTitle, !hebrewTitle.isEmpty {
@@ -47,7 +48,8 @@ struct PrayerText: Codable {
                 title: item.title,
                 hebrewTitle: item.title, // Backend provides Hebrew titles
                 content: item.text,
-                order: item.sortOrder
+                order: item.sortOrder,
+                showTitle: item.showTitle
             )
         }
         self.metadata = TextMetadata()
@@ -69,6 +71,9 @@ struct DisplayablePrayerSection: Identifiable {
     var title: String? {
         if isRepetition {
             return nil // Don't show title for repetitions
+        }
+        guard section.showTitle else {
+            return nil // Backend says don't show title
         }
         return section.displayTitle
     }

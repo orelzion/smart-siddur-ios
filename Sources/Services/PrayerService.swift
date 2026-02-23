@@ -119,10 +119,9 @@ final class PrayerService {
     
     private func timeOfDayOrder(for category: PrayerCategory) -> Int {
         switch category {
-        case .morning: return 0
-        case .afternoon: return 1
-        case .evening: return 2
-        case .special: return 3
+        case .daily: return 0
+        case .blessings: return 1
+        case .special: return 2
         }
     }
 }

@@ -1,4 +1,5 @@
 import Foundation
+import OSLog
 
 // MARK: - Prayer Types
 /// Maps to backend PrayerType — only includes types the edge function supports
@@ -124,29 +125,57 @@ enum PrayerType: String, CaseIterable, Identifiable, Codable {
         case .musaf: return "Additional prayer on Shabbat and festivals"
         }
     }
+    
+    var iconName: String {
+        switch self {
+        case .shacharit: return "sun.max"
+        case .mincha: return "sunset"
+        case .arvit: return "moon.stars"
+        case .mazon: return "fork.knife"
+        case .omer: return "number.circle"
+        case .alMita: return "bed.double"
+        case .chatzot: return "building.columns"
+        case .havdala: return "candle. flamination"
+        case .hanuka: return "flame"
+        case .levana: return "moon.circle"
+        case .haderech: return "car"
+        case .blessings: return "sparkles"
+        case .threefold: return "cup.and.saucer"
+        case .mila: return "figure.and.child.holdinghands"
+        case .shevaBrachot: return "heart.circle"
+        case .maaser: return "leaf"
+        case .hala: return "oven"
+        case .lagBaomer: return "flame"
+        case .ilanot: return "tree"
+        case .kinot: return "building.columns"
+        case .slihot: return "horn"
+        case .nedarim: return "scroll"
+        case .asherYatzar: return "drop"
+        case .ushpizin: return "tent"
+        case .torahReading: return "book"
+        case .musaf: return "star"
+        }
+    }
 }
 
 // MARK: - Prayer Categories
 enum PrayerCategory: String, CaseIterable, Codable {
-    case morning = "morning"
-    case afternoon = "afternoon"
-    case evening = "evening"
+    case daily = "daily"
+    case blessings = "blessings"
     case special = "special"
     
     var displayName: String {
         switch self {
-        case .morning: return "Morning"
-        case .afternoon: return "Afternoon"
-        case .evening: return "Evening"
+        case .daily: return "Daily Prayers"
+        case .blessings: return "Blessings"
         case .special: return "Special Occasions"
         }
     }
     
     var hebrewName: String {
         switch self {
-        case .morning: return "בוקר"
-        case .afternoon: return "צהריים"
-        case .evening: return "ערב"
+        case .daily: return "תפילות יום יום"
+        case .blessings: return "ברכות"
         case .special: return "מאורעות מיוחדים"
         }
     }
@@ -172,16 +201,11 @@ struct Prayer: Identifiable, Codable {
     
     private static func category(for type: PrayerType) -> PrayerCategory {
         switch type {
-        case .shacharit:
-            return .morning
-        case .mincha:
-            return .afternoon
-        case .arvit, .alMita, .chatzot:
-            return .evening
-        case .mazon, .omer, .havdala, .hanuka, .levana, .haderech, .blessings,
-             .threefold, .mila, .shevaBrachot, .maaser, .hala, .lagBaomer,
-             .ilanot, .kinot, .slihot, .nedarim, .asherYatzar, .ushpizin,
-             .torahReading, .musaf:
+        case .shacharit, .mincha, .arvit, .asherYatzar, .alMita, .chatzot, .musaf, .torahReading:
+            return .daily
+        case .mazon, .threefold, .hala, .blessings, .maaser, .haderech, .mila, .shevaBrachot:
+            return .blessings
+        case .omer, .ushpizin, .lagBaomer, .levana, .havdala, .hanuka, .ilanot, .kinot, .slihot, .nedarim:
             return .special
         }
     }
@@ -248,6 +272,8 @@ struct PrayerSettings: Codable {
     let sickName: String
     let pasuk: String
     let language: String
+    let mazonVariant: String?
+    let threefoldType: String?
     
     enum CodingKeys: String, CodingKey {
         case isWoman = "is_woman"
@@ -261,22 +287,85 @@ struct PrayerSettings: Codable {
         case sickName = "sick_name"
         case pasuk
         case language
+        case mazonVariant = "mazon_variant"
+        case threefoldType = "threefold_type"
     }
     
-    /// Create from LocalSettings
+    /// Create from LocalSettings only (legacy - prefers defaults)
     @MainActor
     init(from localSettings: LocalSettings) {
-        self.isWoman = false // Not yet in LocalSettings
+        self.isWoman = false
         self.isAvel = localSettings.isAvel
         self.noTahanun = localSettings.noTahanun
         self.isVanenu = localSettings.isVanenu
         self.nachemAlways = localSettings.nachemAlways
-        self.talPreference = false // Not yet in LocalSettings
-        self.isMizrochnik = false // Not yet in LocalSettings
-        self.mukafMode = "purim" // Default
-        self.sickName = "" // Not yet in LocalSettings
-        self.pasuk = "" // Not yet in LocalSettings
-        self.language = "hebrew"
+        self.talPreference = false
+        self.isMizrochnik = false
+        self.mukafMode = "purim"
+        self.sickName = ""
+        self.pasuk = ""
+        self.language = "he"
+        self.mazonVariant = nil
+        self.threefoldType = nil
+    }
+    
+    /// Create from both LocalSettings and SyncedUserSettings
+    @MainActor
+    init(from localSettings: LocalSettings, syncedSettings: SyncedUserSettings) {
+        self.isWoman = syncedSettings.isWoman
+        self.isAvel = localSettings.isAvel
+        self.noTahanun = localSettings.noTahanun
+        self.isVanenu = localSettings.isVanenu
+        self.nachemAlways = localSettings.nachemAlways
+        self.talPreference = syncedSettings.talPreference
+        self.isMizrochnik = syncedSettings.isMizrochnik
+        self.mukafMode = syncedSettings.mukafMode.rawValue
+        self.sickName = syncedSettings.sickName
+        self.pasuk = syncedSettings.pasuk
+        self.language = Self.mapLanguage(syncedSettings.language)
+        self.mazonVariant = nil
+        self.threefoldType = nil
+    }
+    
+    /// Create with prayer-specific variant settings
+    @MainActor
+    init(from localSettings: LocalSettings, syncedSettings: SyncedUserSettings, mazonVariant: String?, threefoldType: String?) {
+        self.isWoman = syncedSettings.isWoman
+        self.isAvel = localSettings.isAvel
+        self.noTahanun = localSettings.noTahanun
+        self.isVanenu = localSettings.isVanenu
+        self.nachemAlways = localSettings.nachemAlways
+        self.talPreference = syncedSettings.talPreference
+        self.isMizrochnik = syncedSettings.isMizrochnik
+        self.mukafMode = syncedSettings.mukafMode.rawValue
+        self.sickName = syncedSettings.sickName
+        self.pasuk = syncedSettings.pasuk
+        self.language = Self.mapLanguage(syncedSettings.language)
+        self.mazonVariant = mazonVariant
+        self.threefoldType = threefoldType
+    }
+    
+    /// Map AppLanguage to backend language code
+    private static func mapLanguage(_ appLanguage: AppLanguage) -> String {
+        switch appLanguage {
+        case .he: return "he"
+        case .fr: return "fr"
+        case .de: return "de"
+        case .es: return "es"
+        case .en: return "en"
+        case .system:
+            if let langCode = Locale.current.language.languageCode?.identifier {
+                switch langCode {
+                case "he": return "he"
+                case "fr": return "fr"
+                case "de": return "de"
+                case "es": return "es"
+                case "en": return "en"
+                default: return "he"
+                }
+            }
+            return "he"
+        }
     }
 }
 

@@ -26,6 +26,7 @@
 		6085ED45707D02E32363DCC6 /* PrayerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D80D689B772B80432993A1 /* PrayerTextView.swift */; };
 		6688A91835FC8CCEE177A78F /* KosherSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C01B83C381A3E98C7CABA6B7 /* KosherSwift */; };
 		68174EC5A17A377F2DBBF9C1 /* LocalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D140848EB01886C964C5964 /* LocalSettings.swift */; };
+		69407757CC91157365735E5C /* PrayerBackgroundTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5459177296B9504507939205 /* PrayerBackgroundTaskManager.swift */; };
 		6B27EA3A961ADF97B16B29CD /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FDAC25B3D12302DE67E3FE /* DependencyContainer.swift */; };
 		712EC396EFD0AD476E3FC5C7 /* PrayerCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1130D420C14529284D37CE9C /* PrayerCacheService.swift */; };
 		72E8A641C60B901B599E068A /* CalendarGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54EAA15EB64CB014D21243A /* CalendarGridView.swift */; };
@@ -39,6 +40,7 @@
 		B09A92C15DBC6766425B25D4 /* ZmanTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3129614457AC2378B65F96 /* ZmanTime.swift */; };
 		B1B5A9B922F67A2DB719C004 /* AppearanceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86D4C931CACCF23F27D2C90 /* AppearanceSettingsView.swift */; };
 		B88D7AB3CD1F1893CBF9A8C9 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766675CCCC9F7BB7FBC69B1B /* CalendarViewModel.swift */; };
+		BE4101C21B413C0287D956FD /* PrayerVisibilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A118B1F19B1CAA31813EC /* PrayerVisibilityService.swift */; };
 		C50FE49EE9042C1D60E7D9F0 /* Prayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49D4BFDC0284ABEFC7695F5 /* Prayer.swift */; };
 		C8AB458548FC9623C0708128 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2078DB86BBC6B8B0B2A491D3 /* LocationViewModel.swift */; };
 		C9B1B3A802CE8325CFA122A9 /* PrayerTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38DE6B94EBB20589D9B4D69 /* PrayerTextViewModel.swift */; };
@@ -51,14 +53,13 @@
 		E0867DB1165C772EE478E883 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60503CEE65E7643F5D9B3D69 /* LocationRepository.swift */; };
 		E27283B277F7F6B5477677CE /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 40ECC7AA631B280CB92EFFCA /* GoogleSignInSwift */; };
 		E49CDA681BC9A1352A148543 /* PrayersMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189ADF8A8619B12C14B05840 /* PrayersMenuView.swift */; };
+		E6787D74BCBAAE6D224CA00D /* AttributedString+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DE5784B19C577C5F9439E6 /* AttributedString+HTML.swift */; };
 		E74120B368A2E6E2837AF6BA /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0934B84EE6AED7E5C3F73690 /* UserProfile.swift */; };
 		EA7761342A937F5F8E684CB2 /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FF0441106605277492A68D /* LocationPickerView.swift */; };
 		EB443D21F17499C889E42279 /* ZmanimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB23020C9205B50CB07A30 /* ZmanimView.swift */; };
 		EB6F72C8082DB9BAAD82CB15 /* SupabaseClient+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D856A14D3F8F320ED8FF320F /* SupabaseClient+Config.swift */; };
 		EB71B064F23A703B8794AB9D /* GeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9822BEDB5C40021594FCCE46 /* GeoLocation.swift */; };
 		FC6B9A431ECA984D7F5E8D22 /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9CCA4B3024E5BB1947737 /* TabContainerView.swift */; };
-		A10000000000000100000003 /* PrayerBackgroundTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000100000004 /* PrayerBackgroundTaskManager.swift */; };
-		4DF615BE4C354E7E85FC230D /* AttributedString+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C6E7FC44644BDB4E55045 /* AttributedString+HTML.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,10 +78,12 @@
 		24FF0441106605277492A68D /* LocationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
 		2A3704DC9BE02F8710A564B4 /* CachedPrayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedPrayer.swift; sourceTree = "<group>"; };
 		2A6605511BA944A8ED63EE67 /* PrayersMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersMenuViewModel.swift; sourceTree = "<group>"; };
+		2F7A118B1F19B1CAA31813EC /* PrayerVisibilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerVisibilityService.swift; sourceTree = "<group>"; };
 		3D140848EB01886C964C5964 /* LocalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSettings.swift; sourceTree = "<group>"; };
 		46F9CCA4B3024E5BB1947737 /* TabContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerView.swift; sourceTree = "<group>"; };
 		47C20F8C5D942DF43E1A2388 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		495F9C18BF77A011860FB874 /* DayDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailSheet.swift; sourceTree = "<group>"; };
+		5459177296B9504507939205 /* PrayerBackgroundTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerBackgroundTaskManager.swift; sourceTree = "<group>"; };
 		60503CEE65E7643F5D9B3D69 /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
 		766675CCCC9F7BB7FBC69B1B /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		7B1853EE3C275561D121A355 /* ZmanimViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZmanimViewModel.swift; sourceTree = "<group>"; };
@@ -107,10 +110,9 @@
 		F110AD93AABB1CBAF701C8B1 /* JewishCalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JewishCalendarService.swift; sourceTree = "<group>"; };
 		F3BA212441061AB578167D64 /* PrayerText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerText.swift; sourceTree = "<group>"; };
 		F7189D62DDF29D26F64996C9 /* NusachPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NusachPickerView.swift; sourceTree = "<group>"; };
+		F7DE5784B19C577C5F9439E6 /* AttributedString+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedString+HTML.swift"; sourceTree = "<group>"; };
 		FB5B248124038FA5B8E8BCF9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FC5BF69A6053C5964DF11812 /* ZmanRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZmanRowView.swift; sourceTree = "<group>"; };
-		A10000000000000100000004 /* PrayerBackgroundTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerBackgroundTaskManager.swift; sourceTree = "<group>"; };
-		FF2C6E7FC44644BDB4E55045 /* AttributedString+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Extensions/AttributedString+HTML.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C51E0DDDDC4DB18C22EF0E8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7DE5784B19C577C5F9439E6 /* AttributedString+HTML.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		101E8C91531844E510F87E5E /* DTO */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,8 +152,10 @@
 				69305DBF231256F904AADE7F /* App */,
 				A3804EDA58C498988A865113 /* Core */,
 				E82CDFC93C8087D07188A752 /* Data */,
+				0C51E0DDDDC4DB18C22EF0E8 /* Extensions */,
 				B83042DED4A4A75E99CFA1CD /* Features */,
 				A7CBC73B308CFC20687348C7 /* Services */,
+				57FE214EAA70038262A9D74C /* UI */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -165,6 +177,13 @@
 				091EE7350B22B3AA91D8F59E /* SettingsRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		57FE214EAA70038262A9D74C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		6855F6EE8021CCC1846DBCA1 /* Products */ = {
@@ -244,9 +263,10 @@
 			isa = PBXGroup;
 			children = (
 				F110AD93AABB1CBAF701C8B1 /* JewishCalendarService.swift */,
+				5459177296B9504507939205 /* PrayerBackgroundTaskManager.swift */,
 				1130D420C14529284D37CE9C /* PrayerCacheService.swift */,
 				AAAC86919D109160AC4C0345 /* PrayerService.swift */,
-				A10000000000000100000004 /* PrayerBackgroundTaskManager.swift */,
+				2F7A118B1F19B1CAA31813EC /* PrayerVisibilityService.swift */,
 				8C2C550E8EC12715FEE7F711 /* ZmanimService.swift */,
 			);
 			path = Services;
@@ -407,6 +427,7 @@
 			files = (
 				9E260B8899496B5685C4A5EB /* AppDelegate.swift in Sources */,
 				B1B5A9B922F67A2DB719C004 /* AppearanceSettingsView.swift in Sources */,
+				E6787D74BCBAAE6D224CA00D /* AttributedString+HTML.swift in Sources */,
 				D3D15921765FC7F801F3EC5B /* AuthDTO.swift in Sources */,
 				0B3610930B6CD0B532C55435 /* AuthRepository.swift in Sources */,
 				85701BD138D50792AEF7D68F /* AuthViewModel.swift in Sources */,
@@ -429,11 +450,13 @@
 				2414038719CD0DAAE25B08EE /* NusachPickerView.swift in Sources */,
 				CAFC92C96FECC0326670A2F1 /* OnboardingView.swift in Sources */,
 				C50FE49EE9042C1D60E7D9F0 /* Prayer.swift in Sources */,
+				69407757CC91157365735E5C /* PrayerBackgroundTaskManager.swift in Sources */,
 				712EC396EFD0AD476E3FC5C7 /* PrayerCacheService.swift in Sources */,
 				9A252AD5E0BE18F2A8D566DC /* PrayerService.swift in Sources */,
 				94C8253441C4AA88E1DDDBBD /* PrayerText.swift in Sources */,
 				6085ED45707D02E32363DCC6 /* PrayerTextView.swift in Sources */,
 				C9B1B3A802CE8325CFA122A9 /* PrayerTextViewModel.swift in Sources */,
+				BE4101C21B413C0287D956FD /* PrayerVisibilityService.swift in Sources */,
 				E49CDA681BC9A1352A148543 /* PrayersMenuView.swift in Sources */,
 				4D9663202C7FBD4FEB1DC62B /* PrayersMenuViewModel.swift in Sources */,
 				78C11A5B7DEB088B03C26AC2 /* SettingsRepository.swift in Sources */,
@@ -451,8 +474,6 @@
 				DB66F87953FDB0DB349EC317 /* ZmanimService.swift in Sources */,
 				EB443D21F17499C889E42279 /* ZmanimView.swift in Sources */,
 				97583B985BFD39B623EA7772 /* ZmanimViewModel.swift in Sources */,
-				A10000000000000100000003 /* PrayerBackgroundTaskManager.swift in Sources */,
-				4DF615BE4C354E7E85FC230D /* AttributedString+HTML.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
