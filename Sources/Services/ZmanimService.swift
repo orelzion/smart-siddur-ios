@@ -266,6 +266,167 @@ struct ZmanimService: Sendable {
         return result
     }
 
+    /// Calculate special zmanim for the given date based on Jewish calendar.
+    /// Returns times like Erev Shabbat (candle lighting), Motzei Shabbat (havdala),
+    /// Erev/Motzei Yom Tov, Chanukah, fast days, Pesach times, Sefirat HaOmer, etc.
+    /// Empty array if no special zmanim apply to the given day.
+    func specialZmanim(
+        for date: Date,
+        location: UserLocation,
+        opinions: ZmanimOpinions,
+        isInIsrael: Bool
+    ) -> [SpecialZman] {
+        let jCal = JewishCalendar(workingDate: date)
+        jCal.setInIsrael(inIsrael: isInIsrael)
+        
+        let gregorianCalendar = Calendar(identifier: .gregorian)
+        let dayOfWeek = gregorianCalendar.component(.weekday, from: date)
+        let yomTovIndex = jCal.getYomTovIndex()
+        
+        var result: [SpecialZman] = []
+        let zmanimCalendar = makeCalendar(date: date, location: location, opinions: opinions)
+        
+        // FRIDAY - Erev Shabbat: Candle Lighting
+        if dayOfWeek == 6 {
+            zmanimCalendar.setCandleLightingOffset(candleLightingOffset: opinions.shabbatCandleMinutes)
+            if let candleTime = zmanimCalendar.getCandleLighting() {
+                result.append(SpecialZman(
+                    name: "Erev Shabbat - Candle Lighting",
+                    hebrewName: "ערב שבת - הדלקת נרות",
+                    time: candleTime,
+                    context: "Last time to light Shabbat candles"
+                ))
+            }
+        }
+        
+        // SATURDAY - Motzei Shabbat: Havdala
+        if dayOfWeek == 7 {
+            if let sunset = zmanimCalendar.getElevationAdjustedSunset(),
+               let havdalahTime = Calendar.current.date(byAdding: .minute, value: opinions.shabbatEndMinutes, to: sunset) {
+                result.append(SpecialZman(
+                    name: "Motzei Shabbat - Havdala",
+                    hebrewName: "מוצאי שבת - הבדלה",
+                    time: havdalahTime,
+                    context: "Earliest time to recite Havdala to end Shabbat"
+                ))
+            }
+        }
+        
+        // CHANUKAH
+        if jCal.isChanukah() {
+            let hebrewDay = jCal.getJewishDayOfMonth()
+            let chanukahNight = max(1, hebrewDay - 24) // Kislev 25 = night 1
+            
+            // Chanukah candle lighting: typically at Tzet HaKochavim
+            if let tzeitTime = nightfall(calendar: zmanimCalendar, opinion: opinions.duskOpinion) {
+                result.append(SpecialZman(
+                    name: "Chanukah - Candle Lighting Night \(chanukahNight)",
+                    hebrewName: "חנוכה - הדלקת נרות ליל \(chanukahNight)",
+                    time: tzeitTime,
+                    context: "Best time to kindle Chanukah candles (after Tzet HaKochavim)"
+                ))
+            }
+        }
+        
+        // FAST DAYS
+        if jCal.isTaanis() && yomTovIndex != JewishCalendar.YOM_KIPPUR {
+            // Fast start: Alot HaShachar (dawn)
+            if let alotTime = dawnTime(calendar: zmanimCalendar, opinion: opinions.dawnOpinion) {
+                let (fastName, fastHebrewName) = fastDayNames(for: yomTovIndex, isFastBegin: true)
+                
+                result.append(SpecialZman(
+                    name: fastName,
+                    hebrewName: fastHebrewName,
+                    time: alotTime,
+                    context: "Fast begins at dawn (Alot HaShachar)"
+                ))
+            }
+            
+            // Fast end: Tzet HaKochavim (nightfall)
+            if let tzeitTime = nightfall(calendar: zmanimCalendar, opinion: opinions.duskOpinion) {
+                let (fastName, fastHebrewName) = fastDayNames(for: yomTovIndex, isFastBegin: false)
+                
+                result.append(SpecialZman(
+                    name: fastName,
+                    hebrewName: fastHebrewName,
+                    time: tzeitTime,
+                    context: "Fast ends at nightfall (Tzet HaKochavim)"
+                ))
+            }
+        }
+        
+        // SEFIRAT HA'OMER - show tonight's count time (at Tzet)
+        let omerDay = jCal.getDayOfOmer()
+        if omerDay > 0 {
+            if let tzeitTime = nightfall(calendar: zmanimCalendar, opinion: opinions.duskOpinion) {
+                let weekNumber = (omerDay - 1) / 7 + 1
+                let dayInWeek = (omerDay - 1) % 7 + 1
+                let countDisplay = omerDay <= 7 ? "Day \(omerDay)" : "Week \(weekNumber), Day \(dayInWeek)"
+                
+                result.append(SpecialZman(
+                    name: "Sefirat HaOmer - Count Night \(omerDay)",
+                    hebrewName: "ספירת העומר - שטח \(countDisplay)",
+                    time: tzeitTime,
+                    context: "Count tonight: \(countDisplay) of the Omer"
+                ))
+            }
+        }
+        
+        // ROSH CHODESH - show molad time (rough astronomical calculation)
+        if jCal.isRoshChodesh() {
+            // Simplified: Molad is roughly at midday (Chatzot)
+            if let chatzot = zmanimCalendar.getChatzos() {
+                result.append(SpecialZman(
+                    name: "Rosh Chodesh",
+                    hebrewName: "ראש חדש",
+                    time: chatzot,
+                    context: "New Moon (Molad) - start of new Hebrew month"
+                ))
+            }
+        }
+        
+        // PURIM
+        if yomTovIndex == JewishCalendar.PURIM {
+            // Megilla reading: evening (Tzet) and morning (after sunrise)
+            if let tzeitTime = nightfall(calendar: zmanimCalendar, opinion: opinions.duskOpinion) {
+                result.append(SpecialZman(
+                    name: "Purim - Megilla Reading (Evening)",
+                    hebrewName: "פורים - קריאת מגילה",
+                    time: tzeitTime,
+                    context: "Evening reading of the Megilla (Esther)"
+                ))
+            }
+        }
+        
+        // EREV YOM KIPPUR - Kol Nidrei time (evening)
+        if yomTovIndex == JewishCalendar.EREV_YOM_KIPPUR {
+            // Get sunset or slightly before
+            zmanimCalendar.setCandleLightingOffset(candleLightingOffset: opinions.shabbatCandleMinutes)
+            if let candleTime = zmanimCalendar.getCandleLighting() {
+                result.append(SpecialZman(
+                    name: "Erev Yom Kippur - Kol Nidrei",
+                    hebrewName: "ערב יום כיפור - כל נדרי",
+                    time: candleTime,
+                    context: "Start of Yom Kippur services (Kol Nidrei)"
+                ))
+            }
+        }
+        
+        // LAG BA'OMER - bonfire time (Tzet)
+        if yomTovIndex == JewishCalendar.LAG_BAOMER {
+            if let tzeitTime = nightfall(calendar: zmanimCalendar, opinion: opinions.duskOpinion) {
+                result.append(SpecialZman(
+                    name: "Lag Ba'Omer - Bonfire Time",
+                    hebrewName: "לג בעומר - חסוני",
+                    time: tzeitTime,
+                    context: "Traditional bonfire lighting time (Tzet HaKochavim)"
+                ))
+            }
+        }
+        
+        return result
+    }
+
     // MARK: - Private Helpers
 
     /// Create a ComplexZmanimCalendar for the given date and location.
@@ -350,5 +511,24 @@ struct ZmanimService: Sendable {
     private func solarMidnight(calendar: ComplexZmanimCalendar) -> Date? {
         guard let chatzot = calendar.getChatzos() else { return nil }
         return Calendar.current.date(byAdding: .hour, value: 12, to: chatzot)
+    }
+
+    /// Helper to get fast day names based on yomTovIndex.
+    private func fastDayNames(for yomTovIndex: Int, isFastBegin: Bool) -> (String, String) {
+        let begin = isFastBegin ? "Fast Begins" : "Fast Ends"
+        let beginHeb = isFastBegin ? "תחילת הצום" : "סיום הצום"
+        
+        switch yomTovIndex {
+        case JewishCalendar.TISHA_BEAV:
+            return ("Tisha B'Av - \(begin)", "תשעה באב - \(beginHeb)")
+        case JewishCalendar.FAST_OF_GEDALIAH:
+            return ("Fast of Gedaliah - \(begin)", "צום גדליה - \(beginHeb)")
+        case JewishCalendar.FAST_OF_ESTHER:
+            return ("Fast of Esther - \(begin)", "צום אסתר - \(beginHeb)")
+        case JewishCalendar.FAST_OF_17_TAMMUZ:
+            return ("17 Tammuz Fast - \(begin)", "שבעה עשר בתמוז - \(beginHeb)")
+        default:
+            return ("Fast Day - \(begin)", "צום - \(beginHeb)")
+        }
     }
 }
