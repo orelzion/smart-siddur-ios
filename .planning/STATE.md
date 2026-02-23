@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-02-08)
 
 ## Current Position
 
-Phase: 2 of 6 (Home Tab Implementation) - **NEW VISUAL REDESIGN PROJECT**
-Plan: 1 of 1 in Phase 2 (02-01 complete)
-Status: Phase 2 complete - Home Tab Implementation (Smart Prayer Countdown + Glass UI)
-Last activity: 2026-02-23 -- Completed Phase 2 Home Tab Implementation
+Phase: 3 of 6 (Unified Calendar/Zmanim Tab) - **NEW VISUAL REDESIGN PROJECT**
+Plan: 1 of 1 in Phase 3 (complete)
+Status: Phase 3 complete - Unified Calendar/Zmanim Tab (Month & Day Views with Gestures)
+Last activity: 2026-02-23 -- Completed Phase 3 Unified Calendar/Zmanim Tab
 
-Progress: [██░░░░░░░░░░░░░░░░░] 33% (2/6 phases) - Smart Siddur Visual Redesign
+Progress: [███░░░░░░░░░░░░░░░░] 50% (3/6 phases) - Smart Siddur Visual Redesign
 
 ## Performance Metrics
 
@@ -31,6 +31,9 @@ Progress: [██░░░░░░░░░░░░░░░░░] 33% (2/6 p
 | quick tasks | 1 | 1 | ~13min |
 | 02-ios-core | 3 | 3 | ~20min |
 | 03-prayer-experience | 2 | 2 | ~5min |
+| 02-design-system | 1 | 1 | ~45min |
+| 02-home-tab | 1 | 1 | ~25min |
+| 03-calendar-zmanim | 1 | 1 | ~4min |
 | 04-monetization | 1 | 0 | - |
 
 **Recent Trend:**
@@ -85,40 +88,53 @@ None.
 
 ### Blockers/Concerns
 
-None. Phase 2 (Home Tab Implementation) is complete. All plans executed:
-- 02-01: Data models + NextPrayerService + view extensions
-- 02-02: HomeViewModel + NewHomeView UI
+None. Phase 3 (Unified Calendar/Zmanim Tab) is complete. All tasks executed:
+- 3.1: Extended ZmanimService with specialZmanim() method
+- 3.2: Enhanced CalendarViewModel with dual view modes
+- 3.3: Month View implementation with 7-column grid
+- 3.4: Day View implementation with swipe navigation
+- 3.5: DayInfoCard component for day information display
 
-Ready for Phase 3 (Prayer Detail & Navigation).
+Ready for Phase 4 (Tab Structure Migration).
 
 ## Session Continuity
 
-Last session: 2026-02-23 16:10 UTC
-Stopped at: Completed Phase 2 - Home Tab Implementation
+Last session: 2026-02-23 15:35 UTC
+Stopped at: Completed Phase 3 - Unified Calendar/Zmanim Tab
 Resume file: None
 
-**Phase 2 Execution Completed**: Home Tab Implementation
+**Phase 3 Execution Completed**: Unified Calendar/Zmanim Tab
 
-Phase 2 complete. Home Tab Implementation delivered:
-- **Data Models** (NextPrayerState.swift): 4 models for prayer state management
-  - NextPrayerState, PrayerMilestone, SuggestedItem, SpecialZman
-- **NextPrayerService**: Smart prayer countdown with milestone-based timer
-  - 9-window prayer classification (prep/halachic/extended/too-late)
-  - Milestone boundary detection (not every-second updates)
-  - Scene phase observation for background/foreground transitions
-- **Service Extensions**:
-  - PrayerVisibilityService.suggestedItems() - Contextual seasonal prayers
-  - JewishCalendarService.seasonalBadge() - Holiday badges
-- **HomeViewModel**: Complete orchestration of services
-  - Greeting management, date display, prayer grid filtering
-  - Lifecycle management (start/stop)
-- **NewHomeView**: Premium dark/gold UI
-  - Greeting header, HeroCard countdown, Suggested For You grid
-  - All Prayers 2-column grid with current prayer highlighting
-  - RTL layout support, spring animations
-- All components: light/dark theme support, glass morphism aesthetic, haptic feedback
-- Project source code compiles successfully (signing only requires dev team)
+Phase 3 complete. Unified Calendar/Zmanim Tab delivered:
+- **Extended ZmanimService** (specialZmanim method):
+  - Erev/Motzei Shabbat (candle lighting, havdala)
+  - Chanukah (nightly candle lighting with night number)
+  - Fast days (begin/end times for Tisha B'Av, Gedaliah, Esther, 17 Tammuz)
+  - Sefirat HaOmer (nightly count display)
+  - Rosh Chodesh (molad/new moon time)
+  - Purim (Megilla reading times)
+  - Erev Yom Kippur (Kol Nidrei)
+  - Lag Ba'Omer (bonfire time)
+- **Enhanced CalendarViewModel**:
+  - Dual view mode support (month/day)
+  - Dual date display mode (hebrew/gregorian)
+  - New state for selectedDate, showAllZmanim
+  - Computed properties for essentialZmanim, allZmanim, specialZmanim
+  - Day navigation methods for swipe gestures
+- **UnifiedCalendarView** (Month & Day modes):
+  - Month View: 7-column grid with colored day type indicators, inline day detail
+  - Day View: Full-screen single day display with swipe navigation
+  - Gesture handling: horizontal swipes for day navigation, arrow buttons for month/day navigation
+  - Special zmanim display with context descriptions
+  - Essential/All zmanim toggle with smooth animation
+- **DayInfoCard Component**:
+  - Always shows Hebrew date (primary), Gregorian date, Daf Yomi
+  - Conditionally shows Parsha (Shabbat), Holiday, Omer count
+  - Adaptively displays special zmanim with gold time values
+  - Glass card styling with sections
+- All components: light/dark theme support, glass morphism aesthetic, RTL support, smooth animations
+- Project source code compiles successfully
 
-Ready for Phase 3 (Prayer Detail & Navigation).
+Ready for Phase 4 (Tab Structure Migration).
 
-Home Tab Implementation: Milestone-based smart countdown, glass cards, contextual suggestions, RTL support.
+Unified Calendar/Zmanim Tab: Dual view modes, gesture navigation, special zmanim display, glass UI.
