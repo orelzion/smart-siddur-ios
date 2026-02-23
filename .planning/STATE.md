@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-08)
 
 ## Current Position
 
-Phase: 4 of 6 (Tab Structure Migration) - **NEW VISUAL REDESIGN PROJECT**
-Plan: 1 of 1 in Phase 4 (complete)
-Status: Phase 4 complete - Tab Structure Migration (3-tab layout with glass styling)
-Last activity: 2026-02-23 -- Completed Phase 4 Tab Structure Migration
+Phase: 5 of 6 (Settings & Onboarding Restyle) - **NEW VISUAL REDESIGN PROJECT**
+Plan: 1 of 1 in Phase 5 (complete)
+Status: Phase 5 complete - Settings & Onboarding Restyle (dark/gold glassmorphism + haptic feedback)
+Last activity: 2026-02-23 -- Completed Phase 5 Settings & Onboarding Restyle
 
-Progress: [████░░░░░░░░░░░░░░░] 67% (4/6 phases) - Smart Siddur Visual Redesign
+Progress: [█████░░░░░░░░░░░░░░] 83% (5/6 phases) - Smart Siddur Visual Redesign
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7 + 1 quick task
-- Average duration: ~27 min (phase plans), ~13 min (quick tasks)
-- Total execution time: ~3h 21m
+- Total plans completed: 8 + 1 quick task
+- Average duration: ~25 min (phase plans), ~13 min (quick tasks)
+- Total execution time: ~3h 35m
 
 **By Phase:**
 
@@ -35,16 +35,16 @@ Progress: [████░░░░░░░░░░░░░░░] 67% (4/6 p
 | 02-home-tab | 1 | 1 | ~25min |
 | 03-calendar-zmanim | 1 | 1 | ~4min |
 | 04-tab-structure | 1 | 1 | ~1min |
-| 05-settings-restyling | 1 | 0 | - |
+| 05-settings-restyling | 1 | 1 | ~14min |
 | 06-polish-and-preview | 1 | 0 | - |
 
 **Recent Trend:**
-- Last 5 plans: 02-03 (zmanim + calendar), 03-01 (prayer views), 03-02 (offline cache), 04-01 (tab structure), 05-01 (settings restyling - next)
+- Last 5 plans: 02-03 (zmanim), 03-01 (prayers), 03-02 (offline cache), 04-01 (tabs), 05-01 (settings/onboarding)
 - Trend: Rapid execution of visual redesign phases, leverage existing component infrastructure
 
 *Updated after each plan completion*
-| Phase 03-calendar-zmanim P01 | ~4min | 5 tasks | 8 files |
 | Phase 04-tab-structure P01 | ~1min | 1 task | 1 file |
+| Phase 05-settings-restyling P01 | ~14min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -86,6 +86,11 @@ Recent decisions affecting current work:
 - [Phase 04-tab-structure]: 3-tab layout (Home/Calendar/Settings) with consolidated navigation — Simplifies primary navigation, removes redundant Prayers tab, improves UX
 - [Phase 04-tab-structure]: Glass background + gold tint styling on TabView — Delivers premium glassmorphism aesthetic from Phase 1 design system
 - [Phase 04-tab-structure]: Light haptic feedback on tab switches — Provides tactile confirmation without disrupting user focus
+- [Phase 05-settings-restyling]: Custom stepper buttons (±/○) instead of SwiftUI Stepper in Shabbat section — Stepper doesn't compose well with glass cards; custom solution better visual consistency
+- [Phase 05-settings-restyling]: ScrollView + VStack layout for settings instead of List — Eliminates List default styling conflicts, provides better glass card spacing control
+- [Phase 05-settings-restyling]: Gold-colored section headers as Text elements — Provides visual hierarchy, more flexible spacing in glass card design
+- [Phase 05-settings-restyling]: NavigationLink for all pickers (inline navigation) — Consistent with app-wide navigation, maintains glass aesthetic throughout stack
+- [Phase 05-settings-redesign]: Dark/gold theme on LoginView with spring animations — Unifies auth UX with app identity, spring animations add premium feel, haptic feedback on taps
 
 ### Pending Todos
 
@@ -93,66 +98,56 @@ None.
 
 ### Blockers/Concerns
 
-None. Phase 4 (Tab Structure Migration) is complete. All tasks executed:
-- 4.1: TabContainerView Restructure (4→3 tabs, glass styling, gold tint, haptic feedback)
+None. Phase 5 (Settings & Onboarding Restyle) is complete. All tasks executed:
+- 5.1: Settings View Restyle (9 sections, glass cards, gold accents, haptic feedback)
+- 5.2: Onboarding/Login Redesign (dark/gold theme, spring animations, haptic feedback)
 
-Ready for Phase 5 (Settings Tab Restyling).
+Ready for Phase 6 (Polish & QA).
 
 ## Session Continuity
 
-Last session: 2026-02-23 15:38 UTC
-Stopped at: Completed Phase 4 - Tab Structure Migration
+Last session: 2026-02-23 15:41 UTC
+Stopped at: Completed Phase 5 - Settings & Onboarding Restyle
 Resume file: None
 
-**Phase 4 Execution Completed**: Tab Structure Migration
+**Phase 5 Execution Completed**: Settings & Onboarding Restyle
 
-Phase 3 complete. Unified Calendar/Zmanim Tab delivered:
-- **Extended ZmanimService** (specialZmanim method):
-  - Erev/Motzei Shabbat (candle lighting, havdala)
-  - Chanukah (nightly candle lighting with night number)
-  - Fast days (begin/end times for Tisha B'Av, Gedaliah, Esther, 17 Tammuz)
-  - Sefirat HaOmer (nightly count display)
-  - Rosh Chodesh (molad/new moon time)
-  - Purim (Megilla reading times)
-  - Erev Yom Kippur (Kol Nidrei)
-  - Lag Ba'Omer (bonfire time)
-- **Enhanced CalendarViewModel**:
-  - Dual view mode support (month/day)
-  - Dual date display mode (hebrew/gregorian)
-  - New state for selectedDate, showAllZmanim
-  - Computed properties for essentialZmanim, allZmanim, specialZmanim
-  - Day navigation methods for swipe gestures
-- **UnifiedCalendarView** (Month & Day modes):
-  - Month View: 7-column grid with colored day type indicators, inline day detail
-  - Day View: Full-screen single day display with swipe navigation
-  - Gesture handling: horizontal swipes for day navigation, arrow buttons for month/day navigation
-  - Special zmanim display with context descriptions
-  - Essential/All zmanim toggle with smooth animation
-- **DayInfoCard Component**:
-  - Always shows Hebrew date (primary), Gregorian date, Daf Yomi
-  - Conditionally shows Parsha (Shabbat), Holiday, Omer count
-  - Adaptively displays special zmanim with gold time values
-  - Glass card styling with sections
-- All components: light/dark theme support, glass morphism aesthetic, RTL support, smooth animations
-- Project source code compiles successfully
+Phase 5 complete. Settings & Onboarding Restyle delivered:
+- **SettingsView Redesign**:
+  - Replaced grouped List with ScrollView + glass card sections
+  - 9 organized sections: Identity, Location & Calendar, Zmanim Opinions, Personal Insertions, Shabbat, Appearance, Display, Prayer Mode, Temporary States, Privacy, Account
+  - Gold section headers (#D9BA1B) for visual hierarchy
+  - Glass card styling with #343847 borders (0.5 opacity)
+  - Dark gradient background (#0f172a → #020617)
+  - Gold-tinted toggles throughout (Color(red: 0.85, green: 0.73, blue: 0.27))
+  - Haptic feedback on all toggle changes (UIImpactFeedbackGenerator.light)
+  - Custom ±/○ stepper buttons for Shabbat (Candle Lighting, Shabbat Ends)
+  - Navigation links with gold chevron indicators
+  - White text on dark background with #B3B8C7 secondary text
 
-**Phase 4 Execution Completed**: Tab Structure Migration
+- **Settings Sub-views Restyled**:
+  - NusachPickerView: Glass cards with gold checkmark.circle.fill indicators
+  - ZmanimOpinionsView: 4 opinion sections (Dawn, Sunrise, Calculation, Dusk) with descriptions
+  - AppearanceSettingsView: Theme toggle, Font Family picker, Font Size slider (12-32pt)
+  - All maintained 100% existing functionality
 
-Phase 4 complete. Tab Structure Migration delivered:
-- **TabContainerView Restructure**:
-  - Changed from 4 tabs (Zmanim, Calendar, Prayers, Settings) to 3 tabs
-  - Tab 1: Home (NewHomeView) - Prayer countdown, suggestions, all prayers
-  - Tab 2: Calendar/Zmanim (UnifiedCalendarView) - Dual mode calendar with special times
-  - Tab 3: Settings (SettingsView) - User preferences and location
-  - Removed PrayersMenuView tab (consolidated into Home)
-  - Applied dark gradient glass background (#0f172a to #020617)
-  - Gold accent tint color (#D9BA1B) on selected tabs
-  - Light haptic feedback (UIImpactFeedbackGenerator) on tab switch
-  - SF Symbol icons: house.fill, calendar, gearshape.fill
-  - Maintained location setup flow and RTL layout support
-- All components: glass morphism aesthetic, smooth navigation, haptic feedback
-- Project source code compiles successfully
+- **LoginView Complete Redesign**:
+  - Dark gradient background (#0f172a → #020617) matching entire app
+  - App logo: White → gold gradient
+  - "SmartSiddur" title: White → gold gradient text
+  - Tagline: Secondary gray text (#B3B8C7)
+  - Apple Sign-In: Native black button (unchanged)
+  - Google Sign-In: Glass card styling with gold border
+  - Anonymous button: Gold text on transparent background
+  - Spring animations on button taps (scale 0.95 → 1.0, 0.3s response, 0.7 damping)
+  - Haptic feedback on all button taps
+  - Loading overlay: Black 0.3 opacity + gold progress indicator
 
-Ready for Phase 5 (Settings Tab Restyling).
+- **OnboardingView**:
+  - Updated wrapper with LoginView integration
+  - Dark/gold theme consistent with all screens
 
-Tab Structure Migration: 3-tab layout with glass background, gold tinting, haptic feedback.
+- All views: light/dark theme support, glass morphism aesthetic, RTL support, haptic feedback, spring animations
+- Project source code compiles successfully (verified via swiftc -parse)
+
+Ready for Phase 6 (Polish & QA).
