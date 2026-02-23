@@ -1,7 +1,23 @@
 import Foundation
 import Observation
 
-// MARK: - CalendarMode
+// MARK: - CalendarViewMode
+
+/// Toggle between day and month calendar views.
+enum CalendarViewMode: String, Sendable {
+    case day
+    case month
+}
+
+// MARK: - DateDisplayMode
+
+/// Toggle between Hebrew and Gregorian date display.
+enum DateDisplayMode: String, Sendable {
+    case hebrew
+    case gregorian
+}
+
+// MARK: - CalendarMode (Deprecated - use DateDisplayMode)
 
 /// Toggle between Gregorian-primary and Hebrew-primary calendar views.
 enum CalendarMode: String, Sendable {
@@ -28,8 +44,17 @@ final class CalendarViewModel {
     /// First day of the currently displayed month.
     var currentMonth: Date
 
-    /// Calendar display mode.
+    /// Current view mode (day or month).
+    var viewMode: CalendarViewMode = .month
+
+    /// Date display mode (Hebrew or Gregorian primary).
+    var dateDisplayMode: DateDisplayMode = .gregorian
+
+    /// Calendar display mode (deprecated - use dateDisplayMode).
     var calendarMode: CalendarMode = .gregorianPrimary
+
+    /// Currently selected date.
+    var selectedDate: Date
 
     /// All JewishDay entries for the current month.
     var daysInMonth: [JewishDay] = []
@@ -39,6 +64,9 @@ final class CalendarViewModel {
 
     /// Whether to show the day detail sheet.
     var showDayDetail: Bool = false
+
+    /// Whether to show all zmanim (vs. essential only).
+    var showAllZmanim: Bool = false
 
     /// Loading state.
     var isLoading: Bool = false
@@ -107,6 +135,7 @@ final class CalendarViewModel {
         let cal = Calendar(identifier: .gregorian)
         let comps = cal.dateComponents([.year, .month], from: Date())
         self.currentMonth = cal.date(from: comps) ?? Date()
+        self.selectedDate = Date()
     }
 
     // MARK: - Navigation
@@ -206,6 +235,96 @@ final class CalendarViewModel {
             location: location,
             opinions: userOpinions
         )
+    }
+
+    /// Get essential zmanim for the selected date (5-8 key times).
+    var essentialZmanim: [ZmanTime] {
+        guard let location = userLocation else { return [] }
+        return zmanimService.calculateZmanim(
+            date: selectedDate,
+            location: location,
+            opinions: userOpinions
+        ).filter { $0.isEssential }
+    }
+
+    /// Get all zmanim for the selected date (full 16).
+    var allZmanim: [ZmanTime] {
+        guard let location = userLocation else { return [] }
+        return zmanimService.calculateZmanim(
+            date: selectedDate,
+            location: location,
+            opinions: userOpinions
+        )
+    }
+
+    /// Get special zmanim for the selected date (Shabbat, Yom Tov, Chanukah, etc.).
+    var specialZmanim: [SpecialZman] {
+        guard let location = userLocation else { return [] }
+        return zmanimService.specialZmanim(
+            for: selectedDate,
+            location: location,
+            opinions: userOpinions,
+            isInIsrael: isInIsrael
+        )
+    }
+
+    /// Day navigation for day view mode.
+    func goToNextDay() {
+        let cal = Calendar(identifier: .gregorian)
+        if let nextDate = cal.date(byAdding: .day, value: 1, to: selectedDate) {
+            selectedDate = nextDate
+            updateCurrentMonthIfNeeded()
+        }
+    }
+
+    /// Previous day navigation for day view mode.
+    func goToPreviousDay() {
+        let cal = Calendar(identifier: .gregorian)
+        if let prevDate = cal.date(byAdding: .day, value: -1, to: selectedDate) {
+            selectedDate = prevDate
+            updateCurrentMonthIfNeeded()
+        }
+    }
+
+    /// Update the current month if selectedDate moved to a different month.
+    private func updateCurrentMonthIfNeeded() {
+        let cal = Calendar(identifier: .gregorian)
+        let selectedComps = cal.dateComponents([.year, .month], from: selectedDate)
+        let currentComps = cal.dateComponents([.year, .month], from: currentMonth)
+        
+        if selectedComps.year != currentComps.year || selectedComps.month != currentComps.month {
+            if let newMonth = cal.date(from: DateComponents(
+                year: selectedComps.year,
+                month: selectedComps.month,
+                day: 1
+            )) {
+                currentMonth = newMonth
+                loadMonth()
+            }
+        }
+    }
+
+    /// Get Jewish day info for the selected date.
+    var selectedDayInfo: JewishDay? {
+        daysInMonth.first { $0.gregorianDate.compare(selectedDate) == .orderedSame }
+    }
+
+    /// Get day type indicator color for a specific day.
+    func dayTypeColor(for dayType: DayType) -> String {
+        switch dayType {
+        case .shabbat:
+            return "purple"
+        case .yomTov:
+            return "orange"
+        case .fastDay:
+            return "red"
+        case .roshChodesh:
+            return "blue"
+        case .cholHamoed:
+            return "green"
+        case .regular:
+            return "gray"
+        }
     }
 
     // MARK: - Helpers
