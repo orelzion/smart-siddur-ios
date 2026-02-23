@@ -258,6 +258,15 @@
   - Filtered prayers from ViewModel
   - Gold border on current/next prayer
   - Tap navigation to PrayerView
+
+---
+
+## Backlog (TBD, Not Now)
+
+- [ ] Daily Learning Integration (Sefaria API)
+  - Fetch and display daily learning items (e.g., Daf Yomi / related tracks) from Sefaria API
+  - Define caching/fallback strategy for offline mode
+  - Add failure handling and rate-limit-safe refresh behavior
 - [ ] Apply glass card styling throughout
 - [ ] RTL layout verification
 - [ ] Spring animations for state transitions

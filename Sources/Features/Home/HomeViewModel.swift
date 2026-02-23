@@ -9,120 +9,216 @@ final class HomeViewModel {
     private let nextPrayerService: NextPrayerService
     private let prayerVisibilityService: PrayerVisibilityService
     private let jewishCalendarService: JewishCalendarService
-    private let zmanimService: ZmanimService
     private let authViewModel: AuthViewModel
     private let dependencyContainer: DependencyContainer
-    
     private let logger = Logger(subsystem: "com.karriapps.smartsiddur", category: "HomeViewModel")
-    
-    var greetingText: String = ""
-    var dateText: String = ""
-    var nextPrayerState: NextPrayerState? = nil
+
+    var greetingText = "Shalom"
+    var dateText = ""
+    var nextPrayerState: NextPrayerState = .empty
     var suggestedItems: [SuggestedItem] = []
     var seasonalBadgeText: String?
-    var filteredPrayers: [PrayerType] = [.shacharit, .mincha, .arvit, .mazon]
-    var currentJewishDay: JewishDay?
+    var filteredPrayers: [PrayerType] = [.shacharit, .mincha, .arvit, .mazon, .alMita, .blessings]
+    var highlightedPrayer: PrayerType?
     var isLoading = false
-    
-    private var updateTimer: Timer?
-    
+
+    private var currentJewishDay: JewishDay?
+    private var selectedLocation: UserLocation?
+    private var userOpinions: ZmanimOpinions = .defaults
+    private var isInIsrael = false
+    private var nusach: Nusach = .edot
+    private var refreshTimer: Timer?
+
     init(
         dependencyContainer: DependencyContainer,
         nextPrayerService: NextPrayerService? = nil,
         prayerVisibilityService: PrayerVisibilityService? = nil,
         jewishCalendarService: JewishCalendarService? = nil,
-        zmanimService: ZmanimService? = nil,
         authViewModel: AuthViewModel? = nil
     ) {
         self.dependencyContainer = dependencyContainer
-        
-        self.nextPrayerService = nextPrayerService ?? NextPrayerService(
-            zmanimService: dependencyContainer.zmanimService,
-            jewishCalendarService: dependencyContainer.jewishCalendarService
-        )
+        self.nextPrayerService = nextPrayerService ?? dependencyContainer.nextPrayerService
         self.prayerVisibilityService = prayerVisibilityService ?? PrayerVisibilityService()
         self.jewishCalendarService = jewishCalendarService ?? dependencyContainer.jewishCalendarService
-        self.zmanimService = zmanimService ?? dependencyContainer.zmanimService
         self.authViewModel = authViewModel ?? AuthViewModel(authRepository: dependencyContainer.authRepository)
-        
-        updateDisplay()
+        updateGreeting()
     }
-    
+
     func start() {
-        logger.debug("Starting HomeViewModel")
-        updateDisplay()
-        
-        Task {
-            await refreshData()
-        }
-        
-        updateTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
+        stop()
+        Task { await refreshData() }
+        refreshTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
             Task { @MainActor in
-                self?.updateDisplay()
+                await self?.refreshData(lightweight: true)
             }
         }
     }
-    
+
     func stop() {
-        logger.debug("Stopping HomeViewModel")
-        updateTimer?.invalidate()
-        updateTimer = nil
+        refreshTimer?.invalidate()
+        refreshTimer = nil
     }
-    
-    private func refreshData() async {
-        isLoading = true
-        updateDisplay()
-        
-        let today = Date()
-        suggestedItems = prayerVisibilityService.suggestedItems(for: today)
-        seasonalBadgeText = jewishCalendarService.seasonalBadge(for: today)
-        
+
+    func onSceneDidBecomeActive() {
+        Task { await refreshData() }
+    }
+
+    private func refreshData(lightweight: Bool = false) async {
+        if !lightweight {
+            isLoading = true
+        }
+
+        updateGreeting()
+        await loadUserContextIfNeeded()
+        let now = Date()
+        updateJewishDayAndDates(for: now)
+        updatePrayerData(for: now)
+
         isLoading = false
     }
-    
-    private func updateDisplay() {
-        updateGreeting()
-        updateDates(for: Date())
-        updateJewishDayInfo(for: Date())
-    }
-    
+
     private func updateGreeting() {
-        let hour = Calendar.current.component(.hour, from: Date())
-        let timeGreeting: String
-        
-        switch hour {
-        case 5..<12:
-            timeGreeting = "Boker tov"
-        case 12..<17:
-            timeGreeting = "Tzom hari"
-        case 17..<20:
-            timeGreeting = "Erev tov"
-        default:
-            timeGreeting = "Shalom"
-        }
-        
-        if let displayName = authViewModel.displayName {
-            greetingText = "\(timeGreeting), \(displayName)"
+        if let displayName = authViewModel.displayName, !displayName.isEmpty {
+            greetingText = "Shalom, \(displayName)"
         } else {
-            greetingText = timeGreeting
+            greetingText = "Shalom"
         }
     }
-    
-    private func updateDates(for date: Date) {
+
+    private func loadUserContextIfNeeded() async {
+        if selectedLocation == nil {
+            do {
+                selectedLocation = try await dependencyContainer.locationRepository.getSelectedLocation()
+            } catch {
+                logger.error("Failed to load selected location: \(error.localizedDescription)")
+            }
+        }
+
+        let settings = await dependencyContainer.getSyncedSettings()
+        isInIsrael = settings.isInIsrael
+        nusach = settings.nusach
+        userOpinions = ZmanimOpinions(
+            dawnOpinion: settings.dawnOpinion,
+            sunriseOpinion: settings.sunriseOpinion,
+            zmanOpinion: settings.zmanOpinion,
+            duskOpinion: settings.duskOpinion,
+            shabbatCandleMinutes: settings.shabbatCandleMinutes,
+            shabbatEndMinutes: settings.shabbatEndMinutes
+        )
+    }
+
+    private func updateJewishDayAndDates(for date: Date) {
+        let jewishDay = jewishCalendarService.getJewishDay(for: date, isInIsrael: isInIsrael)
+        currentJewishDay = jewishDay
+
         let gregorianFormatter = DateFormatter()
-        gregorianFormatter.dateStyle = .medium
-        gregorianFormatter.locale = Locale(identifier: "en_US")
-        let gregorianStr = gregorianFormatter.string(from: date)
-        
-        if let jewishDay = currentJewishDay {
-            dateText = "\(jewishDay.hebrewDateString) | \(gregorianStr)"
+        gregorianFormatter.locale = Locale(identifier: "en_US_POSIX")
+        gregorianFormatter.setLocalizedDateFormatFromTemplate("d MMMM y")
+        let gregorianText = gregorianFormatter.string(from: date)
+        dateText = "\(jewishDay.hebrewDateString) / \(gregorianText)"
+    }
+
+    private func updatePrayerData(for date: Date) {
+        seasonalBadgeText = jewishCalendarService.seasonalBadge(for: date)
+
+        if let location = selectedLocation {
+            nextPrayerState = nextPrayerService.calculateCurrentState(
+                for: date,
+                location: location,
+                opinions: userOpinions,
+                isInIsrael: isInIsrael
+            )
         } else {
-            dateText = gregorianStr
+            nextPrayerState = .empty
+        }
+
+        suggestedItems = prayerVisibilityService.suggestedItems(for: date)
+        removeDuplicateArvitSuggestionIfCoveredByCTA()
+        addNightSuggestionsIfApplicable()
+
+        filteredPrayers = buildPrayerGrid(for: date)
+        highlightedPrayer = nextPrayerState.prayer ?? (nextPrayerState.isTransitional ? .mincha : nextPrayerState.alternativePrayer)
+    }
+
+    private func removeDuplicateArvitSuggestionIfCoveredByCTA() {
+        let isArvitInCTA = nextPrayerState.prayer == .arvit || nextPrayerState.isTransitional
+        guard isArvitInCTA else { return }
+        suggestedItems.removeAll { $0.prayerType == .arvit }
+    }
+
+    private func addNightSuggestionsIfApplicable() {
+        let isNightWindow = nextPrayerState.prayer == .arvit
+        guard isNightWindow else { return }
+
+        if !suggestedItems.contains(where: { $0.prayerType == .alMita }) {
+            suggestedItems.append(
+                SuggestedItem(
+                    icon: "bed.double.fill",
+                    title: "Kriat Shema Al HaMita",
+                    hebrewTitle: "קריאת שמע על המיטה",
+                    prayerType: .alMita,
+                    description: "Before sleep"
+                )
+            )
+        }
+
+        if
+            let jewishDay = currentJewishDay,
+            (3...15).contains(jewishDay.hebrewDay),
+            !suggestedItems.contains(where: { $0.prayerType == .levana })
+        {
+            suggestedItems.append(
+                SuggestedItem(
+                    icon: "moon.circle.fill",
+                    title: "Birkat HaLevana",
+                    hebrewTitle: "ברכת הלבנה",
+                    prayerType: .levana,
+                    description: "After 3 days from molad until the 15th"
+                )
+            )
         }
     }
-    
-    private func updateJewishDayInfo(for date: Date) {
-        let isInIsrael = dependencyContainer.localSettings.locationName?.contains("Israel") == true
-        self.currentJewishDay = jewishCalendarService.getJewishDay(for: date, isInIsrael: isInIsrael)
+
+    private func buildPrayerGrid(for date: Date) -> [PrayerType] {
+        let alwaysShown: [PrayerType] = [.shacharit, .mincha, .arvit, .mazon, .alMita, .blessings]
+        guard let jewishDay = currentJewishDay else { return alwaysShown }
+
+        let context = PrayerVisibilityContext(
+            jewishDay: jewishDay,
+            nusach: nusach,
+            isMotzaeiShabbat: jewishDay.isShabbat && isAfterTzet(for: date),
+            isLevanaAvailable: jewishDay.hebrewDay >= 3 && jewishDay.hebrewDay <= 15,
+            isAfterPlagOnErevChanukah: false
+        )
+
+        var visible = Set(alwaysShown)
+        visible.formUnion(prayerVisibilityService.visiblePrayers(in: context))
+
+        if jewishDay.isShabbat || jewishDay.isYomTov || jewishDay.isRoshChodesh {
+            visible.insert(.musaf)
+        }
+
+        if jewishDay.parsha != nil {
+            visible.insert(.torahReading)
+        }
+
+        let order: [PrayerType] = [
+            .shacharit, .mincha, .arvit, .musaf, .torahReading, .omer, .hanuka, .slihot,
+            .havdala, .lagBaomer, .ilanot, .levana, .kinot, .nedarim, .ushpizin, .mazon,
+            .asherYatzar, .alMita, .blessings
+        ]
+
+        return order.filter { visible.contains($0) }
+    }
+
+    private func isAfterTzet(for date: Date) -> Bool {
+        guard let location = selectedLocation else { return false }
+        let zmanim = dependencyContainer.zmanimService.calculateZmanim(
+            date: date,
+            location: location,
+            opinions: userOpinions
+        )
+        guard let tzet = zmanim.first(where: { $0.id == "tzeit" })?.time else { return false }
+        return date >= tzet
     }
 }

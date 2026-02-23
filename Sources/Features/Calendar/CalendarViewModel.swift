@@ -45,7 +45,7 @@ final class CalendarViewModel {
     var currentMonth: Date
 
     /// Current view mode (day or month).
-    var viewMode: CalendarViewMode = .month
+    var viewMode: CalendarViewMode = .day
 
     /// Date display mode (Hebrew or Gregorian primary).
     var dateDisplayMode: DateDisplayMode = .gregorian
@@ -84,31 +84,28 @@ final class CalendarViewModel {
 
     /// Month title based on current mode.
     var monthTitle: String {
-        let gregorianCalendar = Calendar(identifier: .gregorian)
-        let year = gregorianCalendar.component(.year, from: currentMonth)
-        let month = gregorianCalendar.component(.month, from: currentMonth)
-
         if calendarMode == .gregorianPrimary {
+            let gregorianCalendar = Calendar(identifier: .gregorian)
+            let year = gregorianCalendar.component(.year, from: currentMonth)
+            let month = gregorianCalendar.component(.month, from: currentMonth)
             let formatter = DateFormatter()
             formatter.dateFormat = "MMMM yyyy"
-            return formatter.string(from: currentMonth)
+            return formatter.string(from: gregorianCalendar.date(from: DateComponents(year: year, month: month, day: 1)) ?? currentMonth)
         } else {
-            // Hebrew-primary: show the Hebrew month(s) that span this Gregorian month
-            // Use the 15th of the month as a representative date
-            if let midMonth = gregorianCalendar.date(from: DateComponents(year: year, month: month, day: 15)) {
-                let day = jewishCalendarService.getJewishDay(for: midMonth, isInIsrael: isInIsrael)
-                let isLeap = isHebrewLeapYear(day.hebrewYear)
-                let monthName = HebrewDateFormatterUtil.hebrewMonthName(month: day.hebrewMonth, isLeapYear: isLeap)
-                let yearStr = HebrewDateFormatterUtil.hebrewYearString(day.hebrewYear)
-                return "\(monthName) \(yearStr)"
-            }
-            return ""
+            guard let first = daysInMonth.first else { return "" }
+            let isLeap = isHebrewLeapYear(first.hebrewYear)
+            let monthName = HebrewDateFormatterUtil.hebrewMonthName(month: first.hebrewMonth, isLeapYear: isLeap)
+            let yearStr = HebrewDateFormatterUtil.hebrewYearString(first.hebrewYear)
+            return "\(monthName) \(yearStr)"
         }
     }
 
     /// Day headers for the grid (Sun-Sat).
     var dayHeaders: [String] {
-        ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+        if dateDisplayMode == .hebrew {
+            return ["א", "ב", "ג", "ד", "ה", "ו", "ש"]
+        }
+        return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     }
 
     /// Leading empty cells before the first day of the month.
@@ -141,18 +138,36 @@ final class CalendarViewModel {
     // MARK: - Navigation
 
     func goToNextMonth() {
-        let cal = Calendar(identifier: .gregorian)
-        if let next = cal.date(byAdding: .month, value: 1, to: currentMonth) {
-            currentMonth = next
-            loadMonth()
+        if dateDisplayMode == .hebrew {
+            if let next = shiftedHebrewMonthDate(from: selectedDate, by: 1) {
+                selectedDate = next
+                currentMonth = next
+                loadMonth()
+            }
+        } else {
+            let cal = Calendar(identifier: .gregorian)
+            if let next = cal.date(byAdding: .month, value: 1, to: currentMonth) {
+                currentMonth = next
+                selectedDate = next
+                loadMonth()
+            }
         }
     }
 
     func goToPreviousMonth() {
-        let cal = Calendar(identifier: .gregorian)
-        if let prev = cal.date(byAdding: .month, value: -1, to: currentMonth) {
-            currentMonth = prev
-            loadMonth()
+        if dateDisplayMode == .hebrew {
+            if let prev = shiftedHebrewMonthDate(from: selectedDate, by: -1) {
+                selectedDate = prev
+                currentMonth = prev
+                loadMonth()
+            }
+        } else {
+            let cal = Calendar(identifier: .gregorian)
+            if let prev = cal.date(byAdding: .month, value: -1, to: currentMonth) {
+                currentMonth = prev
+                selectedDate = prev
+                loadMonth()
+            }
         }
     }
 
@@ -160,6 +175,7 @@ final class CalendarViewModel {
         let cal = Calendar(identifier: .gregorian)
         let comps = cal.dateComponents([.year, .month], from: Date())
         currentMonth = cal.date(from: comps) ?? Date()
+        selectedDate = Date()
         loadMonth()
     }
 
@@ -167,7 +183,8 @@ final class CalendarViewModel {
 
     func selectDay(_ day: JewishDay) {
         selectedDay = day
-        showDayDetail = true
+        selectedDate = day.gregorianDate
+        showDayDetail = false
     }
 
     // MARK: - Loading
@@ -203,15 +220,23 @@ final class CalendarViewModel {
     /// Calculate all JewishDay entries for the current month.
     func loadMonth() {
         isLoading = true
-        let cal = Calendar(identifier: .gregorian)
-        let year = cal.component(.year, from: currentMonth)
-        let month = cal.component(.month, from: currentMonth)
+        if dateDisplayMode == .hebrew {
+            daysInMonth = jewishCalendarService.getJewishDaysForHebrewMonth(
+                containing: selectedDate,
+                isInIsrael: isInIsrael
+            )
+            currentMonth = daysInMonth.first?.gregorianDate ?? currentMonth
+        } else {
+            let cal = Calendar(identifier: .gregorian)
+            let year = cal.component(.year, from: currentMonth)
+            let month = cal.component(.month, from: currentMonth)
 
-        daysInMonth = jewishCalendarService.getJewishDaysForMonth(
-            year: year,
-            month: month,
-            isInIsrael: isInIsrael
-        )
+            daysInMonth = jewishCalendarService.getJewishDaysForMonth(
+                year: year,
+                month: month,
+                isInIsrael: isInIsrael
+            )
+        }
         isLoading = false
     }
 
@@ -260,12 +285,42 @@ final class CalendarViewModel {
     /// Get special zmanim for the selected date (Shabbat, Yom Tov, Chanukah, etc.).
     var specialZmanim: [SpecialZman] {
         guard let location = userLocation else { return [] }
-        return zmanimService.specialZmanim(
+        var result = zmanimService.specialZmanim(
             for: selectedDate,
             location: location,
             opinions: userOpinions,
             isInIsrael: isInIsrael
         )
+        // Friday card should show both candle lighting and upcoming Motzei Shabbat havdala.
+        if Calendar(identifier: .gregorian).component(.weekday, from: selectedDate) == 6,
+           let nextDay = Calendar(identifier: .gregorian).date(byAdding: .day, value: 1, to: selectedDate) {
+            let satTimes = zmanimService.shabbatTimes(date: nextDay, location: location, opinions: userOpinions)
+            if let havdala = satTimes.first(where: { $0.id == "havdalah" })?.time {
+                result.append(SpecialZman(
+                    name: "Motzei Shabbat - Havdala",
+                    hebrewName: "מוצאי שבת - הבדלה",
+                    time: havdala,
+                    context: "Upcoming Shabbat end"
+                ))
+            }
+        }
+        return result
+    }
+
+    var roshChodeshName: String? {
+        jewishCalendarService.roshChodeshName(for: selectedDate, isInIsrael: isInIsrael)
+    }
+
+    var isShabbosMevorchim: Bool {
+        jewishCalendarService.isShabbosMevorchim(for: selectedDate, isInIsrael: isInIsrael)
+    }
+
+    var upcomingMoladDate: Date? {
+        jewishCalendarService.upcomingMonthMoladDate(from: selectedDate, isInIsrael: isInIsrael)
+    }
+
+    var upcomingMoladTraditionalHebrew: String? {
+        jewishCalendarService.upcomingMonthMoladTraditionalHebrew(from: selectedDate, isInIsrael: isInIsrael)
     }
 
     /// Day navigation for day view mode.
@@ -306,7 +361,8 @@ final class CalendarViewModel {
 
     /// Get Jewish day info for the selected date.
     var selectedDayInfo: JewishDay? {
-        daysInMonth.first { $0.gregorianDate.compare(selectedDate) == .orderedSame }
+        let cal = Calendar(identifier: .gregorian)
+        return daysInMonth.first { cal.isDate($0.gregorianDate, inSameDayAs: selectedDate) }
     }
 
     /// Get day type indicator color for a specific day.
@@ -338,5 +394,26 @@ final class CalendarViewModel {
     private func isHebrewLeapYear(_ year: Int) -> Bool {
         let mod = year % 19
         return [3, 6, 8, 11, 14, 17, 0].contains(mod)
+    }
+
+    private func shiftedHebrewMonthDate(from date: Date, by months: Int) -> Date? {
+        guard months != 0 else { return date }
+        let cal = Calendar(identifier: .gregorian)
+        guard let probe = cal.date(byAdding: .day, value: months > 0 ? 35 : -35, to: date) else {
+            return nil
+        }
+        return firstDayOfHebrewMonth(containing: probe)
+    }
+
+    private func firstDayOfHebrewMonth(containing date: Date) -> Date {
+        let cal = Calendar(identifier: .gregorian)
+        var cursor = date
+        var day = jewishCalendarService.getJewishDay(for: cursor, isInIsrael: isInIsrael)
+        while day.hebrewDay > 1 {
+            guard let prev = cal.date(byAdding: .day, value: -1, to: cursor) else { break }
+            cursor = prev
+            day = jewishCalendarService.getJewishDay(for: cursor, isInIsrael: isInIsrael)
+        }
+        return cursor
     }
 }

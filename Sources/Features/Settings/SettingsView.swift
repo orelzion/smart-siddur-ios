@@ -4,8 +4,38 @@ import SwiftUI
 /// Per MIGRATION_SPEC Sections 6.2 (synced) and 6.3 (local).
 struct SettingsView: View {
     @Environment(DependencyContainer.self) private var container
+    @Environment(\.colorScheme) private var colorScheme
     @State private var viewModel: SettingsViewModel?
     @State private var showLocationPicker = false
+
+    private var backgroundGradient: LinearGradient {
+        if colorScheme == .dark {
+            return LinearGradient(
+                colors: [
+                    Color(red: 0.06, green: 0.09, blue: 0.16),
+                    Color(red: 0.01, green: 0.02, blue: 0.04)
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        }
+        return LinearGradient(
+            colors: [
+                Color(red: 0.98, green: 0.97, blue: 0.96),
+                Color.white
+            ],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+    }
+
+    private var cardFill: Color {
+        colorScheme == .dark ? Color.white.opacity(0.08) : Color.white
+    }
+
+    private var headerTint: Color {
+        Color(red: 0.85, green: 0.73, blue: 0.27)
+    }
 
     var body: some View {
         Group {
@@ -16,6 +46,7 @@ struct SettingsView: View {
             }
         }
         .navigationTitle("Settings")
+        .background(backgroundGradient.ignoresSafeArea())
         .onAppear {
             if viewModel == nil {
                 let vm = SettingsViewModel(
@@ -82,6 +113,7 @@ struct SettingsView: View {
                     }
                 }
             }
+            .listRowBackground(cardFill)
 
             // MARK: - Location/Calendar Section
             Section("Location & Calendar") {
@@ -113,6 +145,7 @@ struct SettingsView: View {
                     }
                 }
             }
+            .listRowBackground(cardFill)
 
             // MARK: - Zmanim Opinions Section
             Section("Zmanim Opinions") {
@@ -127,6 +160,7 @@ struct SettingsView: View {
                     }
                 }
             }
+            .listRowBackground(cardFill)
 
             // MARK: - Personal Insertions Section
             Section("Personal Insertions") {
@@ -157,6 +191,7 @@ struct SettingsView: View {
                     set: { viewModel.updateTalPreference($0) }
                 ))
             }
+            .listRowBackground(cardFill)
 
             // MARK: - Shabbat Section
             Section("Shabbat") {
@@ -178,6 +213,7 @@ struct SettingsView: View {
                     in: 1...72
                 )
             }
+            .listRowBackground(cardFill)
 
             // MARK: - Appearance Section (Local)
             Section("Appearance") {
@@ -192,6 +228,7 @@ struct SettingsView: View {
                     }
                 }
             }
+            .listRowBackground(cardFill)
 
             // MARK: - Display Preferences (Local)
             Section("Display") {
@@ -225,6 +262,7 @@ struct SettingsView: View {
                     set: { local.respondLongPress = $0 }
                 ))
             }
+            .listRowBackground(cardFill)
 
             // MARK: - Prayer Mode (Local)
             Section("Prayer Mode") {
@@ -246,6 +284,7 @@ struct SettingsView: View {
                     }
                 }
             }
+            .listRowBackground(cardFill)
 
             // MARK: - Temporary States (Local)
             Section("Temporary States") {
@@ -269,6 +308,7 @@ struct SettingsView: View {
                     set: { local.nachemAlways = $0 }
                 ))
             }
+            .listRowBackground(cardFill)
 
             // MARK: - Privacy (Local)
             Section("Privacy") {
@@ -277,6 +317,7 @@ struct SettingsView: View {
                     set: { local.allowTracking = $0 }
                 ))
             }
+            .listRowBackground(cardFill)
 
             // MARK: - Account Section
             Section("Account") {
@@ -293,7 +334,13 @@ struct SettingsView: View {
                         .foregroundStyle(.secondary)
                 }
             }
+            .listRowBackground(cardFill)
         }
+        .listStyle(.insetGrouped)
+        .scrollContentBackground(.hidden)
+        .background(backgroundGradient.ignoresSafeArea())
+        .tint(headerTint)
+        .environment(\.defaultMinListRowHeight, 46)
         .overlay {
             if viewModel.isLoading {
                 ProgressView()

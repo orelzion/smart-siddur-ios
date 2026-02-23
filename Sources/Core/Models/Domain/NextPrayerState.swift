@@ -7,7 +7,7 @@ import Foundation
 /// boundaries (not every second) for efficiency.
 struct NextPrayerState: Equatable, Sendable {
     /// The prayer that is currently active or next to be recited
-    let prayer: PrayerType
+    let prayer: PrayerType?
     
     /// The current milestone for the prayer timing (e.g., "Now", "In 30 min", etc.)
     let currentMilestone: PrayerMilestone
@@ -19,7 +19,7 @@ struct NextPrayerState: Equatable, Sendable {
     let alternativePrayer: PrayerType?
     
     static let empty = NextPrayerState(
-        prayer: .shacharit,
+        prayer: nil,
         currentMilestone: PrayerMilestone.empty,
         isTransitional: false,
         alternativePrayer: nil
@@ -57,7 +57,7 @@ struct PrayerMilestone: Equatable, Sendable {
 /// These are contextually relevant prayers based on the current date and time,
 /// such as Havdala on Saturday night or Omer counting during Sefirah.
 struct SuggestedItem: Identifiable, Equatable, Sendable {
-    let id: String = UUID().uuidString
+    let id: String
     
     /// SF Symbol icon name for the suggested prayer
     let icon: String
@@ -85,6 +85,7 @@ struct SuggestedItem: Identifiable, Equatable, Sendable {
         badgeText: String? = nil,
         description: String = ""
     ) {
+        self.id = "\(prayerType.rawValue)-\(title)-\(badgeText ?? "")"
         self.icon = icon
         self.title = title
         self.hebrewTitle = hebrewTitle

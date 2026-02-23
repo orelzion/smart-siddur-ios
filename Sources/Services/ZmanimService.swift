@@ -372,19 +372,6 @@ struct ZmanimService: Sendable {
             }
         }
         
-        // ROSH CHODESH - show molad time (rough astronomical calculation)
-        if jCal.isRoshChodesh() {
-            // Simplified: Molad is roughly at midday (Chatzot)
-            if let chatzot = zmanimCalendar.getChatzos() {
-                result.append(SpecialZman(
-                    name: "Rosh Chodesh",
-                    hebrewName: "ראש חדש",
-                    time: chatzot,
-                    context: "New Moon (Molad) - start of new Hebrew month"
-                ))
-            }
-        }
-        
         // PURIM
         if yomTovIndex == JewishCalendar.PURIM {
             // Megilla reading: evening (Tzet) and morning (after sunrise)

@@ -8,6 +8,7 @@ struct CalendarGridView: View {
     let leadingEmptyCells: Int
     let dayHeaders: [String]
     let isToday: (JewishDay) -> Bool
+    let isSelected: (JewishDay) -> Bool
     let onDayTap: (JewishDay) -> Void
 
     private let columns = Array(repeating: GridItem(.flexible(), spacing: 2), count: 7)
@@ -33,7 +34,8 @@ struct CalendarGridView: View {
                 CalendarDayCell(
                     day: day,
                     calendarMode: calendarMode,
-                    isTodayCell: isToday(day)
+                    isTodayCell: isToday(day),
+                    isSelectedCell: isSelected(day)
                 )
                 .onTapGesture {
                     onDayTap(day)
@@ -50,6 +52,7 @@ struct CalendarDayCell: View {
     let day: JewishDay
     let calendarMode: CalendarMode
     let isTodayCell: Bool
+    let isSelectedCell: Bool
 
     var body: some View {
         VStack(spacing: 2) {
@@ -77,13 +80,8 @@ struct CalendarDayCell: View {
             dayMarker
         }
         .frame(maxWidth: .infinity, minHeight: 56)
-        .background(
-            isTodayCell
-                ? Circle()
-                    .fill(Color.accentColor)
-                    .frame(width: 40, height: 40)
-                : nil
-        )
+        .background(circleBackground)
+        .overlay(circleSelectionOverlay)
         .contentShape(Rectangle())
     }
 
@@ -112,6 +110,28 @@ struct CalendarDayCell: View {
             return .green
         case .regular:
             return .primary
+        }
+    }
+
+    @ViewBuilder
+    private var circleBackground: some View {
+        if isTodayCell {
+            Circle()
+                .fill(Color(red: 0.85, green: 0.73, blue: 0.27))
+                .frame(width: 40, height: 40)
+        } else if isSelectedCell {
+            Circle()
+                .fill(Color(red: 0.85, green: 0.73, blue: 0.27).opacity(0.18))
+                .frame(width: 40, height: 40)
+        }
+    }
+
+    @ViewBuilder
+    private var circleSelectionOverlay: some View {
+        if isSelectedCell && !isTodayCell {
+            Circle()
+                .stroke(Color(red: 0.85, green: 0.73, blue: 0.27), lineWidth: 1.3)
+                .frame(width: 40, height: 40)
         }
     }
 
