@@ -11,7 +11,8 @@ enum SupabaseConfig {
         supabaseKey: anonKey,
         options: .init(
             auth: .init(
-                redirectToURL: redirectURL
+                redirectToURL: redirectURL,
+                emitLocalSessionAsInitialSession: true
             )
         )
     )

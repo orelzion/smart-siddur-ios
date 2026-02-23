@@ -35,7 +35,8 @@ struct SmartSiddurApp: App {
                     isCheckingSession = false
                     switch event {
                     case .initialSession, .signedIn, .tokenRefreshed:
-                        isAuthenticated = session != nil
+                        // Check session validity: ensure session exists and is not expired
+                        isAuthenticated = session != nil && !(session?.isExpired ?? true)
                     case .signedOut:
                         isAuthenticated = false
                     default:
