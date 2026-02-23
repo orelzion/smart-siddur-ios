@@ -23,14 +23,6 @@ struct SmartSiddurApp: App {
             .environment(container)
             .modelContainer(for: [CachedPrayer.self]) { result in
                 // Configure SwiftData model container with migration handling
-                let schema = Schema([CachedPrayer.self])
-                let modelConfiguration = ModelConfiguration(
-                    schema: schema,
-                    isStoredInMemoryOnly: false,
-                    allowsSave: true,
-                    cloudKitDatabase: .none
-                )
-                
                 switch result {
                 case .success(let container):
                     DependencyContainer.modelContainer = container

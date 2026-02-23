@@ -1,4 +1,5 @@
 import SwiftUI
+import Observation
 
 /// Post-auth container with tab navigation.
 /// Shows 3 tabs:
@@ -17,6 +18,7 @@ struct TabContainerView: View {
     @State private var showLocationSetup = false
     @State private var hasCheckedLocation = false
     @State private var previousTab: Int = 0
+    @State private var homeViewModel: HomeViewModel?
 
     var body: some View {
         @Bindable var container = container
@@ -36,7 +38,16 @@ struct TabContainerView: View {
             TabView(selection: $container.selectedTab) {
                 // Tab 1: Home
                 NavigationStack {
-                    NewHomeView(viewModel: HomeViewModel(dependencyContainer: container))
+                    if let viewModel = homeViewModel {
+                        NewHomeView(viewModel: viewModel)
+                    } else {
+                        ProgressView()
+                            .task {
+                                let vm = HomeViewModel(dependencyContainer: container)
+                                homeViewModel = vm
+                                vm.start()
+                            }
+                    }
                 }
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
