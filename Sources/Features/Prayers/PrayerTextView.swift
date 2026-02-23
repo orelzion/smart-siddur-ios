@@ -33,7 +33,7 @@ struct PrayerTextView: View {
             .navigationTitle(viewModel.prayerTitle)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                
+
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack {
                         if viewModel.hasTableOfContents {
@@ -41,7 +41,7 @@ struct PrayerTextView: View {
                                 showTableOfContents.toggle()
                             }
                         }
-                        
+
                         Button("Refresh") {
                             Task {
                                 await viewModel.refreshPrayer()
@@ -53,6 +53,21 @@ struct PrayerTextView: View {
             }
             .task {
                 await viewModel.loadPrayer(prayer)
+            }
+            .onChange(of: DependencyContainer.shared.localSettings.nusachString) { _, _ in
+                Task {
+                    await viewModel.refreshPrayer()
+                }
+            }
+            .onChange(of: DependencyContainer.shared.localSettings.locationName) { _, _ in
+                Task {
+                    await viewModel.refreshPrayer()
+                }
+            }
+            .onChange(of: DependencyContainer.shared.localSettings.tfilaMode) { _, _ in
+                Task {
+                    await viewModel.refreshPrayer()
+                }
             }
             .sheet(isPresented: $showTableOfContents) {
                 TableOfContentsView(
