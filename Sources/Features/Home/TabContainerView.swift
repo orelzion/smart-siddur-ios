@@ -57,7 +57,7 @@ struct TabContainerView: View {
 
                 // Tab 2: Calendar/Zmanim
                 NavigationStack {
-                    UnifiedCalendarView()
+                    CalendarView()
                 }
                 .tabItem {
                     Label("Calendar", systemImage: "calendar")

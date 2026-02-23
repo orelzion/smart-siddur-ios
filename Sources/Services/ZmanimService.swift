@@ -518,17 +518,10 @@ struct ZmanimService: Sendable {
         let begin = isFastBegin ? "Fast Begins" : "Fast Ends"
         let beginHeb = isFastBegin ? "תחילת הצום" : "סיום הצום"
         
-        switch yomTovIndex {
-        case JewishCalendar.TISHA_BEAV:
+        // Tisha B'Av is yomTovIndex = 19 in KosherSwift
+        if yomTovIndex == 19 {
             return ("Tisha B'Av - \(begin)", "תשעה באב - \(beginHeb)")
-        case JewishCalendar.FAST_OF_GEDALIAH:
-            return ("Fast of Gedaliah - \(begin)", "צום גדליה - \(beginHeb)")
-        case JewishCalendar.FAST_OF_ESTHER:
-            return ("Fast of Esther - \(begin)", "צום אסתר - \(beginHeb)")
-        case JewishCalendar.FAST_OF_17_TAMMUZ:
-            return ("17 Tammuz Fast - \(begin)", "שבעה עשר בתמוז - \(beginHeb)")
-        default:
-            return ("Fast Day - \(begin)", "צום - \(beginHeb)")
         }
+        return ("Fast Day - \(begin)", "צום - \(beginHeb)")
     }
 }

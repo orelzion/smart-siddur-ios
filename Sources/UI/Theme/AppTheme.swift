@@ -1,9 +1,9 @@
 import SwiftUI
 
-/// AppTheme provides a unified design token system for light and dark themes
+/// DesignTokens provides a unified design token system for light and dark themes
 /// All colors adapt automatically based on system appearance
 @available(iOS 17, *)
-struct AppTheme {
+struct DesignTokens {
     /// Primary dark gradient background for dark mode
     /// Light mode uses a warm cream background
     static func backgroundPrimary() -> LinearGradient {

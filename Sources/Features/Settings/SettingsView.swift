@@ -2,37 +2,20 @@ import SwiftUI
 
 /// Main Settings screen organized into sections covering all synced and local settings.
 /// Per MIGRATION_SPEC Sections 6.2 (synced) and 6.3 (local).
-/// Redesigned with dark/gold glassmorphism theme and haptic feedback.
 struct SettingsView: View {
     @Environment(DependencyContainer.self) private var container
-    @Environment(\.colorScheme) var colorScheme
     @State private var viewModel: SettingsViewModel?
+    @State private var showLocationPicker = false
 
     var body: some View {
-        ZStack {
-            // Background gradient
-            LinearGradient(
-                gradient: Gradient(colors: [
-                    Color(red: 0.06, green: 0.09, blue: 0.16),  // #0f172a
-                    Color(red: 0.01, green: 0.02, blue: 0.04)   // #020617
-                ]),
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
-
-            Group {
-                if let viewModel {
-                    settingsContent(viewModel: viewModel)
-                } else {
-                    ProgressView()
-                        .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                }
+        Group {
+            if let viewModel {
+                settingsContent(viewModel: viewModel)
+            } else {
+                ProgressView("Loading settings...")
             }
         }
         .navigationTitle("Settings")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbarColorScheme(.dark, for: .navigationBar)
         .onAppear {
             if viewModel == nil {
                 let vm = SettingsViewModel(
@@ -50,655 +33,270 @@ struct SettingsView: View {
         @Bindable var vm = viewModel
         let local = viewModel.localSettings
 
-        ScrollView {
-            VStack(spacing: 24) {
-                // MARK: - Identity Section
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Identity")
-                        .font(.headline)
-                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        .padding(.horizontal, 16)
-
-                    VStack(spacing: 0) {
-                        NavigationLink {
-                            NusachPickerView(
-                                selected: viewModel.syncedSettings.nusach,
-                                onSelect: { viewModel.updateNusach($0) }
-                            )
-                        } label: {
-                            SettingsRow(
-                                label: "Nusach",
-                                value: viewModel.syncedSettings.nusach.displayName
-                            )
-                        }
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        HStack(spacing: 12) {
-                            Text("Woman")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { viewModel.syncedSettings.isWoman },
-                                set: {
-                                    viewModel.updateIsWoman($0)
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        SettingsPickerRow(
-                            label: "Language",
-                            value: viewModel.syncedSettings.language.displayName,
-                            onTap: {}
-                        )
+        List {
+            // MARK: - Identity Section
+            Section("Identity") {
+                NavigationLink {
+                    NusachPickerView(
+                        selected: viewModel.syncedSettings.nusach,
+                        onSelect: { viewModel.updateNusach($0) }
+                    )
+                } label: {
+                    HStack {
+                        Text("Nusach")
+                        Spacer()
+                        Text(viewModel.syncedSettings.nusach.displayName)
+                            .foregroundStyle(.secondary)
                     }
-                    .glassCard()
-                    .padding(.horizontal, 16)
-
-                    NavigationLink {
-                        LocationPickerView()
-                    } label: {
-                        VStack(spacing: 0) {
-                            HStack(spacing: 12) {
-                                Text("Location")
-                                    .foregroundStyle(.white)
-                                Spacer()
-                                if let loc = container.selectedLocationName {
-                                    Text(loc)
-                                        .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
-                                        .lineLimit(1)
-                                } else {
-                                    Text("Not set")
-                                        .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
-                                }
-                                Image(systemName: "chevron.right")
-                                    .font(.caption)
-                                    .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
-                            }
-                            .padding(16)
-                        }
-                        .glassCard()
-                    }
-                    .padding(.horizontal, 16)
                 }
 
-                // MARK: - Location/Calendar Section
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Location & Calendar")
-                        .font(.headline)
-                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        .padding(.horizontal, 16)
+                Toggle("Woman", isOn: Binding(
+                    get: { viewModel.syncedSettings.isWoman },
+                    set: { viewModel.updateIsWoman($0) }
+                ))
 
-                    VStack(spacing: 0) {
-                        HStack(spacing: 12) {
-                            Text("In Israel")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { viewModel.syncedSettings.isInIsrael },
-                                set: {
-                                    viewModel.updateIsInIsrael($0)
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        HStack(spacing: 12) {
-                            Text("Mizrochnik")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { viewModel.syncedSettings.isMizrochnik },
-                                set: {
-                                    viewModel.updateIsMizrochnik($0)
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        SettingsPickerRow(
-                            label: "Mukaf Mode",
-                            value: viewModel.syncedSettings.mukafMode.displayName,
-                            onTap: {}
-                        )
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        SettingsPickerRow(
-                            label: "Date Change",
-                            value: viewModel.syncedSettings.dateChangeRule.displayName,
-                            onTap: {}
-                        )
+                Picker("Language", selection: Binding(
+                    get: { viewModel.syncedSettings.language },
+                    set: { viewModel.updateLanguage($0) }
+                )) {
+                    ForEach(AppLanguage.allCases, id: \.self) { lang in
+                        Text(lang.displayName).tag(lang)
                     }
-                    .glassCard()
-                    .padding(.horizontal, 16)
                 }
 
-                // MARK: - Zmanim Opinions Section
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Zmanim Opinions")
-                        .font(.headline)
-                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        .padding(.horizontal, 16)
-
-                    NavigationLink {
-                        ZmanimOpinionsView(viewModel: viewModel)
-                    } label: {
-                        VStack(spacing: 0) {
-                            HStack(spacing: 12) {
-                                Text("Halachic Opinions")
-                                    .foregroundStyle(.white)
-                                Spacer()
-                                Text(viewModel.syncedSettings.zmanOpinion.displayName)
-                                    .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
-                                Image(systemName: "chevron.right")
-                                    .font(.caption)
-                                    .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
-                            }
-                            .padding(16)
+                // Location row
+                NavigationLink {
+                    LocationPickerView()
+                } label: {
+                    HStack {
+                        Text("Location")
+                        Spacer()
+                        if let loc = container.selectedLocationName {
+                            Text(loc)
+                                .foregroundStyle(.secondary)
+                                .lineLimit(1)
+                        } else {
+                            Text("Not set")
+                                .foregroundStyle(.secondary)
                         }
-                        .glassCard()
                     }
-                    .padding(.horizontal, 16)
                 }
-
-                // MARK: - Personal Insertions Section
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Personal Insertions")
-                        .font(.headline)
-                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        .padding(.horizontal, 16)
-
-                    VStack(spacing: 0) {
-                        HStack(spacing: 12) {
-                            Text("Pasuk")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            TextField("Your verse", text: Binding(
-                                get: { viewModel.syncedSettings.pasuk },
-                                set: { viewModel.updatePasuk($0) }
-                            ))
-                            .multilineTextAlignment(.trailing)
-                            .foregroundStyle(.white)
-                            .textFieldStyle(.plain)
-                        }
-                        .padding(16)
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        HStack(spacing: 12) {
-                            Text("Sick Name")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            TextField("For Mi Sheberach", text: Binding(
-                                get: { viewModel.syncedSettings.sickName },
-                                set: { viewModel.updateSickName($0) }
-                            ))
-                            .multilineTextAlignment(.trailing)
-                            .foregroundStyle(.white)
-                            .textFieldStyle(.plain)
-                        }
-                        .padding(16)
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        HStack(spacing: 12) {
-                            Text("Include Tal")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { viewModel.syncedSettings.talPreference },
-                                set: {
-                                    viewModel.updateTalPreference($0)
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-                    }
-                    .glassCard()
-                    .padding(.horizontal, 16)
-                }
-
-                // MARK: - Shabbat Section
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Shabbat")
-                        .font(.headline)
-                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        .padding(.horizontal, 16)
-
-                    VStack(spacing: 0) {
-                        HStack(spacing: 12) {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text("Candle Lighting")
-                                    .foregroundStyle(.white)
-                                Text("\(viewModel.syncedSettings.shabbatCandleMinutes) min before")
-                                    .font(.caption)
-                                    .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
-                            }
-                            Spacer()
-                            HStack(spacing: 8) {
-                                Button {
-                                    if viewModel.syncedSettings.shabbatCandleMinutes > 10 {
-                                        viewModel.updateShabbatCandleMinutes(viewModel.syncedSettings.shabbatCandleMinutes - 1)
-                                        hapticFeedback()
-                                    }
-                                } label: {
-                                    Image(systemName: "minus.circle.fill")
-                                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                                }
-
-                                Text("\(viewModel.syncedSettings.shabbatCandleMinutes)")
-                                    .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                                    .frame(width: 30, alignment: .center)
-
-                                Button {
-                                    if viewModel.syncedSettings.shabbatCandleMinutes < 40 {
-                                        viewModel.updateShabbatCandleMinutes(viewModel.syncedSettings.shabbatCandleMinutes + 1)
-                                        hapticFeedback()
-                                    }
-                                } label: {
-                                    Image(systemName: "plus.circle.fill")
-                                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                                }
-                            }
-                        }
-                        .padding(16)
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        HStack(spacing: 12) {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text("Shabbat Ends")
-                                    .foregroundStyle(.white)
-                                Text("\(viewModel.syncedSettings.shabbatEndMinutes) min after")
-                                    .font(.caption)
-                                    .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
-                            }
-                            Spacer()
-                            HStack(spacing: 8) {
-                                Button {
-                                    if viewModel.syncedSettings.shabbatEndMinutes > 1 {
-                                        viewModel.updateShabbatEndMinutes(viewModel.syncedSettings.shabbatEndMinutes - 1)
-                                        hapticFeedback()
-                                    }
-                                } label: {
-                                    Image(systemName: "minus.circle.fill")
-                                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                                }
-
-                                Text("\(viewModel.syncedSettings.shabbatEndMinutes)")
-                                    .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                                    .frame(width: 30, alignment: .center)
-
-                                Button {
-                                    if viewModel.syncedSettings.shabbatEndMinutes < 72 {
-                                        viewModel.updateShabbatEndMinutes(viewModel.syncedSettings.shabbatEndMinutes + 1)
-                                        hapticFeedback()
-                                    }
-                                } label: {
-                                    Image(systemName: "plus.circle.fill")
-                                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                                }
-                            }
-                        }
-                        .padding(16)
-                    }
-                    .glassCard()
-                    .padding(.horizontal, 16)
-                }
-
-                // MARK: - Appearance Section (Local)
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Appearance")
-                        .font(.headline)
-                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        .padding(.horizontal, 16)
-
-                    NavigationLink {
-                        AppearanceSettingsView(localSettings: local)
-                    } label: {
-                        VStack(spacing: 0) {
-                            HStack(spacing: 12) {
-                                Text("Theme & Fonts")
-                                    .foregroundStyle(.white)
-                                Spacer()
-                                Text(local.appTheme.displayName)
-                                    .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
-                                Image(systemName: "chevron.right")
-                                    .font(.caption)
-                                    .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
-                            }
-                            .padding(16)
-                        }
-                        .glassCard()
-                    }
-                    .padding(.horizontal, 16)
-                }
-
-                // MARK: - Display Preferences (Local)
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Display")
-                        .font(.headline)
-                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        .padding(.horizontal, 16)
-
-                    VStack(spacing: 0) {
-                        HStack(spacing: 12) {
-                            Text("Keep Screen Awake")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { local.keepScreenAwake },
-                                set: {
-                                    local.keepScreenAwake = $0
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        HStack(spacing: 12) {
-                            Text("Portrait Only")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { local.portraitOnly },
-                                set: {
-                                    local.portraitOnly = $0
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        HStack(spacing: 12) {
-                            Text("Show Section Titles")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { local.showTitles },
-                                set: {
-                                    local.showTitles = $0
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        HStack(spacing: 12) {
-                            Text("24-Hour Format")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { local.use24hFormat },
-                                set: {
-                                    local.use24hFormat = $0
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        HStack(spacing: 12) {
-                            Text("Show Zman Bar")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { local.showZmanBar },
-                                set: {
-                                    local.showZmanBar = $0
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        HStack(spacing: 12) {
-                            Text("Long Press Response")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { local.respondLongPress },
-                                set: {
-                                    local.respondLongPress = $0
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-                    }
-                    .glassCard()
-                    .padding(.horizontal, 16)
-                }
-
-                // MARK: - Prayer Mode (Local)
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Prayer Mode")
-                        .font(.headline)
-                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        .padding(.horizontal, 16)
-
-                    VStack(spacing: 0) {
-                        SettingsPickerRow(
-                            label: "Tfila Mode",
-                            value: local.tfilaMode.displayName,
-                            onTap: {}
-                        )
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        SettingsPickerRow(
-                            label: "Silent Mode",
-                            value: local.silentMode.displayName,
-                            onTap: {}
-                        )
-                    }
-                    .glassCard()
-                    .padding(.horizontal, 16)
-                }
-
-                // MARK: - Temporary States (Local)
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Temporary States")
-                        .font(.headline)
-                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        .padding(.horizontal, 16)
-
-                    VStack(spacing: 0) {
-                        HStack(spacing: 12) {
-                            Text("Avel Mode")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { local.isAvel },
-                                set: {
-                                    local.isAvel = $0
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        HStack(spacing: 12) {
-                            Text("No Tahanun")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { local.noTahanun },
-                                set: {
-                                    local.noTahanun = $0
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        HStack(spacing: 12) {
-                            Text("Vanenu (Fast Day)")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { local.isVanenu },
-                                set: {
-                                    local.isVanenu = $0
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        HStack(spacing: 12) {
-                            Text("Nachem Always")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { local.nachemAlways },
-                                set: {
-                                    local.nachemAlways = $0
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-                    }
-                    .glassCard()
-                    .padding(.horizontal, 16)
-                }
-
-                // MARK: - Privacy (Local)
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Privacy")
-                        .font(.headline)
-                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        .padding(.horizontal, 16)
-
-                    VStack(spacing: 0) {
-                        HStack(spacing: 12) {
-                            Text("Allow Tracking")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Toggle("", isOn: Binding(
-                                get: { local.allowTracking },
-                                set: {
-                                    local.allowTracking = $0
-                                    hapticFeedback()
-                                }
-                            ))
-                            .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        }
-                        .padding(16)
-                    }
-                    .glassCard()
-                    .padding(.horizontal, 16)
-                }
-
-                // MARK: - Account Section
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Account")
-                        .font(.headline)
-                        .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
-                        .padding(.horizontal, 16)
-
-                    VStack(spacing: 0) {
-                        NavigationLink {
-                            HomeView()
-                        } label: {
-                            HStack(spacing: 12) {
-                                Text("Account & Sign Out")
-                                    .foregroundStyle(.white)
-                                Spacer()
-                                Image(systemName: "chevron.right")
-                                    .font(.caption)
-                                    .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
-                            }
-                            .padding(16)
-                        }
-
-                        Divider()
-                            .background(Color(red: 0.20, green: 0.22, blue: 0.31))
-
-                        HStack(spacing: 12) {
-                            Text("Version")
-                                .foregroundStyle(.white)
-                            Spacer()
-                            Text(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0")
-                                .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
-                        }
-                        .padding(16)
-                    }
-                    .glassCard()
-                    .padding(.horizontal, 16)
-                }
-
-                Spacer()
-                    .frame(height: 32)
             }
-            .padding(.vertical, 24)
+
+            // MARK: - Location/Calendar Section
+            Section("Location & Calendar") {
+                Toggle("In Israel", isOn: Binding(
+                    get: { viewModel.syncedSettings.isInIsrael },
+                    set: { viewModel.updateIsInIsrael($0) }
+                ))
+
+                Toggle("Mizrochnik", isOn: Binding(
+                    get: { viewModel.syncedSettings.isMizrochnik },
+                    set: { viewModel.updateIsMizrochnik($0) }
+                ))
+
+                Picker("Mukaf Mode", selection: Binding(
+                    get: { viewModel.syncedSettings.mukafMode },
+                    set: { viewModel.updateMukafMode($0) }
+                )) {
+                    ForEach(MukafMode.allCases, id: \.self) { mode in
+                        Text(mode.displayName).tag(mode)
+                    }
+                }
+
+                Picker("Date Change", selection: Binding(
+                    get: { viewModel.syncedSettings.dateChangeRule },
+                    set: { viewModel.updateDateChangeRule($0) }
+                )) {
+                    ForEach(DateChangeRule.allCases, id: \.self) { rule in
+                        Text(rule.displayName).tag(rule)
+                    }
+                }
+            }
+
+            // MARK: - Zmanim Opinions Section
+            Section("Zmanim Opinions") {
+                NavigationLink {
+                    ZmanimOpinionsView(viewModel: viewModel)
+                } label: {
+                    HStack {
+                        Text("Halachic Opinions")
+                        Spacer()
+                        Text(viewModel.syncedSettings.zmanOpinion.displayName)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+
+            // MARK: - Personal Insertions Section
+            Section("Personal Insertions") {
+                HStack {
+                    Text("Pasuk")
+                    Spacer()
+                    TextField("Your personal verse", text: Binding(
+                        get: { viewModel.syncedSettings.pasuk },
+                        set: { viewModel.updatePasuk($0) }
+                    ))
+                    .multilineTextAlignment(.trailing)
+                    .textFieldStyle(.plain)
+                }
+
+                HStack {
+                    Text("Sick Name")
+                    Spacer()
+                    TextField("Name for Mi Sheberach", text: Binding(
+                        get: { viewModel.syncedSettings.sickName },
+                        set: { viewModel.updateSickName($0) }
+                    ))
+                    .multilineTextAlignment(.trailing)
+                    .textFieldStyle(.plain)
+                }
+
+                Toggle("Include Tal", isOn: Binding(
+                    get: { viewModel.syncedSettings.talPreference },
+                    set: { viewModel.updateTalPreference($0) }
+                ))
+            }
+
+            // MARK: - Shabbat Section
+            Section("Shabbat") {
+                Stepper(
+                    "Candle Lighting: \(viewModel.syncedSettings.shabbatCandleMinutes) min before",
+                    value: Binding(
+                        get: { viewModel.syncedSettings.shabbatCandleMinutes },
+                        set: { viewModel.updateShabbatCandleMinutes($0) }
+                    ),
+                    in: 10...40
+                )
+
+                Stepper(
+                    "Shabbat Ends: \(viewModel.syncedSettings.shabbatEndMinutes) min after",
+                    value: Binding(
+                        get: { viewModel.syncedSettings.shabbatEndMinutes },
+                        set: { viewModel.updateShabbatEndMinutes($0) }
+                    ),
+                    in: 1...72
+                )
+            }
+
+            // MARK: - Appearance Section (Local)
+            Section("Appearance") {
+                NavigationLink {
+                    AppearanceSettingsView(localSettings: local)
+                } label: {
+                    HStack {
+                        Text("Theme & Fonts")
+                        Spacer()
+                        Text(local.appTheme.displayName)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+
+            // MARK: - Display Preferences (Local)
+            Section("Display") {
+                Toggle("Keep Screen Awake", isOn: Binding(
+                    get: { local.keepScreenAwake },
+                    set: { local.keepScreenAwake = $0 }
+                ))
+
+                Toggle("Portrait Only", isOn: Binding(
+                    get: { local.portraitOnly },
+                    set: { local.portraitOnly = $0 }
+                ))
+
+                Toggle("Show Section Titles", isOn: Binding(
+                    get: { local.showTitles },
+                    set: { local.showTitles = $0 }
+                ))
+
+                Toggle("24-Hour Format", isOn: Binding(
+                    get: { local.use24hFormat },
+                    set: { local.use24hFormat = $0 }
+                ))
+
+                Toggle("Show Zman Bar", isOn: Binding(
+                    get: { local.showZmanBar },
+                    set: { local.showZmanBar = $0 }
+                ))
+
+                Toggle("Long Press Response", isOn: Binding(
+                    get: { local.respondLongPress },
+                    set: { local.respondLongPress = $0 }
+                ))
+            }
+
+            // MARK: - Prayer Mode (Local)
+            Section("Prayer Mode") {
+                Picker("Tfila Mode", selection: Binding(
+                    get: { local.tfilaMode },
+                    set: { local.tfilaMode = $0 }
+                )) {
+                    ForEach(TfilaMode.allCases, id: \.self) { mode in
+                        Text(mode.displayName).tag(mode)
+                    }
+                }
+
+                Picker("Silent Mode", selection: Binding(
+                    get: { local.silentMode },
+                    set: { local.silentMode = $0 }
+                )) {
+                    ForEach(SilentMode.allCases, id: \.self) { mode in
+                        Text(mode.displayName).tag(mode)
+                    }
+                }
+            }
+
+            // MARK: - Temporary States (Local)
+            Section("Temporary States") {
+                Toggle("Avel Mode", isOn: Binding(
+                    get: { local.isAvel },
+                    set: { local.isAvel = $0 }
+                ))
+
+                Toggle("No Tahanun", isOn: Binding(
+                    get: { local.noTahanun },
+                    set: { local.noTahanun = $0 }
+                ))
+
+                Toggle("Vanenu (Fast Day)", isOn: Binding(
+                    get: { local.isVanenu },
+                    set: { local.isVanenu = $0 }
+                ))
+
+                Toggle("Nachem Always", isOn: Binding(
+                    get: { local.nachemAlways },
+                    set: { local.nachemAlways = $0 }
+                ))
+            }
+
+            // MARK: - Privacy (Local)
+            Section("Privacy") {
+                Toggle("Allow Tracking", isOn: Binding(
+                    get: { local.allowTracking },
+                    set: { local.allowTracking = $0 }
+                ))
+            }
+
+            // MARK: - Account Section
+            Section("Account") {
+                NavigationLink {
+                    HomeView()
+                } label: {
+                    Text("Account & Sign Out")
+                }
+
+                HStack {
+                    Text("Version")
+                    Spacer()
+                    Text(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0")
+                        .foregroundStyle(.secondary)
+                }
+            }
         }
         .overlay {
             if viewModel.isLoading {
-                Color.black.opacity(0.3)
-                    .ignoresSafeArea()
                 ProgressView()
-                    .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
             }
         }
         .alert("Error", isPresented: Binding(
@@ -709,48 +307,5 @@ struct SettingsView: View {
         } message: {
             Text(viewModel.error ?? "")
         }
-    }
-
-    private func hapticFeedback() {
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.impactOccurred()
-    }
-}
-
-// MARK: - Helper Components
-
-struct SettingsRow: View {
-    let label: String
-    let value: String
-
-    var body: some View {
-        HStack(spacing: 12) {
-            Text(label)
-                .foregroundStyle(.white)
-            Spacer()
-            Text(value)
-                .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
-            Image(systemName: "chevron.right")
-                .font(.caption)
-                .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
-        }
-        .padding(16)
-    }
-}
-
-struct SettingsPickerRow: View {
-    let label: String
-    let value: String
-    let onTap: () -> Void
-
-    var body: some View {
-        HStack(spacing: 12) {
-            Text(label)
-                .foregroundStyle(.white)
-            Spacer()
-            Text(value)
-                .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
-        }
-        .padding(16)
     }
 }
