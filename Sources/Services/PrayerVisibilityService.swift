@@ -142,4 +142,146 @@ struct PrayerVisibilityService: Sendable {
     func isSpecialCategoryEmpty(context: PrayerVisibilityContext) -> Bool {
         return visiblePrayers(in: context).isEmpty
     }
+    
+    /// Generate suggested items for the "Suggested For You" section.
+    ///
+    /// Returns contextually relevant prayers based on the Jewish calendar and time.
+    /// Always includes core items, then adds seasonal/contextual items based on the date.
+    func suggestedItems(for date: Date, jewishDay: JewishDay) -> [SuggestedItem] {
+        var items: [SuggestedItem] = []
+        
+        let yomTovIndex = jewishDay.yomTovIndex
+        let hebrewMonth = jewishDay.hebrewMonth
+        let omerDay = jewishDay.omerDay
+        
+        // ALWAYS include these core items
+        items.append(SuggestedItem(
+            icon: "fork.knife",
+            title: "Birkat HaMazon",
+            hebrewTitle: "ברכת המזון",
+            prayerType: .mazon,
+            badgeText: nil,
+            description: "Grace after meals"
+        ))
+        
+        items.append(SuggestedItem(
+            icon: "drop",
+            title: "Asher Yatzar",
+            hebrewTitle: "אשר יצר",
+            prayerType: .asherYatzar,
+            badgeText: nil,
+            description: "Blessing after using restroom"
+        ))
+        
+        // OMER COUNTING - shown during Sefirat HaOmer period
+        if let omerDay = omerDay {
+            let weekNumber = (omerDay - 1) / 7 + 1
+            let dayInWeek = (omerDay - 1) % 7 + 1
+            
+            var badgeText: String?
+            if omerDay <= 7 {
+                badgeText = "Tonight - Day \(omerDay)"
+            } else {
+                badgeText = "Night \(weekNumber):\(dayInWeek)"
+            }
+            
+            items.append(SuggestedItem(
+                icon: "number.circle",
+                title: "Sefirat HaOmer",
+                hebrewTitle: "ספירת העומר",
+                prayerType: .omer,
+                badgeText: badgeText,
+                description: "Counting of the Omer"
+            ))
+        }
+        
+        // HAVDALA - Motzaei Shabbat (Saturday night)
+        let dayOfWeek = Calendar(identifier: .gregorian).component(.weekday, from: date)
+        if dayOfWeek == 7 { // Saturday - show Havdala suggestion for tonight
+            items.append(SuggestedItem(
+                icon: "candle.2",
+                title: "Havdala",
+                hebrewTitle: "הבדלה",
+                prayerType: .havdala,
+                badgeText: "Tonight",
+                description: "Ceremony ending Shabbat"
+            ))
+        }
+        
+        // ARVIT QUICK ACCESS - during Shkia to Tzeit window
+        // This is a navigational aid, shown with context
+        items.append(SuggestedItem(
+            icon: "moon.stars",
+            title: "Arvit",
+            hebrewTitle: "ערבית",
+            prayerType: .arvit,
+            badgeText: "Quick access",
+            description: "Evening prayer (after sunset)"
+        ))
+        
+        // CHANUKAH
+        if jewishDay.isChanukah {
+            let chanukahNight = jewishDay.hebrewDay - 24 // Chanukah starts on 25 Kislev
+            items.append(SuggestedItem(
+                icon: "flame",
+                title: "Chanukah",
+                hebrewTitle: "חנוכה",
+                prayerType: .hanuka,
+                badgeText: "Night \(max(1, chanukahNight))",
+                description: "Chanukah prayers and blessings"
+            ))
+        }
+        
+        // ILANOT - Nisan (tree blessing season)
+        if hebrewMonth == JewishCalendar.NISSAN {
+            items.append(SuggestedItem(
+                icon: "tree",
+                title: "Birkat HaIlanot",
+                hebrewTitle: "ברכת האילנות",
+                prayerType: .ilanot,
+                badgeText: "Nisan",
+                description: "Blessing over blossoming trees"
+            ))
+        }
+        
+        // KINOT - Tisha B'Av
+        if yomTovIndex == JewishCalendar.TISHA_BEAV {
+            items.append(SuggestedItem(
+                icon: "building.columns",
+                title: "Kinot",
+                hebrewTitle: "קינות",
+                prayerType: .kinot,
+                badgeText: "Tisha B'Av",
+                description: "Lamentations for Tisha B'Av"
+            ))
+        }
+        
+        // SELICHOT - High Holiday season
+        if isSlihotTime(jewishDay: jewishDay, nusach: .edot) {
+            items.append(SuggestedItem(
+                icon: "horn",
+                title: "Selichot",
+                hebrewTitle: "סליחות",
+                prayerType: .slihot,
+                badgeText: "High Holidays",
+                description: "Penitential prayers"
+            ))
+        }
+        
+        // LEVANA - Birkat HaLevana (moon visible, appropriate time)
+        // This would be more sophisticated in production with actual moon calculations
+        if yomTovIndex != JewishCalendar.YOM_KIPPUR {
+            // Don't show during Yom Kippur
+            items.append(SuggestedItem(
+                icon: "moon.circle",
+                title: "Birkat HaLevana",
+                hebrewTitle: "ברכת הלבנה",
+                prayerType: .levana,
+                badgeText: "When visible",
+                description: "Blessing of the new moon"
+            ))
+        }
+        
+        return items
+    }
 }
