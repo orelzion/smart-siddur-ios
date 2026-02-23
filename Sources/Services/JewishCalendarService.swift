@@ -125,4 +125,120 @@ struct JewishCalendarService: Sendable {
             return getJewishDay(for: date, isInIsrael: isInIsrael)
         }
     }
+
+    /// Get a seasonal badge string for a given Jewish day.
+    ///
+    /// Returns contextual text like "Birkat Ha'Ilanot available" or "Chanukah night 3".
+    /// Used to display seasonal context on the home screen.
+    func seasonalBadge(for jewishDay: JewishDay) -> String? {
+        let hebrewMonth = jewishDay.hebrewMonth
+        let hebrewDay = jewishDay.hebrewDay
+        let yomTovIndex = jewishDay.yomTovIndex
+        let omerDay = jewishDay.omerDay
+        
+        // NISAN - Birkat Ha'Ilanot season
+        if hebrewMonth == JewishCalendar.NISSAN {
+            return "🌳 Birkat Ha'Ilanot available"
+        }
+        
+        // SEFIRAT HA'OMER - show night number
+        if let omerDay = omerDay {
+            let weekNumber = (omerDay - 1) / 7 + 1
+            let dayInWeek = (omerDay - 1) % 7 + 1
+            
+            if omerDay <= 7 {
+                return "📊 Sefirat HaOmer night \(omerDay)"
+            } else {
+                return "📊 Omer night \(weekNumber):\(dayInWeek)"
+            }
+        }
+        
+        // CHANUKAH
+        if jewishDay.isChanukah {
+            let chanukahNight = max(1, hebrewDay - 24)
+            return "🕯️ Chanukah night \(chanukahNight)"
+        }
+        
+        // ROSH CHODESH - any month
+        if jewishDay.isRoshChodesh {
+            let monthName = hebrewMonthName(hebrewMonth)
+            return "🌙 Rosh Chodesh \(monthName)"
+        }
+        
+        // FAST DAYS (other than Yom Kippur which is Yom Tov)
+        if jewishDay.isTaanis && yomTovIndex != JewishCalendar.YOM_KIPPUR {
+            if yomTovIndex == JewishCalendar.TISHA_BEAV {
+                return "⚫ Tisha B'Av"
+            } else if yomTovIndex == JewishCalendar.FAST_OF_GEDALIAH {
+                return "⚫ Fast of Gedaliah"
+            } else if yomTovIndex == JewishCalendar.FAST_OF_ESTHER {
+                return "⚫ Fast of Esther"
+            } else if yomTovIndex == JewishCalendar.FAST_OF_17_TAMMUZ {
+                return "⚫ 17 Tammuz Fast"
+            }
+        }
+        
+        // LAG BA'OMER
+        if yomTovIndex == JewishCalendar.LAG_BAOMER {
+            return "🔥 Lag Ba'Omer"
+        }
+        
+        // PURIM
+        if yomTovIndex == JewishCalendar.PURIM {
+            return "🎭 Purim"
+        }
+        
+        // PESACH
+        if yomTovIndex >= JewishCalendar.PESACH && yomTovIndex <= JewishCalendar.CHOL_HAMOED_PESACH {
+            return "🫓 Pesach"
+        }
+        
+        // SHAVUOT
+        if yomTovIndex >= JewishCalendar.SHAVUOT && yomTovIndex <= JewishCalendar.SHAVUOT2 {
+            return "📖 Shavuot"
+        }
+        
+        // ROSH HASHANA
+        if yomTovIndex >= JewishCalendar.ROSH_HASHANA && yomTovIndex <= JewishCalendar.ROSH_HASHANA2 {
+            return "🍎 Rosh Hashana"
+        }
+        
+        // YOM KIPPUR
+        if yomTovIndex == JewishCalendar.YOM_KIPPUR {
+            return "⚪ Yom Kippur"
+        }
+        
+        // SUKKOT
+        if yomTovIndex >= JewishCalendar.SUCCOS && yomTovIndex <= JewishCalendar.CHOL_HAMOED_SUCCOS {
+            return "🏕️ Sukkot"
+        }
+        
+        // SIMCHAT TORAH
+        if yomTovIndex == JewishCalendar.SIMCHAT_TORAH || yomTovIndex == JewishCalendar.SHEMINI_ATZERET {
+            return "🎉 Simchat Torah"
+        }
+        
+        // No seasonal badge
+        return nil
+    }
+    
+    /// Get Hebrew month name for the month number.
+    private func hebrewMonthName(_ month: Int) -> String {
+        switch month {
+        case JewishCalendar.TISHREI: return "Tishrei"
+        case JewishCalendar.CHESHVAN: return "Cheshvan"
+        case JewishCalendar.KISLEV: return "Kislev"
+        case JewishCalendar.TEVET: return "Tevet"
+        case JewishCalendar.SHEVAT: return "Shevat"
+        case JewishCalendar.ADAR: return "Adar"
+        case JewishCalendar.ADAR_II: return "Adar II"
+        case JewishCalendar.NISSAN: return "Nisan"
+        case JewishCalendar.IYAR: return "Iyar"
+        case JewishCalendar.SIVAN: return "Sivan"
+        case JewishCalendar.TAMMUZ: return "Tammuz"
+        case JewishCalendar.AV: return "Av"
+        case JewishCalendar.ELUL: return "Elul"
+        default: return "Month \(month)"
+        }
+    }
 }
