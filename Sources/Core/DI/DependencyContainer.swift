@@ -16,6 +16,7 @@ final class DependencyContainer {
     let jewishCalendarService: JewishCalendarService
     let prayerService: PrayerService
     let prayerCacheService: PrayerCacheService?
+    let nextPrayerService: NextPrayerService
 
     /// SwiftData model container for caching
     static var modelContainer: ModelContainer?
@@ -46,6 +47,7 @@ final class DependencyContainer {
         let zmanim = ZmanimService()
         let jewishCal = JewishCalendarService()
         let prayerSvc = PrayerService(supabase: supabaseClient)
+        let nextPrayer = NextPrayerService(zmanimService: zmanim, jewishCalendarService: jewishCal)
         
         self.supabase = supabaseClient
         self.authRepository = AuthRepository(supabase: supabaseClient)
@@ -55,6 +57,7 @@ final class DependencyContainer {
         self.zmanimService = zmanim
         self.jewishCalendarService = jewishCal
         self.prayerService = prayerSvc
+        self.nextPrayerService = nextPrayer
         
         // Initialize cache service if SwiftData is available
         // Use a helper to avoid capturing self before full initialization
