@@ -15,7 +15,8 @@ struct HeroCard: View {
     let action: () -> Void
     
     @Environment(\.colorScheme) var colorScheme
-    @State private var isPressed = false
+     @Environment(\.accessibilityReduceMotion) var reduceMotion
+     @State private var isPressed = false
     
     var body: some View {
         Button(action: triggerAction) {
@@ -36,15 +37,20 @@ struct HeroCard: View {
                     Text(milestoneTitle)
                         .font(.headline)
                         .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))  // textSecondary
+                        .accessibilityLabel("Milestone")
+                        .accessibilityValue(milestoneTitle)
                     
                     HStack(spacing: 8) {
                         Image(systemName: "clock.fill")
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))  // accentGold
+                            .accessibilityHidden(true)  // Hidden from VoiceOver since text describes it
                         
                         Text(countdown)
                             .font(.system(size: 32, weight: .bold, design: .monospaced))
                             .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))  // accentGold
+                            .accessibilityLabel("Countdown timer")
+                            .accessibilityValue(countdown)
                     }
                 }
                 
@@ -113,7 +119,7 @@ struct HeroCard: View {
             )
         }
         .scaleEffect(isPressed ? 0.98 : 1.0)
-        .simultaneousGesture(
+         .simultaneousGesture(
             DragGesture(minimumDistance: 0)
                 .onChanged { _ in
                     isPressed = true
@@ -122,7 +128,14 @@ struct HeroCard: View {
                     isPressed = false
                 }
         )
-        .animation(.spring(response: 0.3, dampingFraction: 0.6), value: isPressed)
+        .animation(
+            reduceMotion
+                ? .linear(duration: 0.1)
+                : .spring(response: 0.3, dampingFraction: 0.6),
+            value: isPressed
+        )
+        .accessibilityLabel("\(prayerName) prayer card")
+        .accessibilityHint("Countdown to \(milestoneTitle). Tap to view full prayer text.")
     }
     
     private func triggerAction() {

@@ -287,7 +287,7 @@ final class CalendarViewModel {
     }
 
     /// Update the current month if selectedDate moved to a different month.
-    private func updateCurrentMonthIfNeeded() {
+    func updateCurrentMonthIfNeeded() {
         let cal = Calendar(identifier: .gregorian)
         let selectedComps = cal.dateComponents([.year, .month], from: selectedDate)
         let currentComps = cal.dateComponents([.year, .month], from: currentMonth)

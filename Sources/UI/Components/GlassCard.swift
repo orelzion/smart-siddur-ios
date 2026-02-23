@@ -19,13 +19,19 @@ struct GlassCard: ViewModifier {
                 Group {
                     if #available(iOS 18, *) {
                         // Liquid Glass effect for iOS 18+
-                        Color(red: 0.11, green: 0.13, blue: 0.20)  // #1c2230
+                        let bgColor = colorScheme == .dark 
+                            ? Color(red: 0.11, green: 0.13, blue: 0.20)  // #1c2230
+                            : Color(red: 0.98, green: 0.97, blue: 0.96)  // #faf8f5 (warm cream)
+                        bgColor
                             .opacity(colorScheme == .dark ? 0.4 : 0.8)
                             .glassEffect(.regular)
                     } else {
                         // Material effect for iOS 17
+                        let bgColor = colorScheme == .dark
+                            ? Color(red: 0.11, green: 0.13, blue: 0.20)  // #1c2230
+                            : Color(red: 0.98, green: 0.97, blue: 0.96)  // #faf8f5 (warm cream)
                         RoundedRectangle(cornerRadius: cornerRadius)
-                            .fill(Color(red: 0.11, green: 0.13, blue: 0.20))
+                            .fill(bgColor)
                             .opacity(colorScheme == .dark ? 0.4 : 0.8)
                             .blur(radius: 8)
                     }
@@ -35,7 +41,9 @@ struct GlassCard: ViewModifier {
             .overlay(
                 RoundedRectangle(cornerRadius: cornerRadius)
                     .stroke(
-                        Color(red: 0.20, green: 0.22, blue: 0.31),  // #343847
+                        colorScheme == .dark
+                            ? Color(red: 0.20, green: 0.22, blue: 0.31)  // #343847 (dark border)
+                            : Color(red: 0.90, green: 0.88, blue: 0.84),  // #e5e0d6 (light border)
                         lineWidth: 1
                     )
                     .opacity(borderOpacity)

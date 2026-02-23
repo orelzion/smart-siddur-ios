@@ -42,8 +42,10 @@ struct SuggestedCard: View {
             }
         }
         .frame(height: 120)
-        .scaleEffect(0.98)
-        .hoverEffect(.lift)
+         .scaleEffect(0.98)
+         .hoverEffect(.lift)
+         .accessibilityLabel("\(title) prayer or blessing")
+         .accessibilityHint("Double tap to open \(title)")
     }
 }
 

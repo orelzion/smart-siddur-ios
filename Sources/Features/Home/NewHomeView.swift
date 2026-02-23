@@ -173,8 +173,10 @@ struct NewHomeView: View {
             ) {
                 ForEach(viewModel.gridPrayers) { prayer in
                     prayerGridCell(for: prayer)
+                        .transition(.opacity.combined(with: .scale))
                 }
             }
+            .animation(.easeInOut(duration: 0.2), value: viewModel.gridPrayers)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }

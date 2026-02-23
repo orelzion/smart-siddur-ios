@@ -42,6 +42,7 @@ struct TabContainerView: View {
                     Label("Home", systemImage: "house.fill")
                 }
                 .tag(0)
+                .transition(.opacity)
 
                 // Tab 2: Calendar/Zmanim
                 NavigationStack {
@@ -51,6 +52,7 @@ struct TabContainerView: View {
                     Label("Calendar", systemImage: "calendar")
                 }
                 .tag(1)
+                .transition(.opacity)
 
                 // Tab 3: Settings
                 NavigationStack {
@@ -60,9 +62,11 @@ struct TabContainerView: View {
                     Label("Settings", systemImage: "gearshape.fill")
                 }
                 .tag(2)
+                .transition(.opacity)
             }
             .tabViewStyle(.automatic)
             .tint(Color(red: 0.85, green: 0.73, blue: 0.27))  // Gold accent
+            .animation(.easeInOut(duration: 0.2), value: container.selectedTab)
             .onChange(of: container.selectedTab) { oldValue, newValue in
                 handleTabChange(from: oldValue, to: newValue)
             }

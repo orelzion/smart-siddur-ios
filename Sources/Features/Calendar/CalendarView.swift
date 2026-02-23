@@ -188,8 +188,10 @@ struct UnifiedCalendarView: View {
                 // Days in month
                 ForEach(viewModel.daysInMonth, id: \.id) { day in
                     dayCell(viewModel: viewModel, day: day)
+                        .transition(.opacity.combined(with: .scale))
                 }
             }
+            .animation(.easeInOut(duration: 0.15), value: viewModel.daysInMonth)
         }
         .padding(12)
         .glassCard(cornerRadius: 16)

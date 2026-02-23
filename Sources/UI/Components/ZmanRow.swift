@@ -47,6 +47,10 @@ struct ZmanRow: View {
                     )
                 : nil
         )
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(label)
+        .accessibilityValue(time)
+        .accessibilityHint(isNextUpcoming ? "Next upcoming zman" : "")
     }
 }
 
