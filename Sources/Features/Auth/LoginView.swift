@@ -3,36 +3,60 @@ import AuthenticationServices
 import GoogleSignInSwift
 
 /// Full-screen login view with Apple, Google, and Anonymous auth options.
+/// Redesigned with dark/gold glassmorphism theme and spring animations.
 struct LoginView: View {
     @Environment(DependencyContainer.self) private var container
     @State private var viewModel: AuthViewModel?
     @State private var showError = false
+    @State private var scaleAnimation: CGFloat = 1.0
 
     var body: some View {
         ZStack {
-            // Background gradient
+            // Background gradient - dark/gold theme
             LinearGradient(
-                colors: [.blue.opacity(0.1), .white],
-                startPoint: .top,
-                endPoint: .bottom
+                gradient: Gradient(colors: [
+                    Color(red: 0.06, green: 0.09, blue: 0.16),  // #0f172a
+                    Color(red: 0.01, green: 0.02, blue: 0.04)   // #020617
+                ]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
             )
             .ignoresSafeArea()
 
             VStack(spacing: 32) {
                 Spacer()
 
-                // App logo and title
+                // App logo and title with gold gradient
                 VStack(spacing: 12) {
                     Image(systemName: "book.fill")
                         .font(.system(size: 72))
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(
+                            LinearGradient(
+                                gradient: Gradient(colors: [
+                                    Color(red: 1.0, green: 1.0, blue: 1.0),
+                                    Color(red: 0.85, green: 0.73, blue: 0.27)
+                                ]),
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
+                        )
 
                     Text("SmartSiddur")
                         .font(.largeTitle.bold())
+                        .foregroundStyle(
+                            LinearGradient(
+                                gradient: Gradient(colors: [
+                                    Color.white,
+                                    Color(red: 0.85, green: 0.73, blue: 0.27)
+                                ]),
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
+                        )
 
                     Text("Your personal siddur")
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(Color(red: 0.70, green: 0.72, blue: 0.78))
                 }
 
                 Spacer()
@@ -48,9 +72,16 @@ struct LoginView: View {
                     .signInWithAppleButtonStyle(.black)
                     .frame(height: 50)
                     .cornerRadius(12)
+                    .scaleEffect(scaleAnimation)
+                    .onTapGesture {
+                        springAnimation()
+                        hapticFeedback()
+                    }
 
                     // Sign in with Google
                     Button {
+                        springAnimation()
+                        hapticFeedback()
                         viewModel?.signInWithGoogle()
                     } label: {
                         HStack(spacing: 8) {
@@ -61,22 +92,24 @@ struct LoginView: View {
                         }
                         .frame(maxWidth: .infinity)
                         .frame(height: 50)
-                        .background(Color(.systemBackground))
-                        .foregroundStyle(.primary)
+                        .background(Color(red: 0.11, green: 0.13, blue: 0.20))
+                        .foregroundStyle(.white)
                         .cornerRadius(12)
                         .overlay(
                             RoundedRectangle(cornerRadius: 12)
-                                .stroke(Color(.separator), lineWidth: 1)
+                                .stroke(Color(red: 0.20, green: 0.22, blue: 0.31), lineWidth: 1)
                         )
                     }
 
                     // Anonymous / Continue without account
                     Button {
+                        springAnimation()
+                        hapticFeedback()
                         viewModel?.signInAnonymously()
                     } label: {
                         Text("Continue without account")
                             .font(.subheadline)
-                            .foregroundStyle(.blue)
+                            .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
                     }
                     .padding(.top, 8)
                 }
@@ -93,7 +126,7 @@ struct LoginView: View {
                     .ignoresSafeArea()
                 ProgressView()
                     .scaleEffect(1.5)
-                    .tint(.white)
+                    .tint(Color(red: 0.85, green: 0.73, blue: 0.27))
             }
         }
         .onAppear {
@@ -146,5 +179,19 @@ struct LoginView: View {
             viewModel?.error = error.localizedDescription
             showError = true
         }
+    }
+
+    private func springAnimation() {
+        withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+            scaleAnimation = 0.95
+        }
+        withAnimation(.spring(response: 0.3, dampingFraction: 0.7).delay(0.1)) {
+            scaleAnimation = 1.0
+        }
+    }
+
+    private func hapticFeedback() {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
     }
 }

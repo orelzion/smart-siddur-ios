@@ -1,7 +1,7 @@
 import SwiftUI
 
-/// Onboarding wrapper. Currently shows LoginView directly.
-/// Future: nusach selection, location setup steps before login.
+/// Onboarding wrapper with login as primary flow.
+/// Redesigned with dark/gold glassmorphism theme matching LoginView.
 struct OnboardingView: View {
     var body: some View {
         LoginView()
