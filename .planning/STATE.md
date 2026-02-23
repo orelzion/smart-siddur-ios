@@ -9,12 +9,12 @@ See: .planning/PROJECT.md (updated 2026-02-08)
 
 ## Current Position
 
-Phase: 1 of 6 (Design System Foundation) - **NEW VISUAL REDESIGN PROJECT**
-Plan: 1 of 1 in Phase 1 (01-01 complete)
-Status: Phase 1 complete - Design System Foundation (AppTheme + 8 UI Components)
-Last activity: 2026-02-23 -- Completed Phase 1 Design System Foundation
+Phase: 2 of 6 (Home Tab Implementation) - **NEW VISUAL REDESIGN PROJECT**
+Plan: 1 of 1 in Phase 2 (02-01 complete)
+Status: Phase 2 complete - Home Tab Implementation (Smart Prayer Countdown + Glass UI)
+Last activity: 2026-02-23 -- Completed Phase 2 Home Tab Implementation
 
-Progress: [█░░░░░░░░░░░░░░░░░░] 17% (1/6 phases) - Smart Siddur Visual Redesign
+Progress: [██░░░░░░░░░░░░░░░░░] 33% (2/6 phases) - Smart Siddur Visual Redesign
 
 ## Performance Metrics
 
@@ -74,6 +74,10 @@ Recent decisions affecting current work:
 - [Phase 03-prayer-experience]: Organized prayers by time of day with Today section for current relevance — Provides intuitive navigation and highlights today's relevant prayers
 - [Phase 03-prayer-experience]: Hebrew-only display with nikud and teamim, no translations per user decisions — Aligns with user feedback from previous phases
 - [Phase 03-prayer-experience]: Full scrolling text view rather than pagination for better reading experience — Improves user experience for prayer reading
+- [Phase 02-home]: Milestone-based timer (not every-second) for battery efficiency — Reduces battery drain, updates only when crossing time boundaries
+- [Phase 02-home]: 9-window prayer classification (prep/halachic/extended/too-late) — Aligns with halachic precision and provides contextual guidance
+- [Phase 02-home]: Always-visible core prayers (Shacharit/Mincha/Arvit/Brachot) plus seasonal contextual suggestions — Ensures baseline consistency while adding relevant contextual prayers
+- [Phase 02-home]: Scene phase observation for background/foreground transitions — Prevents stale state when app returns from background/sleep
 
 ### Pending Todos
 
@@ -81,34 +85,40 @@ None.
 
 ### Blockers/Concerns
 
-None. Phase 3 (Prayer Experience) is complete. All plans executed:
-- 03-01: Prayer views (menu, text display, navigation)
-- 03-02: Offline cache and pre-fetch
+None. Phase 2 (Home Tab Implementation) is complete. All plans executed:
+- 02-01: Data models + NextPrayerService + view extensions
+- 02-02: HomeViewModel + NewHomeView UI
 
-Ready for Phase 4 (Monetization).
+Ready for Phase 3 (Prayer Detail & Navigation).
 
 ## Session Continuity
 
-Last session: 2026-02-23 15:21 UTC
-Stopped at: Completed Phase 1 - Design System Foundation
+Last session: 2026-02-23 16:10 UTC
+Stopped at: Completed Phase 2 - Home Tab Implementation
 Resume file: None
 
-**NEW PROJECT PHASE STARTED**: Smart Siddur Visual Redesign
+**Phase 2 Execution Completed**: Home Tab Implementation
 
-Phase 1 complete. Design System Foundation delivered:
-- AppTheme.swift with complete design token system (dark/light modes)
-- 8 production-ready UI components:
-  1. GlassCard - Glass morphism modifier
-  2. GoldGradientText - White-to-gold gradient text
-  3. PrimaryButton - Gold CTA with haptic feedback
-  4. SegmentedPicker - Custom segmented control with gold accent
-  5. ZmanRow - Prayer time display row
-  6. SuggestedCard - Quick-access card component
-  7. SeasonalBadge - Green-tinted seasonal badge
-  8. HeroCard - Large prayer card with countdown timer
-- All components: light/dark theme support, RTL layout, haptics, animations
-- Project builds successfully with zero errors
+Phase 2 complete. Home Tab Implementation delivered:
+- **Data Models** (NextPrayerState.swift): 4 models for prayer state management
+  - NextPrayerState, PrayerMilestone, SuggestedItem, SpecialZman
+- **NextPrayerService**: Smart prayer countdown with milestone-based timer
+  - 9-window prayer classification (prep/halachic/extended/too-late)
+  - Milestone boundary detection (not every-second updates)
+  - Scene phase observation for background/foreground transitions
+- **Service Extensions**:
+  - PrayerVisibilityService.suggestedItems() - Contextual seasonal prayers
+  - JewishCalendarService.seasonalBadge() - Holiday badges
+- **HomeViewModel**: Complete orchestration of services
+  - Greeting management, date display, prayer grid filtering
+  - Lifecycle management (start/stop)
+- **NewHomeView**: Premium dark/gold UI
+  - Greeting header, HeroCard countdown, Suggested For You grid
+  - All Prayers 2-column grid with current prayer highlighting
+  - RTL layout support, spring animations
+- All components: light/dark theme support, glass morphism aesthetic, haptic feedback
+- Project source code compiles successfully (signing only requires dev team)
 
-Ready for Phase 2 (Home Tab Implementation).
+Ready for Phase 3 (Prayer Detail & Navigation).
 
-Design System Foundation: Dark theme (#0f172a→#020617 gradient), gold accents (#dab946), glass effects, iOS 17+ compatibility.
+Home Tab Implementation: Milestone-based smart countdown, glass cards, contextual suggestions, RTL support.
