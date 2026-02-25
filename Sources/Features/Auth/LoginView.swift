@@ -41,7 +41,7 @@ struct LoginView: View {
                             )
                         )
 
-                    Text("SmartSiddur")
+                    Text("app_name")
                         .font(.largeTitle.bold())
                         .foregroundStyle(
                             LinearGradient(
@@ -87,7 +87,7 @@ struct LoginView: View {
                         HStack(spacing: 8) {
                             Image(systemName: "g.circle.fill")
                                 .font(.title2)
-                            Text("Sign in with Google")
+                            Text("common_signin_button_text_long")
                                 .font(.body.weight(.medium))
                         }
                         .frame(maxWidth: .infinity)
@@ -135,7 +135,7 @@ struct LoginView: View {
             }
         }
         .alert("Sign-In Error", isPresented: $showError) {
-            Button("OK") {
+            Button("ok") {
                 viewModel?.error = nil
             }
         } message: {

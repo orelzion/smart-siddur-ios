@@ -124,7 +124,7 @@ struct LocationPickerView: View {
             get: { viewModel.error != nil },
             set: { if !$0 { viewModel.error = nil } }
         )) {
-            Button("OK") { viewModel.error = nil }
+            Button("ok") { viewModel.error = nil }
         } message: {
             Text(viewModel.error ?? "")
         }

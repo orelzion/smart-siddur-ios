@@ -1,6 +1,11 @@
 import Foundation
 import OSLog
 
+private func localizedValue(_ key: String, fallback: String) -> String {
+    let value = NSLocalizedString(key, comment: "")
+    return value == key ? fallback : value
+}
+
 // MARK: - Prayer Types
 /// Maps to backend PrayerType — only includes types the edge function supports
 enum PrayerType: String, CaseIterable, Identifiable, Codable {
@@ -35,32 +40,32 @@ enum PrayerType: String, CaseIterable, Identifiable, Codable {
     
     var displayName: String {
         switch self {
-        case .shacharit: return "Shacharit"
-        case .mincha: return "Mincha"
-        case .arvit: return "Arvit"
-        case .mazon: return "Birkat HaMazon"
-        case .omer: return "Sefirat HaOmer"
-        case .alMita: return "Kriat Shema Al HaMitah"
-        case .chatzot: return "Tikkun Chatzot"
-        case .havdala: return "Havdala"
-        case .hanuka: return "Chanukah"
-        case .levana: return "Birkat HaLevana"
-        case .haderech: return "Tefilat HaDerech"
-        case .blessings: return "Brachot"
-        case .threefold: return "Bracha Achrona"
-        case .mila: return "Brit Milah"
-        case .shevaBrachot: return "Sheva Brachot"
-        case .maaser: return "Maaser"
-        case .hala: return "Hafrashat Challah"
-        case .lagBaomer: return "Lag BaOmer"
-        case .ilanot: return "Birkat HaIlanot"
-        case .kinot: return "Kinot"
-        case .slihot: return "Selichot"
-        case .nedarim: return "Hatarat Nedarim"
-        case .asherYatzar: return "Asher Yatzar"
-        case .ushpizin: return "Ushpizin"
-        case .torahReading: return "Torah Reading"
-        case .musaf: return "Musaf"
+        case .shacharit: return localizedValue("shacharit", fallback: "Shacharit")
+        case .mincha: return localizedValue("mincha", fallback: "Mincha")
+        case .arvit: return localizedValue("arvit", fallback: "Arvit")
+        case .mazon: return localizedValue("mazon", fallback: "Birkat HaMazon")
+        case .omer: return localizedValue("notification_type_omer", fallback: "Sefirat HaOmer")
+        case .alMita: return localizedValue("al_mita", fallback: "Kriat Shema Al HaMitah")
+        case .chatzot: return localizedValue("chatzot", fallback: "Tikkun Chatzot")
+        case .havdala: return localizedValue("havdala_title", fallback: "Havdala")
+        case .hanuka: return localizedValue("hanuka", fallback: "Chanukah")
+        case .levana: return localizedValue("levana_birkat", fallback: "Birkat HaLevana")
+        case .haderech: return localizedValue("haderech", fallback: "Tefilat HaDerech")
+        case .blessings: return localizedValue("brachot", fallback: "Brachot")
+        case .threefold: return localizedValue("meen_shalosh", fallback: "Bracha Achrona")
+        case .mila: return localizedValue("britMilaTitle", fallback: "Brit Milah")
+        case .shevaBrachot: return localizedValue("sheva_brachot", fallback: "Sheva Brachot")
+        case .maaser: return localizedValue("maaser", fallback: "Maaser")
+        case .hala: return localizedValue("halaTitle", fallback: "Hafrashat Challah")
+        case .lagBaomer: return localizedValue("lag_omer_title", fallback: "Lag BaOmer")
+        case .ilanot: return localizedValue("birkat_ailanot", fallback: "Birkat HaIlanot")
+        case .kinot: return localizedValue("kinot_title", fallback: "Kinot")
+        case .slihot: return localizedValue("slihot", fallback: "Selichot")
+        case .nedarim: return localizedValue("nedarimTitle", fallback: "Hatarat Nedarim")
+        case .asherYatzar: return localizedValue("asher_yatzar", fallback: "Asher Yatzar")
+        case .ushpizin: return localizedValue("uluTitle", fallback: "Ushpizin")
+        case .torahReading: return localizedValue("torah", fallback: "Torah Reading")
+        case .musaf: return localizedValue("mussaf", fallback: "Musaf")
         }
     }
     
@@ -166,9 +171,9 @@ enum PrayerCategory: String, CaseIterable, Codable {
     
     var displayName: String {
         switch self {
-        case .daily: return "Daily Prayers"
-        case .blessings: return "Blessings"
-        case .special: return "Special Occasions"
+        case .daily: return localizedValue("daily_tfilot", fallback: "Daily Prayers")
+        case .blessings: return localizedValue("brachot", fallback: "Blessings")
+        case .special: return localizedValue("special_occasions", fallback: "Special Occasions")
         }
     }
     

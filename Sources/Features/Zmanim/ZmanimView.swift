@@ -15,7 +15,7 @@ struct ZmanimView: View {
                 ProgressView("Loading...")
             }
         }
-        .navigationTitle("Zmanim")
+        .navigationTitle("zmanim")
         .task {
             if viewModel == nil {
                 let vm = ZmanimViewModel(
@@ -89,7 +89,7 @@ struct ZmanimView: View {
                 }
             } header: {
                 HStack {
-                    Text("Halachic Times")
+                    Text("notification_type_zman")
                     Spacer()
                     Button {
                         viewModel.showAllTimes.toggle()
@@ -122,9 +122,6 @@ struct ZmanimView: View {
     }
 
     private func formattedGregorianDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-        return formatter.string(from: date)
+        LocaleFormatters.longDate(date)
     }
 }

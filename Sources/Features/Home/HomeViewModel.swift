@@ -111,10 +111,7 @@ final class HomeViewModel {
         let jewishDay = jewishCalendarService.getJewishDay(for: date, isInIsrael: isInIsrael)
         currentJewishDay = jewishDay
 
-        let gregorianFormatter = DateFormatter()
-        gregorianFormatter.locale = Locale(identifier: "en_US_POSIX")
-        gregorianFormatter.setLocalizedDateFormatFromTemplate("d MMMM y")
-        let gregorianText = gregorianFormatter.string(from: date)
+        let gregorianText = LocaleFormatters.dayMonthYear(date)
         dateText = "\(jewishDay.hebrewDateString) / \(gregorianText)"
     }
 
@@ -136,7 +133,7 @@ final class HomeViewModel {
         removeDuplicateArvitSuggestionIfCoveredByCTA()
         addNightSuggestionsIfApplicable()
 
-        filteredPrayers = buildPrayerGrid(for: date)
+        filteredPrayers = removeSuggestedFromGrid(buildPrayerGrid(for: date))
         highlightedPrayer = nextPrayerState.prayer ?? (nextPrayerState.isTransitional ? .mincha : nextPrayerState.alternativePrayer)
     }
 
@@ -209,6 +206,11 @@ final class HomeViewModel {
         ]
 
         return order.filter { visible.contains($0) }
+    }
+
+    private func removeSuggestedFromGrid(_ prayers: [PrayerType]) -> [PrayerType] {
+        let suggestedTypes = Set(suggestedItems.map(\.prayerType))
+        return prayers.filter { !suggestedTypes.contains($0) }
     }
 
     private func isAfterTzet(for date: Date) -> Bool {

@@ -1,6 +1,11 @@
 import Foundation
 import Observation
 
+private func localizedLocalSettingValue(_ key: String, fallback: String) -> String {
+    let value = NSLocalizedString(key, comment: "")
+    return value == key ? fallback : value
+}
+
 // MARK: - Local Setting Enums
 
 enum TfilaMode: String, CaseIterable, Sendable {
@@ -10,9 +15,9 @@ enum TfilaMode: String, CaseIterable, Sendable {
 
     var displayName: String {
         switch self {
-        case .regular: "Regular"
-        case .yahid: "Yahid"
-        case .chazan: "Chazan"
+        case .regular: localizedLocalSettingValue("modes__0", fallback: "Regular")
+        case .yahid: localizedLocalSettingValue("modes__1", fallback: "Yahid")
+        case .chazan: localizedLocalSettingValue("modes__2", fallback: "Chazan")
         }
     }
 }
@@ -24,9 +29,9 @@ enum AppTheme: String, CaseIterable, Sendable {
 
     var displayName: String {
         switch self {
-        case .system: "System"
-        case .light: "Light"
-        case .dark: "Dark"
+        case .system: localizedLocalSettingValue("system_managed", fallback: "System")
+        case .light: localizedLocalSettingValue("theme__0", fallback: "Light")
+        case .dark: localizedLocalSettingValue("theme__1", fallback: "Dark")
         }
     }
 }
@@ -54,9 +59,9 @@ enum SilentMode: String, CaseIterable, Sendable {
 
     var displayName: String {
         switch self {
-        case .ask: "Ask"
-        case .silent: "Silent"
-        case .normal: "Normal"
+        case .ask: localizedLocalSettingValue("silent_mode__2", fallback: "Ask")
+        case .silent: localizedLocalSettingValue("silent_mode__0", fallback: "Silent")
+        case .normal: localizedLocalSettingValue("silent_mode__1", fallback: "Normal")
         }
     }
 }

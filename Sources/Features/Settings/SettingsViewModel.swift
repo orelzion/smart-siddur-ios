@@ -73,6 +73,8 @@ final class SettingsViewModel {
         pushSingleSetting("is_woman", value: value, rollback: { self.syncedSettings.isWoman = previous })
     }
 
+    /// Kept for backend prayer generation compatibility.
+    /// UI localization is system-managed and should not call this from Settings UI.
     func updateLanguage(_ language: AppLanguage) {
         let previous = syncedSettings.language
         syncedSettings.language = language

@@ -10,13 +10,9 @@ struct ZmanRowView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 2) {
-                Text(zman.name)
+                Text(zman.primaryLabel)
                     .font(zman.isNextUpcoming ? .body.bold() : .body)
                     .foregroundStyle(zman.isNextUpcoming ? Color.accentColor : .primary)
-
-                Text(zman.hebrewName)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
             }
 
             Spacer()

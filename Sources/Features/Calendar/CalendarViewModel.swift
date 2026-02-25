@@ -1,6 +1,11 @@
 import Foundation
 import Observation
 
+private func localizedCalendarValue(_ key: String, fallback: String) -> String {
+    let value = NSLocalizedString(key, comment: "")
+    return value == key ? fallback : value
+}
+
 // MARK: - CalendarViewMode
 
 /// Toggle between day and month calendar views.
@@ -88,9 +93,8 @@ final class CalendarViewModel {
             let gregorianCalendar = Calendar(identifier: .gregorian)
             let year = gregorianCalendar.component(.year, from: currentMonth)
             let month = gregorianCalendar.component(.month, from: currentMonth)
-            let formatter = DateFormatter()
-            formatter.dateFormat = "MMMM yyyy"
-            return formatter.string(from: gregorianCalendar.date(from: DateComponents(year: year, month: month, day: 1)) ?? currentMonth)
+            let monthStart = gregorianCalendar.date(from: DateComponents(year: year, month: month, day: 1)) ?? currentMonth
+            return LocaleFormatters.monthYear(monthStart)
         } else {
             guard let first = daysInMonth.first else { return "" }
             let isLeap = isHebrewLeapYear(first.hebrewYear)
@@ -102,10 +106,15 @@ final class CalendarViewModel {
 
     /// Day headers for the grid (Sun-Sat).
     var dayHeaders: [String] {
-        if dateDisplayMode == .hebrew {
-            return ["א", "ב", "ג", "ד", "ה", "ו", "ש"]
-        }
-        return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+        return [
+            localizedCalendarValue("days_array__0", fallback: "Sun"),
+            localizedCalendarValue("days_array__1", fallback: "Mon"),
+            localizedCalendarValue("days_array__2", fallback: "Tue"),
+            localizedCalendarValue("days_array__3", fallback: "Wed"),
+            localizedCalendarValue("days_array__4", fallback: "Thu"),
+            localizedCalendarValue("days_array__5", fallback: "Fri"),
+            localizedCalendarValue("days_array__6", fallback: "Shabbat"),
+        ]
     }
 
     /// Leading empty cells before the first day of the month.
@@ -297,6 +306,7 @@ final class CalendarViewModel {
             let satTimes = zmanimService.shabbatTimes(date: nextDay, location: location, opinions: userOpinions)
             if let havdala = satTimes.first(where: { $0.id == "havdalah" })?.time {
                 result.append(SpecialZman(
+                    labelKey: "havdala_title",
                     name: "Motzei Shabbat - Havdala",
                     hebrewName: "מוצאי שבת - הבדלה",
                     time: havdala,

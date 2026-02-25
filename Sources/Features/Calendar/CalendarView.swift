@@ -56,7 +56,7 @@ struct CalendarView: View {
                     .background(backgroundGradient.ignoresSafeArea())
             }
         }
-        .navigationTitle("Calendar")
+        .navigationTitle("calendar")
         .task {
             if viewModel == nil {
                 let vm = CalendarViewModel(
@@ -123,7 +123,7 @@ struct CalendarView: View {
                     viewModel.goToToday()
                     viewModel.selectedDate = Date()
                 } label: {
-                    Text("Today")
+                    Text("today")
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(primaryText)
                         .frame(height: 34)
@@ -186,7 +186,6 @@ struct CalendarView: View {
                 viewModel.selectDay(day)
             }
         )
-        .environment(\.layoutDirection, viewModel.dateDisplayMode == .hebrew ? .rightToLeft : .leftToRight)
         .padding(12)
         .background(cardFill, in: .rect(cornerRadius: 18))
         .overlay(
@@ -269,7 +268,7 @@ struct CalendarView: View {
                     dayInfoRow("Holiday", value: holiday)
                 }
                 ForEach(viewModel.specialZmanim.filter { !$0.name.localizedCaseInsensitiveContains("rosh chodesh") }.prefix(4), id: \.name) { special in
-                    dayInfoRow(special.name, value: special.time.map(formattedTime) ?? "--")
+                    dayInfoRow(special.displayName, value: special.time.map(formattedTime) ?? "--")
                 }
             } else {
                 Text("Select a day in month view to see details.")
@@ -313,7 +312,7 @@ struct CalendarView: View {
 
         return VStack(alignment: .leading, spacing: 10) {
             HStack {
-                Text("Zmanim")
+                Text("zmanim")
                     .font(.headline)
                     .foregroundStyle(primaryText)
                 Spacer()
@@ -326,7 +325,7 @@ struct CalendarView: View {
 
             ForEach(displayedZmanim) { zman in
                 HStack {
-                    Text(zman.name)
+                    Text(zman.primaryLabel)
                         .font(.subheadline)
                         .foregroundStyle(primaryText)
                     Spacer()
@@ -346,17 +345,11 @@ struct CalendarView: View {
     }
 
     private func formattedGregorianDate(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-        return formatter.string(from: date)
+        LocaleFormatters.longDate(date)
     }
 
     private func formattedTime(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.timeStyle = container.localSettings.use24hFormat ? .short : .short
-        formatter.dateStyle = .none
-        return formatter.string(from: date)
+        LocaleFormatters.shortTime(date, use24h: container.localSettings.use24hFormat)
     }
 
 }

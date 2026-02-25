@@ -8,7 +8,7 @@ struct ZmanimOpinionsView: View {
     var body: some View {
         List {
             Section {
-                Picker("Dawn (Alot HaShachar)", selection: Binding(
+                Picker("dawn_title", selection: Binding(
                     get: { viewModel.syncedSettings.dawnOpinion },
                     set: { viewModel.updateDawnOpinion($0) }
                 )) {
@@ -18,13 +18,13 @@ struct ZmanimOpinionsView: View {
                 }
                 .pickerStyle(.navigationLink)
             } header: {
-                Text("Dawn")
+                Text("alotZmanTitle")
             } footer: {
                 Text("Determines the earliest time for morning prayers.")
             }
 
             Section {
-                Picker("Sunrise", selection: Binding(
+                Picker("sunriseZmanTitle", selection: Binding(
                     get: { viewModel.syncedSettings.sunriseOpinion },
                     set: { viewModel.updateSunriseOpinion($0) }
                 )) {
@@ -34,7 +34,7 @@ struct ZmanimOpinionsView: View {
                 }
                 .pickerStyle(.navigationLink)
             } header: {
-                Text("Sunrise")
+                Text("sunriseZmanTitle")
             } footer: {
                 Text("Visible sunrise accounts for elevation; sea level does not.")
             }

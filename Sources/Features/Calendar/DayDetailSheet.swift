@@ -58,7 +58,7 @@ struct DayDetailSheet: View {
                         // Omer count
                         if let omer = day.omerDay {
                             Label {
-                                Text("Day \(omer) of the Omer")
+                                Text("omer_day_end")
                             } icon: {
                                 Image(systemName: "number.circle.fill")
                                     .foregroundStyle(.green)
@@ -68,7 +68,7 @@ struct DayDetailSheet: View {
                         // Daf Yomi
                         if let daf = day.dafYomi {
                             Label {
-                                Text("Daf Yomi: \(daf)")
+                                Text("daf_yomi")
                             } icon: {
                                 Image(systemName: "text.book.closed.fill")
                                     .foregroundStyle(.blue)
@@ -141,7 +141,7 @@ struct DayDetailSheet: View {
                     } label: {
                         HStack {
                             Image(systemName: "clock.fill")
-                            Text("View Full Zmanim")
+                            Text("full_zmanim_list")
                             Spacer()
                             Image(systemName: "chevron.right")
                                 .font(.caption)
@@ -163,10 +163,7 @@ struct DayDetailSheet: View {
     }
 
     private var formattedGregorianDate: String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-        return formatter.string(from: day.gregorianDate)
+        LocaleFormatters.longDate(day.gregorianDate)
     }
 
     /// Dismiss the sheet, set the date override, and switch to the Zmanim tab.

@@ -1,5 +1,10 @@
 import Foundation
 
+private func localizedSettingValue(_ key: String, fallback: String) -> String {
+    let value = NSLocalizedString(key, comment: "")
+    return value == key ? fallback : value
+}
+
 // MARK: - Synced Setting Enums
 
 enum Nusach: String, CaseIterable, Codable, Sendable {
@@ -10,10 +15,10 @@ enum Nusach: String, CaseIterable, Codable, Sendable {
 
     var displayName: String {
         switch self {
-        case .edot: "Edot HaMizrach"
-        case .sfarad: "Sfarad"
-        case .ashkenaz: "Ashkenaz"
-        case .chabad: "Chabad"
+        case .edot: localizedSettingValue("nusach__0", fallback: "Edot HaMizrach")
+        case .sfarad: localizedSettingValue("nusach__1", fallback: "Sfarad")
+        case .ashkenaz: localizedSettingValue("nusach__2", fallback: "Ashkenaz")
+        case .chabad: localizedSettingValue("nusach__3", fallback: "Chabad")
         }
     }
 
@@ -37,12 +42,12 @@ enum AppLanguage: String, CaseIterable, Codable, Sendable {
 
     var displayName: String {
         switch self {
-        case .en: "English"
-        case .he: "Hebrew"
-        case .fr: "French"
-        case .system: "System"
-        case .es: "Spanish"
-        case .de: "German"
+        case .en: localizedSettingValue("Language__0", fallback: "English")
+        case .he: localizedSettingValue("Language__1", fallback: "Hebrew")
+        case .fr: localizedSettingValue("Language__2", fallback: "French")
+        case .system: localizedSettingValue("Language__5", fallback: "System")
+        case .es: localizedSettingValue("Language__3", fallback: "Spanish")
+        case .de: localizedSettingValue("Language__4", fallback: "German")
         }
     }
 }
@@ -54,9 +59,9 @@ enum MukafMode: String, CaseIterable, Codable, Sendable {
 
     var displayName: String {
         switch self {
-        case .purim: "Purim (14 Adar)"
-        case .shushan: "Shushan Purim (15 Adar)"
-        case .both: "Both"
+        case .purim: localizedSettingValue("mukaf_entries__0", fallback: "Purim (14 Adar)")
+        case .shushan: localizedSettingValue("mukaf_entries__1", fallback: "Shushan Purim (15 Adar)")
+        case .both: localizedSettingValue("mukaf_entries__2", fallback: "Both")
         }
     }
 }
@@ -68,9 +73,9 @@ enum DateChangeRule: String, CaseIterable, Codable, Sendable {
 
     var displayName: String {
         switch self {
-        case .sunset: "At Sunset"
-        case .afterSunset: "After Sunset"
-        case .dusk: "At Dusk"
+        case .sunset: localizedSettingValue("change__0", fallback: "At Sunset")
+        case .afterSunset: localizedSettingValue("change__1", fallback: "After Sunset")
+        case .dusk: localizedSettingValue("change__2", fallback: "At Dusk")
         }
     }
 }
@@ -82,9 +87,9 @@ enum DawnOpinion: String, CaseIterable, Codable, Sendable {
 
     var displayName: String {
         switch self {
-        case .alot90: "Alot HaShachar (90 min)"
-        case .alot72: "Alot HaShachar (72 min)"
-        case .alotDegrees: "Alot HaShachar (degrees)"
+        case .alot90: localizedSettingValue("alot__0", fallback: "Alot HaShachar (90 min)")
+        case .alot72: localizedSettingValue("alot__1", fallback: "Alot HaShachar (72 min)")
+        case .alotDegrees: localizedSettingValue("alot__2", fallback: "Alot HaShachar (degrees)")
         }
     }
 }
@@ -95,8 +100,8 @@ enum SunriseOpinion: String, CaseIterable, Codable, Sendable {
 
     var displayName: String {
         switch self {
-        case .visible: "Visible Sunrise"
-        case .seaLevel: "Sea Level Sunrise"
+        case .visible: localizedSettingValue("sunrise__0", fallback: "Visible Sunrise")
+        case .seaLevel: localizedSettingValue("sunrise__1", fallback: "Sea Level Sunrise")
         }
     }
 }
@@ -107,8 +112,8 @@ enum ZmanOpinion: String, CaseIterable, Codable, Sendable {
 
     var displayName: String {
         switch self {
-        case .mga: "Magen Avraham"
-        case .gra: "GR\"A (Vilna Gaon)"
+        case .mga: localizedSettingValue("graOrMagen__0", fallback: "Magen Avraham")
+        case .gra: localizedSettingValue("graOrMagen__1", fallback: "GR\"A (Vilna Gaon)")
         }
     }
 }
@@ -122,11 +127,11 @@ enum DuskOpinion: String, CaseIterable, Codable, Sendable {
 
     var displayName: String {
         switch self {
-        case .haravOvadia: "HaRav Ovadia Yosef"
-        case .gra: "GR\"A (Vilna Gaon)"
-        case .baalHatania: "Baal HaTania"
-        case .chazonIsh: "Chazon Ish"
-        case .rabenuTam: "Rabenu Tam"
+        case .haravOvadia: localizedSettingValue("tzetKochav__0", fallback: "HaRav Ovadia Yosef")
+        case .gra: localizedSettingValue("tzetKochav__1", fallback: "GR\"A (Vilna Gaon)")
+        case .baalHatania: localizedSettingValue("tzetKochav__2", fallback: "Baal HaTania")
+        case .chazonIsh: localizedSettingValue("tzetKochav__3", fallback: "Chazon Ish")
+        case .rabenuTam: localizedSettingValue("tzetKochav__4", fallback: "Rabenu Tam")
         }
     }
 }

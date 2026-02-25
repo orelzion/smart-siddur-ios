@@ -1,5 +1,10 @@
 import Foundation
 
+private func localizedHebrewMonthValue(_ key: String, fallback: String) -> String {
+    let value = NSLocalizedString(key, comment: "")
+    return value == key ? fallback : value
+}
+
 /// Utility for formatting Hebrew dates with gematria and Hebrew month names.
 /// Handles day numbers, month names (including Adar I/II), and year formatting.
 enum HebrewDateFormatterUtil {
@@ -118,10 +123,33 @@ enum HebrewDateFormatterUtil {
 
     /// Get English month name for a given month number.
     static func englishMonthName(month: Int, isLeapYear: Bool) -> String {
-        if isLeapYear, let name = leapYearEnglishMonthNames[month] {
-            return name
+        if isLeapYear {
+            if month == 6 {
+                return localizedHebrewMonthValue("hebrew_months__12", fallback: leapYearEnglishMonthNames[6] ?? "Adar I")
+            }
+            if month == 7 {
+                return localizedHebrewMonthValue("hebrew_months__13", fallback: leapYearEnglishMonthNames[7] ?? "Adar II")
+            }
         }
-        return englishMonthNames[month] ?? ""
+        let keyByMonth: [Int: String] = [
+            1: "hebrew_months__6",   // Tishri
+            2: "hebrew_months__7",   // Heshvan
+            3: "hebrew_months__8",   // Kislev
+            4: "hebrew_months__9",   // Tevet
+            5: "hebrew_months__10",  // Shvat
+            6: "hebrew_months__11",  // Adar
+            7: "hebrew_months__11",  // Adar (non-leap)
+            8: "hebrew_months__0",   // Nisan
+            9: "hebrew_months__1",   // Iyar
+            10: "hebrew_months__2",  // Sivan
+            11: "hebrew_months__3",  // Tamuz
+            12: "hebrew_months__4",  // Av
+            13: "hebrew_months__5",  // Elul
+        ]
+        guard let key = keyByMonth[month] else {
+            return englishMonthNames[month] ?? ""
+        }
+        return localizedHebrewMonthValue(key, fallback: englishMonthNames[month] ?? "")
     }
 
     /// Format Hebrew year as gematria of last 3 digits (e.g., 5786 -> 786 in gematria with quotes).

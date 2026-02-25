@@ -59,6 +59,7 @@ final class NextPrayerService {
             return makeState(
                 prayer: .arvit,
                 milestone: .init(
+                    labelKey: "alotZmanTitle",
                     name: "Alot HaShachar",
                     hebrewName: "עלות השחר",
                     time: alotToday,
@@ -71,6 +72,7 @@ final class NextPrayerService {
             return makeState(
                 prayer: .shacharit,
                 milestone: .init(
+                    labelKey: "zman_sunrise",
                     name: "Netz HaChama",
                     hebrewName: "נץ החמה",
                     time: netzToday,
@@ -83,6 +85,7 @@ final class NextPrayerService {
             return makeState(
                 prayer: .shacharit,
                 milestone: .init(
+                    labelKey: "zman_shma_gra",
                     name: "Sof Zman Kriat Shma",
                     hebrewName: "סוף זמן קריאת שמע",
                     time: sofShmaToday,
@@ -95,6 +98,7 @@ final class NextPrayerService {
             return makeState(
                 prayer: .shacharit,
                 milestone: .init(
+                    labelKey: "zman_tfila_gra",
                     name: "Sof Zman Tefila",
                     hebrewName: "סוף זמן תפילה",
                     time: sofTefilaToday,
@@ -119,6 +123,7 @@ final class NextPrayerService {
             return makeState(
                 prayer: nil,
                 milestone: .init(
+                    labelKey: "minchaBigZmanTitle",
                     name: "Mincha Gedola",
                     hebrewName: "מנחה גדולה",
                     time: minchaGedolaToday,
@@ -131,6 +136,7 @@ final class NextPrayerService {
             return makeState(
                 prayer: .mincha,
                 milestone: .init(
+                    labelKey: "zman_sunset",
                     name: "Shkia",
                     hebrewName: "שקיעה",
                     time: shkiaToday,
@@ -143,6 +149,7 @@ final class NextPrayerService {
             return NextPrayerState(
                 prayer: nil,
                 currentMilestone: .init(
+                    labelKey: "zman_nightfall",
                     name: "Tzet HaKochavim",
                     hebrewName: "צאת הכוכבים",
                     time: tzetToday,
@@ -169,6 +176,7 @@ final class NextPrayerService {
             return makeState(
                 prayer: .arvit,
                 milestone: .init(
+                    labelKey: "alotZmanTitle",
                     name: "Alot HaShachar",
                     hebrewName: "עלות השחר",
                     time: alotTomorrow,
@@ -206,6 +214,7 @@ final class NextPrayerService {
             return makeState(
                 prayer: .shacharit,
                 milestone: PrayerMilestone(
+                    labelKey: "zman_sunrise",
                     name: "Netz HaChama",
                     hebrewName: "נץ החמה",
                     time: date,
@@ -217,6 +226,7 @@ final class NextPrayerService {
             return makeState(
                 prayer: .mincha,
                 milestone: PrayerMilestone(
+                    labelKey: "zman_sunset",
                     name: "Shkia",
                     hebrewName: "שקיעה",
                     time: date,

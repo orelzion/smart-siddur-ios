@@ -60,7 +60,7 @@ struct TabContainerView: View {
                     CalendarView()
                 }
                 .tabItem {
-                    Label("Calendar", systemImage: "calendar")
+                    Label("calendar", systemImage: "calendar")
                 }
                 .tag(1)
                 .transition(.opacity)
@@ -70,7 +70,7 @@ struct TabContainerView: View {
                     SettingsView()
                 }
                 .tabItem {
-                    Label("Settings", systemImage: "gearshape.fill")
+                    Label("action_settings", systemImage: "gearshape.fill")
                 }
                 .tag(2)
                 .transition(.opacity)
@@ -85,10 +85,10 @@ struct TabContainerView: View {
         .sheet(isPresented: $showLocationSetup) {
             NavigationStack {
                 LocationPickerView()
-                    .navigationTitle("Set Your Location")
+                    .navigationTitle("loc_select")
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
-                            Button("Skip") {
+                            Button("skip") {
                                 showLocationSetup = false
                             }
                         }

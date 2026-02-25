@@ -48,8 +48,8 @@ struct ZmanimService: Sendable {
         let alotTime = dawnTime(calendar: calendar, opinion: opinions.dawnOpinion)
         zmanim.append(ZmanTime(
             id: "alot",
+            labelKey: "alotZmanTitle",
             name: "Dawn",
-            hebrewName: "\u{05E2}\u{05DC}\u{05D5}\u{05EA} \u{05D4}\u{05E9}\u{05D7}\u{05E8}",
             time: alotTime,
             category: .dawn,
             isEssential: true
@@ -59,8 +59,8 @@ struct ZmanimService: Sendable {
         let sunriseTime = sunrise(calendar: calendar, opinion: opinions.sunriseOpinion)
         zmanim.append(ZmanTime(
             id: "netz",
+            labelKey: "zman_sunrise",
             name: "Sunrise",
-            hebrewName: "\u{05E0}\u{05E5} \u{05D4}\u{05D7}\u{05DE}\u{05D4}",
             time: sunriseTime,
             category: .morning,
             isEssential: true
@@ -69,10 +69,11 @@ struct ZmanimService: Sendable {
         // 3. Sof Zman Shma (default opinion)
         let sofShmaTime = sofZmanShma(calendar: calendar, opinion: opinions.zmanOpinion)
         let shmaLabel = opinions.zmanOpinion == .gra ? "GR\"A" : "MGA"
+        let shmaLabelKey = opinions.zmanOpinion == .gra ? "zman_shma_gra" : "zman_shma_mga"
         zmanim.append(ZmanTime(
             id: "sofZmanShma",
+            labelKey: shmaLabelKey,
             name: "Sof Zman Shma (\(shmaLabel))",
-            hebrewName: "\u{05E1}\u{05D5}\u{05E3} \u{05D6}\u{05DE}\u{05DF} \u{05E9}\u{05DE}\u{05E2}",
             time: sofShmaTime,
             category: .morning,
             isEssential: true
@@ -81,10 +82,11 @@ struct ZmanimService: Sendable {
         // 4. Sof Zman Tfila (default opinion)
         let sofTfilaTime = sofZmanTfila(calendar: calendar, opinion: opinions.zmanOpinion)
         let tfilaLabel = opinions.zmanOpinion == .gra ? "GR\"A" : "MGA"
+        let tfilaLabelKey = opinions.zmanOpinion == .gra ? "zman_tfila_gra" : "zman_tfila_mga"
         zmanim.append(ZmanTime(
             id: "sofZmanTfila",
+            labelKey: tfilaLabelKey,
             name: "Sof Zman Tfila (\(tfilaLabel))",
-            hebrewName: "\u{05E1}\u{05D5}\u{05E3} \u{05D6}\u{05DE}\u{05DF} \u{05EA}\u{05E4}\u{05D9}\u{05DC}\u{05D4}",
             time: sofTfilaTime,
             category: .morning,
             isEssential: true
@@ -94,7 +96,6 @@ struct ZmanimService: Sendable {
         zmanim.append(ZmanTime(
             id: "chatzot",
             name: "Midday",
-            hebrewName: "\u{05D7}\u{05E6}\u{05D5}\u{05EA}",
             time: calendar.getChatzos(),
             category: .midday,
             isEssential: true
@@ -103,8 +104,8 @@ struct ZmanimService: Sendable {
         // 6. Mincha Gedola
         zmanim.append(ZmanTime(
             id: "minchaGedola",
+            labelKey: "minchaBigZmanTitle",
             name: "Mincha Gedola",
-            hebrewName: "\u{05DE}\u{05E0}\u{05D7}\u{05D4} \u{05D2}\u{05D3}\u{05D5}\u{05DC}\u{05D4}",
             time: calendar.getMinchaGedola(),
             category: .afternoon,
             isEssential: true
@@ -113,8 +114,8 @@ struct ZmanimService: Sendable {
         // 7. Sunset (Shkia)
         zmanim.append(ZmanTime(
             id: "shkia",
+            labelKey: "zman_sunset",
             name: "Sunset",
-            hebrewName: "\u{05E9}\u{05E7}\u{05D9}\u{05E2}\u{05D4}",
             time: calendar.getElevationAdjustedSunset(),
             category: .evening,
             isEssential: true
@@ -124,8 +125,8 @@ struct ZmanimService: Sendable {
         let tzeitTime = nightfall(calendar: calendar, opinion: opinions.duskOpinion)
         zmanim.append(ZmanTime(
             id: "tzeit",
+            labelKey: "zman_nightfall",
             name: "Nightfall",
-            hebrewName: "\u{05E6}\u{05D0}\u{05EA} \u{05D4}\u{05DB}\u{05D5}\u{05DB}\u{05D1}\u{05D9}\u{05DD}",
             time: tzeitTime,
             category: .night,
             isEssential: true
@@ -137,7 +138,6 @@ struct ZmanimService: Sendable {
         zmanim.append(ZmanTime(
             id: "misheyakir",
             name: "Tallit & Tefillin",
-            hebrewName: "\u{05D6}\u{05DE}\u{05DF} \u{05E6}\u{05D9}\u{05E6}\u{05D9}\u{05EA} \u{05D5}\u{05EA}\u{05E4}\u{05D9}\u{05DC}\u{05D9}\u{05DF}",
             time: calendar.getMisheyakir11Point5Degrees(),
             category: .dawn,
             isEssential: false
@@ -146,10 +146,11 @@ struct ZmanimService: Sendable {
         // 10. Sof Zman Shma (other opinion)
         let otherZmanOpinion: ZmanOpinion = opinions.zmanOpinion == .gra ? .mga : .gra
         let otherShmaLabel = otherZmanOpinion == .gra ? "GR\"A" : "MGA"
+        let otherShmaKey = otherZmanOpinion == .gra ? "zman_shma_gra" : "zman_shma_mga"
         zmanim.append(ZmanTime(
             id: "sofZmanShmaAlt",
+            labelKey: otherShmaKey,
             name: "Sof Zman Shma (\(otherShmaLabel))",
-            hebrewName: "\u{05E1}\u{05D5}\u{05E3} \u{05D6}\u{05DE}\u{05DF} \u{05E9}\u{05DE}\u{05E2} (\(otherShmaLabel))",
             time: sofZmanShma(calendar: calendar, opinion: otherZmanOpinion),
             category: .morning,
             isEssential: false
@@ -157,10 +158,11 @@ struct ZmanimService: Sendable {
 
         // 11. Sof Zman Tfila (other opinion)
         let otherTfilaLabel = otherZmanOpinion == .gra ? "GR\"A" : "MGA"
+        let otherTfilaKey = otherZmanOpinion == .gra ? "zman_tfila_gra" : "zman_tfila_mga"
         zmanim.append(ZmanTime(
             id: "sofZmanTfilaAlt",
+            labelKey: otherTfilaKey,
             name: "Sof Zman Tfila (\(otherTfilaLabel))",
-            hebrewName: "\u{05E1}\u{05D5}\u{05E3} \u{05D6}\u{05DE}\u{05DF} \u{05EA}\u{05E4}\u{05D9}\u{05DC}\u{05D4} (\(otherTfilaLabel))",
             time: sofZmanTfila(calendar: calendar, opinion: otherZmanOpinion),
             category: .morning,
             isEssential: false
@@ -170,7 +172,6 @@ struct ZmanimService: Sendable {
         zmanim.append(ZmanTime(
             id: "minchaKetana",
             name: "Mincha Ketana",
-            hebrewName: "\u{05DE}\u{05E0}\u{05D7}\u{05D4} \u{05E7}\u{05D8}\u{05E0}\u{05D4}",
             time: calendar.getMinchaKetana(),
             category: .afternoon,
             isEssential: false
@@ -179,8 +180,8 @@ struct ZmanimService: Sendable {
         // 13. Plag HaMincha
         zmanim.append(ZmanTime(
             id: "plagHamincha",
+            labelKey: "plagZmanTitle",
             name: "Plag HaMincha",
-            hebrewName: "\u{05E4}\u{05DC}\u{05D2} \u{05D4}\u{05DE}\u{05E0}\u{05D7}\u{05D4}",
             time: calendar.getPlagHamincha(),
             category: .afternoon,
             isEssential: false
@@ -190,7 +191,6 @@ struct ZmanimService: Sendable {
         zmanim.append(ZmanTime(
             id: "tzeit72",
             name: "Nightfall 72 min",
-            hebrewName: "\u{05E6}\u{05D0}\u{05EA} 72 \u{05D3}\u{05E7}\u{05D5}\u{05EA}",
             time: calendar.getTzais72(),
             category: .night,
             isEssential: false
@@ -200,7 +200,6 @@ struct ZmanimService: Sendable {
         zmanim.append(ZmanTime(
             id: "tzeitRabenuTam",
             name: "Nightfall Rabenu Tam",
-            hebrewName: "\u{05E6}\u{05D0}\u{05EA} \u{05E8}\u{05D1}\u{05E0}\u{05D5} \u{05EA}\u{05DD}",
             time: calendar.getTzais72(),
             category: .night,
             isEssential: false
@@ -211,7 +210,6 @@ struct ZmanimService: Sendable {
         zmanim.append(ZmanTime(
             id: "chatzotHalaila",
             name: "Midnight",
-            hebrewName: "\u{05D7}\u{05E6}\u{05D5}\u{05EA} \u{05D4}\u{05DC}\u{05D9}\u{05DC}\u{05D4}",
             time: midnightTime,
             category: .night,
             isEssential: false
@@ -238,8 +236,8 @@ struct ZmanimService: Sendable {
             zmanimCalendar.setCandleLightingOffset(candleLightingOffset: opinions.shabbatCandleMinutes)
             result.append(ZmanTime(
                 id: "candleLighting",
+                labelKey: "shabbatEnterZmanTitle",
                 name: "Candle Lighting",
-                hebrewName: "\u{05D4}\u{05D3}\u{05DC}\u{05E7}\u{05EA} \u{05E0}\u{05E8}\u{05D5}\u{05EA}",
                 time: zmanimCalendar.getCandleLighting(),
                 category: .shabbat,
                 isEssential: true
@@ -255,8 +253,8 @@ struct ZmanimService: Sendable {
             }
             result.append(ZmanTime(
                 id: "havdalah",
+                labelKey: "havdala_title",
                 name: "Havdalah",
-                hebrewName: "\u{05D4}\u{05D1}\u{05D3}\u{05DC}\u{05D4}",
                 time: havdalahTime,
                 category: .shabbat,
                 isEssential: true
@@ -291,6 +289,7 @@ struct ZmanimService: Sendable {
             zmanimCalendar.setCandleLightingOffset(candleLightingOffset: opinions.shabbatCandleMinutes)
             if let candleTime = zmanimCalendar.getCandleLighting() {
                 result.append(SpecialZman(
+                    labelKey: "shabbatEnterZmanTitle",
                     name: "Erev Shabbat - Candle Lighting",
                     hebrewName: "ערב שבת - הדלקת נרות",
                     time: candleTime,
@@ -304,6 +303,7 @@ struct ZmanimService: Sendable {
             if let sunset = zmanimCalendar.getElevationAdjustedSunset(),
                let havdalahTime = Calendar.current.date(byAdding: .minute, value: opinions.shabbatEndMinutes, to: sunset) {
                 result.append(SpecialZman(
+                    labelKey: "havdala_title",
                     name: "Motzei Shabbat - Havdala",
                     hebrewName: "מוצאי שבת - הבדלה",
                     time: havdalahTime,
@@ -320,6 +320,7 @@ struct ZmanimService: Sendable {
             // Chanukah candle lighting: typically at Tzet HaKochavim
             if let tzeitTime = nightfall(calendar: zmanimCalendar, opinion: opinions.duskOpinion) {
                 result.append(SpecialZman(
+                    labelKey: "hanuka",
                     name: "Chanukah - Candle Lighting Night \(chanukahNight)",
                     hebrewName: "חנוכה - הדלקת נרות ליל \(chanukahNight)",
                     time: tzeitTime,
@@ -364,6 +365,7 @@ struct ZmanimService: Sendable {
                 let countDisplay = omerDay <= 7 ? "Day \(omerDay)" : "Week \(weekNumber), Day \(dayInWeek)"
                 
                 result.append(SpecialZman(
+                    labelKey: "notification_type_omer",
                     name: "Sefirat HaOmer - Count Night \(omerDay)",
                     hebrewName: "ספירת העומר - שטח \(countDisplay)",
                     time: tzeitTime,
@@ -403,6 +405,7 @@ struct ZmanimService: Sendable {
         if yomTovIndex == JewishCalendar.LAG_BAOMER {
             if let tzeitTime = nightfall(calendar: zmanimCalendar, opinion: opinions.duskOpinion) {
                 result.append(SpecialZman(
+                    labelKey: "lag_omer_title",
                     name: "Lag Ba'Omer - Bonfire Time",
                     hebrewName: "לג בעומר - חסוני",
                     time: tzeitTime,

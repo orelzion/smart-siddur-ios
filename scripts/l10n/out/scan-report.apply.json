@@ -1,0 +1,1422 @@
+{
+  "mode": "apply",
+  "catalog": "/Users/orelzion/git/smart-siddur-ios-new/scripts/l10n/out/localizable.from.supabase.json",
+  "sourcesDir": "/Users/orelzion/git/smart-siddur-ios-new/Sources",
+  "summary": {
+    "filesScanned": 55,
+    "filesChanged": 0,
+    "replacements": 1,
+    "unresolved": 143,
+    "skipped": 0
+  },
+  "files": [
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/App/AppDelegate.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/App/SmartSiddurApp.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/App/SmartSiddurApp.swift",
+          "line": 16,
+          "value": "Loading...",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Core/DI/DependencyContainer.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Core/LocalSettings.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Core/Models/DTO/AuthDTO.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Core/Models/Domain/CachedPrayer.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Core/Models/Domain/GeoLocation.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Core/Models/Domain/JewishDay.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Core/Models/Domain/NextPrayerState.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Core/Models/Domain/Prayer.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Core/Models/Domain/PrayerText.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Core/Models/Domain/SyncedUserSettings.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Core/Models/Domain/UserLocation.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Core/Models/Domain/UserProfile.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Core/Models/Domain/ZmanTime.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Core/Supabase/SupabaseClient+Config.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Data/Repositories/AuthRepository.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Data/Repositories/LocationRepository.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Data/Repositories/SettingsRepository.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Extensions/AttributedString+HTML.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/AuthViewModel.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/LoginView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/LoginView.swift",
+          "line": 44,
+          "value": "app_name",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/LoginView.swift",
+          "line": 57,
+          "value": "Your personal siddur",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/LoginView.swift",
+          "line": 90,
+          "value": "common_signin_button_text_long",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/LoginView.swift",
+          "line": 110,
+          "value": "Continue without account",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/LoginView.swift",
+          "line": 138,
+          "value": "ok",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/LoginView.swift",
+          "line": 137,
+          "value": "Sign-In Error",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/OnboardingView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarGridView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+          "line": 126,
+          "value": "today",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+          "line": 157,
+          "value": "Day",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+          "line": 158,
+          "value": "Month",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+          "line": 167,
+          "value": "Gregorian",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+          "line": 168,
+          "value": "Hebrew",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+          "line": 247,
+          "value": "Day Info",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+          "line": 274,
+          "value": "Select a day in month view to see details.",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+          "line": 315,
+          "value": "zmanim",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+          "line": 153,
+          "value": "View",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+          "line": 163,
+          "value": "Date Mode",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+          "line": 54,
+          "value": "Loading...",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+          "line": 59,
+          "value": "calendar",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarViewModel.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+          "line": 51,
+          "value": "Parashat \\(parsha)",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+          "line": 61,
+          "value": "omer_day_end",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+          "line": 71,
+          "value": "daf_yomi",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+          "line": 81,
+          "value": "Fast Day",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+          "line": 92,
+          "value": "Rosh Chodesh",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+          "line": 102,
+          "value": "Chol HaMoed",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+          "line": 144,
+          "value": "full_zmanim_list",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+          "line": 35,
+          "value": "Day Info",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+          "line": 113,
+          "value": "Shabbat Times",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+          "line": 126,
+          "value": "Sun Times",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+          "line": 153,
+          "value": "Day Details",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/HebrewDateFormatter.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/HomeView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/HomeView.swift",
+          "line": 19,
+          "value": "Anonymous User",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/HomeView.swift",
+          "line": 21,
+          "value": "You are using the app without an account",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/HomeView.swift",
+          "line": 43,
+          "value": "Sign Out",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/HomeViewModel.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/NewHomeView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/NewHomeView.swift",
+          "line": 139,
+          "value": "Suggested For You",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/NewHomeView.swift",
+          "line": 198,
+          "value": "All Prayers",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/TabContainerView.swift",
+      "changed": false,
+      "replacements": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/TabContainerView.swift",
+          "line": 91,
+          "value": "skip",
+          "key": "skip"
+        }
+      ],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/TabContainerView.swift",
+          "line": 53,
+          "value": "Home",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/TabContainerView.swift",
+          "line": 63,
+          "value": "calendar",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/TabContainerView.swift",
+          "line": 73,
+          "value": "action_settings",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/TabContainerView.swift",
+          "line": 88,
+          "value": "loc_select",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+          "line": 72,
+          "value": "No cities found for \"\\(viewModel.searchText)\"",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+          "line": 98,
+          "value": "Search Results",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+          "line": 107,
+          "value": "Search for a city",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+          "line": 110,
+          "value": "Or use GPS to detect your location",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+          "line": 143,
+          "value": "Use Current Location",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+          "line": 171,
+          "value": "\\(geo.countryName) (\\(String(format: ",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+          "line": 176,
+          "value": "Select",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+          "line": 187,
+          "value": "Location access denied. Enable in Settings.",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+          "line": 127,
+          "value": "ok",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+          "line": 45,
+          "value": "Current Location",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+          "line": 15,
+          "value": "Loading...",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+          "line": 18,
+          "value": "Location",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+          "line": 123,
+          "value": "Error",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationViewModel.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+          "line": 93,
+          "value": "Loading prayer text...",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+          "line": 107,
+          "value": "Unable to load prayer",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+          "line": 136,
+          "value": "No prayer text available",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+          "line": 183,
+          "value": "error",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+          "line": 192,
+          "value": "(Repeat)",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+          "line": 40,
+          "value": "TOC",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+          "line": 45,
+          "value": "Refresh",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+          "line": 118,
+          "value": "Try Again",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+          "line": 233,
+          "value": "Table of Contents",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextViewModel.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayersMenuView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayersMenuView.swift",
+          "line": 44,
+          "value": "Loading prayers...",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayersMenuView.swift",
+          "line": 58,
+          "value": "Unable to load prayers",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayersMenuView.swift",
+          "line": 25,
+          "value": "Refresh",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayersMenuView.swift",
+          "line": 69,
+          "value": "Try Again",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayersMenuView.swift",
+          "line": 21,
+          "value": "תפילות",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayersMenuViewModel.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+          "line": 40,
+          "value": "Font Size",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+          "line": 42,
+          "value": "\\(Int(localSettings.fontSize)) pt",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+          "line": 55,
+          "value": "Size",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+          "line": 60,
+          "value": "Shema Yisrael Hashem Elokeinu Hashem Echad",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+          "line": 11,
+          "value": "Theme",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+          "line": 24,
+          "value": "Font",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+          "line": 59,
+          "value": "Preview",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+          "line": 12,
+          "value": "App Theme",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+          "line": 25,
+          "value": "Font Family",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+          "line": 66,
+          "value": "Appearance",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/NusachPickerView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/NusachPickerView.swift",
+          "line": 38,
+          "value": "Nusach",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 77,
+          "value": "Nusach",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 94,
+          "value": "Location",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 101,
+          "value": "Not set",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 111,
+          "value": "App language follows iOS App Language.",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 113,
+          "value": "Change it in Settings > SmartSiddur > Language.",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 119,
+          "value": "Prayer backend language",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 165,
+          "value": "Halachic Opinions",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 177,
+          "value": "Pasuk",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 188,
+          "value": "Sick Name",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 233,
+          "value": "Theme & Fonts",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 336,
+          "value": "Account & Sign Out",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 340,
+          "value": "version",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 362,
+          "value": "ok",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 69,
+          "value": "Identity",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 109,
+          "value": "choose_language",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 128,
+          "value": "Location & Calendar",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 160,
+          "value": "Zmanim Opinions",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 175,
+          "value": "Personal Insertions",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 206,
+          "value": "Shabbat",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 228,
+          "value": "appearance",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 243,
+          "value": "Display",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 277,
+          "value": "Prayer Mode",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 299,
+          "value": "Temporary States",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 323,
+          "value": "Privacy",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 332,
+          "value": "account_title",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 84,
+          "value": "Woman",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 129,
+          "value": "In Israel",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 134,
+          "value": "Mizrochnik",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 198,
+          "value": "Include Tal",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 244,
+          "value": "Keep Screen Awake",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 249,
+          "value": "Portrait Only",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 254,
+          "value": "show_titles",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 259,
+          "value": "use24",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 264,
+          "value": "Show Zman Bar",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 269,
+          "value": "Long Press Response",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 300,
+          "value": "Avel Mode",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 305,
+          "value": "options_tahanun",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 310,
+          "value": "Vanenu (Fast Day)",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 315,
+          "value": "Nachem Always",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 324,
+          "value": "track_title",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 139,
+          "value": "Mukaf Mode",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 148,
+          "value": "Date Change",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 278,
+          "value": "Tfila Mode",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 287,
+          "value": "silent",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 45,
+          "value": "Loading settings...",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 179,
+          "value": "Your personal verse",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 190,
+          "value": "Name for Mi Sheberach",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 48,
+          "value": "action_settings",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+          "line": 358,
+          "value": "Error",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsViewModel.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+          "line": 21,
+          "value": "alotZmanTitle",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+          "line": 23,
+          "value": "Determines the earliest time for morning prayers.",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+          "line": 37,
+          "value": "sunriseZmanTitle",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+          "line": 39,
+          "value": "Visible sunrise accounts for elevation; sea level does not.",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+          "line": 53,
+          "value": "Zman Calculation",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+          "line": 55,
+          "value": "MGA calculates from dawn to nightfall; GRA from sunrise to sunset.",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+          "line": 69,
+          "value": "Dusk",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+          "line": 71,
+          "value": "Determines nightfall for end of Shabbat and fast days.",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+          "line": 11,
+          "value": "dawn_title",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+          "line": 27,
+          "value": "sunriseZmanTitle",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+          "line": 43,
+          "value": "General Opinion",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+          "line": 59,
+          "value": "Dusk (Tzeit HaKochavim)",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+          "line": 74,
+          "value": "Zmanim Opinions",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Zmanim/ZmanRowView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Zmanim/ZmanimView.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Zmanim/ZmanimView.swift",
+          "line": 92,
+          "value": "notification_type_zman",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Zmanim/ZmanimView.swift",
+          "line": 15,
+          "value": "Loading...",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Zmanim/ZmanimView.swift",
+          "line": 77,
+          "value": "Shabbat Times",
+          "reason": "missing",
+          "candidates": []
+        },
+        {
+          "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Zmanim/ZmanimView.swift",
+          "line": 18,
+          "value": "zmanim",
+          "reason": "missing",
+          "candidates": []
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Zmanim/ZmanimViewModel.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Services/JewishCalendarService.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Services/NextPrayerService.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Services/PrayerBackgroundTaskManager.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Services/PrayerCacheService.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Services/PrayerService.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Services/PrayerVisibilityService.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Services/ZmanimService.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/UI/Components/ComponentExports.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/UI/Theme/AppTheme.swift",
+      "changed": false,
+      "replacements": [],
+      "unresolved": [],
+      "skipped": []
+    }
+  ]
+}

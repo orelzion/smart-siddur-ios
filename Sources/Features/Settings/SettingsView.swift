@@ -5,6 +5,7 @@ import SwiftUI
 struct SettingsView: View {
     @Environment(DependencyContainer.self) private var container
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.openURL) private var openURL
     @State private var viewModel: SettingsViewModel?
     @State private var showLocationPicker = false
 
@@ -45,7 +46,7 @@ struct SettingsView: View {
                 ProgressView("Loading settings...")
             }
         }
-        .navigationTitle("Settings")
+        .navigationTitle("action_settings")
         .background(backgroundGradient.ignoresSafeArea())
         .onAppear {
             if viewModel == nil {
@@ -86,15 +87,6 @@ struct SettingsView: View {
                     set: { viewModel.updateIsWoman($0) }
                 ))
 
-                Picker("Language", selection: Binding(
-                    get: { viewModel.syncedSettings.language },
-                    set: { viewModel.updateLanguage($0) }
-                )) {
-                    ForEach(AppLanguage.allCases, id: \.self) { lang in
-                        Text(lang.displayName).tag(lang)
-                    }
-                }
-
                 // Location row
                 NavigationLink {
                     LocationPickerView()
@@ -112,6 +104,26 @@ struct SettingsView: View {
                         }
                     }
                 }
+            }
+            .listRowBackground(cardFill)
+
+            Section("choose_language") {
+                Button {
+                    guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+                    openURL(url)
+                } label: {
+                    HStack {
+                        Text("choose_language")
+                        Spacer()
+                        Text("system_managed")
+                            .foregroundStyle(.secondary)
+                    }
+                }
+
+                Text("language_notice")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+
             }
             .listRowBackground(cardFill)
 
@@ -216,7 +228,7 @@ struct SettingsView: View {
             .listRowBackground(cardFill)
 
             // MARK: - Appearance Section (Local)
-            Section("Appearance") {
+            Section("appearance") {
                 NavigationLink {
                     AppearanceSettingsView(localSettings: local)
                 } label: {
@@ -242,12 +254,12 @@ struct SettingsView: View {
                     set: { local.portraitOnly = $0 }
                 ))
 
-                Toggle("Show Section Titles", isOn: Binding(
+                Toggle("show_titles", isOn: Binding(
                     get: { local.showTitles },
                     set: { local.showTitles = $0 }
                 ))
 
-                Toggle("24-Hour Format", isOn: Binding(
+                Toggle("use24", isOn: Binding(
                     get: { local.use24hFormat },
                     set: { local.use24hFormat = $0 }
                 ))
@@ -275,7 +287,7 @@ struct SettingsView: View {
                     }
                 }
 
-                Picker("Silent Mode", selection: Binding(
+                Picker("silent", selection: Binding(
                     get: { local.silentMode },
                     set: { local.silentMode = $0 }
                 )) {
@@ -293,7 +305,7 @@ struct SettingsView: View {
                     set: { local.isAvel = $0 }
                 ))
 
-                Toggle("No Tahanun", isOn: Binding(
+                Toggle("options_tahanun", isOn: Binding(
                     get: { local.noTahanun },
                     set: { local.noTahanun = $0 }
                 ))
@@ -312,7 +324,7 @@ struct SettingsView: View {
 
             // MARK: - Privacy (Local)
             Section("Privacy") {
-                Toggle("Allow Tracking", isOn: Binding(
+                Toggle("track_title", isOn: Binding(
                     get: { local.allowTracking },
                     set: { local.allowTracking = $0 }
                 ))
@@ -320,7 +332,7 @@ struct SettingsView: View {
             .listRowBackground(cardFill)
 
             // MARK: - Account Section
-            Section("Account") {
+            Section("account_title") {
                 NavigationLink {
                     HomeView()
                 } label: {
@@ -328,7 +340,7 @@ struct SettingsView: View {
                 }
 
                 HStack {
-                    Text("Version")
+                    Text("version")
                     Spacer()
                     Text(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0")
                         .foregroundStyle(.secondary)
@@ -350,7 +362,7 @@ struct SettingsView: View {
             get: { viewModel.error != nil },
             set: { if !$0 { viewModel.error = nil } }
         )) {
-            Button("OK") { viewModel.error = nil }
+            Button("ok") { viewModel.error = nil }
         } message: {
             Text(viewModel.error ?? "")
         }

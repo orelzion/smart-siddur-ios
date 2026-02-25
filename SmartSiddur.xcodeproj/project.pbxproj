@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1B2C3D4E5F60718293A4B5C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60718293A4B5D /* Localizable.xcstrings */; };
 		0037917626E6D72F83FEE50B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B248124038FA5B8E8BCF9 /* LoginView.swift */; };
 		04606F4B99095758EE095A45 /* ZmanimOpinionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B03E5D6E0A814235CE3D9 /* ZmanimOpinionsView.swift */; };
 		048A0019B8D19526A8CBE19D /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C22762CA3FD74D37C7F3EC /* AppTheme.swift */; };
@@ -69,6 +70,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A1B2C3D4E5F60718293A4B5D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		0094A82EAB5AF180F650C087 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		00FDAC25B3D12302DE67E3FE /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		01C865A793AF63FAAB5ADD55 /* JewishDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JewishDay.swift; sourceTree = "<group>"; };
@@ -142,6 +144,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1B2C3D4E5F60718293A4B5E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1B2C3D4E5F60718293A4B5F /* Localization */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A1B2C3D4E5F60718293A4B5F /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				A1B2C3D4E5F60718293A4B5D /* Localizable.xcstrings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		0C51E0DDDDC4DB18C22EF0E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +184,7 @@
 				E82CDFC93C8087D07188A752 /* Data */,
 				0C51E0DDDDC4DB18C22EF0E8 /* Extensions */,
 				B83042DED4A4A75E99CFA1CD /* Features */,
+				A1B2C3D4E5F60718293A4B5E /* Resources */,
 				A7CBC73B308CFC20687348C7 /* Services */,
 				57FE214EAA70038262A9D74C /* UI */,
 			);
@@ -404,6 +423,7 @@
 			buildConfigurationList = 3CBF4A7124E356C8CFF4A2C7 /* Build configuration list for PBXNativeTarget "SmartSiddur" */;
 			buildPhases = (
 				D3AD1D648BEBE736C113F117 /* Sources */,
+				A1B2C3D4E5F60718293A4B60 /* Resources */,
 				1B84E8FAF4887F3DA1CB7A06 /* Frameworks */,
 			);
 			buildRules = (
@@ -437,6 +457,10 @@
 			knownRegions = (
 				Base,
 				en,
+				he,
+				fr,
+				es,
+				de,
 			);
 			mainGroup = E8F5001257A4B69709EF95DE;
 			minimizedProjectReferenceProxies = 1;
@@ -453,6 +477,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1B2C3D4E5F60718293A4B60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B2C3D4E5F60718293A4B5C /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3AD1D648BEBE736C113F117 /* Sources */ = {

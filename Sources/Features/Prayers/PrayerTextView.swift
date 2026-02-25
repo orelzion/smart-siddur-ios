@@ -81,6 +81,7 @@ struct PrayerTextView: View {
                     }
                 )
             }
+            .environment(\.layoutDirection, .rightToLeft)
         }
     }
     

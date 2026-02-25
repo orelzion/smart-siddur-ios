@@ -95,7 +95,7 @@ struct NewHomeView: View {
                 .font(.headline)
                 .foregroundStyle(primaryText)
 
-            Text(viewModel.nextPrayerState.currentMilestone.name)
+            Text(viewModel.nextPrayerState.currentMilestone.displayName)
                 .font(.title3.weight(.semibold))
                 .foregroundStyle(gold)
 
@@ -170,7 +170,7 @@ struct NewHomeView: View {
                             }
                             .foregroundStyle(gold)
 
-                            Text(item.title)
+                            Text(Prayer(type: item.prayerType).displayName)
                                 .font(.subheadline.weight(.semibold))
                                 .foregroundStyle(primaryText)
                                 .lineLimit(2)

@@ -102,7 +102,6 @@ struct PrayersMenuView: View {
         VStack(alignment: .leading, spacing: 12) {
             SectionHeader(
                 title: "Today's Prayers",
-                hebrewTitle: "תפילות היום",
                 icon: "calendar",
                 color: .blue
             )
@@ -126,7 +125,6 @@ struct PrayersMenuView: View {
         VStack(alignment: .leading, spacing: 12) {
             SectionHeader(
                 title: section.title,
-                hebrewTitle: section.hebrewTitle,
                 icon: iconForCategory(section.category),
                 color: colorForCategory(section.category)
             )
@@ -163,7 +161,6 @@ struct PrayersMenuView: View {
 // MARK: - Section Header
 private struct SectionHeader: View {
     let title: String
-    let hebrewTitle: String
     let icon: String
     let color: Color
     
@@ -173,15 +170,9 @@ private struct SectionHeader: View {
                 .foregroundColor(color)
                 .font(.system(size: 16, weight: .semibold))
             
-            VStack(alignment: .leading, spacing: 2) {
-                Text(hebrewTitle)
-                    .font(.system(size: 18, weight: .semibold))
-                    .foregroundColor(.primary)
-                
-                Text(title)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-            }
+            Text(title)
+                .font(.system(size: 18, weight: .semibold))
+                .foregroundColor(.primary)
             
             Spacer()
         }
@@ -200,15 +191,9 @@ private struct PrayerRow: View {
     
     var body: some View {
         HStack(spacing: 12) {
-            VStack(alignment: .leading, spacing: 2) {
-                Text(prayer.hebrewName)
-                    .font(.system(size: 18, weight: .medium))
-                    .foregroundColor(.primary)
-                
-                Text(prayer.displayName)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-            }
+            Text(prayer.displayName)
+                .font(.system(size: 18, weight: .medium))
+                .foregroundColor(.primary)
             
             Spacer()
             
@@ -236,17 +221,10 @@ private struct PrayerCard: View {
     
     var body: some View {
         VStack(spacing: 8) {
-            Text(prayer.hebrewName)
+            Text(prayer.displayName)
                 .font(.system(size: isCompact ? 16 : 20, weight: .medium))
                 .foregroundColor(.primary)
                 .multilineTextAlignment(.center)
-            
-            if !isCompact {
-                Text(prayer.displayName)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                    .multilineTextAlignment(.center)
-            }
         }
         .frame(maxWidth: .infinity)
         .padding(.horizontal, 12)

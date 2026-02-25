@@ -1,0 +1,2516 @@
+{
+  "summary": {
+    "unresolvedCount": 143,
+    "withAndroidSuggestions": 96
+  },
+  "items": [
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/App/SmartSiddurApp.swift",
+      "line": 16,
+      "value": "Loading...",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "loading",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/LoginView.swift",
+      "line": 44,
+      "value": "app_name",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "app_name",
+      "androidSuggestions": [
+        {
+          "key": "help_home_title",
+          "en": "App Menu",
+          "score": 0.75
+        },
+        {
+          "key": "register_lname",
+          "en": "Last Name",
+          "score": 0.706
+        },
+        {
+          "key": "app_name",
+          "en": "Smart Siddur",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/LoginView.swift",
+      "line": 57,
+      "value": "Your personal siddur",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "your_personal_siddur",
+      "androidSuggestions": [
+        {
+          "key": "siddur",
+          "en": "Tfilot",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/LoginView.swift",
+      "line": 90,
+      "value": "common_signin_button_text_long",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "common_signin_button_text_long",
+      "androidSuggestions": [
+        {
+          "key": "common_signin_button_text_long",
+          "en": "Login with Google",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/LoginView.swift",
+      "line": 110,
+      "value": "Continue without account",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "continue_without_account",
+      "androidSuggestions": [
+        {
+          "key": "account_title",
+          "en": "Account",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/LoginView.swift",
+      "line": 137,
+      "value": "Sign-In Error",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "sign_in_error",
+      "androidSuggestions": [
+        {
+          "key": "action_sign_in_short",
+          "en": "Sign in",
+          "score": 0.92
+        },
+        {
+          "key": "title_activity_login",
+          "en": "Sign in",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Auth/LoginView.swift",
+      "line": 138,
+      "value": "ok",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "ok",
+      "androidSuggestions": [
+        {
+          "key": "ok",
+          "en": "OK",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+      "line": 54,
+      "value": "Loading...",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "loading",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+      "line": 59,
+      "value": "calendar",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "calendar",
+      "androidSuggestions": [
+        {
+          "key": "calendar",
+          "en": "Calendar",
+          "score": 1.0
+        },
+        {
+          "key": "calendar_and_zmanim",
+          "en": "Calendar and Zmanim",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+      "line": 126,
+      "value": "today",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "today",
+      "androidSuggestions": [
+        {
+          "key": "today",
+          "en": "Today",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+      "line": 153,
+      "value": "View",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "view",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+      "line": 157,
+      "value": "Day",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "day",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+      "line": 158,
+      "value": "Month",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "month",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+      "line": 163,
+      "value": "Date Mode",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "date_mode",
+      "androidSuggestions": [
+        {
+          "key": "dark_mode",
+          "en": "Dark Mode",
+          "score": 0.778
+        },
+        {
+          "key": "mode",
+          "en": "Choose Tefila Mode",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+      "line": 167,
+      "value": "Gregorian",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "gregorian",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+      "line": 168,
+      "value": "Hebrew",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "hebrew",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+      "line": 247,
+      "value": "Day Info",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "day_info",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+      "line": 274,
+      "value": "Select a day in month view to see details.",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "select_a_day_in_month_view_to_see_details",
+      "androidSuggestions": [
+        {
+          "key": "more_details",
+          "en": "Details",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/CalendarView.swift",
+      "line": 315,
+      "value": "zmanim",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "zmanim",
+      "androidSuggestions": [
+        {
+          "key": "zmanim",
+          "en": "Zmanim",
+          "score": 1.0
+        },
+        {
+          "key": "calendar_and_zmanim",
+          "en": "Calendar and Zmanim",
+          "score": 0.9
+        },
+        {
+          "key": "full_zmanim_list",
+          "en": "Full Zmanim List",
+          "score": 0.9
+        },
+        {
+          "key": "more_zmanim",
+          "en": "More Zmanim",
+          "score": 0.9
+        },
+        {
+          "key": "show_zmanim",
+          "en": "Show Zmanim",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+      "line": 35,
+      "value": "Day Info",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "day_info",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+      "line": 51,
+      "value": "Parashat \\(parsha)",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "parashat_parsha",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+      "line": 61,
+      "value": "omer_day_end",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "omer_day_end",
+      "androidSuggestions": [
+        {
+          "key": "omer_day_end",
+          "en": " of the Omer",
+          "score": 1.0
+        },
+        {
+          "key": "omer_day",
+          "en": "Today is %1$d days",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+      "line": 71,
+      "value": "daf_yomi",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "daf_yomi",
+      "androidSuggestions": [
+        {
+          "key": "daf_yomi",
+          "en": "Daf Yomi: %1$@",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+      "line": 81,
+      "value": "Fast Day",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "fast_day",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+      "line": 92,
+      "value": "Rosh Chodesh",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "rosh_chodesh",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+      "line": 102,
+      "value": "Chol HaMoed",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "chol_hamoed",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+      "line": 113,
+      "value": "Shabbat Times",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "shabbat_times",
+      "androidSuggestions": [
+        {
+          "key": "shabbat_settings_title",
+          "en": "Shabbat ",
+          "score": 0.92
+        },
+        {
+          "key": "notification_type_zman",
+          "en": "Halachic Times",
+          "score": 0.667
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+      "line": 126,
+      "value": "Sun Times",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "sun_times",
+      "androidSuggestions": [
+        {
+          "key": "at_zman_time",
+          "en": "On time",
+          "score": 0.75
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+      "line": 144,
+      "value": "full_zmanim_list",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "full_zmanim_list",
+      "androidSuggestions": [
+        {
+          "key": "full_zmanim_list",
+          "en": "Full Zmanim List",
+          "score": 1.0
+        },
+        {
+          "key": "zmanim",
+          "en": "Zmanim",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Calendar/DayDetailSheet.swift",
+      "line": 153,
+      "value": "Day Details",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "day_details",
+      "androidSuggestions": [
+        {
+          "key": "more_details",
+          "en": "Details",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/HomeView.swift",
+      "line": 19,
+      "value": "Anonymous User",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "anonymous_user",
+      "androidSuggestions": [
+        {
+          "key": "no",
+          "en": "No",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/HomeView.swift",
+      "line": 21,
+      "value": "You are using the app without an account",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "you_are_using_the_app_without_an_account",
+      "androidSuggestions": [
+        {
+          "key": "account_title",
+          "en": "Account",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/HomeView.swift",
+      "line": 43,
+      "value": "Sign Out",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "sign_out",
+      "androidSuggestions": [
+        {
+          "key": "action_sign_in_short",
+          "en": "Sign in",
+          "score": 0.667
+        },
+        {
+          "key": "title_activity_login",
+          "en": "Sign in",
+          "score": 0.667
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/NewHomeView.swift",
+      "line": 139,
+      "value": "Suggested For You",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "suggested_for_you",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/NewHomeView.swift",
+      "line": 198,
+      "value": "All Prayers",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "all_prayers",
+      "androidSuggestions": [
+        {
+          "key": "nachem_pref",
+          "en": "Show Nachem at all prayers",
+          "score": 0.92
+        },
+        {
+          "key": "purchase_promotion",
+          "en": "\n        \n        &#149; Get full access to all prayers<br/><br/>\n        &#149; Unlock full Hebrew calendar and daily times<br/><br/>\n        &#149; Get full control on your Siddur settings<br/><br/>\n        &#149; Support the developer :)\n        \n    ",
+          "score": 0.92
+        },
+        {
+          "key": "rahaman_title",
+          "en": "Prayers",
+          "score": 0.92
+        },
+        {
+          "key": "daily_tfilot",
+          "en": "Daily Prayers",
+          "score": 0.833
+        },
+        {
+          "key": "additional_prayers",
+          "en": "Additional Prayers",
+          "score": 0.69
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/TabContainerView.swift",
+      "line": 53,
+      "value": "Home",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "home",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/TabContainerView.swift",
+      "line": 63,
+      "value": "calendar",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "calendar",
+      "androidSuggestions": [
+        {
+          "key": "calendar",
+          "en": "Calendar",
+          "score": 1.0
+        },
+        {
+          "key": "calendar_and_zmanim",
+          "en": "Calendar and Zmanim",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/TabContainerView.swift",
+      "line": 73,
+      "value": "action_settings",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "action_settings",
+      "androidSuggestions": [
+        {
+          "key": "action_settings",
+          "en": "Settings",
+          "score": 0.92
+        },
+        {
+          "key": "settings",
+          "en": "Settings",
+          "score": 0.92
+        },
+        {
+          "key": "location_title",
+          "en": "Zmanim Settings",
+          "score": 0.733
+        },
+        {
+          "key": "text_set",
+          "en": "Text Settings",
+          "score": 0.714
+        },
+        {
+          "key": "set",
+          "en": "Set",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Home/TabContainerView.swift",
+      "line": 88,
+      "value": "loc_select",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "loc_select",
+      "androidSuggestions": [
+        {
+          "key": "loc_select",
+          "en": "Select Location",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+      "line": 15,
+      "value": "Loading...",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "loading",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+      "line": 18,
+      "value": "Location",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "location",
+      "androidSuggestions": [
+        {
+          "key": "locations_tab",
+          "en": "Locations",
+          "score": 0.941
+        },
+        {
+          "key": "add_location",
+          "en": "Just add",
+          "score": 0.9
+        },
+        {
+          "key": "auto_track_location",
+          "en": "Auto track location",
+          "score": 0.9
+        },
+        {
+          "key": "automatic_location_canceled",
+          "en": "Disabled automatic location update",
+          "score": 0.9
+        },
+        {
+          "key": "choose_location",
+          "en": "Choose Location",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+      "line": 45,
+      "value": "Current Location",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "current_location",
+      "androidSuggestions": [
+        {
+          "key": "current_location",
+          "en": "Current Location: ",
+          "score": 1.0
+        },
+        {
+          "key": "compass_info",
+          "en": "Current Location: %1$f, %2$f\nKotel Location: %3$f, %4$f\nKotel Bearing from Current Location: %5$f\nCurrent Bearing: %6$f",
+          "score": 0.92
+        },
+        {
+          "key": "gps_failure",
+          "en": "Couldn't find your current location",
+          "score": 0.92
+        },
+        {
+          "key": "searching_for_location",
+          "en": "Locating your current location",
+          "score": 0.92
+        },
+        {
+          "key": "searching_for_location_message",
+          "en": "Enabling this will activate automatic location updates, ensuring that your app consistently checks and updates your current location whenever you open it.",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+      "line": 72,
+      "value": "No cities found for \"\\(viewModel.searchText)\"",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "no_cities_found_for_viewmodel_searchtext",
+      "androidSuggestions": [
+        {
+          "key": "mode",
+          "en": "Choose Tefila Mode",
+          "score": 0.9
+        },
+        {
+          "key": "no",
+          "en": "No",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+      "line": 98,
+      "value": "Search Results",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "search_results",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+      "line": 107,
+      "value": "Search for a city",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "search_for_a_city",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+      "line": 110,
+      "value": "Or use GPS to detect your location",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "or_use_gps_to_detect_your_location",
+      "androidSuggestions": [
+        {
+          "key": "israel_holiday_title",
+          "en": "Update your location?",
+          "score": 0.704
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+      "line": 123,
+      "value": "Error",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "error",
+      "androidSuggestions": [
+        {
+          "key": "error_date_format",
+          "en": "The date format must be DD/MM/YYYY",
+          "score": 0.9
+        },
+        {
+          "key": "error_email_format",
+          "en": "Email is not valid",
+          "score": 0.9
+        },
+        {
+          "key": "error_empty_field",
+          "en": "The field cannot be empty",
+          "score": 0.9
+        },
+        {
+          "key": "error_field_required",
+          "en": "This field is required",
+          "score": 0.9
+        },
+        {
+          "key": "error_incorrect_password",
+          "en": "This password is incorrect",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+      "line": 127,
+      "value": "ok",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "ok",
+      "androidSuggestions": [
+        {
+          "key": "ok",
+          "en": "OK",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+      "line": 143,
+      "value": "Use Current Location",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "use_current_location",
+      "androidSuggestions": [
+        {
+          "key": "current_location",
+          "en": "Current Location: ",
+          "score": 0.92
+        },
+        {
+          "key": "set_location_message",
+          "en": "Set %@ as your current location?",
+          "score": 0.792
+        },
+        {
+          "key": "loc_select",
+          "en": "Select Location",
+          "score": 0.743
+        },
+        {
+          "key": "searching_for_location",
+          "en": "Locating your current location",
+          "score": 0.72
+        },
+        {
+          "key": "israel_holiday_title",
+          "en": "Update your location?",
+          "score": 0.7
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+      "line": 171,
+      "value": "\\(geo.countryName) (\\(String(format: ",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "geo_countryname_string_format",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+      "line": 176,
+      "value": "Select",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "select",
+      "androidSuggestions": [
+        {
+          "key": "loc_select",
+          "en": "Select Location",
+          "score": 0.9
+        },
+        {
+          "key": "no_location_selected",
+          "en": "No Selected Location",
+          "score": 0.9
+        },
+        {
+          "key": "no_location_selected_description",
+          "en": "Please select a location to display accurate prayers and times",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Location/LocationPickerView.swift",
+      "line": 187,
+      "value": "Location access denied. Enable in Settings.",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "location_access_denied_enable_in_settings",
+      "androidSuggestions": [
+        {
+          "key": "action_settings",
+          "en": "Settings",
+          "score": 0.92
+        },
+        {
+          "key": "settings",
+          "en": "Settings",
+          "score": 0.92
+        },
+        {
+          "key": "set",
+          "en": "Set",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+      "line": 40,
+      "value": "TOC",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "toc",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+      "line": 45,
+      "value": "Refresh",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "refresh",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+      "line": 93,
+      "value": "Loading prayer text...",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "loading_prayer_text",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+      "line": 107,
+      "value": "Unable to load prayer",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "unable_to_load_prayer",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+      "line": 118,
+      "value": "Try Again",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "try_again",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+      "line": 136,
+      "value": "No prayer text available",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "no_prayer_text_available",
+      "androidSuggestions": [
+        {
+          "key": "no",
+          "en": "No",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+      "line": 183,
+      "value": "error",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "error",
+      "androidSuggestions": [
+        {
+          "key": "error_date_format",
+          "en": "The date format must be DD/MM/YYYY",
+          "score": 0.9
+        },
+        {
+          "key": "error_email_format",
+          "en": "Email is not valid",
+          "score": 0.9
+        },
+        {
+          "key": "error_empty_field",
+          "en": "The field cannot be empty",
+          "score": 0.9
+        },
+        {
+          "key": "error_field_required",
+          "en": "This field is required",
+          "score": 0.9
+        },
+        {
+          "key": "error_incorrect_password",
+          "en": "This password is incorrect",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+      "line": 192,
+      "value": "(Repeat)",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "repeat",
+      "androidSuggestions": [
+        {
+          "key": "repeat",
+          "en": "Repeat",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayerTextView.swift",
+      "line": 233,
+      "value": "Table of Contents",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "table_of_contents",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayersMenuView.swift",
+      "line": 21,
+      "value": "תפילות",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "todo_key",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayersMenuView.swift",
+      "line": 25,
+      "value": "Refresh",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "refresh",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayersMenuView.swift",
+      "line": 44,
+      "value": "Loading prayers...",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "loading_prayers",
+      "androidSuggestions": [
+        {
+          "key": "rahaman_title",
+          "en": "Prayers",
+          "score": 0.92
+        },
+        {
+          "key": "shachar",
+          "en": "Morning Prayers",
+          "score": 0.8
+        },
+        {
+          "key": "additional_prayers",
+          "en": "Additional Prayers",
+          "score": 0.727
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayersMenuView.swift",
+      "line": 58,
+      "value": "Unable to load prayers",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "unable_to_load_prayers",
+      "androidSuggestions": [
+        {
+          "key": "rahaman_title",
+          "en": "Prayers",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Prayers/PrayersMenuView.swift",
+      "line": 69,
+      "value": "Try Again",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "try_again",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+      "line": 11,
+      "value": "Theme",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "theme",
+      "androidSuggestions": [
+        {
+          "key": "themes",
+          "en": "Choose Theme",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+      "line": 12,
+      "value": "App Theme",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "app_theme",
+      "androidSuggestions": [
+        {
+          "key": "help_home_title",
+          "en": "App Menu",
+          "score": 0.706
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+      "line": 24,
+      "value": "Font",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "font",
+      "androidSuggestions": [
+        {
+          "key": "font",
+          "en": "Choose Font",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+      "line": 25,
+      "value": "Font Family",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "font_family",
+      "androidSuggestions": [
+        {
+          "key": "font",
+          "en": "Choose Font",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+      "line": 40,
+      "value": "Font Size",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "font_size",
+      "androidSuggestions": [
+        {
+          "key": "appearance_summery",
+          "en": "Choose appearance preferences like themes, font size etc.",
+          "score": 0.92
+        },
+        {
+          "key": "font_size",
+          "en": "Change Font Size",
+          "score": 0.92
+        },
+        {
+          "key": "font_size_summery",
+          "en": "Enter font size in numbers",
+          "score": 0.92
+        },
+        {
+          "key": "font",
+          "en": "Choose Font",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+      "line": 42,
+      "value": "\\(Int(localSettings.fontSize)) pt",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "int_localsettings_fontsize_pt",
+      "androidSuggestions": [
+        {
+          "key": "font",
+          "en": "Choose Font",
+          "score": 0.9
+        },
+        {
+          "key": "set",
+          "en": "Set",
+          "score": 0.9
+        },
+        {
+          "key": "settings",
+          "en": "Settings",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+      "line": 55,
+      "value": "Size",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "size",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+      "line": 59,
+      "value": "Preview",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "preview",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+      "line": 60,
+      "value": "Shema Yisrael Hashem Elokeinu Hashem Echad",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "shema_yisrael_hashem_elokeinu_hashem_echad",
+      "androidSuggestions": [
+        {
+          "key": "ok",
+          "en": "OK",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/AppearanceSettingsView.swift",
+      "line": 66,
+      "value": "Appearance",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "appearance",
+      "androidSuggestions": [
+        {
+          "key": "appearance",
+          "en": "Appearance Settings",
+          "score": 1.0
+        },
+        {
+          "key": "appearance_summery",
+          "en": "Choose appearance preferences like themes, font size etc.",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/NusachPickerView.swift",
+      "line": 38,
+      "value": "Nusach",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "nusach",
+      "androidSuggestions": [
+        {
+          "key": "nusach_pref",
+          "en": "Choose Nusach",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 46,
+      "value": "Loading settings...",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "loading_settings",
+      "androidSuggestions": [
+        {
+          "key": "action_settings",
+          "en": "Settings",
+          "score": 0.92
+        },
+        {
+          "key": "settings",
+          "en": "Settings",
+          "score": 0.92
+        },
+        {
+          "key": "location_title",
+          "en": "Zmanim Settings",
+          "score": 0.71
+        },
+        {
+          "key": "set",
+          "en": "Set",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 49,
+      "value": "action_settings",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "action_settings",
+      "androidSuggestions": [
+        {
+          "key": "action_settings",
+          "en": "Settings",
+          "score": 0.92
+        },
+        {
+          "key": "settings",
+          "en": "Settings",
+          "score": 0.92
+        },
+        {
+          "key": "location_title",
+          "en": "Zmanim Settings",
+          "score": 0.733
+        },
+        {
+          "key": "text_set",
+          "en": "Text Settings",
+          "score": 0.714
+        },
+        {
+          "key": "set",
+          "en": "Set",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 70,
+      "value": "Identity",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "identity",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 78,
+      "value": "Nusach",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "nusach",
+      "androidSuggestions": [
+        {
+          "key": "nusach_pref",
+          "en": "Choose Nusach",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 85,
+      "value": "Woman",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "woman",
+      "androidSuggestions": [
+        {
+          "key": "woman_mode",
+          "en": "I am a woman",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 95,
+      "value": "Location",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "location",
+      "androidSuggestions": [
+        {
+          "key": "locations_tab",
+          "en": "Locations",
+          "score": 0.941
+        },
+        {
+          "key": "add_location",
+          "en": "Just add",
+          "score": 0.9
+        },
+        {
+          "key": "auto_track_location",
+          "en": "Auto track location",
+          "score": 0.9
+        },
+        {
+          "key": "automatic_location_canceled",
+          "en": "Disabled automatic location update",
+          "score": 0.9
+        },
+        {
+          "key": "choose_location",
+          "en": "Choose Location",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 102,
+      "value": "Not set",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "not_set",
+      "androidSuggestions": [
+        {
+          "key": "no",
+          "en": "No",
+          "score": 0.9
+        },
+        {
+          "key": "set",
+          "en": "Set",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 110,
+      "value": "choose_language",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "choose_language",
+      "androidSuggestions": [
+        {
+          "key": "choose_language",
+          "en": "Language",
+          "score": 0.92
+        },
+        {
+          "key": "choose_date",
+          "en": "Choose Date",
+          "score": 0.692
+        },
+        {
+          "key": "choose_blessing",
+          "en": "Choose Blessing",
+          "score": 0.667
+        },
+        {
+          "key": "choose_location",
+          "en": "Choose Location",
+          "score": 0.667
+        },
+        {
+          "key": "manual_summary",
+          "en": "Choose Location",
+          "score": 0.667
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 116,
+      "value": "choose_language",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "choose_language",
+      "androidSuggestions": [
+        {
+          "key": "choose_language",
+          "en": "Language",
+          "score": 0.92
+        },
+        {
+          "key": "choose_date",
+          "en": "Choose Date",
+          "score": 0.692
+        },
+        {
+          "key": "choose_blessing",
+          "en": "Choose Blessing",
+          "score": 0.667
+        },
+        {
+          "key": "choose_location",
+          "en": "Choose Location",
+          "score": 0.667
+        },
+        {
+          "key": "manual_summary",
+          "en": "Choose Location",
+          "score": 0.667
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 118,
+      "value": "system_managed",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "system_managed",
+      "androidSuggestions": [
+        {
+          "key": "system_managed",
+          "en": "System Managed",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 123,
+      "value": "language_notice",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "language_notice",
+      "androidSuggestions": [
+        {
+          "key": "choose_language",
+          "en": "Language",
+          "score": 0.92
+        },
+        {
+          "key": "language_notice",
+          "en": "The language will be updated only after fresh launch of the app",
+          "score": 1.0
+        },
+        {
+          "key": "no",
+          "en": "No",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 131,
+      "value": "Location & Calendar",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "location_calendar",
+      "androidSuggestions": [
+        {
+          "key": "calendar",
+          "en": "Calendar",
+          "score": 0.92
+        },
+        {
+          "key": "location_has_changed",
+          "en": "Location has been updated",
+          "score": 0.667
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 132,
+      "value": "In Israel",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "in_israel",
+      "androidSuggestions": [
+        {
+          "key": "forWineOF",
+          "en": "For wine made in Israel:",
+          "score": 0.92
+        },
+        {
+          "key": "israel_title",
+          "en": "I am in Israel",
+          "score": 0.92
+        },
+        {
+          "key": "shomerIsraelTitle",
+          "en": "Guardian of Israel",
+          "score": 0.667
+        },
+        {
+          "key": "tikunRachelTitle",
+          "en": "Tikun Rachel",
+          "score": 0.667
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 137,
+      "value": "Mizrochnik",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "mizrochnik",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 142,
+      "value": "Mukaf Mode",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "mukaf_mode",
+      "androidSuggestions": [
+        {
+          "key": "option_normal",
+          "en": "Normal Mode",
+          "score": 0.667
+        },
+        {
+          "key": "mode",
+          "en": "Choose Tefila Mode",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 151,
+      "value": "Date Change",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "date_change",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 163,
+      "value": "Zmanim Opinions",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "zmanim_opinions",
+      "androidSuggestions": [
+        {
+          "key": "zmanim",
+          "en": "Zmanim",
+          "score": 0.92
+        },
+        {
+          "key": "location_title",
+          "en": "Zmanim Settings",
+          "score": 0.667
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 168,
+      "value": "Halachic Opinions",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "halachic_opinions",
+      "androidSuggestions": [
+        {
+          "key": "notification_type_zman",
+          "en": "Halachic Times",
+          "score": 0.71
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 178,
+      "value": "Personal Insertions",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "personal_insertions",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 180,
+      "value": "Pasuk",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "pasuk",
+      "androidSuggestions": [
+        {
+          "key": "pasuk",
+          "en": "Enter Your Pasuk",
+          "score": 1.0
+        },
+        {
+          "key": "pasuk_summery",
+          "en": "Set the Pasuk to say before Yihyu LeRatzon",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 182,
+      "value": "Your personal verse",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "your_personal_verse",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 191,
+      "value": "Sick Name",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "sick_name",
+      "androidSuggestions": [
+        {
+          "key": "register_lname",
+          "en": "Last Name",
+          "score": 0.667
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 193,
+      "value": "Name for Mi Sheberach",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "name_for_mi_sheberach",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 201,
+      "value": "Include Tal",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "include_tal",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 209,
+      "value": "Shabbat",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "shabbat",
+      "androidSuggestions": [
+        {
+          "key": "shabbat_settings_title",
+          "en": "Shabbat ",
+          "score": 1.0
+        },
+        {
+          "key": "shabbatEndZmanTitle",
+          "en": "Shabbat or Hag Ends",
+          "score": 0.9
+        },
+        {
+          "key": "shabbatEnterZmanTitle",
+          "en": "Candle Lighting",
+          "score": 0.9
+        },
+        {
+          "key": "shabbat_end_summary",
+          "en": "Choose Shita to calculate the end of Shabbat",
+          "score": 0.9
+        },
+        {
+          "key": "shabbat_end_title",
+          "en": "Havdala",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 231,
+      "value": "appearance",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "appearance",
+      "androidSuggestions": [
+        {
+          "key": "appearance",
+          "en": "Appearance Settings",
+          "score": 1.0
+        },
+        {
+          "key": "appearance_summery",
+          "en": "Choose appearance preferences like themes, font size etc.",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 236,
+      "value": "Theme & Fonts",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "theme_fonts",
+      "androidSuggestions": [
+        {
+          "key": "font",
+          "en": "Choose Font",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 246,
+      "value": "Display",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "display",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 247,
+      "value": "Keep Screen Awake",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "keep_screen_awake",
+      "androidSuggestions": [
+        {
+          "key": "awake",
+          "en": "Screen On",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 252,
+      "value": "Portrait Only",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "portrait_only",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 257,
+      "value": "show_titles",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "show_titles",
+      "androidSuggestions": [
+        {
+          "key": "show_titles",
+          "en": "Show Titles",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 262,
+      "value": "use24",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "use24",
+      "androidSuggestions": [
+        {
+          "key": "use24",
+          "en": "Use 24 hour format",
+          "score": 1.0
+        },
+        {
+          "key": "use24Summary",
+          "en": "Use 24 hour format (e.g. 13:56)",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 267,
+      "value": "Show Zman Bar",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "show_zman_bar",
+      "androidSuggestions": [
+        {
+          "key": "show_zmanim",
+          "en": "Show Zmanim",
+          "score": 0.75
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 272,
+      "value": "Long Press Response",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "long_press_response",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 280,
+      "value": "Prayer Mode",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "prayer_mode",
+      "androidSuggestions": [
+        {
+          "key": "rahaman_title",
+          "en": "Prayers",
+          "score": 0.667
+        },
+        {
+          "key": "zahalTitle",
+          "en": "A Prayer for IDF",
+          "score": 0.667
+        },
+        {
+          "key": "mode",
+          "en": "Choose Tefila Mode",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 281,
+      "value": "Tfila Mode",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "tfila_mode",
+      "androidSuggestions": [
+        {
+          "key": "mode",
+          "en": "Choose Tefila Mode",
+          "score": 0.714
+        },
+        {
+          "key": "silent",
+          "en": "Silent Mode",
+          "score": 0.667
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 290,
+      "value": "silent",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "silent",
+      "androidSuggestions": [
+        {
+          "key": "sound_setting_silent",
+          "en": "Silent",
+          "score": 1.0
+        },
+        {
+          "key": "silent",
+          "en": "Silent Mode",
+          "score": 1.0
+        },
+        {
+          "key": "channel_name_silent",
+          "en": "Silent Alerts",
+          "score": 0.9
+        },
+        {
+          "key": "silent_ask",
+          "en": "Would you like to switch into silent mode?",
+          "score": 0.9
+        },
+        {
+          "key": "silent_mazon",
+          "en": "Also apply to Birkat HaMazon",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 302,
+      "value": "Temporary States",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "temporary_states",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 303,
+      "value": "Avel Mode",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "avel_mode",
+      "androidSuggestions": [
+        {
+          "key": "option_normal",
+          "en": "Normal Mode",
+          "score": 0.7
+        },
+        {
+          "key": "dark_mode",
+          "en": "Dark Mode",
+          "score": 0.667
+        },
+        {
+          "key": "mode",
+          "en": "Choose Tefila Mode",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 308,
+      "value": "options_tahanun",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "options_tahanun",
+      "androidSuggestions": [
+        {
+          "key": "options",
+          "en": "Options",
+          "score": 0.92
+        },
+        {
+          "key": "options_tahanun",
+          "en": "No Tahanun",
+          "score": 0.72
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 313,
+      "value": "Vanenu (Fast Day)",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "vanenu_fast_day",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 318,
+      "value": "Nachem Always",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "nachem_always",
+      "androidSuggestions": [
+        {
+          "key": "nachemTitle",
+          "en": "Nachem",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 326,
+      "value": "Privacy",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "privacy",
+      "androidSuggestions": [
+        {
+          "key": "privacy_policy",
+          "en": "By creating account you agree to our <a href=\"http://admin-karriapps.rhcloud.com/public/privacy_policy\">Privacy Policy</a>",
+          "score": 0.9
+        },
+        {
+          "key": "privacy_policy_title",
+          "en": "Privacy Policy",
+          "score": 0.9
+        },
+        {
+          "key": "privacy_policy_url",
+          "en": "http://admin-karriapps.rhcloud.com/public/privacy_policy",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 327,
+      "value": "track_title",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "track_title",
+      "androidSuggestions": [
+        {
+          "key": "track_title",
+          "en": "Allow Tracking",
+          "score": 1.0
+        },
+        {
+          "key": "track",
+          "en": "Allow annonymous tracking of your Siddur usage",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 335,
+      "value": "account_title",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "account_title",
+      "androidSuggestions": [
+        {
+          "key": "account_title",
+          "en": "Account",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 339,
+      "value": "Account & Sign Out",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "account_sign_out",
+      "androidSuggestions": [
+        {
+          "key": "account_title",
+          "en": "Account",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 343,
+      "value": "version",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "version",
+      "androidSuggestions": [
+        {
+          "key": "version",
+          "en": "App Version",
+          "score": 1.0
+        },
+        {
+          "key": "new_version_title",
+          "en": "New Version Available",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 361,
+      "value": "Error",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "error",
+      "androidSuggestions": [
+        {
+          "key": "error_date_format",
+          "en": "The date format must be DD/MM/YYYY",
+          "score": 0.9
+        },
+        {
+          "key": "error_email_format",
+          "en": "Email is not valid",
+          "score": 0.9
+        },
+        {
+          "key": "error_empty_field",
+          "en": "The field cannot be empty",
+          "score": 0.9
+        },
+        {
+          "key": "error_field_required",
+          "en": "This field is required",
+          "score": 0.9
+        },
+        {
+          "key": "error_incorrect_password",
+          "en": "This password is incorrect",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/SettingsView.swift",
+      "line": 365,
+      "value": "ok",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "ok",
+      "androidSuggestions": [
+        {
+          "key": "ok",
+          "en": "OK",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+      "line": 11,
+      "value": "dawn_title",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "dawn_title",
+      "androidSuggestions": [
+        {
+          "key": "show_titles",
+          "en": "Show Titles",
+          "score": 0.667
+        },
+        {
+          "key": "dawn_title",
+          "en": "Dawn (Alot HaShachar)",
+          "score": 1.0
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+      "line": 21,
+      "value": "alotZmanTitle",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "alotzmantitle",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+      "line": 23,
+      "value": "Determines the earliest time for morning prayers.",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "determines_the_earliest_time_for_morning_prayers",
+      "androidSuggestions": [
+        {
+          "key": "rahaman_title",
+          "en": "Prayers",
+          "score": 0.92
+        },
+        {
+          "key": "shachar",
+          "en": "Morning Prayers",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+      "line": 27,
+      "value": "sunriseZmanTitle",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "sunrisezmantitle",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+      "line": 37,
+      "value": "sunriseZmanTitle",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "sunrisezmantitle",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+      "line": 39,
+      "value": "Visible sunrise accounts for elevation; sea level does not.",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "visible_sunrise_accounts_for_elevation_sea_level_does_not",
+      "androidSuggestions": [
+        {
+          "key": "account_title",
+          "en": "Account",
+          "score": 0.92
+        },
+        {
+          "key": "sunriseZmanTitle",
+          "en": "Sunrise",
+          "score": 0.92
+        },
+        {
+          "key": "zman_sunrise",
+          "en": "Sunrise",
+          "score": 0.92
+        },
+        {
+          "key": "no",
+          "en": "No",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+      "line": 43,
+      "value": "General Opinion",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "general_opinion",
+      "androidSuggestions": [
+        {
+          "key": "general",
+          "en": "General Preferences",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+      "line": 53,
+      "value": "Zman Calculation",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "zman_calculation",
+      "androidSuggestions": [
+        {
+          "key": "manual_title",
+          "en": "Manual Location",
+          "score": 0.71
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+      "line": 55,
+      "value": "MGA calculates from dawn to nightfall; GRA from sunrise to sunset.",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "mga_calculates_from_dawn_to_nightfall_gra_from_sunrise_to_sunset",
+      "androidSuggestions": [
+        {
+          "key": "sunriseZmanTitle",
+          "en": "Sunrise",
+          "score": 0.92
+        },
+        {
+          "key": "sunsetZmanTitle",
+          "en": "Sunset",
+          "score": 0.92
+        },
+        {
+          "key": "tzetZmanTitle",
+          "en": "Nightfall",
+          "score": 0.92
+        },
+        {
+          "key": "zman_nightfall",
+          "en": "Nightfall",
+          "score": 0.92
+        },
+        {
+          "key": "zman_sunrise",
+          "en": "Sunrise",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+      "line": 59,
+      "value": "Dusk (Tzeit HaKochavim)",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "dusk_tzeit_hakochavim",
+      "androidSuggestions": [
+        {
+          "key": "tzet_title",
+          "en": "Dusk (Tzet HaKochavim)",
+          "score": 0.976
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+      "line": 69,
+      "value": "Dusk",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "dusk",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+      "line": 71,
+      "value": "Determines nightfall for end of Shabbat and fast days.",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "determines_nightfall_for_end_of_shabbat_and_fast_days",
+      "androidSuggestions": [
+        {
+          "key": "moztash_title",
+          "en": "End of Shabbat",
+          "score": 0.92
+        },
+        {
+          "key": "shabbat_settings_title",
+          "en": "Shabbat ",
+          "score": 0.92
+        },
+        {
+          "key": "tzetZmanTitle",
+          "en": "Nightfall",
+          "score": 0.92
+        },
+        {
+          "key": "zman_nightfall",
+          "en": "Nightfall",
+          "score": 0.92
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Settings/ZmanimOpinionsView.swift",
+      "line": 74,
+      "value": "Zmanim Opinions",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "zmanim_opinions",
+      "androidSuggestions": [
+        {
+          "key": "zmanim",
+          "en": "Zmanim",
+          "score": 0.92
+        },
+        {
+          "key": "location_title",
+          "en": "Zmanim Settings",
+          "score": 0.667
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Zmanim/ZmanimView.swift",
+      "line": 15,
+      "value": "Loading...",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "loading",
+      "androidSuggestions": []
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Zmanim/ZmanimView.swift",
+      "line": 18,
+      "value": "zmanim",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "zmanim",
+      "androidSuggestions": [
+        {
+          "key": "zmanim",
+          "en": "Zmanim",
+          "score": 1.0
+        },
+        {
+          "key": "calendar_and_zmanim",
+          "en": "Calendar and Zmanim",
+          "score": 0.9
+        },
+        {
+          "key": "full_zmanim_list",
+          "en": "Full Zmanim List",
+          "score": 0.9
+        },
+        {
+          "key": "more_zmanim",
+          "en": "More Zmanim",
+          "score": 0.9
+        },
+        {
+          "key": "show_zmanim",
+          "en": "Show Zmanim",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Zmanim/ZmanimView.swift",
+      "line": 77,
+      "value": "Shabbat Times",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "shabbat_times",
+      "androidSuggestions": [
+        {
+          "key": "shabbat_settings_title",
+          "en": "Shabbat ",
+          "score": 0.92
+        },
+        {
+          "key": "notification_type_zman",
+          "en": "Halachic Times",
+          "score": 0.667
+        }
+      ]
+    },
+    {
+      "file": "/Users/orelzion/git/smart-siddur-ios-new/Sources/Features/Zmanim/ZmanimView.swift",
+      "line": 92,
+      "value": "notification_type_zman",
+      "reason": "missing",
+      "candidateKeys": [],
+      "suggestedKey": "notification_type_zman",
+      "androidSuggestions": [
+        {
+          "key": "notification_title",
+          "en": "Notifications",
+          "score": 0.686
+        },
+        {
+          "key": "no_notifications_title",
+          "en": "No Notifications Yet",
+          "score": 0.667
+        },
+        {
+          "key": "notification_type_zman",
+          "en": "Halachic Times",
+          "score": 1.0
+        },
+        {
+          "key": "no",
+          "en": "No",
+          "score": 0.9
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4875 @@
+{
+  "version": 1,
+  "generatedAt": "2026-02-23T19:38:50.517943+00:00",
+  "source": {
+    "type": "android_strings_xml",
+    "path": "/Users/orelzion/git/SmartSiddur/app/src/main/res"
+  },
+  "defaultLocale": "en",
+  "locales": [
+    "en",
+    "he",
+    "fr",
+    "es",
+    "de"
+  ],
+  "stats": {
+    "en": 807,
+    "he": 534,
+    "fr": 668,
+    "es": 510,
+    "de": 699
+  },
+  "strings": {
+    "Language__0": {
+      "en": "English"
+    },
+    "Language__1": {
+      "en": "עברית"
+    },
+    "Language__2": {
+      "en": "français"
+    },
+    "Language__3": {
+      "en": "español"
+    },
+    "Language__4": {
+      "en": "Deutsch"
+    },
+    "Language__5": {
+      "en": "System Configured"
+    },
+    "Language_values__0": {
+      "en": "0"
+    },
+    "Language_values__1": {
+      "en": "1"
+    },
+    "Language_values__2": {
+      "en": "2"
+    },
+    "Language_values__3": {
+      "en": "4"
+    },
+    "Language_values__4": {
+      "en": "5"
+    },
+    "Language_values__5": {
+      "en": "3"
+    },
+    "abbayeTitle": {
+      "en": "The Mikdash Agenda",
+      "fr": "Ordre des Sacrifices",
+      "es": "Mikdash",
+      "de": "Die Mikdasch Agenda"
+    },
+    "about_title": {
+      "en": "About",
+      "he": "אודות",
+      "fr": "A Propos",
+      "es": "Acerca de Nosotros",
+      "de": "Über"
+    },
+    "account_title": {
+      "en": "Account",
+      "he": "חשבון",
+      "fr": "Compte",
+      "de": "Account"
+    },
+    "action_example": {
+      "en": "Example action",
+      "de": "Beispielaktion"
+    },
+    "action_search": {
+      "en": "Search Locations",
+      "he": "חפש מיקום",
+      "fr": "Rechercher la localisation",
+      "de": "Orte suchen"
+    },
+    "action_settings": {
+      "en": "Settings",
+      "he": "הגדרות",
+      "de": "Einstellungen"
+    },
+    "action_sign_in": {
+      "en": "Sign in or register",
+      "he": "התחבר או הירשם",
+      "fr": "S׳identifier ou s׳enregistrer",
+      "de": "Einloggen oder registrieren"
+    },
+    "action_sign_in_short": {
+      "en": "Sign in",
+      "he": "התחבר",
+      "fr": "S׳identifier",
+      "de": "Einloggen"
+    },
+    "adamaBlessTitle": {
+      "en": "On Vegetables:   ",
+      "he": "  \nעל ירקות:   \n",
+      "fr": "\nPour les légumes:\n",
+      "es": "  \nSobre las Verduras:   \n",
+      "de": "Auf Gemüse:   "
+    },
+    "add_location": {
+      "en": "Just add",
+      "he": "רק להוסיף"
+    },
+    "add_notification": {
+      "en": "Add Notification",
+      "he": "הוסף התראה",
+      "fr": "Ajouter une notification",
+      "es": "Añadir notificación",
+      "de": "Benachrichtigung hinzufügen"
+    },
+    "add_notification_description": {
+      "en": "Set up a reminder to help you observe important times",
+      "he": "הגדר תזכורת שתעזור לך לשמור על זמנים חשובים",
+      "fr": "Configurez un rappel pour vous aider à respecter les moments importants",
+      "es": "Configura un recordatorio para ayudarte a observar tiempos importantes",
+      "de": "Richten Sie eine Erinnerung ein, um wichtige Zeiten einzuhalten"
+    },
+    "additional_prayers": {
+      "en": "Additional Prayers",
+      "he": "תפילות נוספות",
+      "de": "Zusätzliche Gebete"
+    },
+    "adonHaslichotTitle": {
+      "en": "Lord of Forgivness",
+      "he": "אדון הסליחות",
+      "fr": "Seigneur qui Pardonne",
+      "de": "Herr der Verzeihung"
+    },
+    "adonTitle": {
+      "en": "Adon Olam",
+      "fr": "Adon Olam",
+      "es": "Adon Olam",
+      "de": "Adon Olam"
+    },
+    "afterAleinuChabadTitle": {
+      "en": "Don't You Worry",
+      "de": "Sorge dich nicht"
+    },
+    "afterMilaTitle": {
+      "en": "A Prayer for the Boy",
+      "he": "תפילה לשלום התינוק",
+      "fr": "Prière pour un Garçon",
+      "es": "Rezo por él Bebe",
+      "de": "Ein Gebet für einen Jungen"
+    },
+    "afterTfilinRoshInstruction": {
+      "en": "After tightening the head Tfilin, one should say",
+      "he": "לאחר הידוק תפילין של ראש, אמור:",
+      "fr": "Après avoir attaché le Téphiline de la tête, on dit:",
+      "es": "Después de ponerse el Tfilin de la Cabeza se dice:",
+      "de": "Nach dem Anziehen des Kopftfillin sagt man"
+    },
+    "afterTfilinTitle": {
+      "en": "Tfilin Psukim",
+      "fr": "Versets des Tephilines",
+      "es": "Psukim de Tfilin",
+      "de": "Tfillin Psukim"
+    },
+    "ahavaRabaTitle": {
+      "en": "Ahava Raba",
+      "fr": "Ahava Raba",
+      "es": "Ahava Raba",
+      "de": "Ahava Raba"
+    },
+    "ahavatOlamTitle": {
+      "en": "Ahavat Olam",
+      "fr": "Ahavat Olam",
+      "es": "Ahavat Olam",
+      "de": "Ahawat Olam"
+    },
+    "akedaSlicha": {
+      "en": "Akeda ",
+      "he": "עקדה ",
+      "fr": "Akeda ",
+      "de": "Akeda "
+    },
+    "akedaTitle": {
+      "en": "Akeda",
+      "fr": "Sacrifice d׳Isaac",
+      "es": "Akeda",
+      "de": "Akeda"
+    },
+    "alTaasTitle": {
+      "en": "Don't Eliminate Us",
+      "he": "אל תעש עמנו כלה",
+      "fr": "Ne nous éradique pas",
+      "de": "Eliminiere uns nicht"
+    },
+    "al_mita": {
+      "en": "Bedtime Shma",
+      "he": "קריאת שמע שעל המיטה",
+      "fr": "Shéma du Coucher",
+      "es": "Shma antes de Dormir",
+      "de": "Gebet vor dem Schlafengehen"
+    },
+    "al_nahharot_title": {
+      "en": "By the Rivers of Babylon",
+      "fr": "Si je t’oublie, Jérusalem",
+      "es": "Por los ríos de Babilonia",
+      "de": "Am Flussufer des Babylon"
+    },
+    "aleichem_shalom": {
+      "en": "And the friend answers:",
+      "he": "והחבר עונה:",
+      "fr": "Et l׳ami répond:",
+      "de": "Und der Freund antwortet:"
+    },
+    "aleinuTitle": {
+      "en": "Aleinu",
+      "fr": "Aleinu",
+      "es": "Aleinu",
+      "de": "Schlussgebet/Aleinu"
+    },
+    "aliaIsrael": {
+      "en": "\n<font color=\"#aaaaaa\"><small>\nYisrael\n</small></font>\n    ",
+      "he": "<font color=\"#aaaaaa\"><small>\nישראל\n</small></font>\n",
+      "fr": "\nIsrael\n",
+      "es": "<font color=\"#aaaaaa\"><small>\nIsrael\n</small></font>\n",
+      "de": "\n<font color=\"#aaaaaa\"><small>\nIsrael\n</small></font>\n    "
+    },
+    "aliaKohen": {
+      "en": "\n<font color=\"#aaaaaa\"><small>\nKohen\n</small></font>\n    ",
+      "he": "<small><font color=\"#aaaaaa\">\nכהן\n</font></small>\n",
+      "fr": "\nKohen\n",
+      "es": "<font color=\"#aaaaaa\"><small>\nKohen\n</small></font>\n",
+      "de": "\n<font color=\"#aaaaaa\"><small>\nKohen\n</small></font>\n    "
+    },
+    "aliaLevi": {
+      "en": "\n<font color=\"#aaaaaa\"><small>\nLevi\n</small></font>\n    ",
+      "he": "<font color=\"#aaaaaa\"><small>\nלוי\n</small></font>\n",
+      "fr": "\nLevi\n",
+      "es": "<font color=\"#aaaaaa\"><small>\nLevi\n</small></font>\n",
+      "de": "\n<font color=\"#aaaaaa\"><small>\nLevi\n</small></font>\n    "
+    },
+    "aliaRevi": {
+      "en": "\n<font color=\"#aaaaaa\"><small>\nRevee'i\n</small></font>\n    ",
+      "he": "<font color=\"#aaaaaa\"><small>\nרביעי\n</small></font>\n",
+      "fr": "\nRevee\\׳i\n",
+      "es": "<font color=\"#aaaaaa\"><small>\nRevii\n</small></font>\n",
+      "de": "\n<font color=\"#aaaaaa\"><small>\nRewi'i\n</small></font>\n    "
+    },
+    "aliaShlishi": {
+      "en": "\n<font color=\"#aaaaaa\"><small>\nShlishi\n</small></font>\n    ",
+      "he": "<font color=\"#aaaaaa\"><small>\nשלישי\n</small></font>\n",
+      "fr": "\nShlishi\n",
+      "es": "<font color=\"#aaaaaa\"><small>\nShlishi\n</small></font>\n",
+      "de": "\n<font color=\"#aaaaaa\"><small>\nSchlischi\n</small></font>\n    "
+    },
+    "allow_push_summary": {
+      "en": "Allow promotional and informatical push messages",
+      "he": "אפשר שליחת הודעות אינפורמטיביות באמצעות דחיפה",
+      "fr": "Autoriser des messages promotionnels ou informatifs",
+      "de": "Werbe- und Informations-Push-Nachrichten erlauben"
+    },
+    "allow_push_title": {
+      "en": "Allow Push",
+      "he": "אפשר הודעות דחיפה",
+      "fr": "Autoriser les Messages",
+      "de": "Push erlauben"
+    },
+    "aloheinuTitle": {
+      "en": "Our God in Heaven",
+      "he": "אלוהינו שבשמים",
+      "fr": "Notre D.ieu dans les Cieux",
+      "de": "Unser G-tt im Himmel"
+    },
+    "alot72DegDes": {
+      "en": "72 minutes as 16.1 degrees",
+      "fr": "72 minutes à 16.1 degrés",
+      "es": "72 minutos como 16.1 grados",
+      "de": "72 Minuten bei 16,1 Grad"
+    },
+    "alot72Des": {
+      "en": "Fixed 72 minutes before sunrise",
+      "fr": "Fixé à 72 minutes avant le lever du soleil",
+      "es": "72 minutos Ajustados Antes de la salida del Sol",
+      "de": "Fixe 72 Minuten vor Sonnenaufgang"
+    },
+    "alot90Des": {
+      "en": "90 minutes as degrees, before sunrise",
+      "fr": "90 minutes de degrés, avant le lever du soleil",
+      "es": "90 minutos, Antes de la Salida del Sol",
+      "de": "90 Minuten als Grad, vor Sonnenaufgang"
+    },
+    "alotZmanTitle": {
+      "en": "Dawn",
+      "fr": "Aube",
+      "es": "Salida del Alba",
+      "de": "Morgendämmerung"
+    },
+    "alot__0": {
+      "en": "90 Minutes before Sunrise",
+      "he": "90 דקות קודם הנץ",
+      "fr": "90 Minutes avant le Lever du Soleil",
+      "es": "90 Minutes before Sunrise"
+    },
+    "alot__1": {
+      "en": "72 Minutes before Sunrise",
+      "he": "72 דקות קודם הנץ",
+      "fr": "72 Minutes avant le Lever du Soleil",
+      "es": "72 Minutes before Sunrise"
+    },
+    "alot__2": {
+      "en": "72 Minutes as 16.1 degrees",
+      "he": "72 דקות במעלות קודם הנץ",
+      "fr": "72 Minutes à 16.1 degrés",
+      "es": "72 Minutes as 16.1 degrees"
+    },
+    "amarRabiAkivaTitle": {
+      "en": "Rabbi Akiva",
+      "he": "אמר רבי עקיבא",
+      "fr": "Rabbi Akiva",
+      "de": "Rabbi Akiva"
+    },
+    "amida": {
+      "en": "Amida",
+      "fr": "Amida",
+      "es": "Amida",
+      "de": "Amida"
+    },
+    "amidaSofTitle": {
+      "en": "Pleas",
+      "fr": "Implorations",
+      "es": "Peticiones",
+      "de": "Bitte"
+    },
+    "anaRepeat": {
+      "en": "Repeat today's verse three times",
+      "he": "וחוזר ג' פעמים על הפסוק של היוֹם",
+      "fr": "On répète 3 fois le Pasouk du jour",
+      "es": "Se repite el versículo del dia 3 veces",
+      "de": "Wiederhole heutigen Vers dreimal"
+    },
+    "anaTitle": {
+      "en": "Ana Bekoach",
+      "he": "אנא בכח",
+      "fr": "Ana BeKoach Prayer",
+      "es": "Ana Bekoaj",
+      "de": "Ana Bekoach"
+    },
+    "anenuSlichotTitle": {
+      "en": "Answer Us",
+      "he": "עננו",
+      "fr": "Réponds Nous",
+      "de": "Antworte uns"
+    },
+    "anenuTitle": {
+      "en": "Anenu for Chazan",
+      "fr": "Anenu pour le Hazan",
+      "es": "Anenu para el Jazan",
+      "de": "Anenu für den Vorbeter"
+    },
+    "ansheiEmunaTitle": {
+      "en": "People of Faith",
+      "he": "אנשי אמונה",
+      "fr": "Peuple de Foi",
+      "de": "Leute des Glaubens"
+    },
+    "app_name": {
+      "en": "Smart Siddur",
+      "he": "הסידור החכם",
+      "fr": "Smart Siddur",
+      "es": "Smart Siddur",
+      "de": "Smart Siddur"
+    },
+    "appearance": {
+      "en": "Appearance Settings",
+      "he": "הגדרות תצוגה",
+      "fr": "Paramètres de Présentation",
+      "es": "Ajustes de Apariencia",
+      "de": "Darstellung Einstellungen"
+    },
+    "appearance_summery": {
+      "en": "Choose appearance preferences like themes, font size etc.",
+      "he": "בחר הגדרות תצוגה כגון ערכות נושא, גודל גופן וכו'",
+      "fr": "Choisissez vos préférences de présentation comme le thème, la taille des caractères, etc.",
+      "es": "Escoja preferencias de apariencia como Temas, Tamaños de Fuentes, etc.",
+      "de": "Wähle Erscheinungspräferenzen wie Themen, Schriftgröße etc."
+    },
+    "aravaTitle": {
+      "en": "Hibut Arava",
+      "he": "חיבוט ערבה",
+      "fr": "Hibut Arava",
+      "de": "Hibut Arawa"
+    },
+    "around_the_year": {
+      "en": "Around the Year",
+      "he": "במעגל השנה",
+      "fr": "Pendant l׳année",
+      "de": "Rund ums Jahr"
+    },
+    "arvit": {
+      "en": "Arvit",
+      "he": "ערבית",
+      "fr": "Arvit",
+      "es": "Arvit",
+      "de": "Arwit"
+    },
+    "arvit_zman_alert": {
+      "en": "Tzeit is only on %@",
+      "he": "צאת הכוכבים יהיה ב%@",
+      "fr": "Le Crépuscule est seulement ‡ %@",
+      "de": "Tzeit ist erst ab %@"
+    },
+    "asehTitle": {
+      "en": "Act for Sake of",
+      "he": "עשה למען",
+      "fr": "Agit pour le Mérite de",
+      "de": "Akt aus Gründen von"
+    },
+    "ashamnuTitle": {
+      "en": "We have Sinned",
+      "he": "אשמנו",
+      "fr": "Nous avons péché",
+      "de": "Wir haben gesündigt"
+    },
+    "asher_yatzar": {
+      "en": "Asher Yatzar",
+      "he": "אשר יצר"
+    },
+    "ashreiTitle": {
+      "en": "Ashrei",
+      "fr": "Ashrei",
+      "es": "Ashre",
+      "de": "Aschrei"
+    },
+    "ashrenuBarYohaiTitle": {
+      "en": "Ashrenu",
+      "he": "אשרינו",
+      "fr": "Ashrenu",
+      "de": "Aschrenu"
+    },
+    "at_sunset": {
+      "en": "At sunset",
+      "he": "בשקיעה",
+      "fr": "Au coucher du soleil",
+      "es": "Al atardecer",
+      "de": "Bei Sonnenuntergang"
+    },
+    "at_zman_time": {
+      "en": "On time",
+      "he": "בזמן",
+      "fr": "À l'heure",
+      "es": "A tiempo",
+      "de": "Pünktlich"
+    },
+    "at_zman_time_with_name": {
+      "en": "At %@",
+      "he": "ב%@",
+      "fr": "À %@",
+      "es": "A %@",
+      "de": "Bei %@"
+    },
+    "atanuTitle": {
+      "en": "We Came",
+      "he": "אתאנו",
+      "fr": "Nous venons demander grâce",
+      "de": "Wir kamen"
+    },
+    "atseiTitle": {
+      "en": "Upon smelling fragrant trees and shrubs or their flowers (e.g. roses):",
+      "he": "בהרחת בשמים הגדלים על עצים (כגון הדסים):",
+      "fr": "Lorsque l׳on sent le parfum d׳un arbre, arbuste ou leurs fleurs (ex. roses):",
+      "es": " Al oler fragancias provenientes de árboles y arbustos o de sus flores (por ejemplo rosas):",
+      "de": "Über einen wohlriechenden Baum und Sträucher oder deren Blumen (z.B. Rosen):"
+    },
+    "atsmaut_title": {
+      "en": "Israel Independence Day",
+      "fr": "Jour de l’Indépendance d’Israël",
+      "es": "Día de la Independencia de Israel",
+      "de": "Israels Unabhängigkeitstag"
+    },
+    "auto_track_location": {
+      "en": "Auto track location",
+      "he": "קבע מיקום אוטומטית",
+      "de": "Standort automatisch verfolgen"
+    },
+    "automatic": {
+      "en": "Automatic",
+      "he": "אוטומטי",
+      "fr": "Automatiquement",
+      "es": "Automático",
+      "de": "Automatisch"
+    },
+    "automatic_location_canceled": {
+      "en": "Disabled automatic location update",
+      "he": "בדיקת מיקום אוטומטית בוטלה"
+    },
+    "avHarahamimTitle": {
+      "en": "Av HaRachamim",
+      "fr": "Av HaRachamim",
+      "es": "Av HaRajamim",
+      "de": "Aw HaRachamim"
+    },
+    "avelTitle": {
+      "en": "A Mizmor in a Mourning House",
+      "fr": "Mizmor dans une Maison en Deuil",
+      "es": "En casa del Avel",
+      "de": "Ein Mismor im Trauerhaus"
+    },
+    "avinuTitle": {
+      "en": "Avinu Malkenu",
+      "fr": "Avinu Malkenu",
+      "es": "Avinu Malkenu",
+      "de": "Awinu Malkenu"
+    },
+    "avotTitle": {
+      "en": "Patriarchs Blessing",
+      "fr": "Bénédiction des Patriarches",
+      "es": "Bendición de los Patriarcas",
+      "de": "Segen über Stammväter"
+    },
+    "awake": {
+      "en": "Screen On",
+      "he": "מסך דלוק",
+      "fr": "Ecran allumé",
+      "es": "Mantenga la pantalla Encendida",
+      "de": "Bildschirm an"
+    },
+    "awake_summery": {
+      "en": "Keep screen on during prayers",
+      "he": "המסך לא יכבה במשך התפילה",
+      "fr": "Conserver l׳écran allumé durant les prières",
+      "es": "Mantenga la pantalla Encendida  Durante el Rezo",
+      "de": "Bildschirm während des Gebetes anlassen"
+    },
+    "azYashirTitle": {
+      "en": "The Sea's Redemption Song",
+      "fr": "Miracle de la Mer rouge",
+      "es": "VaYosha",
+      "de": "Das Lied am Schilfmeer"
+    },
+    "b10Title": {
+      "en": "Ingathering of the Exiles Blessing",
+      "fr": "Pour le Retour des Exilés",
+      "es": "Bendición por Reunión de los Exiliados",
+      "de": "Segen über die Sammlung der Zerstreuten"
+    },
+    "b11Title": {
+      "en": "Justice Blessing",
+      "fr": "Bénédiction pour la Justice",
+      "es": "Bendición por la Justicia",
+      "de": "Segen über Gericht"
+    },
+    "b12Title": {
+      "en": "Against Heretics",
+      "fr": "Bénédiction Contre les Hérétiques",
+      "es": "Contra los Herejes",
+      "de": "Segen gegen Häretiker"
+    },
+    "b13Title": {
+      "en": "The Righteous Blessing",
+      "fr": "Bénédiction pour les Justes",
+      "es": " Bendición de los Justos",
+      "de": "Segen über die Gerechten"
+    },
+    "b14Title": {
+      "en": "Rebuilding Jerusalem Blessing",
+      "fr": "Pour la Reconstruction de Jérusalem",
+      "es": "Bendición por la Reconstrucción de Jerusalem",
+      "de": "Segen über den Wiederaufbau von Jeruschalajim"
+    },
+    "b15Title": {
+      "en": "Davidic Reign Blessing",
+      "fr": "Bénédiction pour l׳Arrivée du Messie",
+      "es": "Bendición por el Reinado de David",
+      "de": "Segen über die Herrschaft des Hauses David"
+    },
+    "b16Title": {
+      "en": "Acceptance of Prayer Blessing",
+      "fr": "Pour l׳Acceptation de la Prière",
+      "es": "Bendición por la Aprobación del Rezo",
+      "de": "Segen über das Erhören des Gebetes"
+    },
+    "b17Title": {
+      "en": "Temple Service Blessing",
+      "fr": "Pour la Présence Divine",
+      "es": "Bendición por el servicio del Templo",
+      "de": "Segen über Tempeldienst"
+    },
+    "b18Title": {
+      "en": "Thanksgiving Blessing",
+      "fr": "Bénédiction pour remercier D.ieu",
+      "es": "Bendición del Agradecimiento",
+      "de": "Segen über Danksagung"
+    },
+    "b19Title": {
+      "en": "Peace Blessing",
+      "fr": "Bénédiction pour la Paix",
+      "es": "Bendición por la Paz",
+      "de": "Segen über Frieden"
+    },
+    "b1Arvit_title": {
+      "en": "The Evening Blessing",
+      "fr": "Bénédiction du Soir",
+      "es": "Bendición por el Anochecer",
+      "de": "Segen über der Abend"
+    },
+    "b2Arvit_title": {
+      "en": "The Torah Blessing",
+      "fr": "Bénédiction de la Torah",
+      "es": "Bendición por la Tora",
+      "de": "Segen über die Torah"
+    },
+    "b2Title": {
+      "en": "God's Might Blessing",
+      "fr": "Omnipotence de D.ieu",
+      "es": "Bendición por el Poder de Hashem",
+      "de": "Segen über G-ttes Macht"
+    },
+    "b3Arvit_title": {
+      "en": "Egypt Redemption Blessing",
+      "fr": "Pour nous avoir libéré d׳Egypte",
+      "es": "Bendición por la Redención de Egipto",
+      "de": "Segen über die Erlösung aus Ägypten"
+    },
+    "b3Title": {
+      "en": "Holiness of God's Name Blessing",
+      "fr": "Sainteté du Nom de D.ieu",
+      "es": "Bendición por la Santidad de Hashem",
+      "de": "Segen über G-ttes Heiligkeit"
+    },
+    "b4Arvit_title": {
+      "en": "The Night Blessing",
+      "fr": "Bénédiction pour une bonne Nuit",
+      "es": " Bendición por la Noche ",
+      "de": "Segen über die Nacht"
+    },
+    "b4Title": {
+      "en": "Insight Blessing",
+      "fr": "Bénédiction pour la Sagesse",
+      "es": "Bendición por la Sabiduría",
+      "de": "Segen über Einsicht"
+    },
+    "b5Title": {
+      "en": "Repentance Blessing",
+      "fr": "Bénédiction pour le Repentir",
+      "es": "Bendición del Arrepentimiento",
+      "de": "Segen über Rückkehr"
+    },
+    "b6Title": {
+      "en": "Forgiveness Blessing",
+      "fr": "Bénédiction pour le Pardon",
+      "es": "Bendición del Perdón",
+      "de": "Segen über Verzeihung"
+    },
+    "b7Title": {
+      "en": "Redemption Blessing",
+      "fr": "Bénédiction pour la Délivrance",
+      "es": "Bendición por la Redención",
+      "de": "Segen über Erlösung"
+    },
+    "b8Title": {
+      "en": "Health Blessing",
+      "fr": "Bénédiction pour la Guérison",
+      "es": "Bendición por la salud",
+      "de": "Segen über Heilung"
+    },
+    "b9Title": {
+      "en": "Year of Prosperity Blessing",
+      "fr": "Pour la Réussite Matérielle",
+      "es": "Bendición por la prosperidad del año",
+      "de": "Segen über ein Segensreiches Jahr"
+    },
+    "bHatov_title": {
+      "en": "For God's Goodness",
+      "fr": "Pour la Bonté d׳Hashem",
+      "es": "For God's Goodness",
+      "de": "Für G-ttes Güte"
+    },
+    "bHazan_title": {
+      "en": "For Nourishment",
+      "fr": "Pour la Nourriture",
+      "es": "For Nourishment",
+      "de": "Für Nährung"
+    },
+    "bNode_title": {
+      "en": "For The Land",
+      "fr": "Pour la Terre",
+      "es": "For The Land",
+      "de": "Für das Land"
+    },
+    "bRahem_title": {
+      "en": "For Jerusalem",
+      "fr": "Pour Jérusalem",
+      "es": "For Jerusalem",
+      "de": "Für Jerusalem"
+    },
+    "bShahar_title": {
+      "en": "Birkot HaShachar",
+      "fr": "Bénédictions du Matin",
+      "es": "Birkot HaShajar",
+      "de": "Birkot HaSchachar"
+    },
+    "bTorah_title": {
+      "en": "Birkot HaTorah",
+      "fr": "Bénédiction de la Torah",
+      "es": "Birkot HaTora",
+      "de": "Birkot HaTorah"
+    },
+    "back": {
+      "en": "Back",
+      "he": "אחורה",
+      "fr": "Précédent",
+      "es": "Atrás",
+      "de": "Zurück"
+    },
+    "back_to_hazara": {
+      "en": "Back to Repetition",
+      "he": "לחזרת השץ",
+      "fr": "Répétition de la Amida",
+      "de": "Zurück zur Wiederholung"
+    },
+    "barYohaiTitle": {
+      "en": "Bar Yohai",
+      "he": "בר יוחאי",
+      "fr": "Bar Yohai",
+      "de": "Bar Yohai"
+    },
+    "barchiTitle": {
+      "en": "Barchi Nafshi",
+      "fr": "Barchi Nafshi",
+      "es": "Barji Nafshi",
+      "de": "Borchi Nafschi"
+    },
+    "barechi_title": {
+      "en": "Barechi Nafshi",
+      "fr": "Barechi Nafshi",
+      "es": "Bareji Nafshi",
+      "de": "Borchi Nafshi"
+    },
+    "barechuTitle": {
+      "en": "Bless Hashem",
+      "fr": "Béni soit Hashem",
+      "es": "Bendito Hashem",
+      "de": "Segne Haschem"
+    },
+    "baruchArvit_title": {
+      "en": "Baruch Hashem Le'olam",
+      "fr": "Baruch Hashem Le׳olam",
+      "es": "Baruj Hashem Le'olam",
+      "de": "Baruch Haschem Le'olam"
+    },
+    "baruchSheamrTitle": {
+      "en": "Baruch SheAmar",
+      "fr": "Baruch SheAmar",
+      "es": "Baruch SheAmar",
+      "de": "Baruch ScheAmar"
+    },
+    "bdilTitle": {
+      "en": "Because of Vaya'avor",
+      "he": "בדיל ויעבור",
+      "fr": "Grâce au Vaya׳avor",
+      "de": "Wegen Vaya'avor"
+    },
+    "beforeViduyTitle": {
+      "en": "Intro to Confession",
+      "he": "פתיחה לוידוי",
+      "fr": "Intro à la Confession",
+      "de": "Einführung ins Geständnis"
+    },
+    "before_sending": {
+      "en": "Please describe the problem in this email",
+      "he": "אנא ציין במייל את פרטי הבעיה",
+      "fr": "Merci de décrire le problème dans cet email",
+      "es": "Por Favor describa el problema en este Correo",
+      "de": "Bitte beschreiben Sie das Problem in dieser Email"
+    },
+    "benAdamTitle": {
+      "en": "Son of Man",
+      "he": "בן אדם",
+      "fr": "Fils de l׳Homme",
+      "de": "Sohn des Menschen"
+    },
+    "betYaakovTitle": {
+      "en": "Bet Yaakov",
+      "fr": "Bet Yaakov",
+      "es": "Bet Yaakov",
+      "de": "Beit Jaakow"
+    },
+    "bezochriTitle": {
+      "en": "Once I Remember",
+      "he": "בזכרי",
+      "fr": "Je me Souviens",
+      "de": "Wenn ich mich erinnere"
+    },
+    "billing_not_available": {
+      "en": "An error occured, purchase is not available",
+      "he": "אירעה שגיאה. לא ניתן לבצע רכישה כעת",
+      "de": "Da ist etas schief gegangen, der Kauf ist nicht möglich"
+    },
+    "birkotToraTitle": {
+      "en": "Blessings for the Torah Reading",
+      "fr": "Bénédictions pour la lecture de la Torah",
+      "es": "Bendición después de subir a la Tora",
+      "de": "Segenspruch für die Torah Lesung"
+    },
+    "blessAfterEster_title": {
+      "en": "Blessings After Ester",
+      "fr": "Bénédictions après la Meguilat Esther",
+      "es": "Bendición Después de Ester ",
+      "de": "Segensprüche nach Esther"
+    },
+    "blessBeforeEster_title": {
+      "en": "Blessings Before Ester",
+      "fr": "Bénédictions avant la Meguilat Esther",
+      "es": "Bendición Antes de Ester",
+      "de": "Segensprüche bevor Esther"
+    },
+    "brachot": {
+      "en": "Blessings",
+      "he": "ברכות",
+      "fr": "Prières diverses pour les aliments",
+      "es": "Berajot",
+      "de": "Segensprüche"
+    },
+    "brachot_other": {
+      "en": "Other Blessings",
+      "he": "ברכות נוספות",
+      "fr": "Autres prières",
+      "es": "Otras Berajot",
+      "de": "Andere Segensprüche"
+    },
+    "breadBlessTitle": {
+      "en": "Before eating the bread, one should say:  ",
+      "he": "\nהמוציא:  \n",
+      "fr": "\nAvant de manger le pain, on dit:\n",
+      "es": "\nAntes de Comer pan, bendice:\n",
+      "de": "Bevor man Brot isst, sagt man:  "
+    },
+    "brichTitle": {
+      "en": "Blessed Would Be His Name",
+      "fr": "Béni soit Son Nom",
+      "es": "Bendito debe ser su Nombre",
+      "de": "Gelobt Sei Sein Name"
+    },
+    "britMilaTitle": {
+      "en": "Brit Mila",
+      "he": "ברית מילה",
+      "fr": "Brit Mila",
+      "es": "Brit Mila",
+      "de": "Brit Mila"
+    },
+    "by_karri_apps": {
+      "en": "by Karri Apps",
+      "fr": "par Karri Apps",
+      "de": "von Karri Apps"
+    },
+    "calendar": {
+      "en": "Calendar",
+      "he": "לוח שנה",
+      "fr": "Calendrier",
+      "es": "Calendario",
+      "de": "Kalender"
+    },
+    "calendar_and_zmanim": {
+      "en": "Calendar and Zmanim",
+      "he": "לוח שנה וזמנים",
+      "fr": "Calendrier et Horaires",
+      "es": "Calendario y Zmanim",
+      "de": "Kalender und Smanim"
+    },
+    "change__0": {
+      "en": "Sunset",
+      "he": "שקיעה",
+      "fr": "Coucher du Soleil",
+      "es": "Sunset"
+    },
+    "change__1": {
+      "en": "5 Minutes after Sunset",
+      "he": "5 דקות לאחר שקיעה",
+      "fr": "5 Minutes après le Coucher du Soleil",
+      "es": "5 Minutes after Sunset"
+    },
+    "change__2": {
+      "en": "Tzeit",
+      "he": "צאת הכוכבים",
+      "fr": "Tzeit",
+      "es": "Tzeit"
+    },
+    "change_summary": {
+      "en": "Choose when the Siddur switches the date",
+      "he": "בחר זמן שבו התאריך יתחלף בסידור",
+      "fr": "Choisissez quand le Siddur change de date",
+      "es": "Escoja cuando el Siddur Cambia de Fecha",
+      "de": "Auswählen wann der Siddur das Datum umstellt"
+    },
+    "change_title": {
+      "en": "Change Date With",
+      "he": "החלף תאריך עם",
+      "fr": "Changer le Jour Avec",
+      "es": "Cambio de Día",
+      "de": "Datum ändern mit"
+    },
+    "channel_description": {
+      "en": "Alarms for Smart Siddur",
+      "he": "Notifications for Smart Siddur",
+      "fr": "Notifications for Smart Siddur"
+    },
+    "channel_name": {
+      "en": "Smart Siddur Alarms"
+    },
+    "channel_name_priority": {
+      "en": "Priority Alerts",
+      "he": "התראות בעדיפות גבוהה",
+      "fr": "Alertes prioritaires",
+      "es": "Alertas prioritarias",
+      "de": "Prioritäts-Benachrichtigungen"
+    },
+    "channel_name_silent": {
+      "en": "Silent Alerts",
+      "he": "התראות שקטות",
+      "fr": "Alertes silencieuses",
+      "es": "Alertas silenciosas",
+      "de": "Lautlose Benachrichtigungen"
+    },
+    "chatzot": {
+      "en": "Tikun Chatzot",
+      "he": "תיקון חצות",
+      "fr": "Tikun Chatzot",
+      "es": "Tikun Jatzot",
+      "de": "Tikun Chatzot"
+    },
+    "chazanSays": {
+      "en": "The Chazan Says:",
+      "fr": " Le Hazan Dit:",
+      "es": "El Jazan Dice:",
+      "de": "Der Vorbeter sagt:"
+    },
+    "choose_blessing": {
+      "en": "Choose Blessing",
+      "he": "בחר ברכה",
+      "fr": "Choississez une Prière",
+      "de": "Wählen Sie einen Segenspruch"
+    },
+    "choose_date": {
+      "en": "Choose Date",
+      "he": "בחר תאריך",
+      "fr": "Choisir une date",
+      "es": "Escoja una Fecha",
+      "de": "Datum auswählen"
+    },
+    "choose_font_example": {
+      "en": "בְּחַר גּוֹפָן",
+      "de": "בְּחַר גּוֹפָן"
+    },
+    "choose_language": {
+      "en": "Language",
+      "he": "בחר שפה",
+      "fr": "Langue",
+      "de": "Sprachen"
+    },
+    "choose_location": {
+      "en": "Choose Location",
+      "he": "בחר מיקום",
+      "fr": "Choisissez un Lieu",
+      "es": "Escoga Ubicación",
+      "de": "Ort auswählen"
+    },
+    "choose_part": {
+      "en": "Change Part",
+      "he": "עבור קטע",
+      "fr": "Choisir une Prière",
+      "es": "Cambiar a:",
+      "de": "Part Ändern"
+    },
+    "claim_purchase": {
+      "en": "Restore",
+      "he": "שחזור",
+      "fr": "Récupérez votre ancien achat",
+      "de": "Fordern Sie Ihren alten Kauf ein"
+    },
+    "closing_the_ark": {
+      "en": "Closing the Ark",
+      "he": "סוגרים הארון",
+      "de": "Schließen des Aron Hakodesch"
+    },
+    "common_signin_button_text_long": {
+      "en": "Login with Google",
+      "he": "התחבר באמצעות גוגל",
+      "fr": "S\\׳identifier avec Google",
+      "de": "Mit Google einloggen"
+    },
+    "compass_info": {
+      "en": "Current Location: %1$f, %2$f\nKotel Location: %3$f, %4$f\nKotel Bearing from Current Location: %5$f\nCurrent Bearing: %6$f",
+      "de": "Aktueller Standort: %1$f, %2$f\nKotel Location: %3$f, %4$f\nKotel Bearing from Current Location: %5$f\nCurrent Bearing: %6$f"
+    },
+    "copyright": {
+      "en": "Copyright Decelerations",
+      "he": "הצהרת זכויות",
+      "fr": "Copyright Decelerations",
+      "de": "Urheberrechtserklärung"
+    },
+    "current_location": {
+      "en": "Current Location: ",
+      "fr": " Emplacement Actuel: ",
+      "es": "Localización Actual: ",
+      "de": "Derzeitiger Ort: "
+    },
+    "daf_yomi": {
+      "en": "Daf Yomi: %1$@",
+      "he": "דף יומי: %1$@",
+      "de": "Daf Jomi: %1$@"
+    },
+    "daily_tfilot": {
+      "en": "Daily Prayers",
+      "he": "תפילות יומיות",
+      "fr": "Prières Quotidiennes",
+      "de": "Tägliche Gebete"
+    },
+    "dark_mode": {
+      "en": "Dark Mode",
+      "he": "מצב לילה",
+      "fr": "Dark Mode",
+      "de": "Dunkler Modus"
+    },
+    "davidTitle": {
+      "en": "David's Blessing",
+      "fr": "Bénédiction de David",
+      "es": "Bendición de David",
+      "de": "David's Segen"
+    },
+    "dawn_summary": {
+      "en": "Choose Shita to calculate dawn time",
+      "he": "בחר שיטה לחישוב זמן עלות השחר",
+      "fr": "Choisissez la Méthode de calcul de l׳heure de l׳Aube",
+      "es": "Que Shita utiliza para calcular la Salida del Sol",
+      "de": "Wähle eine Schita aus, um die Zeit zur Morgendämmerung zu berechnen"
+    },
+    "dawn_title": {
+      "en": "Dawn (Alot HaShachar)",
+      "he": "עלות השחר",
+      "fr": "Aube (Alot HaShachar)",
+      "es": "Salida del Sol (Alot HaShajar)",
+      "de": "Morgendämmerung (Alot HaSchachar)"
+    },
+    "days_array__0": {
+      "en": "Sun",
+      "he": "א",
+      "fr": "Dim",
+      "es": "Sun"
+    },
+    "days_array__1": {
+      "en": "Mon",
+      "he": "ב",
+      "fr": "Lun",
+      "es": "Mon"
+    },
+    "days_array__2": {
+      "en": "Tue",
+      "he": "ג",
+      "fr": "Mar",
+      "es": "Tue"
+    },
+    "days_array__3": {
+      "en": "Wed",
+      "he": "ד",
+      "fr": "Mer",
+      "es": "Wed"
+    },
+    "days_array__4": {
+      "en": "Thu",
+      "he": "ה",
+      "fr": "Jeu",
+      "es": "Thu"
+    },
+    "days_array__5": {
+      "en": "Fri",
+      "he": "ו",
+      "fr": "Ven",
+      "es": "Fri"
+    },
+    "days_array__6": {
+      "en": "Shabbat",
+      "he": "שבת",
+      "fr": "Shabbat",
+      "es": "Shabbat"
+    },
+    "deaneiTitle": {
+      "en": "He Who Answered",
+      "he": "דעני לעניי",
+      "fr": "Celui qui Répond",
+      "de": "Er, der antwortet"
+    },
+    "decrease": {
+      "en": "Decrease",
+      "he": "הקטן",
+      "fr": "Diminuer",
+      "es": "Disminuir",
+      "de": "Verkleinern"
+    },
+    "default_location_message": {
+      "en": "It seems that you didn't chose a location, do you wan to do it now?",
+      "he": "נראה שלא הגדרת מיקום, שנגדיר את המיקום שלך?"
+    },
+    "delete": {
+      "en": "Delete",
+      "he": "מחק",
+      "fr": "Supprimer",
+      "es": "Eliminar",
+      "de": "Löschen"
+    },
+    "deshenTitle": {
+      "en": "Trumas HaDeshen",
+      "fr": "Trumas HaDeshen",
+      "es": "Trumas HaDeshen",
+      "de": "Trumas HaDeschen"
+    },
+    "done": {
+      "en": "Enjoy!",
+      "he": "תהנו!",
+      "fr": "Bonne Téfilah!",
+      "es": "Disfrute!",
+      "de": "Viel Spaß!"
+    },
+    "double_tap_help": {
+      "en": "Double tap to start/stop auto scrolling",
+      "he": "הקש פעמיים על המסך כדי להתחיל/לעצור את הגלילה האוטומטית",
+      "fr": "Appuyez deux fois pour démarrer/arrêter le défilement automatique",
+      "de": "Doppelklick um das Auto-Scrollen an- und auszuschalten"
+    },
+    "drawer_close": {
+      "en": "Drawer Close",
+      "de": "Schubfach schließen"
+    },
+    "drawer_open": {
+      "en": "Drawer Open",
+      "de": "Schubfach öffnen"
+    },
+    "dusk_values__0": {
+      "en": "0"
+    },
+    "dusk_values__1": {
+      "en": "1"
+    },
+    "dusk_values__2": {
+      "en": "2"
+    },
+    "dusk_values__3": {
+      "en": "3"
+    },
+    "dusk_values__4": {
+      "en": "4"
+    },
+    "eicha_title": {
+      "en": "Book of Lamentations (Eikhah)",
+      "fr": "Livre des Lamentations (Eikhah)",
+      "es": "El Libro de las Lamentaciones (Eijah)",
+      "de": "Buch der Wehklagen (Eichah)"
+    },
+    "einTitle": {
+      "en": "There is No One But God",
+      "fr": "Il n׳y a pas d׳autre d ieu que Hashem",
+      "es": "Solo Esta Hashem",
+      "de": "Es gibt keinen außer G-tt"
+    },
+    "elMelechTitle": {
+      "en": "El Melech",
+      "he": "אל מלך",
+      "fr": "El Melech",
+      "de": "El Melech"
+    },
+    "elRahumTitle": {
+      "en": "Merciful God",
+      "he": "אל רחום",
+      "fr": "D.ieu Miséricordieux",
+      "de": "Barmherziger G-tt"
+    },
+    "eleichaTitle": {
+      "en": "I Raise my Eyes",
+      "he": "אליך נשאתי עיני",
+      "fr": "Je lève les Yeux",
+      "de": "Ich erhebe meine Augen"
+    },
+    "eluDvarimTitle": {
+      "en": "Elu Dvarim",
+      "fr": "Elou Dvarim",
+      "es": "Elu Dvarim",
+      "de": "Elu Dwarim"
+    },
+    "end_shacharit": {
+      "en": "End of the Tfila",
+      "fr": "Fin de la prière",
+      "es": "Final del Rezo",
+      "de": "Ende der Tfila"
+    },
+    "enlarge": {
+      "en": "Enlarge",
+      "he": "הגדל",
+      "fr": "Agrandir",
+      "es": "Aumentar",
+      "de": "Vergrößern"
+    },
+    "enteringShoul": {
+      "en": "Before entering the Synagogue",
+      "he": "כשנכנסים לבית הכנסת",
+      "fr": "Before entering the Synagogue",
+      "de": "Vor dem Betreten der Synagoge"
+    },
+    "error_date_format": {
+      "en": "The date format must be DD/MM/YYYY",
+      "he": "התאריך צריך להיות בפורמט DD/MM/YYYY",
+      "de": "Das Datumsformat ist TT/MM/JJJJ"
+    },
+    "error_email_format": {
+      "en": "Email is not valid",
+      "he": "האימייל לא חוקי",
+      "de": "Email ist nicht gültig"
+    },
+    "error_empty_field": {
+      "en": "The field cannot be empty",
+      "he": "השדה לא יכול להיות ריק",
+      "de": "Dieses Feld kann nicht leer bleiben"
+    },
+    "error_field_required": {
+      "en": "This field is required",
+      "he": "זהו שדה חובה",
+      "fr": "Ce champ est obligatoire",
+      "de": "Dieses Feld ist erforderlich"
+    },
+    "error_incorrect_password": {
+      "en": "This password is incorrect",
+      "he": "הסיסמה לא נכונה",
+      "fr": "Ce mot de passe est incorrect",
+      "de": "Das Passwort ist falsch"
+    },
+    "error_invalid_email": {
+      "en": "This email address is invalid",
+      "he": "האימייל לא חוקי",
+      "fr": "Cet email n׳est pas valide",
+      "de": "Diese Email Adresse ist ungültig"
+    },
+    "error_invalid_password": {
+      "en": "This password is too short",
+      "he": "הסיסמה קצרה מדי",
+      "fr": "Ce mot de passe est trop court",
+      "de": "Das Passwort ist zu kurz"
+    },
+    "error_password_invalid": {
+      "en": "The password must contain at least 6 letters and numbers",
+      "he": "הסיסמה חייבת להכיל לפחות 6 אותיות ומספרים",
+      "de": "Das Passwort muss mindestens 6 Buchstaben und Nummern enthalten"
+    },
+    "eserZchirotEnglish": {
+      "fr": "\n\n1. La Sortie d׳Egypte (que le peuple Juif a été choisi comme la nation de D.ieu).\n<br/>\n2. Le Shabbat (D.ieu a créé l׳univers en six jours et s׳est reposé le septième).\n<br/>\n3. La Manne (D.ieu a nourrit nos ancêtres avec la manne pendant quarante ans).\n<br/>\n4. L׳épisode concernant Amalek (la première nation à faire la guerre à Israël après la sortie d׳Egypte, et notre obligation de les détruire).\n<br/>\n5. L׳acceptation de la Torah au Mt. Sinai (via Moshé notre mentor).\n<br/>\n6. Que nos ancêtres ont provoqué la colère de D.ieu dans le désert, en particulier avec le veau d\\׳or.\n<br/>\n7. Ce que Balak et Bilam ont planifié contre nos ancêtres, (et D.ieu a annulé leurs projets maléfiques) afin que nous connaissions la droiture et la miséricorde de D.ieu à notre égard.\n<br/>\n8. L׳incident concernant Myriam la Prophètesse (qui a calomnié Moïse, son frère, et fût punie par la lèpre afin de montrer la dangerosité des mauvaises paroles).\n<br/>\n9. Le commandement qui nous ordonne de nous souvenir du verset, \"Vous devez vous souvenir de D.ieu, votre Maitre, parce qu׳Il est Celui qui vous donne la force (et les idées) pour obtenir la prospérité.\"\n<br/>\n10. Le souvenir de Jerusalem; qu׳elle puisse être reconstruite et décorée de nos jours, Amen.\n<br/>\n\n"
+    },
+    "eserZchirotTitle": {
+      "en": "The Ten Remembrances",
+      "fr": "Les Dix Souvenirs",
+      "es": "Los Diez Recordatorios",
+      "de": "Die Zehn Erinnerungen"
+    },
+    "ester_title": {
+      "en": "The Book of Ester",
+      "he": "מגילת אסתר",
+      "fr": "Le livre d’Ester",
+      "es": "Megilat Ester",
+      "de": "Das Buch Esther"
+    },
+    "etsBlessTitle": {
+      "en": "On Fruits: ",
+      "he": " \nעל הפירות:\n",
+      "fr": "\nPour les Fruits:\n",
+      "es": " \nSobre las Frutas: \n",
+      "de": "Auf Früchte: "
+    },
+    "etsTitle": {
+      "en": "Fruits",
+      "fr": "Fruits",
+      "de": "Früchte"
+    },
+    "eventsBlessingTitle": {
+      "en": "The Blessings for Phenomena and Spectacular Events",
+      "he": "ברכות הראייה",
+      "fr": "Bénédictions pour les Evènements et Phénomènes Spectaculaires",
+      "es": " La bendición por Fenómenos y milagros espectaculares",
+      "de": "Segensprüche über Naturphänomene und spektakuläre Ereignisse"
+    },
+    "facebook": {
+      "en": "Post on our facebook page",
+      "he": "פרסם בדף הפייסבוק שלנו",
+      "fr": "Poster sur notre page facebook",
+      "es": "Postea en nuestra página de Facebook",
+      "de": "Poste auf unserer Facebook Seite"
+    },
+    "faq": {
+      "en": "FAQ",
+      "he": "שאלות נפוצות",
+      "fr": "FAQ",
+      "de": "FAQ"
+    },
+    "faster": {
+      "en": "Scroll Faster",
+      "he": "גלול מהר יותר",
+      "fr": "Défilement plus rapide",
+      "de": "Schneller scrollen"
+    },
+    "feedback": {
+      "en": "Feedback",
+      "he": "משוב",
+      "fr": "Vos remarques",
+      "de": "Feedback"
+    },
+    "font": {
+      "en": "Choose Font",
+      "he": "בחר גופן",
+      "fr": "Choisir la police de caractères",
+      "es": "Escoja la Fuente",
+      "de": "Wähle Schriftart"
+    },
+    "font_name__0": {
+      "en": "Default"
+    },
+    "font_name__1": {
+      "en": "Shofar"
+    },
+    "font_name__2": {
+      "en": "Keter"
+    },
+    "font_name__3": {
+      "en": "Alef"
+    },
+    "font_size": {
+      "en": "Change Font Size",
+      "he": "בחר גודל גופן",
+      "fr": "Changer la taille des caractères",
+      "es": "Cambie el tamaño de fuente",
+      "de": "Ändere Schriftgröße"
+    },
+    "font_size_summery": {
+      "en": "Enter font size in numbers",
+      "he": "הכנס גודל גופן במספרים",
+      "fr": "Entrer une taille de caractères en valeur",
+      "es": "Inserte el tamaño de la fuente en numero",
+      "de": "Schriftgröße mit Nummer eingeben"
+    },
+    "font_values__0": {
+      "en": "0"
+    },
+    "font_values__1": {
+      "en": "1"
+    },
+    "font_values__2": {
+      "en": "2"
+    },
+    "font_values__3": {
+      "en": "3"
+    },
+    "food_blessing_title": {
+      "en": "Blessing on Food",
+      "he": "ברכות האוכל",
+      "fr": "Prières pour la Nourriture",
+      "es": "Bendición sobre la Comida",
+      "de": "Segensprüche über Speisen"
+    },
+    "forWineOF": {
+      "en": "For wine made in Israel:",
+      "he": "על יין של ארץ ישראל יאמר:",
+      "es": "Por el Vino hecho en Israel:",
+      "de": "Für in Israel hergestellten Wein:"
+    },
+    "free_desc": {
+      "en": "Unlock all the features to enjoy the full experience",
+      "he": "רכוש עכשיו וקבל את כל האופציות כדי להינות מכל התכונות של הסידור",
+      "es": "Adquiere la App Completa",
+      "de": "Schalte alle Features frei um die App in vollem Maße zu genießen"
+    },
+    "free_title": {
+      "en": "Get the Full App",
+      "he": "קבל כעת את האפליקציה המלאה",
+      "fr": "Obtenir l’application complète",
+      "es": "Adquiere la App Completa",
+      "de": "Erhalte die volle Version dieser App"
+    },
+    "fruits_instruction": {
+      "en": "For The Seven Fruits (Shivat HaMinim) of Eretz Yisrael:",
+      "he": "על פירות מישראל:",
+      "de": "für Trauben, Feigen usw. (Schiwat HaMinim) aus dem Land Israel:"
+    },
+    "full_zmanim_list": {
+      "en": "Full Zmanim List",
+      "he": "לוח זמנים מלא",
+      "de": "ganze Liste der Zeiten"
+    },
+    "gefenBlessTitle": {
+      "en": "On Wine:   ",
+      "he": "  \nעל יין:   \n",
+      "fr": "\nPour le Vin:\n",
+      "es": "  \nSobre el Vino:   \n",
+      "de": "Auf Wein:   "
+    },
+    "gefenTitle": {
+      "en": "Gefen",
+      "fr": "Vin",
+      "de": "Wein oder Traubensaft"
+    },
+    "gefen_instruction": {
+      "en": "For wine of Eretz Yisrael:",
+      "he": "על יין מישראל:",
+      "de": "für Wein aus dem Land Israel:"
+    },
+    "general": {
+      "en": "General Preferences",
+      "he": "הגדרות כלליות",
+      "fr": "Préférences Générales",
+      "es": "Preferencias generales",
+      "de": "Generelle Bevorzugung"
+    },
+    "general_error": {
+      "en": "Something went wrong",
+      "he": "משהו השתשבש",
+      "de": "Entschuldigung, da ist etwas schief gelaufen"
+    },
+    "general_summery": {
+      "en": "Choose general preferences like auto scroll, silent mode etc.",
+      "fr": "Choisissez les préférences générales comme le défilement automatique, le mode silencieux, etc.",
+      "es": "Escoja Preferencias generales  como Bajar Automáticamente, Modo Silencioso, Etc.",
+      "de": "Wählen Sie Ihre Vorlieben wie Auto Scroll, Still-Modus etc."
+    },
+    "get_on_google_play": {
+      "en": "Get it on Google Play",
+      "he": "רכוש דרך חנות הפליי",
+      "de": "Auf Google Play erwerben"
+    },
+    "geust_title": {
+      "en": "Guest's Blessing",
+      "fr": "Bénédiction de l׳invité:",
+      "es": "Guest's Blessing",
+      "de": "Segen des Gastes"
+    },
+    "goodCustomMorning": {
+      "en": "It is a good custom to say this every morning",
+      "he": "מנהג טוֹב לומר בכל בוקר:",
+      "fr": "C׳est une coutume de dire cela tous les matins",
+      "es": "Es una Buena costumbre decir cada mañana:",
+      "de": "Es ist ein guter Brauch, folgendes jeden Morgen zu sagen"
+    },
+    "gps_failure": {
+      "en": "Couldn't find your current location",
+      "he": "לא הצלחתי למצוא את המיקום הנוכחי שלך"
+    },
+    "gps_summary": {
+      "en": "The application will determine your location according to phone's reported location.",
+      "he": "האפליקציה תקבע מיקום אוטומטי לפי המכשיר",
+      "fr": "L׳application va déterminer votre emplacement en fonction de celle de votre téléphone.",
+      "es": "La Aplicación Reconocerá la Ubicación de Acuerdo a las Especificaciones de su Equipo.",
+      "de": "Die Anwendung wird Ihre Position aus dem von Ihrem Smartphone berichteten Ort bestimmen."
+    },
+    "gps_title": {
+      "en": "Automatic Location",
+      "he": "מיקום אוטומטי",
+      "fr": "Localisation Automatique",
+      "es": "Ubicación Automática",
+      "de": "Automatischer Ort"
+    },
+    "graDes": {
+      "en": "According to the GRA and Ba'al HaTania as calculated from sunrise to sunset.",
+      "fr": "Selon GRA et Ba׳al HaTania, calculé du lever du soleil à son coucher.",
+      "es": "Según el GRA and Ba'al HaTania se calcula de la salida a la puesta del Sol.",
+      "de": "Nach der Meinung des GRA und Ba'al HaTania von Sonnenauf- bis Sonnenuntergang berechnet."
+    },
+    "graOrMagen__0": {
+      "en": "Magen Avraham",
+      "he": "מגן אברהם",
+      "fr": "Magen Avraham",
+      "es": "Magen Avraham"
+    },
+    "graOrMagen__1": {
+      "en": "Gra and Baal Tanya",
+      "he": "גרא ובעל התניא",
+      "fr": "Gra and Baal Tanya",
+      "es": "Gra and Baal Tanya"
+    },
+    "groom_title": {
+      "en": "On a Wedding Meal",
+      "fr": "Lors d׳un Repas de Mariage",
+      "es": "On a Wedding Meal",
+      "de": "Bei einem Hochzeitsmahl"
+    },
+    "gvuratoTitle": {
+      "en": "Upon hearing thunder, or seeing a violent storm (tornado, hurricane,etc.)",
+      "he": "בשמיעת הרעם",
+      "fr": "Lorsque l׳on entend le tonnerre, ou que l׳on voit une violente tempête (tornade, ouragan,etc.)",
+      "es": " Al oír el trueno, o ver una tormenta violenta (tornados, huracanes, etc)",
+      "de": "Über das Hören eines Donners, oder Sehen eines wilden Sturms (Tornado, Hurricane,etc.)"
+    },
+    "haazinu_title": {
+      "en": "Ha'azinu",
+      "fr": "Ha׳azinu",
+      "es": "Ha'azinu",
+      "de": "Ha'asinu"
+    },
+    "haderech": {
+      "en": "The Traveler's Prayer",
+      "he": "תפילת הדרך",
+      "fr": "Prière du Voyageur",
+      "es": "Bendición para el Viajero",
+      "de": "Gebet für Reisende"
+    },
+    "haderetTitle": {
+      "en": "Haaderet VeHaemuna",
+      "he": "האדרת והאמונה",
+      "de": "Haaderet VeHaemuna"
+    },
+    "haftaraBlessingsTitle": {
+      "en": "Blessing of Haftara",
+      "fr": "Bénédiction de la Haftara",
+      "es": "Bendición por la Haftara",
+      "de": "Segenspruch für die Haftara"
+    },
+    "haftaraTitle": {
+      "en": "Haftara",
+      "fr": "Haftara",
+      "es": "Haftara",
+      "de": "Haftara"
+    },
+    "hagbaTitle": {
+      "en": "Raising of the Torah",
+      "fr": "Élévation de la Torah",
+      "es": "Al Subir a la Tora",
+      "de": "Heben der Torah"
+    },
+    "hal1Title": {
+      "en": "My Soul Will Praise",
+      "fr": "Confiance en D.ieu",
+      "es": "Mi Alma Perdurara",
+      "de": "Meine Seele wird loben"
+    },
+    "hal2Title": {
+      "en": "It is Good to Praise Hashem",
+      "fr": "Louange à D.ieu",
+      "es": "Es Bueno Alabar a Hashem",
+      "de": "Es ist gut, Haschem zu loben"
+    },
+    "hal3Title": {
+      "en": "Praise the Lord Hashem",
+      "fr": "Louez l׳Éternel",
+      "es": "Alaba a Hashem",
+      "de": "Lobet den Ewigen Haschem"
+    },
+    "hal4Title": {
+      "en": "Sing for Hashem",
+      "fr": "Chant pour Hashem",
+      "es": "Canta a Hashem",
+      "de": "Sing für Haschem"
+    },
+    "hal5Title": {
+      "en": "Every Neshama Should Praise Hashem",
+      "fr": "Louez Son Omnipotence",
+      "es": "Cada Neshama Debe Alabar a Hashem",
+      "de": "Jede Neschama soll Haschem loben"
+    },
+    "halaIntroText": {
+      "en": "If one prepares dough of water and flour, an olive-sized piece of dough must be separated and burnt from each batch of dough that is at least 2 lbs.10 oz.  Regarding the amount of dough required for the recitation of the blessing, opinions vary from 3 lbs. 10.7 oz. to 4 lbs. 15.2 oz.",
+      "he": "\n        אם אופה עיסה מקמח ומים, יש להפריש ממנה כזית חלה. השיעור הראוי בברכה נתון במחלוקת כשלדעת הגר״ע יוסף חייבים בברכה כבר מ1666 גרם אך לפי רוב הדעות רק מ2400 גרם ומעלה מתחייבים בברכה\n",
+      "fr": "Si on prépare une pâte à base d׳eau et de farine, un morceau de pâte de la taille d\\׳une olive doit être séparé et brûlé de chaque lot de pâte faisant au moins 1.2 kgs. Concernant la quantité de pâte requise pour réciter la bénédiction, les opinions varient entre 1.6kgs et 2.2kgs.",
+      "es": " Si uno se prepara la masa de agua y harina, un pedazo del tamaño de una aceituna, debe ser y quemado de cada lote de masa (esta debe ser de al menos 2 lbs. 10 oz En cuanto a la cantidad de masa necesaria para la recitación de la bendición, las opiniones varían de 3 libras. 10,7 oz a 4 libras. 15,2 oz)",
+      "de": "Wenn jemand Teig und Wasser vorbereitet, muss von jeder Partie, die mindestens 1,19 kg ist, ein Oliven-großes Stück des Teigs separiert und verbrannt werden. Bezüglich der Menge des Teigs, welches benötigt wird um den Segenspruch zu sagen, variieren die Meinungen zwischen 1,66 kg und 2,25 kg"
+    },
+    "halaTitle": {
+      "en": "Dough offering",
+      "he": "הפרשת חלה",
+      "fr": "Prélèvement de la H׳ala",
+      "de": "Trennen der Challa"
+    },
+    "halel": {
+      "en": "Hallel",
+      "fr": "Halel",
+      "es": "Halel",
+      "de": "Hallel"
+    },
+    "halelEndBlessingTitle": {
+      "en": "A Blessing after Halel",
+      "fr": "Bénédiction après le Halel",
+      "es": "Bendición Post-Halel",
+      "de": "Ein Segenspruch nach Hallel"
+    },
+    "halelS1Title": {
+      "en": "Praise the Lord",
+      "fr": "Louez Hashem",
+      "es": "Alaba a Hashem",
+      "de": "Lobe den Ewigen"
+    },
+    "halelS2Title": {
+      "en": "God's Revelation in Egypt",
+      "fr": "Révélation de D.ieu en Egypte",
+      "es": "La Revelación de Hashem en Egipto",
+      "de": "G-ttes Offenbarung in Ägypten"
+    },
+    "halelS3Title": {
+      "en": "God's Revelation in the Present",
+      "fr": "Hashem Bénit Israël",
+      "es": " La Revelación de Hashem en el Presente",
+      "de": "G-ttes Offenbarung in der Gegenwart"
+    },
+    "halelS4Title": {
+      "en": "God's Revelation in the future",
+      "fr": "Révélation de D.ieu dans le futur",
+      "es": " La Revelación de Hashem en el Futuro",
+      "de": "G-ttes Offenbarung in der Zukunft"
+    },
+    "halelS5Title": {
+      "en": "Praise and Thank the Lord",
+      "fr": "Louez et Remerciez Hashem",
+      "es": "Alaba y Agradece a Hashem",
+      "de": "Lobpreisung und Dank dem Ewigen"
+    },
+    "halelS6Title": {
+      "en": "A Prayer that was said in Bet HaMikdash",
+      "fr": "Une Prière dite dans le Bet HaMikdash",
+      "es": "Una Bendición Recitada en el Bait HaMikdash",
+      "de": "Ein Gebet, das im Beit HaMikdasch gesagt wurde"
+    },
+    "halelStartBlessTitle": {
+      "en": "A Blessing before Halel",
+      "fr": "Prière avant le Halel",
+      "es": "Bendición por el Halel",
+      "de": "Ein Segenspruch vor Hallel"
+    },
+    "hamapilTitle": {
+      "en": "Hamapil Blessing",
+      "he": "ברכת המפיל",
+      "es": "Hamapil",
+      "de": "Hamapil Segenspruch"
+    },
+    "hanaTitle": {
+      "en": "Hana's Prayer",
+      "fr": "Prière de Hanah",
+      "es": "Rezo de Hana's",
+      "de": "Chana's Gebet"
+    },
+    "hanuka": {
+      "en": "Hanuka Lighting",
+      "he": "הדלקת נר חנוכה",
+      "fr": "Allumage des bougies de Hanuka",
+      "es": "Encendido de velas en Hanuka",
+      "de": "Chanukka Lichter"
+    },
+    "hashenHonenuTitle": {
+      "en": "Lord Save Us",
+      "he": "השם חוננו",
+      "fr": "D.ieu Sauve Nous",
+      "de": "Herr, rette uns"
+    },
+    "hashkivenuTitle": {
+      "en": "Evning Blessing",
+      "he": "ברכת השכיבנו (ברכת הערב)",
+      "es": "Bendición por la noche",
+      "de": "Abendgebet"
+    },
+    "hatzotZmanTitle": {
+      "en": "Midday and Midnight",
+      "fr": "Midi et Minuit",
+      "es": "Hatzot",
+      "de": "Mittag und Mitternacht"
+    },
+    "havdala_title": {
+      "en": "Havdala",
+      "he": "הבדלה",
+      "fr": "Havdala",
+      "es": "Havdala",
+      "de": "Hawdala"
+    },
+    "hebrew_months__0": {
+      "en": "Nisan",
+      "he": "ניסן",
+      "fr": "Nisan",
+      "es": "Nisan",
+      "de": "Nissan"
+    },
+    "hebrew_months__1": {
+      "en": "Iyar",
+      "he": "אייר",
+      "fr": "Iyar",
+      "es": "Iyar",
+      "de": "Ijar"
+    },
+    "hebrew_months__10": {
+      "en": "Shvat",
+      "he": "שבט",
+      "fr": "Shvat",
+      "es": "Shvat",
+      "de": "Schwat"
+    },
+    "hebrew_months__11": {
+      "en": "Adar",
+      "he": "אדר",
+      "fr": "Adar",
+      "es": "Adar",
+      "de": "Adar"
+    },
+    "hebrew_months__12": {
+      "en": "Adar I",
+      "he": "אדר א",
+      "fr": "Adar I",
+      "es": "Adar I",
+      "de": "Adar I"
+    },
+    "hebrew_months__13": {
+      "en": "Adar II",
+      "he": "אדר ב",
+      "fr": "Adar II",
+      "es": "Adar II",
+      "de": "Adar II"
+    },
+    "hebrew_months__2": {
+      "en": "Sivan",
+      "he": "סיון",
+      "fr": "Sivan",
+      "es": "Sivan",
+      "de": "Siwan"
+    },
+    "hebrew_months__3": {
+      "en": "Tamuz",
+      "he": "תמוז",
+      "fr": "Tamuz",
+      "es": "Tamuz",
+      "de": "Tammus"
+    },
+    "hebrew_months__4": {
+      "en": "Av",
+      "he": "אב",
+      "fr": "Av",
+      "es": "Av",
+      "de": "Aw"
+    },
+    "hebrew_months__5": {
+      "en": "Elul",
+      "he": "אלול",
+      "fr": "Elul",
+      "es": "Elul",
+      "de": "Elul"
+    },
+    "hebrew_months__6": {
+      "en": "Tishri",
+      "he": "תשרי",
+      "fr": "Tishri",
+      "es": "Tishri",
+      "de": "Tischrei"
+    },
+    "hebrew_months__7": {
+      "en": "Heshvan",
+      "he": "חשוון",
+      "fr": "Heshvan",
+      "es": "Heshvan",
+      "de": "Cheschwan"
+    },
+    "hebrew_months__8": {
+      "en": "Kislev",
+      "he": "כסלו",
+      "fr": "Kislev",
+      "es": "Kislev",
+      "de": "Kislew"
+    },
+    "hebrew_months__9": {
+      "en": "Tevet",
+      "he": "טבת",
+      "fr": "Tevet",
+      "es": "Tevet",
+      "de": "Tewet"
+    },
+    "help": {
+      "en": "Help and Feedback",
+      "he": "עזרה ומשוב",
+      "fr": "Aide et remarques",
+      "de": "Hilfe und Feedback"
+    },
+    "help_fab": {
+      "en": "Start auto scroll for easier reading (tap elsewhere to hide)",
+      "he": "הפעל גלילה אוטומטית לקריאה נוחה יותר (גע במקום אחר במסך כדי להעלים)",
+      "fr": "Démarrer le défilement automatique pour une lecture facile (tapez n׳importe où pour cacher cette flèche)",
+      "de": "Auto-Scroll für leichteres Lesen beginnen (anderswo tippen zum verbergen)"
+    },
+    "help_home_description": {
+      "en": "Tap to open other prayers, access settings, getting help and more!",
+      "he": "לחץ כדי לפתוח עוד תפילות, להיכנס להגדרות, לקבל עזרה ועוד",
+      "fr": "Appuyez pour accêder à d׳autres prières, aux paramètres, obtenir de l׳aide et bien plus!",
+      "de": "Tippen um andere Gebete zu öffnen, Einstellungen zu ändern, Hilfe und mehr!"
+    },
+    "help_home_title": {
+      "en": "App Menu",
+      "he": "תפריט",
+      "fr": "Menu",
+      "de": "App Menü"
+    },
+    "help_navigation_description": {
+      "en": "Tap this menu to access different parts of the app, like the Calendar",
+      "he": "לחץ כאן כדי לפתוח חלקים נוספים באפליקציה כמו למשל לוח שנה",
+      "fr": "Appuyez sur ce menu pour accéder à différentes parties de l׳application, comme le Calendrier",
+      "de": "Dieses Menü tippen, um auf andere Bereiche der App zuzugreifen, die z.B. dem Kalender"
+    },
+    "help_options": {
+      "en": "Set more prayer options",
+      "he": "קבע אפשרויות שונות בתפילה",
+      "fr": "Paramétrer d׳autres options des prières",
+      "de": "Mehr Optionen für Gebete einstellen"
+    },
+    "help_pinch": {
+      "en": "Pinch to change text size",
+      "he": "לשינוי גודל הטקסט צבוט את המסך",
+      "fr": "Pincez pour changer la taille du texte",
+      "de": "Kneifen um Textgröße zu verändern"
+    },
+    "help_spinner": {
+      "en": "Use the spinner to navigate between parts of the prayer",
+      "he": "נווטו לקטעים שונים בתפילה",
+      "fr": "Utilisez cette flèche pour naviguer entre les différentes parties de la prière.",
+      "de": "Benutze die Pinnadel um zwischen den Teilen des Gebets zu springen"
+    },
+    "hoduTitle": {
+      "en": "Hodu",
+      "fr": "Hodu",
+      "es": "Hodu",
+      "de": "Hodu"
+    },
+    "hoshanotTitle": {
+      "en": "Hosanna",
+      "he": "הושענות",
+      "fr": "Hosanna",
+      "de": "Hoschana"
+    },
+    "hoshienuTitle": {
+      "en": "Hoshienu",
+      "fr": "Hoshienou",
+      "es": "Hoshienu",
+      "de": "Hoschienu"
+    },
+    "hotsaTitle": {
+      "en": "Taking Out the Sefer",
+      "fr": "Sortie du rouleau de la Torah",
+      "es": "Al Sacar el Sefer",
+      "de": "Ausheben der Torah"
+    },
+    "ihudTitle": {
+      "en": "Leshem Ihud",
+      "he": "לשם יחוד",
+      "es": "Leshem Ihud",
+      "de": "Leschem Ihud"
+    },
+    "ikarimSfaradTranslation": {
+      "fr": "\n\n1. La croyance en l׳existence du Créateur, qui est parfait dans tous les sens de l׳existence et est l׳Origine de tout ce qui existe.\n<br>\n2. La croyance en l׳unité absolue et sans pareille de D.ieu.\n<br>\n3. La croyance en D.ieu incorporel, et qu׳Il n׳est pas touché par les problèmes physiques, comme le déplacement, le repos ou le logement.\n<br>\n4. La croyance en l׳éternité de D.ieu.\n<br>\n5. L׳impératif de croire exclusivement en Hashem et pas en de faux dieux.\n<br>\n6. La croyance que D.ieu communique avec l׳homme par la prophétie.\n<br>\n7. La croyance en la primauté de la prophécie de Moïse notre maitre.\n<br>\n8. La croyance en l׳origine divine de la Torah.\n<br>\n9. La croyance en l׳immuabilité de la Torah.\n<br>\n10. La croyance en l׳omniscience et la providence de D.ieu.\n<br>\n11. La croyance en la récompense et le châtiment divins.\n<br>\n12. La croyance en l׳arrivée du Messie et de l׳ère messianique.\n<br>\n13. La croyance en la résurrection des morts.\n\n"
+    },
+    "ikarimTitle": {
+      "en": "The Thirteen Principles of Jewish Faith",
+      "fr": "Les Treize Principes de la Foi Juive",
+      "es": "Los Trece Principios de Fe Judía",
+      "de": "Die Dreizehn Grundlehren des Jüdischen Glaubens"
+    },
+    "ilanot_title": {
+      "en": "Birkat HaIlanot",
+      "he": "ברכת האילנות",
+      "fr": "Birkat HaIlanot",
+      "es": "Birkat HaIlanot",
+      "de": "Birkat HaIlanot"
+    },
+    "imAfesTitle": {
+      "en": "Im Afes",
+      "he": "אם אפס",
+      "fr": "Im Afes",
+      "de": "Im Afes"
+    },
+    "isbeiTitle": {
+      "en": "Upon smelling fragrant herbs, grasses or flowers:",
+      "he": "בהרחת בשמים כפרחים עשבים וכדומה (כגון ורד):",
+      "fr": "Lorsque l׳on sent le parfum d׳herbes, graminées ou de fleurs:",
+      "es": " Al oler las hierbas aromáticas, hierbas o flores:",
+      "de": "Über wohlriechende Kräuter, Gräser oder Blumen:"
+    },
+    "isha": {
+      "en": "Women say:",
+      "fr": "Les Femmes disent:",
+      "es": "La Mujer dice:",
+      "de": "Frauen sagen:"
+    },
+    "israel_force_message": {
+      "en": "It seems you currently set on a location abroad, do you want to force set the calendar to Israel or change your location?",
+      "he": "נראה שאתה מוגדר בחו\\״ל תרצה לכפות את לוח השנה לנהוג כמו ישראל, או לשנות את המיקום שלך?"
+    },
+    "israel_force_negative": {
+      "en": "Change Location",
+      "he": "שנה מיקום"
+    },
+    "israel_force_positive": {
+      "en": "Force",
+      "he": "כפה כישראל"
+    },
+    "israel_force_summery": {
+      "en": "Force show prayers and holidays for Israel regardless of my location",
+      "he": "הראה תפילות וחגים לישראל בלי קשר למיקום שלי"
+    },
+    "israel_holiday": {
+      "en": "Israel National Holiday",
+      "he": "חגים לֹאומיים",
+      "fr": "Fêtes Nationales Israéliennes",
+      "es": "Fiestas Nacionales de Israel",
+      "de": "Israels nationaler Feiertag"
+    },
+    "israel_holiday_title": {
+      "en": "Update your location?",
+      "he": "תרצה לעדכן מיקום?"
+    },
+    "israel_summery": {
+      "en": "Show special Tefilot for Israel National holidays",
+      "he": "בחר כדי להראות תפילות מיוחדות לחגים לֹאומיים",
+      "fr": "Afficher les Téfilot Spéciales pour les Fêtes Nationales Israéliennes",
+      "es": "Muestra Tefilot especiales por Israel",
+      "de": "Zeige spezielle Tefillot für Israels nationale Feiertage"
+    },
+    "israel_title": {
+      "en": "I am in Israel",
+      "he": "אני בישראל",
+      "fr": "Je suis en  Israel",
+      "es": "Me encuentro en Israel",
+      "de": "Ich bin in Israel"
+    },
+    "jog_and_say": {
+      "en": "Jog a bit three times and say",
+      "he": "קפוץ מעט ואמור:",
+      "fr": "Secouez un peu trois fois et dÓtes",
+      "de": "Man hüpft ein wenig für drei mal und sagt:"
+    },
+    "kadishDerTitle": {
+      "en": "Kaddish Derabanan",
+      "he": "קדיש דרבנן",
+      "fr": "Kadish des Endeuillés",
+      "es": "Kaddish Derabanan",
+      "de": "Lern-Kaddisch (Derabanan)"
+    },
+    "kadishTitkTitle": {
+      "en": "The Full Kaddish",
+      "he": "קדיש מלא",
+      "fr": "Kadish complet",
+      "es": "Kadish Completo",
+      "de": "Ganzes Kaddisch"
+    },
+    "kadishTitle": {
+      "en": "Kaddish",
+      "he": "קדיש",
+      "fr": "Kadish",
+      "es": "Kadish",
+      "de": "Kaddisch"
+    },
+    "kadishYatomTitle": {
+      "en": "The Mourners Kaddish",
+      "he": "קדיש יתום",
+      "es": "Kaddish del doliente",
+      "de": "Kaddisch der Trauernden"
+    },
+    "kahalSays": {
+      "en": "The congregation Answer:",
+      "fr": "L’Assistance répond:",
+      "es": "El Publico Contesta:",
+      "de": "Die Gemeinde antwortet:"
+    },
+    "kalTitle": {
+      "en": "The Thirteen Principles of Interpretation",
+      "fr": "Les Treize principes d׳Interprétation",
+      "es": "Los Trece principios de Interpretation",
+      "de": "Die Dreizehn Prinzipien der Interpretation"
+    },
+    "kaveTitle": {
+      "en": "Hope For Hashem",
+      "fr": "Espérance en Hashem",
+      "es": "Fe en Hashem",
+      "de": "Hoffnung für Haschem"
+    },
+    "kdushaTitle": {
+      "en": "Kedushah",
+      "fr": "Kedushah",
+      "es": "Kedusha",
+      "de": "Keduschah"
+    },
+    "keep_portrait": {
+      "en": "Lock screen to portrait mode",
+      "he": "שמור מאונך",
+      "fr": "Verrouiller l׳écran en mode portrait",
+      "es": "Fije la pantalla en Vertical",
+      "de": "Bildschirm in Bildmodus einrasten"
+    },
+    "keterTitle": {
+      "en": "Keter",
+      "he": "כתר",
+      "fr": "Keter",
+      "de": "Keter"
+    },
+    "kinotBarahDodiTitle": {
+      "en": "Barah Dodi",
+      "he": "ברח דודי"
+    },
+    "kinotBetsetiTitle": {
+      "en": "Betseti Mimizraim",
+      "he": "בצאתי ממצרים"
+    },
+    "kinotEleEzkeraTitle": {
+      "en": "Ele Ezkera",
+      "he": "אלה אזכרה"
+    },
+    "kinotEliAdinaTitle": {
+      "en": "Eli Adina",
+      "he": "אלי עדינה לשכינה"
+    },
+    "kinotMaNishtanaTitle": {
+      "en": "Ma Nishtana",
+      "he": "מה נשתנה"
+    },
+    "kinot_title": {
+      "en": "Kinnot",
+      "fr": "Kinnot",
+      "es": "Kinnot",
+      "de": "Kinot"
+    },
+    "kiorTitle": {
+      "en": "Kior",
+      "de": "Kior"
+    },
+    "kissTfilin": {
+      "en": "\n\n<small>Touch and kiss your Tefilin</small>\n\n",
+      "he": "\n\n<small>גע ונשק בתפילין</small>\n\n",
+      "de": "\n\n<small>Man berührt und küsst sein Tefillin</small>\n\n"
+    },
+    "klum": {
+      "es": " "
+    },
+    "koLechaiTitle": {
+      "en": "Va'amartem Ko Lechai",
+      "he": "ואמרתם כה לחי",
+      "fr": "Va׳amartem Ko Lechai",
+      "de": "Wa'amartem Ko Lechai"
+    },
+    "kohanimTitle": {
+      "en": "Priestly Blessing",
+      "fr": "Bénédiction des Cohen",
+      "es": "Bendición de los Cohanim",
+      "de": "Priestersegen"
+    },
+    "kohanim_more_than_two": {
+      "en": "If there are Kohanim:",
+      "fr": "S’il y a deux Cohen ou plus:",
+      "es": "Si hay más de dos Cohanim:",
+      "de": "Wenn zwei oder mehr Kohanim anwesend sind:"
+    },
+    "korbanotTitle": {
+      "en": "The Mishna of Sacrifices",
+      "he": "משנת הזבחים",
+      "fr": "La Mishna des Sacrifices",
+      "es": "Mishna de Sacrificios",
+      "de": "Die Mischna der Opferbringung"
+    },
+    "kotel": {
+      "en": "He should direct his heart to the Holy of Holies",
+      "he": "יְכַוֵּן אֶת לִבּוֹ כְּנֶגֶד בֵּית קֹדֶשׁ הַקֳּדָשִׁים",
+      "de": "Er sollte sein Herz in Richtung Heiligtum (Jerusalem) wenden"
+    },
+    "ktoretTitle": {
+      "en": "Parashat HaKtoret",
+      "fr": "Offrande de l׳Encens",
+      "es": "Parashat HaKtoret",
+      "de": "Paraschat HaKetoret"
+    },
+    "kyorTitle": {
+      "en": "Parashat HaKyor",
+      "fr": "Parashat HaKyor",
+      "es": "Parashat HaKyor",
+      "de": "Paraschat HaKijor"
+    },
+    "lag_omer_title": {
+      "en": "Lag BaOmer",
+      "he": "לג בעומר",
+      "fr": "Lag BaOmer",
+      "de": "Lag BaOmer"
+    },
+    "lamanchaTitle": {
+      "en": "For you Sake",
+      "he": "למענך",
+      "fr": "Pour ton Bien",
+      "de": "Um deines Willens"
+    },
+    "lamnatseachMinchaTitle": {
+      "en": "Ma Yedidot",
+      "de": "Ma Yedidot"
+    },
+    "lamnatzeachAlMitaTitle": {
+      "en": "Psalms 51",
+      "he": "תהילים נא",
+      "es": "Salmo 51",
+      "de": "Psalm 51"
+    },
+    "language_notice": {
+      "en": "The language will be updated only after fresh launch of the app",
+      "he": "השפה תתעדכן רק לאחר אתחול מלא של האפליקציה",
+      "de": "Die Sprache wird erst nach dem Neustart der App aktualisiert"
+    },
+    "last_location": {
+      "en": "Last Location on Siddur",
+      "he": "מיקום אחרון בסידור",
+      "fr": "Dernier Emplacement dans le Siddur",
+      "es": "Ultima Localización en Siddur",
+      "de": "Letzter Ort auf dem Siddur"
+    },
+    "ledavidTitle": {
+      "en": "Ledavid",
+      "fr": "Ledavid",
+      "es": "Ledavid",
+      "de": "Ledavid"
+    },
+    "lemiEvke_title": {
+      "en": "To Whom Shall I Cry",
+      "fr": "Qui vais-je implorer?",
+      "es": "A Quien Debemos Llorar?",
+      "de": "Wem soll ich schreien"
+    },
+    "lemitvadeTitle": {
+      "en": "To Whom Who Confesses",
+      "he": "למתוודה",
+      "fr": "A celui qui se Confesse",
+      "de": "An den, der gesteht"
+    },
+    "leolamTitle": {
+      "en": "Leolam",
+      "fr": "Leolam",
+      "es": "Leolam",
+      "de": "Leolam"
+    },
+    "leshemTitle": {
+      "en": "Leshem Ihud",
+      "fr": "Leshem Ihud",
+      "es": "Leshem Ihud",
+      "de": "Leschem Ihud"
+    },
+    "levana_birkat": {
+      "en": "Birkat HaLevana",
+      "he": "ברכת הלבנה",
+      "fr": "Birkat HaLevana",
+      "es": "Birkat HaLevana",
+      "de": "Birkat HaLewana"
+    },
+    "levana_kidush": {
+      "en": "Kidush Levana",
+      "he": "קידוש לבנה",
+      "fr": "Kidush Levana",
+      "es": "Kidush Levana",
+      "de": "Kiddusch Lewana"
+    },
+    "loadLastLocation": {
+      "en": "Loading last saved location",
+      "he": "טוען מיקום שמור אחרון",
+      "fr": "Retrouver le dernier emplacement sauvegardé",
+      "de": "Lädt den zuletzt gespeicherten Ort"
+    },
+    "loc_alt": {
+      "en": "Elavation",
+      "he": "גובה",
+      "fr": "Altitude",
+      "es": "Elevación",
+      "de": "Höhe"
+    },
+    "loc_daylight": {
+      "en": "Daylight Saving Time",
+      "he": "שעון קיץ",
+      "fr": "Heure d׳été",
+      "es": "Horario",
+      "de": "Sommerzeit"
+    },
+    "loc_delete": {
+      "en": "Delete",
+      "he": "מחק",
+      "fr": "Supprimer",
+      "es": "borrar",
+      "de": "Löschen"
+    },
+    "loc_lat_lang": {
+      "en": "%1$@°, %2$@°",
+      "de": "%1$@°, %2$@°"
+    },
+    "loc_long": {
+      "en": "Longtitude: %1$@",
+      "he": "גובה: %1$@",
+      "de": "Längengrad: %1$@"
+    },
+    "loc_select": {
+      "en": "Select Location",
+      "he": "קבע מיקום",
+      "fr": "Choisissez un lieu:",
+      "es": "Escoja Ubicación",
+      "de": "Ort auswählen"
+    },
+    "loc_source": {
+      "en": "Source: %1$@",
+      "he": "מקור: %1$@",
+      "fr": "Source: %1$@",
+      "es": "Fuente: %1$@",
+      "de": "Quelle: %1$@"
+    },
+    "loc_tz": {
+      "en": "Time Zone: %1$@",
+      "he": "אזור זמן: %1$@",
+      "fr": "Fuseau horaire: %1$@",
+      "es": "Zona Horaria: %1$@",
+      "de": "Zeitzone: %1$@"
+    },
+    "location_has_changed": {
+      "en": "Location has been updated",
+      "he": "המיקום עודכן",
+      "fr": "L׳emplacement a été mis à jour",
+      "de": "Der Ort wurde aktualisiert"
+    },
+    "location_has_changed_dont": {
+      "en": "Don't show this message again",
+      "he": "אל תציג שוב את ההודעה הזאת",
+      "fr": "Ne plus afficher ce message",
+      "de": "Diese Meldung nicht mehr zeigen"
+    },
+    "location_has_changed_message": {
+      "en": "Please reload the app",
+      "he": "התפילות ייטענו מחדש",
+      "fr": "Merci de relancer l׳application",
+      "de": "Bitte laden Sie die App neu"
+    },
+    "location_name_unkown": {
+      "en": "Unknown Location",
+      "he": "מיקום לא ידוע",
+      "fr": "Lieu inconnu",
+      "es": "Ubicación desconocida",
+      "de": "Unbekannter Ort"
+    },
+    "location_summary": {
+      "en": "Jewish Times and calendar settings",
+      "he": "זמני היוֹם ולוח השנה",
+      "fr": "Paramètres du Temps Juif et du Calendrier",
+      "es": "Escoja su Ubicación y Controle los Zmanim",
+      "de": "Jüdische Zeiten und Kalender-Einstellungen"
+    },
+    "location_title": {
+      "en": "Zmanim Settings",
+      "he": "הגדרות מיקום וזמנים",
+      "fr": "Paramétrage des Horaires",
+      "es": "Preferencias por los Zmanim y Ubicación",
+      "de": "Smanim Einstellungen"
+    },
+    "locations_tab": {
+      "en": "Locations",
+      "he": "מיקומים",
+      "fr": "Emplacements",
+      "es": "Localizaciones",
+      "de": "Orte"
+    },
+    "login_email": {
+      "en": "Email",
+      "he": "דואר אלקטרוני",
+      "de": "Email"
+    },
+    "login_or": {
+      "en": "- OR -",
+      "he": "- או -",
+      "de": "- ODER -"
+    },
+    "login_password": {
+      "en": "Password",
+      "he": "סיסמה",
+      "de": "Passwort"
+    },
+    "login_title": {
+      "en": "Login",
+      "he": "התחברות",
+      "de": "Einloggen"
+    },
+    "logout": {
+      "en": "Logout",
+      "he": "צא מהחשבון",
+      "fr": "Quitter",
+      "de": "Ausloggen"
+    },
+    "long_tap": {
+      "en": "Long tap to switch to other parts",
+      "he": "לחץ לחיצה ארוכה לשינוי קטע",
+      "fr": "Appui long pour basculer sur d׳autres emplacements",
+      "de": "Gedrückt halten um zu anderen Teilen zu springen"
+    },
+    "look_for_moon": {
+      "en": "Briefly gaze upon the moon.",
+      "he": "הבט על הירח",
+      "fr": "Regardez brièvement la lune.",
+      "de": "Man betrachtet kurz den Mond."
+    },
+    "lulavBless": {
+      "en": "Blessing for Lulav",
+      "he": "ברכה על הלולב",
+      "fr": "Prière du loulav",
+      "es": "Bendición del Lulav",
+      "de": "Segenspruch für Lulav"
+    },
+    "maLachemTitle": {
+      "en": "Ma Lachem",
+      "he": "מה לכם",
+      "fr": "Ma Lachem",
+      "de": "Ma Lachem"
+    },
+    "maakeTitle": {
+      "en": "Upon building a protective railing around one’s roof or other dangerous area",
+      "he": "קביעת מעקה",
+      "fr": "En construisant une balustrade protectrice autour d׳un toit ou d׳une zone dangereuse",
+      "es": " Tras la construcción de una barandilla de protección alrededor de su techo u otro lugar peligroso ",
+      "de": "Über das Bauen eines Schutzgeländers um sein Dach oder gefährliche Stelle"
+    },
+    "maaseBereshitTitle": {
+      "en": "Upon seeing lightening",
+      "he": "בראיית ברק",
+      "fr": "Lorsque l׳on voit un éclair",
+      "es": "Al ver el Rayo",
+      "de": "Über das Sehen eines Blitzes"
+    },
+    "maaser": {
+      "en": "Tithes",
+      "he": "הפרשת תרומות ומעשרות",
+      "fr": "Dîme (Maaser)",
+      "de": "Die Zehntenabgabe"
+    },
+    "manOnly": {
+      "en": "Men say:",
+      "fr": "Les Hommes disent:",
+      "es": "El Hombre dice:",
+      "de": "Männer sagen:"
+    },
+    "manual": {
+      "en": "Manually",
+      "he": "הוכנס ידנית",
+      "fr": "Manuellement",
+      "es": "Manual",
+      "de": "Manuell"
+    },
+    "manual_summary": {
+      "en": "Choose Location",
+      "he": "בחר מיקום",
+      "fr": "Choisissez un Lieu",
+      "es": "Escoja Ubicación",
+      "de": "Ort auswählen"
+    },
+    "manual_title": {
+      "en": "Manual Location",
+      "he": "בחר מיקום",
+      "fr": "Localisation Manuelle",
+      "es": "Ubicación Manual",
+      "de": "Manueller Ort"
+    },
+    "maoz_zur_title": {
+      "en": "Maoz Zur",
+      "he": "מעוז צור",
+      "es": "Maoz Zur",
+      "de": "Maos Zur"
+    },
+    "mariv": {
+      "en": "Maariv",
+      "he": "מעריב",
+      "de": "Maariw"
+    },
+    "mazon": {
+      "en": "Birkat HaMazon",
+      "he": "ברכת המזון",
+      "fr": "Birkat HaMazon",
+      "es": "Birkat HaMazon",
+      "de": "Birkat HaMason"
+    },
+    "meen_shalosh": {
+      "en": "The Threefold Blessing",
+      "he": "מעין שלוש",
+      "fr": "Bénédictions après une Collation",
+      "es": "Bendición de las tres Especies",
+      "de": "Segenspruch nach einem Snack"
+    },
+    "menora": {
+      "en": "Menora",
+      "he": "למנצח בצורת המנורה",
+      "fr": "Ménora",
+      "es": "Menora",
+      "de": "Menora"
+    },
+    "message_box_hint": {
+      "en": "Write a message",
+      "he": "כתוב הודעה",
+      "fr": "Ecrire un message",
+      "de": "Schreibe eine Nachricht"
+    },
+    "message_received": {
+      "en": "New message from support",
+      "he": "הודעה חדשה מהתמיכה",
+      "fr": "Nouveau message du support",
+      "de": "Neue Nachricht vom Support"
+    },
+    "mezonotBlessTitle": {
+      "en": "Before eating anything made of wheat, barley, oats, rye, or spelt one should say:   ",
+      "he": " \nמזונות:   \n",
+      "fr": "\nAvant de mager un aliment à base de blé, orge, avoine, seigle, ou épeautre on dit:\n",
+      "es": " \nAntes de comer cualquier cosa hecha de trigo, cebada, avena, centeno o espelta, habría que decir:\n",
+      "de": "Bevor man etwas aus Weizen, Gerste, Hafer, Roggen oder Dinkel isst, sagt man:   "
+    },
+    "mezonotTitle": {
+      "en": "Mezonot",
+      "fr": "Mezonot",
+      "de": "Mehlspeisen"
+    },
+    "mezonot_instruction": {
+      "en": "For Mezzonot of Eretz Yisrael:",
+      "he": "על מזונות מישראל:",
+      "de": "für Mehlspeisen aus dem Land Israel:"
+    },
+    "mezuzaTitle": {
+      "en": "Before affixing a mezuzah",
+      "he": "קביעת מזוזה",
+      "fr": "Avant de poser une mézuzah",
+      "es": "Antes de colocar la Mezuza",
+      "de": "Vor dem Anbringen einer Mesusa"
+    },
+    "mgaDes": {
+      "en": "According to the Magen Avraham as calculated from dawn to nightfall.",
+      "fr": "Selon Magen Avraham, calculé du lever du soleil à son coucher.",
+      "es": "Según el Magen Avraham se calcula de la salida a la puesta del Sol.",
+      "de": "Nach der Meinung des Magen Awraham von Morgendämmerung bis Einbruch der Nacht berechnet."
+    },
+    "miSheanaTitle": {
+      "en": "Who Answered",
+      "he": "מי שענה",
+      "fr": "Celui qui Répond",
+      "de": "Der, der antwortete"
+    },
+    "milaPyutTitle": {
+      "en": "Pyut Before Mila",
+      "he": "פיוטים לפני המילה",
+      "fr": "Pyut Avant Mila",
+      "es": "Pyut antes de la Mila",
+      "de": "Piyut vor Mila"
+    },
+    "mila_title": {
+      "en": "On a Brit Mila Meal",
+      "fr": "Lors d׳un repas de Brit Mila",
+      "es": "On a Brit Mila Meal",
+      "de": "Bei einem Brit Mila Mahl"
+    },
+    "mimakimTitle": {
+      "en": "Out of the Depth",
+      "fr": "Je T’invoque, Ô Eternel",
+      "es": "Fuera de la Profundidad",
+      "de": "Aus der Tiefe"
+    },
+    "mincha": {
+      "en": "Mincha",
+      "he": "מנחה",
+      "fr": "Minha",
+      "es": "Minja",
+      "de": "Mincha"
+    },
+    "minchaBigZmanTitle": {
+      "en": "Earliest Mincha",
+      "fr": "Minha au plus tôt",
+      "es": "Minja Gedola",
+      "de": "Frühestes Mincha"
+    },
+    "minchaDes": {
+      "en": "%1$@\nOne can start praying Mincha",
+      "fr": "%1$@\nOn peut commencer Minha",
+      "es": "%1$@\nDe Ahora se puede decir Shajirt",
+      "de": "%1$@\nMan kann anfangen Mincha zu beten."
+    },
+    "mincha_zman_alert": {
+      "en": "Sunset was at %@",
+      "he": "שקיעה הייתה ב%@",
+      "fr": "Le coucher du soleil était ‡ %@",
+      "de": "Sonnenuntergang war um %@"
+    },
+    "mineiTitle": {
+      "en": "When preparing to smell or upon smelling fragrances that are (a) a blend of spices of different origins, or (b) of non-vegetable origins (e.g. synthetic perfumes),\nor (c) of undetermined origin:",
+      "he": "בהרחת דברים שלא ידוע מקורם, או שאין מקורם בהצומח או שהם ממינים מעורבים:",
+      "fr": "Lorsque l׳on se prépare à sentir ou lorsque l׳on sent le parfum provenant (a) d׳un mélange d׳épices de différentes origines, ou (b) d\\׳origine non végétale (ex. parfums synthétiques),\nou (c) d\\׳origine indéterminée:",
+      "es": " Cuando se prepare para oler o al oler fragancias que son (1) una mezcla de especias de diferentes orígenes, o (2) de los orígenes no vegetales (por ejemplo, perfumes sintéticos),\no (3), de origen indeterminado:",
+      "de": "Vor dem Riechen oder über das Riechen eines Duftes, das (a) eine Mischung aus Gewürzen verschiedenen Ursprungs ist, oder (b) eines nicht-pflanzlichen Ursprungs ist (z.B. synthetische Parfüme),\noder (c) eines unbestimmten Ursprungs ist:"
+    },
+    "minus": {
+      "es": "-"
+    },
+    "mitsvaBlessingTitle": {
+      "en": "The Blessings Over Mitzvot",
+      "he": "ברכות המצוות",
+      "fr": "Bénédictions pour les Mitzvot",
+      "es": "La Bendicion por las Mitzvot",
+      "de": "Segensprüche über Mitzwot"
+    },
+    "mizmorTodaTitle": {
+      "en": "Mizmor LeToda",
+      "fr": "Mizmor LeToda",
+      "es": "Mizmor LeToda",
+      "de": "Mismor LeToda"
+    },
+    "modaaTitle": {
+      "en": "Annnouncment",
+      "he": "מסירת מודעה",
+      "fr": "Annnouncment",
+      "es": "Annnouncment",
+      "de": "Annnouncment"
+    },
+    "mode": {
+      "en": "Choose Tefila Mode",
+      "he": "בחר מצב תפילה",
+      "fr": "Choisir le Mode de Tefila",
+      "es": "Escoja el modo de Rezo",
+      "de": "Wähle den Tefilla Modus"
+    },
+    "modeInstruction": {
+      "en": "As soon as you wake up, say",
+      "he": "מיד לאחר שקמת משנתך, אמור",
+      "fr": "Dès le lever, on dit:",
+      "es": "Al Despertar:",
+      "de": "Sobald man aufgewacht ist, sage man:"
+    },
+    "mode_pref": {
+      "en": "Choose Mode",
+      "he": "בחר מצב תפילה",
+      "fr": "Choisissez le Mode",
+      "es": "Modo",
+      "de": "Wähle Modus"
+    },
+    "mode_title": {
+      "en": "Mode Ani",
+      "fr": "Mode Ani",
+      "es": "Mode Ani",
+      "de": "Mode Ani"
+    },
+    "mode_values__0": {
+      "en": "0"
+    },
+    "mode_values__1": {
+      "en": "1"
+    },
+    "mode_values__2": {
+      "en": "2"
+    },
+    "modes__0": {
+      "en": "Normal Mode",
+      "he": "מצב רגיל",
+      "fr": "Mode Normal",
+      "es": "Normal Mode"
+    },
+    "modes__1": {
+      "en": "Yahid Mode",
+      "he": "מצב יחיד",
+      "fr": "Mode Seul",
+      "es": "Yahid Mode"
+    },
+    "modes__2": {
+      "en": "Chazan Mode",
+      "he": "מצב חזן",
+      "fr": "Mode Hazan",
+      "es": "Chazan Mode"
+    },
+    "modimDrabnanTitle": {
+      "en": "Modim D'Rabbanan",
+      "fr": "Modim D׳Rabbanan",
+      "es": "Modim D'Rabbanan",
+      "de": "Modim Derabbanan"
+    },
+    "more_apps": {
+      "en": "More applications by Karri Apps",
+      "he": "עוד אפליקציות מבית Karri Apps",
+      "fr": "Autres programmes de Karri Apps",
+      "es": "Mas Aplicaciones de Karri Apps",
+      "de": "Mehr Applikationen von Karri Apps"
+    },
+    "more_details": {
+      "en": "Details",
+      "he": "פרטים",
+      "fr": "Details",
+      "de": "Details"
+    },
+    "more_zmanim": {
+      "en": "More Zmanim",
+      "he": "עוד זמנים",
+      "fr": "Horaires Détaillés",
+      "de": "Mehr Smanim"
+    },
+    "moztash_title": {
+      "en": "End of Shabbat",
+      "fr": "Fin de Shabbat",
+      "es": "Al Terminar Shabbat",
+      "de": "Schabbat endet um:"
+    },
+    "mukaf_entries__0": {
+      "en": "14 Adar",
+      "he": "יד אדר"
+    },
+    "mukaf_entries__1": {
+      "en": "15 Adar (Shushan)",
+      "he": "טו אדר (שושן פורים)"
+    },
+    "mukaf_entries__2": {
+      "en": "Both",
+      "he": "שניהם"
+    },
+    "mukaf_title": {
+      "en": "Purim Date",
+      "he": "אני חוגג פורים ב",
+      "fr": "Date de Pourim",
+      "es": "Celebro Shushan Purim",
+      "de": "Purim Datum"
+    },
+    "mussaf": {
+      "en": "Mussaf",
+      "fr": "Moussaf",
+      "es": "Mussaf",
+      "de": "Mussaf"
+    },
+    "mussafBlessTitle": {
+      "en": "The Day's Blessing",
+      "fr": "Bénédiction du Jour",
+      "es": "Bendición del Día",
+      "de": "Der Segen für den Tag"
+    },
+    "must_update": {
+      "en": "The app you are using is not supported any more, please navigate to the store for update",
+      "he": "הגרסה שברשותך לא נתמכת יותר, אנא עבור לחנות כדי להוריד גרסה חדשה",
+      "fr": "L׳application que vous utilisez n׳est plus maintenue, merci d׳aller sur le Play Store pour une mise à jour",
+      "de": "Die App, die Sie nutzen, wird nicht mehr unterstützt, bitte begeben Sie sich in den Store für ein Update"
+    },
+    "nachemTitle": {
+      "en": "Nachem",
+      "he": "נחם",
+      "fr": "Nachem",
+      "de": "Nachem"
+    },
+    "nachem_pref": {
+      "en": "Show Nachem at all prayers",
+      "he": "הראה נחם בכל התפילות",
+      "fr": "Afficher Nachem dans toutes les prières",
+      "de": "Zeige Nachem bei allen Gebeten"
+    },
+    "navigation_drawer_close": {
+      "en": "Close navigation drawer",
+      "de": "Navigationskasten schließen"
+    },
+    "navigation_drawer_open": {
+      "en": "Open navigation drawer",
+      "de": "Navigationskasten öffnen"
+    },
+    "nechamaTitle": {
+      "en": "Consolation",
+      "de": "Trost"
+    },
+    "nechama_title": {
+      "en": "Redemption",
+      "fr": "Rédemption",
+      "es": "Redención",
+      "de": "Erlösung"
+    },
+    "nedarimTitle": {
+      "en": "Annullment of Vows",
+      "he": "התרת נדרים",
+      "fr": "Annullment of Vows",
+      "es": "Annullment of Vows",
+      "de": "Annullment of Vows"
+    },
+    "netilaBlessTitle": {
+      "en": "Before eating a bread, one shall wash his hands and say:  ",
+      "he": "\nנטילת ידיים:  \n",
+      "fr": "\nAvant de manger du pain, on se lave les mains et on dit:\n",
+      "es": "\nAntes de Comer pan, Se lava las manos y bendice:  \n",
+      "de": "Bevor man Brot isst, wäscht man seine Hände und sagt:  "
+    },
+    "netilaInstruction": {
+      "en": "After one has done with his needs and washed his hands, he should say",
+      "he": "לאחר עשיית צרכיך, אמור:",
+      "fr": "Après avoir fait ses besoins et s׳être lavé les mains, on dit:",
+      "es": "Después de entrar al baño y hacer netila",
+      "de": "Nachdem man seine Notdurft verrichtet und die Hände gewaschen hat, sagt man"
+    },
+    "netilaTitle": {
+      "en": "Washing Hands",
+      "fr": "Prière après s’être lavé les Mains",
+      "es": "Lavado de Manos",
+      "de": "Waschen der Hände"
+    },
+    "new_version_title": {
+      "en": "New Version Available",
+      "he": "יש גרסה חדשה!",
+      "fr": "Nouvelle Version Disponible",
+      "de": "Neue Version verfügbar"
+    },
+    "next": {
+      "en": "Next",
+      "he": "הבא",
+      "fr": "Suivant",
+      "es": "Siguiente",
+      "de": "Nächste"
+    },
+    "nightfallGraDes": {
+      "en": "According to GRA. Calculated as 18 Minutes as degrees, after sunset.\nOne can start say Shma of the Night",
+      "fr": "Selon GRA. Calculé à 18 Minutes de degrés, après le coucher du soleil.\nOn peut commencer le Shéma de la Nuit",
+      "es": "Según el GRA. Calculado 18 Minutos grados, despues de la Puesta del Sol.\nAhora Se puede decir el Shma de la Noche",
+      "de": "Nach der Meinung des GRA. Berechnet als 18 Minuten als Grad, nach Sonnenuntergang.\nMan kann anfangen Schma für die Nacht zu sagen."
+    },
+    "nightfallIshDes": {
+      "en": "According to Chazon Ish. Calculated as 40 Minutes after sunset.\nOne can start say Shma of the Night",
+      "fr": "Selon Chazon Ish. Calculé à 40 Minutes après le coucher du soleil.\nOn peut commencer le Shéma de la Nuit",
+      "es": "Según el Jazon Ish. Calculado 40 Minutos grados, despues de la Puesta del Sol.\nAhora Se puede decir el Shma de la Noche",
+      "de": "Nach der Meinung des Chason Isch. Berechnet als 40 Minuten nach Sonnenuntergang.\nMan kann anfangen Schma für die Nacht zu sagen."
+    },
+    "nightfallRabbiOvadiaDes": {
+      "en": "According to Hacham Ovadia. Calculated as 13.5 Minutes as degrees, after sunset.\nOne can start say Shma of the Night",
+      "fr": "Selon Hacham Ovadia. Calculé comme 13.5 Minutes de Degrés, après le coucher du soleil.\nOn peut commencer le Shéma de la Nuit",
+      "es": "Según Rab Ovadia. Calculado 13.5 Minutos grados, después de la puesta del Sol.\nAhora Se puede decir el Shma de la Noche",
+      "de": "Nach der Meinung des Hacham Ovadia. Berechnet als 13,5 Minuten als Grad, nach Sonnenuntergang.\nMan kann anfangen Schma für die Nacht zu sagen."
+    },
+    "nightfallRabenuTamDes": {
+      "en": "According to Rabenu Tam. Calculated as fixed 72 minutes after sunset",
+      "fr": "Selon Rabenu Tam. Calculé en fixant à 72 minutes après le coucher du soleil",
+      "es": "Según elRabenu Tam. Calculado 72 minutos Ajustados Después de la puesta del Sol",
+      "de": "Nach Rabenu Tam. Berechnet als fixe 72 Minuten nach Sonnenuntergang."
+    },
+    "nightfallTaniaDes": {
+      "en": "According to Ba'al Hatania. Calculated as 24 Minutes as degrees, after sunset.\nOne can start say Shma of the Night",
+      "fr": "Selon Ba׳al Hatania. Calculé à 24 Minutes de degrés, après le coucher du soleil.\nOn peut commencer le Shéma de la Nuit",
+      "es": "Segun el Ba'al Hatania. Calculado 24 Minutos grados, después de la Puesta del Sol.\nAhora Se puede decir el Shma de la Noche",
+      "de": "Nach der Meinung des Ba'al HaTania. Berechnet als 24 Minuten als Grad, nach Sonnenuntergang.\nMan kann anfangen Schma für die Nacht zu sagen."
+    },
+    "nishmatTitle": {
+      "en": "Nishmat",
+      "he": "נשמת",
+      "de": "Nischmat"
+    },
+    "no": {
+      "en": "No",
+      "he": "לא",
+      "fr": "Non",
+      "es": "No",
+      "de": "Nein"
+    },
+    "no_gps": {
+      "en": "Hi \n I could not determine your location, please choose one from the list. \n Thanks",
+      "he": "הי \n אני לא מצליח למצוא את המיקום שלך, אנא בחר מיקום באופן ידני מהרשימה. \n תודה.",
+      "fr": "Bienvenue\n Je ne peux pas déterminer votre emplacement, choisissez en un dans la liste. \n Merci",
+      "es": "Hola \n No puedo Determinar tu Ubicación, Por Favor Escoge una de la Lista. \n Gracias",
+      "de": "Hi \n Dein Aufenthaltsort konnte nicht ausfindig gemacht werden, bitte aus der Liste wöhlen. \n Danke"
+    },
+    "no_gps_title": {
+      "en": "Location not found",
+      "he": "לא נמצא מיקום",
+      "fr": "Emplacement non trouvé",
+      "es": "Ubicación no Encontrada",
+      "de": "Ort nicht gefunden"
+    },
+    "no_kohen": {
+      "en": "If there are no Kohanim:",
+      "fr": "S’il n’y a pas de Cohen:",
+      "es": "Si No hay Cohanim:",
+      "de": "Wenn keine Kohanim anwesend sind:"
+    },
+    "no_location_selected": {
+      "en": "No Selected Location",
+      "he": "לא נבחר מיקום"
+    },
+    "no_location_selected_description": {
+      "en": "Please select a location to display accurate prayers and times",
+      "he": "יש לבחור מיקום להצגה נכונה של התפילות והזמנים"
+    },
+    "no_notifications_description": {
+      "en": "Tap the + button to create your first notification reminder",
+      "he": "לחץ על כפתור + כדי ליצור את התזכורת הראשונה שלך",
+      "fr": "Appuyez sur le bouton + pour créer votre premier rappel",
+      "es": "Toca el botón + para crear tu primer recordatorio",
+      "de": "Tippen Sie auf die + Taste, um Ihre erste Erinnerung zu erstellen"
+    },
+    "no_notifications_title": {
+      "en": "No Notifications Yet",
+      "he": "אין התראות עדיין",
+      "fr": "Pas encore de notifications",
+      "es": "Sin notificaciones todavía",
+      "de": "Noch keine Benachrichtigungen"
+    },
+    "not_available": {
+      "en": "n/a",
+      "he": "לא ידוע",
+      "fr": "n/a",
+      "de": "n/v"
+    },
+    "not_found": {
+      "en": "Sorry, your location could not be found",
+      "he": "מצטערים, המיקום לא נמצא",
+      "fr": "Désolé, nous n׳avons pas trouvé votre emplacement.",
+      "es": "Lo Sentimos, Su Ubicación no Fue Establecida",
+      "de": "Entschuldigung, Ihr Ort konnte nicht gefunden werden"
+    },
+    "not_now": {
+      "en": "Not Now",
+      "he": "לא עכשיו",
+      "fr": "Pas encore",
+      "de": "Nicht jetzt"
+    },
+    "notification_time_label": {
+      "en": "Reminder Time",
+      "he": "שעת התזכורת",
+      "fr": "Heure du rappel",
+      "es": "Hora del recordatorio",
+      "de": "Erinnerungszeit"
+    },
+    "notification_title": {
+      "en": "Notifications",
+      "he": "התראות",
+      "fr": "Notifications",
+      "es": "Notificaciones",
+      "de": "Benachrichtigungen"
+    },
+    "notification_type_explanation": {
+      "en": "Choose what type of reminder you want to receive",
+      "he": "בחר איזה סוג תזכורת ברצונך לקבל",
+      "fr": "Choisissez quel type de rappel vous souhaitez recevoir",
+      "es": "Elige qué tipo de recordatorio deseas recibir",
+      "de": "Wählen Sie, welche Art von Erinnerung Sie erhalten möchten"
+    },
+    "notification_type_label": {
+      "en": "Alert Type",
+      "he": "סוג התראה",
+      "fr": "Type d'alerte",
+      "es": "Tipo de alerta",
+      "de": "Benachrichtigungsart"
+    },
+    "notification_type_omer": {
+      "en": "Sefirat Haomer",
+      "he": "ספירת העומר",
+      "fr": "Sefirat Haomer",
+      "es": "Sefirat Haomer",
+      "de": "Sefirat Haomer"
+    },
+    "notification_type_zman": {
+      "en": "Halachic Times",
+      "he": "זמנים הלכתיים",
+      "fr": "Heures Halakhiques",
+      "es": "Horarios Halájicos",
+      "de": "Halachische Zeiten"
+    },
+    "notifications_screen_description": {
+      "en": "Manage your daily reminders for prayers and important times",
+      "he": "נהל את התזכורות היומיות לתפילות וזמנים חשובים",
+      "fr": "Gérez vos rappels quotidiens pour les prières et les moments importants",
+      "es": "Gestiona tus recordatorios diarios para oraciones y tiempos importantes",
+      "de": "Verwalten Sie Ihre täglichen Erinnerungen für Gebete und wichtige Zeiten"
+    },
+    "notifications_screen_title": {
+      "en": "Your Reminders",
+      "he": "התזכורות שלך",
+      "fr": "Vos rappels",
+      "es": "Tus recordatorios",
+      "de": "Ihre Erinnerungen"
+    },
+    "number_rtl": {
+      "en": "Also reverse numbers",
+      "he": "הפוך גם מספרים",
+      "fr": "Inverse aussi les nombres",
+      "es": "También los números",
+      "de": "Nummern auch vertauschen"
+    },
+    "nusach__0": {
+      "en": "Edot HaMizrach",
+      "he": "עדות המזרח",
+      "fr": "Sefarade (E.HaMizr.)",
+      "es": "Edot HaMizrach"
+    },
+    "nusach__1": {
+      "en": "Sfarad",
+      "he": "ספרד",
+      "fr": "Sfarad",
+      "es": "Sfarad"
+    },
+    "nusach__2": {
+      "en": "Ashkenaz",
+      "he": "אשכנז",
+      "fr": "Ashkenaz",
+      "es": "Ashkenaz"
+    },
+    "nusach__3": {
+      "en": "Ari (Chabad)",
+      "he": "אר\\\"י (חב\\\"ד)",
+      "fr": "Ari (Chabad)",
+      "es": "Ari (Chabad)"
+    },
+    "nusach_pref": {
+      "en": "Choose Nusach",
+      "he": "בחר נוסח",
+      "fr": "Choisissez le Rite",
+      "es": "Nusaj",
+      "de": "Wähle Nussach"
+    },
+    "nusach_values__0": {
+      "en": "0"
+    },
+    "nusach_values__1": {
+      "en": "1"
+    },
+    "nusach_values__2": {
+      "en": "2"
+    },
+    "nusach_values__3": {
+      "en": "3"
+    },
+    "odHayomTitle": {
+      "en": "Od Hayom",
+      "fr": "Od Hayom",
+      "es": "Od Hayom",
+      "de": "Od Hajom"
+    },
+    "ok": {
+      "en": "OK",
+      "he": "בסדר",
+      "fr": "OK",
+      "es": "OK",
+      "de": "OK"
+    },
+    "olMalchutTitle": {
+      "en": "Receiving God's Kingdom",
+      "he": "קבלת מלכות שמים",
+      "fr": "Recevoir le Royaume du D.ieu",
+      "de": "Erhaltung des G-ttes Königreiches"
+    },
+    "olamimBlessDesc": {
+      "en": "After eating anything except for Mezzonot, wine, The Seven Fruits of Eretz Yisrael and bread one should say:  ",
+      "he": "אחרי אכילת מאכל שאיננו מזונות, גפן או שבעת המינים יש לברך:",
+      "fr": "\nAprès avoir mangé un aliment autre que Mezzonot, du vin, un des Sept Fruits d׳Eretz Israël ou du pain on dit:\n",
+      "es": "  \nDespues de Ingerir cualquier alimento Excepto Mezzonot, Vino o Las 7 Especies de Israel, debe decir: \n",
+      "de": "Nachdem man etwas außer Mesonot, Wein, Die Sieben Früchte Eretz Israels oder Brot gegessen hat, sagt man:  "
+    },
+    "olamimBlessTitle": {
+      "en": "Borei Nefashos",
+      "he": "בורא נפשות",
+      "fr": "Borei Nefashot",
+      "es": "Bore Nefashot",
+      "de": "Bore Nefaschot"
+    },
+    "omer_day": {
+      "en": "Today is %1$d days",
+      "fr": "Aujourd'hui est le %1$dème jour",
+      "de": "Heute ist %1$d Tag"
+    },
+    "omer_day_end": {
+      "en": " of the Omer",
+      "fr": " du Omer.",
+      "de": " des Omer"
+    },
+    "omer_days_in_week": {
+      "en": " and %1$d days",
+      "fr": " et %1$d jour(s)",
+      "de": " und %1$d Tage"
+    },
+    "omer_time_explanation": {
+      "en": "Set the time you want to be reminded to count the Omer each night",
+      "he": "קבע את השעה שבה תרצה לקבל תזכורת לספור את העומר בכל לילה",
+      "fr": "Définissez l'heure à laquelle vous souhaitez être rappelé de compter le Omer chaque soir",
+      "es": "Establece la hora en que deseas recibir el recordatorio para contar el Omer cada noche",
+      "de": "Stellen Sie die Zeit ein, zu der Sie jede Nacht ans Omer-Zählen erinnert werden möchten"
+    },
+    "omer_title": {
+      "en": "The Counting of the Omer",
+      "fr": "Compte du Omer",
+      "es": "El Conteo del Omer",
+      "de": "Zählen des Omer"
+    },
+    "omer_type_description": {
+      "en": "Daily reminder during the Omer counting period",
+      "he": "תזכורת יומית בתקופת ספירת העומר",
+      "fr": "Rappel quotidien pendant la période du compte du Omer",
+      "es": "Recordatorio diario durante el período del conteo del Omer",
+      "de": "Tägliche Erinnerung während der Omer-Zählzeit"
+    },
+    "omer_week": {
+      "en": ". Which is %1$d weeks",
+      "fr": ". Ce qui représente %1$d semaine(s)",
+      "de": ". Das ist%1$d Wochen"
+    },
+    "opening": {
+      "en": "Opening",
+      "fr": "Ouverture",
+      "es": "Apertura",
+      "de": "Eröffnung"
+    },
+    "option_chazan": {
+      "en": "Chazan Mode",
+      "he": "מצב חזן",
+      "fr": "Mode Hazan",
+      "de": "Chasan Modus"
+    },
+    "option_normal": {
+      "en": "Normal Mode",
+      "he": "מצב רגיל",
+      "fr": "Mode Normal",
+      "de": "Normaler Modus"
+    },
+    "option_yahid": {
+      "en": "Yahid Mode",
+      "he": "מצב יחיד",
+      "fr": "Mode Seul",
+      "de": "Jahid Modus"
+    },
+    "options": {
+      "en": "Options",
+      "he": "אפשרויות",
+      "fr": "Options",
+      "de": "Optionen"
+    },
+    "options_avel": {
+      "en": "Mourning House",
+      "he": "בית אבל",
+      "fr": "Maison en Deuil",
+      "de": "Trauerhaus"
+    },
+    "options_brit": {
+      "en": "On Brit",
+      "he": "בסעודת ברית",
+      "fr": "Pendant une Brit",
+      "de": "Beim Brit"
+    },
+    "options_hatan": {
+      "en": "On Sheva Brachot",
+      "he": "בשבע ברכות",
+      "fr": "Pendant les Sheva Brakhot",
+      "de": "Bei Schewa Brachot"
+    },
+    "options_tahanun": {
+      "en": "No Tahanun",
+      "he": "ללא תחנון",
+      "fr": "Sans Tahanun",
+      "de": "Kein Tachanun"
+    },
+    "page_scroll__0": {
+      "en": "Slow",
+      "he": "איטי",
+      "fr": "Lent",
+      "es": "Slow"
+    },
+    "page_scroll__1": {
+      "en": "Medium",
+      "he": "בינוני",
+      "fr": "Moyen",
+      "es": "Medium"
+    },
+    "page_scroll__2": {
+      "en": "Fast",
+      "he": "מהיר",
+      "fr": "Rapide",
+      "es": "Fast"
+    },
+    "page_scroll_values__0": {
+      "en": "180"
+    },
+    "page_scroll_values__1": {
+      "en": "140"
+    },
+    "page_scroll_values__2": {
+      "en": "100"
+    },
+    "pasuk": {
+      "en": "Enter Your Pasuk",
+      "he": "הכנס פסוק",
+      "fr": "Saisissez votre Passouk",
+      "es": "Inserte su Pasuk",
+      "de": "Gib deinen Passuk ein"
+    },
+    "pasuk_summery": {
+      "en": "Set the Pasuk to say before Yihyu LeRatzon",
+      "he": "הכנס פסוק אותו אתה נוהג לומר לפני יהיו לרצון",
+      "fr": "Saisissez le Passouk que vous dîtes avant Yihyu LeRatzon",
+      "es": "Inserte su Pasuk a recitar antes del Yihyu LeRatzon",
+      "de": "Bestimme den Passuk, der vor Jihju LeRatzon gesagt wird"
+    },
+    "patachTitle": {
+      "en": "Patach Eliahu",
+      "fr": "Patach Eliahu",
+      "es": "Pataj Eliahu",
+      "de": "Patach Eliahu"
+    },
+    "pause": {
+      "en": "Pause Auto Scrolling",
+      "he": "השהה גלילה",
+      "fr": "Arrêter le défilement automatique",
+      "de": "Auto-Scrollen pausieren"
+    },
+    "perotSmellTitle": {
+      "en": "Upon smelling fragrant edible fruit or nuts:",
+      "he": "בהרחת ריח טוֹב מדבר שניתן לאכלו (כגון אתרוג):",
+      "fr": "Lorsque l׳on sent le parfum d׳un fruit comestible ou de noix:",
+      "es": " Al oler fragancias provenientes de fruta comestible o frutos secos:",
+      "de": "Über wohlriechende essbare Früchte oder Nüsse:"
+    },
+    "pizmon": {
+      "en": "Pizmon ",
+      "he": "פזמון ",
+      "fr": "Pizmon ",
+      "de": "Pismon "
+    },
+    "plagDes": {
+      "en": "%1$@\nOne can start praying Arvit according to Rabbi Yehuda",
+      "fr": "%1$@\nOn peut commencer Arvit selon Rabbi Yehuda",
+      "es": "%1$@\nDe Ahora se puede decir Shajirt Según\nRabi Yehuda",
+      "de": "%1$@\nMan kann anfangen Arwit zu beten (nach Rabbi Jehuda)."
+    },
+    "plagZmanTitle": {
+      "en": "Plag HaMincha",
+      "fr": "Plag HaMinha",
+      "es": "Plag HaMinja",
+      "de": "Plag HaMincha"
+    },
+    "please_wait": {
+      "en": "Please wait",
+      "fr": "Patientez",
+      "es": "Un momento por favor",
+      "de": "Bitte warten"
+    },
+    "plus": {
+      "es": "+"
+    },
+    "portrait_title": {
+      "en": "Keep Portrait",
+      "he": "שמור במצב מאונך",
+      "fr": "Conserver en mode Portrait",
+      "de": "Bild behalten"
+    },
+    "pref_line_spacing": {
+      "en": "Line Spacing",
+      "he": "ריווח שורות",
+      "fr": "Ligne de séparation",
+      "de": "Zeilenabstand"
+    },
+    "privacy_policy": {
+      "en": "By creating account you agree to our <a href=\"http://admin-karriapps.rhcloud.com/public/privacy_policy\">Privacy Policy</a>",
+      "he": "ביצירת חשבון אתה מסכים להצהרת הפרטיות שלנו",
+      "de": "Mit dem Erstellen eines Accounts sind Sie mit unseren Datenschutzbestimmungen <a href=\"http://admin-karriapps.rhcloud.com/public/privacy_policy\">einverstanden</a>"
+    },
+    "privacy_policy_title": {
+      "en": "Privacy Policy",
+      "he": "הצהרת פרטיות",
+      "fr": "Politique de Confidentialité",
+      "de": "Datenschutzbestimmungen"
+    },
+    "privacy_policy_url": {
+      "en": "http://admin-karriapps.rhcloud.com/public/privacy_policy",
+      "de": "http://admin-karriapps.rhcloud.com/public/privacy_policy"
+    },
+    "promotion": {
+      "en": "Smart Siddur Pro",
+      "he": "הסידור החכם - גרסה מלאה",
+      "fr": "Version pro seulement",
+      "es": "Version Pro Únicamente",
+      "de": "Smart Siddur Pro"
+    },
+    "promotion_rights": {
+      "en": "Chajm Guski",
+      "fr": "Chajm Guski",
+      "de": "Chajm Guski"
+    },
+    "prompt_email": {
+      "en": "Email",
+      "he": "דואר אלקטרוני",
+      "fr": "Email",
+      "de": "Email"
+    },
+    "prompt_password": {
+      "en": "Password (optional)",
+      "he": "סיסמה (לא חובה)",
+      "fr": "Mot de passe (optionnel)",
+      "de": "Passwort (optional)"
+    },
+    "psukimBeforMazon": {
+      "en": "Psalms Before Zimun",
+      "fr": "Psaumes Avant Zimoun",
+      "es": "Psalms Before Zimun",
+      "de": "Psalmen vor dem Simun"
+    },
+    "pticha": {
+      "en": "Pticha ",
+      "he": "פתיחה ",
+      "fr": "Pticha ",
+      "de": "Pticha "
+    },
+    "ptihaTitle": {
+      "en": "Opening the Ark",
+      "fr": "Ouverture de l’Arche",
+      "es": "Al Abrir el Ejal",
+      "de": "Öffnen des Aron HaKodesch"
+    },
+    "purchase_date": {
+      "en": "Purchase Date (DD/MM/YYYY)",
+      "he": "תאריך הזמנה )DD/MM/YYYY(",
+      "de": "Kaufdatum (TT/MM/JJJJ)"
+    },
+    "purchase_help": {
+      "en": "Contact us for more information and help",
+      "he": "צור קשר לקבלת מידע ועזרה",
+      "de": "Kontaktieren Sie uns für weitere Informationen und Hilfe"
+    },
+    "purchase_not_found": {
+      "en": "Purchase Not Found",
+      "he": "רכישה לא נמצאה",
+      "de": "Kauf nicht gefunden"
+    },
+    "purchase_order_no": {
+      "en": "Order Number",
+      "he": "מספר הזמנה",
+      "de": "Bestellnummer"
+    },
+    "purchase_promotion": {
+      "en": "\n        \n        &#149; Get full access to all prayers<br/><br/>\n        &#149; Unlock full Hebrew calendar and daily times<br/><br/>\n        &#149; Get full control on your Siddur settings<br/><br/>\n        &#149; Support the developer :)\n        \n    ",
+      "he": "\n        \n        &#149; קבל גישה מלאה לכל התפילות בסידור<br/><br/>\n        &#149; קבל גישה ללוח שנה עברי מלא וזמני היוֹם<br/><br/>\n        &#149; קבל שליטה מלאה בכל אפשרויות הסידור<br/><br/>\n        &#149; תמוך במפתח :)\n        \n    ",
+      "fr": "\n        \n        &#149; Obtenir un accès complet à toutes les prières<br/><br/>\n        &#149; DÈbloquer le calendrier hébraïque complet et les horaires journaliers<br/><br/>\n        &#149; Obtenir un contrôle total des paramètres de votre Siddur<br/><br/>\n        &#149; Soutenir le développeur :)\n        \n    ",
+      "de": "\n        \n        &#149; Erhalte vollen Zugang zu allen Gebeten<br/><br/>\n        &#149; Entsperre den vollen hebräischen Kalender und tägliche Zeiten<br/><br/>\n        &#149; Erhalte die volle Kotrolle in den Siddur Einstellungen<br/><br/>\n        &#149; Unterstütze den Entwickler :)\n        \n    "
+    },
+    "purchase_title": {
+      "en": "Unlock",
+      "he": "שדרג",
+      "de": "Freischalten"
+    },
+    "purim_mode_promt": {
+      "en": "Celebrating Purim Shushan? Set it in the settings",
+      "he": "חוגג פורים שושן? קבע בהגדרות",
+      "de": "Feierst du Schuschan Purim? Markiere das in den Einstellungen"
+    },
+    "pyutTitle": {
+      "en": "Praises",
+      "fr": "Praises",
+      "es": "Alabanzas",
+      "de": "Lobpreisung"
+    },
+    "rabenuTam": {
+      "en": "Rabenu Tam",
+      "he": "רבנו תם",
+      "de": "Rabenu Tam"
+    },
+    "rahaman_title": {
+      "en": "Prayers",
+      "fr": "Prières",
+      "es": "Prayers",
+      "de": "Gebete"
+    },
+    "rahumTitle": {
+      "en": "Merciful",
+      "he": "רחום וחנון",
+      "fr": "Misécordieux",
+      "de": "Barmherzig"
+    },
+    "rainbowBlessTitle": {
+      "en": "Upon seeing a rainbow in the sky",
+      "he": "בראיית הקשת בענן",
+      "fr": "Lorsque l׳on voit un arc en ciel",
+      "es": " Al ver un arco iris en el cielo ",
+      "de": "Über das Sehen eines Regenbogens am Himmel"
+    },
+    "regiser_btn": {
+      "en": "Register",
+      "he": "הירשם",
+      "de": "Registrieren"
+    },
+    "register_fname": {
+      "en": "First Name",
+      "he": "שם פרטי",
+      "de": "Vorname"
+    },
+    "register_lname": {
+      "en": "Last Name",
+      "he": "שם משפחה",
+      "de": "Nachname"
+    },
+    "register_title": {
+      "en": "Create New Account",
+      "he": "צור חשבון",
+      "de": "Neuen Account erstellen"
+    },
+    "remember_this_option": {
+      "en": "Remember this option",
+      "he": "זכור את בחירתי",
+      "fr": "Se souvenir de mon choix",
+      "es": "Recuerda esta opción",
+      "de": "Diese Option merken"
+    },
+    "reminders": {
+      "en": "Reminders",
+      "he": "תזכורות",
+      "fr": "Rappels",
+      "de": "Erinnerungen"
+    },
+    "remove": {
+      "en": "Remove",
+      "he": "הסר",
+      "fr": "Retirer",
+      "de": "Entfernen"
+    },
+    "repeat": {
+      "en": "Repeat",
+      "he": "וחוזר",
+      "fr": "Bis",
+      "es": "Repita",
+      "de": "Wiederhole"
+    },
+    "report_bug": {
+      "en": "Report a Bug",
+      "he": "דווח על בעיה",
+      "fr": "Signaler un Bug",
+      "es": "Rreporte un bug",
+      "de": "Melde einen Fehler"
+    },
+    "ribonOlamimTitle": {
+      "en": "Ribon HaOlamim",
+      "he": "ריבון העולמים",
+      "de": "Ribon HaOlamim"
+    },
+    "rtl": {
+      "en": "RTL Fix",
+      "he": "תיקון יישור לימין",
+      "fr": "Correctif écriture de droite à gauche",
+      "es": "Ajuste RTL",
+      "de": "RTL Fix"
+    },
+    "rtl_summery": {
+      "en": "Check - if your device reverse the Hebrew text",
+      "fr": "Cocher - si votre appareil inverse le texte en hébreu",
+      "es": "Señale si su equipo invierte el texto en Hebreo",
+      "de": "Überprüfen Sie, ob Ihr Gerät den Hebräischen Text umkehrt"
+    },
+    "save": {
+      "en": "save",
+      "he": "שמור",
+      "fr": "sauvegarder",
+      "de": "speichern"
+    },
+    "saved_locations": {
+      "en": "Saved Locations",
+      "he": "מיקומים שמורים",
+      "fr": "Localisations Sauvegardées",
+      "de": "Gespeicherte Orte"
+    },
+    "scroll": {
+      "en": "Auto Scroll",
+      "he": "גלול תפילה",
+      "fr": "Défilement Automatique",
+      "es": "Bajar Automáticamente",
+      "de": "Auto Scroll"
+    },
+    "scroll_adjust_help_text": {
+      "en": "Use volume buttons to adjust scroll speed",
+      "fr": "Utilisez les boutons de volume pour ajuster la vitesse de défilement",
+      "de": "Benutze die Lautstärketasten um die Scroll-Geschwindigkeit einzustellen"
+    },
+    "scroll_option": {
+      "en": "Auto Scroll",
+      "he": "גלול אוטומטית",
+      "fr": "Défilement Automatique",
+      "es": "Bajar Automáticamente",
+      "de": "Auto Scroll"
+    },
+    "scroll_summery": {
+      "en": "Choose to auto scroll Tefila",
+      "he": "בחר האם ברצונך שהתפילה תגלל אוטומטית",
+      "fr": "Choisissez le Défilement automatique de la Tefilah",
+      "es": " Bajar Automáticamente en la Tefila",
+      "de": "Wähle Auto Scroll zur Tefilla"
+    },
+    "search_help": {
+      "en": "Please enter your location in the search box",
+      "he": "אנא הכנס את מיקומך בתיבת החיפוש",
+      "fr": "Merci d׳entrer votre emplacement dans le champ de recherche",
+      "de": "Bitte geben Sie Ihren Ort im Suchfeld ein"
+    },
+    "search_location": {
+      "en": "Type a name of a city",
+      "he": "הזן עיר לחיפוש באנגלית",
+      "fr": "Saisir un nom ou un code postal",
+      "es": "Escriba la Ubicación o C.P.",
+      "de": "Gib den Namen eines Ortes"
+    },
+    "searching_for_location": {
+      "en": "Locating your current location",
+      "he": "בדוק מיקום אוטומטי"
+    },
+    "searching_for_location_message": {
+      "en": "Enabling this will activate automatic location updates, ensuring that your app consistently checks and updates your current location whenever you open it.",
+      "he": "אפשר בדיקת מיקום אוטומטית בכל כניסה חדשה לאפליקציה"
+    },
+    "sefira_warning": {
+      "en": "The Siddur detects your location as %1$@, and sunset as %2$@. \nTherefor it determines the Hebrew date as %3$@.\n\nDoes that make sense?",
+      "he": "הסידור זיהה את מיקומך ב%1$@, ואת השקיעה ל %2$@. \nולכן קבע את התאריך העברי ל%3$@.\n\nזה נשמע בסדר?",
+      "fr": "Le Siddour détecte votre position à %1$@, et le coucher du soleil à %2$@. \nEn conséquence, il détermine la date hébraïque comme étant %3$@.\n\nEtes vous d\\׳accord?",
+      "es": "The Siddur detects your location as %1$@, and sunset as %2$@. \nTherefor it determines the Hebrew date as %3$@.\n\nDoes that make sense?",
+      "de": "Der Siddur hat Ihren Ort als %1$@ erkannt, und Sonnenuntergang als %2$@. \nDeshalb wird das hebräische Datum als %3$@ definiert.\n\nMacht das Sinn?"
+    },
+    "send_btn": {
+      "en": "Send",
+      "he": "שלח",
+      "fr": "Envoi",
+      "de": "Senden"
+    },
+    "send_mail_in": {
+      "en": "Send mail using:",
+      "he": "שלח את האימייל על ידי",
+      "fr": "Envoyer le mail en utilisant:",
+      "es": "Enviar Usando:",
+      "de": "Sende unter folgenden Email:"
+    },
+    "set": {
+      "en": "Set",
+      "he": "קבע",
+      "fr": "Paramétrer",
+      "de": "Einstellen"
+    },
+    "set_location_message": {
+      "en": "Set %@ as your current location?",
+      "he": "לקבוע את %@ כמיקום הנוכחי שלך?"
+    },
+    "settings": {
+      "en": "Settings",
+      "he": "הגדרות",
+      "fr": "Paramètres",
+      "es": "Ajustes",
+      "de": "Einstellungen"
+    },
+    "sgulaAlMitaSfarad": {
+      "en": "It is a Segula to say these four Psalms",
+      "he": "סגולה לומר אלו ארבעה מזמורים לפני השינה",
+      "es": "Es una buena Segula recitar estos Salmos",
+      "de": "Es ist eine Segula diese vier Psalmen zu sagen"
+    },
+    "shabbatEndZmanTitle": {
+      "en": "Shabbat or Hag Ends",
+      "fr": "Fin de Shabbat ou de Fêtes",
+      "es": "Termino de Shabat o Yom Tov",
+      "de": "Schabbat oder Chag endet"
+    },
+    "shabbatEnd__0": {
+      "en": "20 Minutes after Sunset",
+      "he": "20 דקות לאחר השקיעה",
+      "fr": "20 Minutes après le Coucher du Soleil",
+      "es": "20 Minutes after Sunset"
+    },
+    "shabbatEnd__1": {
+      "en": "Three Small Stars",
+      "he": "צאת שָׁלוֹשׁה כוכבים קטנים",
+      "fr": "Trois Petites Etoiles",
+      "es": "Three Small Stars"
+    },
+    "shabbatEnd__2": {
+      "en": "40 Minutes after Sunset",
+      "he": "40 דקות לאחר השקיעה",
+      "fr": "40 Minutes après le Coucher du Soleil",
+      "es": "40 Minutes after Sunset"
+    },
+    "shabbatEnd__3": {
+      "en": "72 Minutes after Sunset",
+      "he": "72 דקות לאחר השקיעה",
+      "fr": "72 Minutes après le Coucher du Soleil",
+      "es": "72 Minutes after Sunset"
+    },
+    "shabbatEnterZmanTitle": {
+      "en": "Candle Lighting",
+      "fr": "Allumage des Bougies",
+      "es": "Encendido de Velas",
+      "de": "Kerzen zünden"
+    },
+    "shabbat_end_summary": {
+      "en": "Choose Shita to calculate the end of Shabbat",
+      "he": "בחר שיטה לחישוב זמן צאת השבת",
+      "fr": "Choisissez la Méthode de calcul de la fin de Shabbat",
+      "es": "Que Shita Utiliza para el Termino de Shabat",
+      "de": "Wähle eine Schita aus, um das Schabbat-Ende zu berechnen"
+    },
+    "shabbat_end_title": {
+      "en": "Havdala",
+      "he": "צאת השבת",
+      "fr": "Havdala",
+      "es": "Havdala",
+      "de": "Hawdala"
+    },
+    "shabbat_settings_title": {
+      "en": "Shabbat ",
+      "he": "שבת",
+      "de": "Schabbat "
+    },
+    "shabbat_summary": {
+      "en": "Candle lighting is %@ before sunset",
+      "he": "בחר כמה דקות לפני שקיעה הוא זמן כניסת השבת",
+      "fr": "L׳allumage des bougies est %@ avant le coucher du soleil",
+      "es": "Cuanto tiempo antes de la puesta del Sol es el Prendido de Velas",
+      "de": "Kerzenzünden ist %@ vor Sonnenuntergang"
+    },
+    "shabbat_title": {
+      "en": "Candle Lighting Time",
+      "he": "שבת ",
+      "fr": "Horaire d’Allumage des Bougies",
+      "es": "Hora de Encendido de Velas",
+      "de": "Zeiten für Kerzenzünden"
+    },
+    "shachar": {
+      "en": "Morning Prayers",
+      "fr": "Bénédictions du Matin",
+      "es": "Bendiciones Matutinas",
+      "de": "Morgen Gebete"
+    },
+    "shacharit": {
+      "en": "Shacharit",
+      "he": "שחרית",
+      "fr": "Shaharit",
+      "es": "Shajarit",
+      "de": "Schacharit"
+    },
+    "shachritDes": {
+      "en": "%1$@\nThe latest time to pray Shachrit. One can still pray until Midday (according to some rabbies) but he shouldn't say Shem in Shma blessings",
+      "fr": "%1$@\nDernier Horaire pour Prier Shahrit. On peut toujours prier jusqu’à midi (selon certains Rabbins) mais on ne devrait pas dire le Shéma ni les Bénédictions du Shéma",
+      "es": "%1$@\nÚltimo Horario para Shajrit. Hay opiniones que se puede rezar hasta Medio Día, sin embargo, sin mencionar el Shem H en las Berajot",
+      "de": "%1$@\nLetzte Zeit um Schacharit zu beten. Man kann trotzdem bis Mittag beten (nach Meinung einiger Rabbiner), sollte aber nicht den Namen G-ttes in den Segensprüchen vor dem Schma sagen."
+    },
+    "shalmonit": {
+      "en": "Shalmonit ",
+      "he": "שלמונית ",
+      "fr": "Shalmonit ",
+      "de": "Schalmonit "
+    },
+    "shalom_aleichem": {
+      "en": "Say to a friend:",
+      "he": "אמור לחבר:",
+      "fr": "On dit à un ami:",
+      "de": "Man sagt zu einem Freund:"
+    },
+    "shanim_title": {
+      "en": "Years from the Destruction of the Temple",
+      "fr": "Années à partir de la Destruction du Temple",
+      "es": "Años de la destrucción del Templo",
+      "de": "Jahre seit der Zerstörung des Tempels"
+    },
+    "share_message": {
+      "en": "Check out this wonderful Jewish app https://goo.gl/b0zlUP",
+      "he": "אתה חייב להוריד עכשיו את הסידור החכם! https://goo.gl/b0zlUP",
+      "fr": "Découvrez ces merveilleuses applications Juives https://goo.gl/b0zlUP",
+      "de": "Schauen Sie sich diese wundervolle jüdische App an https://goo.gl/b0zlUP"
+    },
+    "share_title": {
+      "en": "Share with",
+      "he": "שתף באמצעות",
+      "fr": "Partager avec",
+      "de": "Teilen mit"
+    },
+    "shazRepeat": {
+      "en": "\n\n<small>The Chazan repeats</small>\n\n    ",
+      "he": "\n\n<small>וחוזר החזן</small>\n\n",
+      "fr": "\n\n<small>Le Hazan repète</small>\n\n",
+      "es": "\n\n<small>El jazan Repite</small>\n    \n",
+      "de": "\n\n<small>Der Vorbeter wiederholt</small>\n\n    "
+    },
+    "shehakolBlessTitle": {
+      "en": "For any other food or drinks:  ",
+      "he": " \nברכת שהכל:\n",
+      "fr": "\nPour tout autre aliment ou boisson:\n",
+      "es": " \nPor cualquier otra Comida o Bebida:  \n",
+      "de": "Auf jedes andere Essen oder Getränk:  "
+    },
+    "shehehiyanuBlessTitle": {
+      "en": "Shehecheyanu (Who has given us life):",
+      "he": "שהחיינו:",
+      "fr": "Sheheheyanu (Lui qui nous a donné la vie):",
+      "es": "Shehejeyanu (Quien nos dio Vida):",
+      "de": "Schehechejanu (Der uns das Leben gegeben hat):"
+    },
+    "shemElKamtiTitle": {
+      "en": "Shem El Kamti",
+      "he": "שם אל קמתי",
+      "fr": "Shem El Kamti",
+      "de": "Shem El Kamti"
+    },
+    "sheshZchirot1": {
+      "en": "The Exodus from Egypt",
+      "fr": "La Sortie d׳Egypte",
+      "es": "La salida de Egipto",
+      "de": "Der Auszug aus Ägypten"
+    },
+    "sheshZchirot2": {
+      "en": "Receiving the Torah at Sinai",
+      "fr": "Le Don de la Torah au Sinai",
+      "es": "La entrega de la Tora en Sinaí",
+      "de": "Erhalten der Torah am Berge Sinai"
+    },
+    "sheshZchirot3": {
+      "en": "Amalek’s Evil Attack",
+      "fr": "L׳attaque d׳Amalek",
+      "es": "El malvado Ataque de Amalek",
+      "de": "Amalek’s Böse Attacke"
+    },
+    "sheshZchirot4": {
+      "en": "Miriam’s Punishment",
+      "fr": "La sanction de Miriam",
+      "es": "El Castigo de Miriam HaNevia",
+      "de": "Miriam’s Bestrafung"
+    },
+    "sheshZchirot5": {
+      "en": "The Making of the Golden Calf",
+      "fr": "La fabrication du veau d׳or",
+      "es": "El Becerro de Oro",
+      "de": "Die Erstellung des Goldenen Kalbes"
+    },
+    "sheshZchirot6": {
+      "en": "Shabbos",
+      "fr": "Shabbath",
+      "es": "Shabbat",
+      "de": "Schabbos"
+    },
+    "sheshZchirotTitle": {
+      "en": "The Six Remembrances",
+      "fr": "Les Six Souvenirs",
+      "es": "Los seis Recordatorios",
+      "de": "Die Sechs Erinnerungen"
+    },
+    "sheva_brachot": {
+      "en": "Sheva Berachot",
+      "he": "שבע ברכות",
+      "fr": "Shéva Berachot",
+      "es": "Sheva Berajot",
+      "de": "Schewa Brachot"
+    },
+    "shevetTitle": {
+      "en": "The Tribe of Judea",
+      "he": "שבט יהודה",
+      "fr": "La Tribu de Juda",
+      "de": "Der Stamm Judeas"
+    },
+    "shirLama_title": {
+      "en": "Shir LaMa'alot",
+      "fr": "Shir LaMa׳alot",
+      "es": "Shir LaMaalot",
+      "de": "Schir LaMa'alot"
+    },
+    "shirMinchaTitle": {
+      "en": "Mizmor of Mincha",
+      "de": "Mizmor von Mincha"
+    },
+    "shirShelTitle": {
+      "en": "The Song of the Day",
+      "fr": "Le Chant du Jour",
+      "es": "El Cantico Diario",
+      "de": "Tagespsalm"
+    },
+    "shlishiya": {
+      "en": "Shlishiya ",
+      "he": "שלישיה ",
+      "fr": "Shlishiya ",
+      "de": "Schlischija "
+    },
+    "shlomHamdinaTitle": {
+      "en": "A Prayer for Israel",
+      "fr": "Prière pour Israel",
+      "es": "El Rezo por Israel",
+      "de": "Ein Gebet für Israel"
+    },
+    "shlomRav": {
+      "en": "Shalom Rav",
+      "fr": "Shalom Rav",
+      "es": "Shalom Rav",
+      "de": "Schalom Raw"
+    },
+    "shmaDes": {
+      "en": "%1$@\nThe latest time to read Shma of morning.",
+      "fr": "%1$@\nDernier horaire pour lire le Shéma du Matin.",
+      "es": "%1$@\\.nÚltimo Horario de Shajir en la Mañana.",
+      "de": "%1$@\nLetzte Zeit um Schma am Morgen zu lesen."
+    },
+    "shmaKolenuSlihotTitle": {
+      "en": "Hear our Voices",
+      "he": "שמע קולנו",
+      "fr": "Entends nos Voix",
+      "de": "Höre unsere Stimmen"
+    },
+    "shmaTitle": {
+      "en": "Shma",
+      "he": "קריאת שמע",
+      "fr": "Shéma",
+      "es": "Shma",
+      "de": "Schma"
+    },
+    "shmaZizit": {
+      "en": "\n\n<small>(Take the two front tzitzit into your right hand, then your back left tzitzit, then the back right. Then the tzitzit are moved to the left hand and held near the heart)\n</small>\n\n    ",
+      "he": "\n\n<small>(החזק את כל הציציות ביד שמאל)\n</small>\n\n",
+      "fr": "\n\n<small>(Prendre avec la main droite les deux tzitzit de devant, puis les deux de derrière à gauche, puis l׳arrière droit. Puis les tzitzit sont mis dans la main gauche et tenus près du coeur)\n</small>\n\n",
+      "es": "\n\n<small>(Tome los 2 Tzitzit del frente en su mano derecha, luego el tzitzit de atrás izquierdo, luego el de atrás derecho. Luego se toman con la mano izquierda y se sostienen junto al Corazón)\n</small>\n\n",
+      "de": "\n\n<small>(Nehme die vorderen zwei Tzitzit in deine rechte Hand, dann dein hinteres linkes, dann dein hinteres rechtes Tzitzit. Sie werden alle in die linke Hand gelegt und am Herzen gehoben)\n</small>\n\n    "
+    },
+    "shmaZmanTitle": {
+      "en": "Latest Shma",
+      "fr": "Dernier Shéma",
+      "es": "Shema",
+      "de": "Letztes Schma"
+    },
+    "shma_amida": {
+      "en": "Kriat Shma and Amida",
+      "fr": "Shéma et Amida",
+      "es": "Kriat Shma y Amida",
+      "de": "Kriat Schma und Amida"
+    },
+    "shnia": {
+      "en": "Shniya ",
+      "he": "שניה ",
+      "fr": "Shniya ",
+      "de": "Schnija "
+    },
+    "shomerIsraelTitle": {
+      "en": "Guardian of Israel",
+      "he": "שומר ישראל",
+      "fr": "Gardien d׳Israel",
+      "de": "Wächter Israels"
+    },
+    "should_update": {
+      "en": "New version of the Siddur is now avaiable, please navigate to the store for download",
+      "he": "גרסה חדשה זמינה כעת בחנות, אנא עבור לחנות כדי להוריד אותה",
+      "fr": "Une nouvelle version du Siddur est disponible, merci de vous rendre sur le Play Store pour la télécharger",
+      "de": "Eine neue Version des Siddurs ist jetzt verfügbar, bitte begeben Sie sich in den Store zum Download"
+    },
+    "show_titles": {
+      "en": "Show Titles",
+      "he": "הראה כותרות",
+      "fr": "Show Titles",
+      "de": "Titel anzeigen"
+    },
+    "show_zmanim": {
+      "en": "Show Zmanim",
+      "he": "הראה זמנים",
+      "fr": "Montrer les Horaires",
+      "es": "Muestra Zmanim",
+      "de": "Zeige Smanim"
+    },
+    "sick_pref": {
+      "en": "Prayer For the Sick",
+      "he": "תפילה לחולה",
+      "fr": "Prière pour les Malades",
+      "es": "Rezo por el Enfermo",
+      "de": "Gebet für die Kranken"
+    },
+    "sick_summery": {
+      "en": "Enter a name of a sick person for whom you want to pray",
+      "he": "הכנס שם של חולה עבורו אתה מתפלל",
+      "fr": "Entrez le nom d׳une personne malade pour laquelle vous voulez prier",
+      "es": "Agregue el Nombre del Enfermo para Rezar por el",
+      "de": "Gib einen Namen einer kranken Person ein, für die du beten möchtest"
+    },
+    "siddur": {
+      "en": "Tfilot",
+      "he": "סידור",
+      "fr": "Téfilot",
+      "es": "Tfilot",
+      "de": "Tfillot"
+    },
+    "siddur_pref": {
+      "en": "Siddur Preferences",
+      "he": "הגדרות הסידור",
+      "fr": "Préférences du Siddur",
+      "es": "Preferencias del Siddur",
+      "de": "Siddur Vorliebe"
+    },
+    "siddur_pref_summery": {
+      "en": "Choose Siddur related preferences like Nusach, Tefila Mode etc.",
+      "he": "בחר אפשרויות הנוגעות לסידור עצמו כמו נוסח, מצב תפילה וכו'",
+      "fr": "Choisissez vos préférences de Siddur comme le rite, le mode de prière, etc.",
+      "es": "Preferencias del Siddur como el Nusaj, Modo de Rezo etc.",
+      "de": "Wähle Siddur bezogene Vorlieben wie Nussach, Tefilla Modus etc."
+    },
+    "sign_in_text": {
+      "en": "Sign in to start using the best Siddur app",
+      "he": "הירשם כדי להינות מהסידור הכי חכם בשוק",
+      "fr": "Enregistrez vous pour commencer à utiliser la meilleure application de Siddur",
+      "de": "Einloggen um die beste Siddur App zu starten"
+    },
+    "silent": {
+      "en": "Silent Mode",
+      "he": "מצב שקט",
+      "fr": "Mode Silencieux",
+      "es": "Modo Silencioso",
+      "de": "Still-Modus"
+    },
+    "silent_ask": {
+      "en": "Would you like to switch into silent mode?",
+      "he": "האם ברצונך להעביר את המכשיר למצב שקט?",
+      "fr": "Voulez vous passer en mode silencieux?",
+      "es": "Desea Cambiar al Modo Silencioso?",
+      "de": "Würden Sie gerne in den Still-Modus wechseln?"
+    },
+    "silent_mazon": {
+      "en": "Also apply to Birkat HaMazon",
+      "he": "הפעל גם בברכת המזון",
+      "fr": "Appliquer également au Birkat HaMazon",
+      "es": "También Durante el Birkat HaMazon",
+      "de": "Ebenso für Birkat HaMason aktivieren"
+    },
+    "silent_mode__0": {
+      "en": "Always switch to silent mode",
+      "he": "תמיד העבר למצב שקט",
+      "fr": "Toujours Basculer en Mode Silencieux",
+      "es": "Always switch to silent mode"
+    },
+    "silent_mode__1": {
+      "en": "Never switch to silent mode",
+      "he": "לעולם אל תעביר למצב שקט",
+      "fr": "Ne Jamais Basculer en Mode Silencieux",
+      "es": "Never switch to silent mode"
+    },
+    "silent_mode__2": {
+      "en": "Ask me every time",
+      "he": "שאל אותי בכל פעם",
+      "fr": "Me poser la question à chaque fois",
+      "es": "Ask me every time"
+    },
+    "silent_mode_values__0": {
+      "en": "0"
+    },
+    "silent_mode_values__1": {
+      "en": "1"
+    },
+    "silent_mode_values__2": {
+      "en": "2"
+    },
+    "silent_permission_message": {
+      "en": "Do you allow Smart Siddur to turn Do No Disturb mode?",
+      "he": "האם ברצונך לתת אישור גישה להגדרות השמע לסידור החכם?",
+      "de": "Erlaubst du Smart Siddur den Nicht Stören Modus zu aktivieren?"
+    },
+    "silent_permission_title": {
+      "en": "DND Permission",
+      "he": "הרשאה למצב שקט",
+      "de": "DND Erlaubnis"
+    },
+    "silent_start": {
+      "en": "Apply when entering the application",
+      "he": "הפעל עם הכניסה לֹאפליקציה",
+      "fr": "Appliquer dès le lancement de l’application",
+      "es": "Aplicar al entrar a la App SmartSiddur",
+      "de": "Aktivieren sobald die Applikation gestartet wird"
+    },
+    "silent_summery": {
+      "en": "Choose whether to switch to silent mode during the Tefila",
+      "he": "בחר האם להעביר למצב שקט בתפילות",
+      "fr": "Choisissez de passer en mode silencieux pendant la Tefilah",
+      "es": "Cambiar a modo Silencioso durante el Rezo",
+      "de": "Wähle ob während der Tefilla in den Still-Modus gewechselt werden soll"
+    },
+    "skip": {
+      "en": "skip",
+      "he": "דלג",
+      "de": "überspringen"
+    },
+    "slicha": {
+      "en": "Slicha ",
+      "he": "סליחה ",
+      "fr": "Slicha ",
+      "de": "Slicha "
+    },
+    "slichot": {
+      "en": "Slichot",
+      "he": "סליחות",
+      "fr": "Sélikhot",
+      "es": "Slijot",
+      "de": "Slichot"
+    },
+    "slichot_title": {
+      "en": "Slichot",
+      "he": "סליחות",
+      "es": "Slijot",
+      "de": "Slichot"
+    },
+    "slower": {
+      "en": "Scroll Slower",
+      "he": "גלול לאט יותר",
+      "fr": "Défilement plus lent",
+      "de": "Langsamer scrollen"
+    },
+    "smell_blessing_title": {
+      "en": "The Blessings Over Fragrances",
+      "he": "ברכות הריח",
+      "fr": "Prière pour les Parfums",
+      "es": "Bendición sobre Fragancias",
+      "de": "Segensprüche über Düfte"
+    },
+    "snooze": {
+      "en": "Snooze",
+      "he": "נודניק",
+      "es": "Snooze",
+      "de": "Schlummer"
+    },
+    "sofMazonTitle": {
+      "en": "The End",
+      "fr": "Conclusion",
+      "es": "The End",
+      "de": "Ende"
+    },
+    "sofZmanAchilaTitle": {
+      "en": "Last Time to Eat Chametz",
+      "fr": "Dernier horaire pour Manger du Hametz",
+      "es": "Ultimo Horario de Jametz",
+      "de": "Chametz essen bis spätestens"
+    },
+    "sofZmanBiurTitle": {
+      "en": "Last Time to Burn Chametz",
+      "fr": "Dernier Horaire pour Brûler le Hametz",
+      "es": "Ultimo Horario de Quemar el Jametz",
+      "de": "Chametz verbrennen/vernichten bis spätestens"
+    },
+    "some_add": {
+      "en": "Some Add",
+      "he": "יש מוסיפים",
+      "fr": "Certains Ajoutent",
+      "de": "Einige fügen hinzu"
+    },
+    "sound_default_description": {
+      "en": "Uses your device's default notification sound",
+      "he": "משתמש בצליל ברירת המחדל של המכשיר שלך",
+      "fr": "Utilise le son de notification par défaut de votre appareil",
+      "es": "Usa el sonido de notificación predeterminado de tu dispositivo",
+      "de": "Verwendet den Standard-Benachrichtigungston Ihres Geräts"
+    },
+    "sound_override_dnd_description": {
+      "en": "Will alert you even when Do Not Disturb is on",
+      "he": "יתריע גם כשמצב נא לא להפריע מופעל",
+      "fr": "Vous alertera même lorsque Ne pas déranger est activé",
+      "es": "Te alertará incluso cuando No molestar esté activado",
+      "de": "Wird Sie auch dann alarmieren, wenn Nicht stören aktiviert ist"
+    },
+    "sound_setting_default": {
+      "en": "With Sound",
+      "he": "עם צליל",
+      "fr": "Avec son",
+      "es": "Con sonido",
+      "de": "Mit Ton"
+    },
+    "sound_setting_explanation": {
+      "en": "Control how the notification alerts you",
+      "he": "שליטה באופן שבו ההתראה מתריעה",
+      "fr": "Contrôlez comment la notification vous alerte",
+      "es": "Controla cómo te alerta la notificación",
+      "de": "Steuern Sie, wie die Benachrichtigung Sie alarmiert"
+    },
+    "sound_setting_label": {
+      "en": "Sound",
+      "he": "צליל",
+      "fr": "Son",
+      "es": "Sonido",
+      "de": "Ton"
+    },
+    "sound_setting_override_dnd": {
+      "en": "Override Do Not Disturb",
+      "he": "עקוף מצב נא לא להפריע",
+      "fr": "Ignorer Ne pas déranger",
+      "es": "Anular No molestar",
+      "de": "Nicht stören überschreiben"
+    },
+    "sound_setting_silent": {
+      "en": "Silent",
+      "he": "שקט",
+      "fr": "Silencieux",
+      "es": "Silencio",
+      "de": "Lautlos"
+    },
+    "sound_silent_description": {
+      "en": "Notification appears silently without sound",
+      "he": "ההתראה מופיעה בשקט ללא צליל",
+      "fr": "La notification apparaît silencieusement sans son",
+      "es": "La notificación aparece silenciosamente sin sonido",
+      "de": "Benachrichtigung erscheint lautlos ohne Ton"
+    },
+    "specialMizmorTitle": {
+      "en": "A Special Mizmor",
+      "fr": "Spécial Mizmor",
+      "es": "Mizmor Especial",
+      "de": "Ein spezieller Mismor"
+    },
+    "special_holidays": {
+      "en": "Special Holidays",
+      "fr": "Fêtes particulières",
+      "es": "Días Especiales",
+      "de": "Spezielle Feiertage"
+    },
+    "special_occasions": {
+      "en": "Special Occasions",
+      "he": "אירועים מיוחדים",
+      "fr": "Evènements spéciaux",
+      "de": "Besondere Anlässe"
+    },
+    "speed": {
+      "en": "Choose Scrolling Speed",
+      "he": "בחר מהירות גלילה",
+      "fr": "Choisissez la vitesse de défilement",
+      "es": "Velocidad del Automático",
+      "de": "Wähle Scroll-Geschwindigkeit"
+    },
+    "standBefore": {
+      "en": "\n\n<small>Stand before saying</small>\n\n    ",
+      "he": "\n\n<small>יעמוד ויאמר</small>\n ",
+      "fr": "\n\n<small>On se lève avant de dire</small>\n ",
+      "es": "\n\n<small>Levantarse antes</small>\n ",
+      "de": "\n\n<small>Man sagt das folgende stehend</small>\n\n    "
+    },
+    "startBeforeSunset": {
+      "en": "Sunset was at %@\nDid you start this meal before sunset?",
+      "he": "השקיעה הייתה ב%@\nהאם התחלת את הסעודה קודם?",
+      "fr": "Le coucher du soleil était ‡ %@\nAvez vous commencé ce repas avant le coucher du soleil?",
+      "de": "Sonnenuntergang war um %@\nHaben Sie die Mahlzeit vor Sonnenuntergang begonnen?"
+    },
+    "stop_scroll": {
+      "en": "Pause Scrolling",
+      "he": "השהה גלילה",
+      "fr": "Arrêter le Défilement",
+      "es": "Detener el Automático",
+      "de": "Scrollen pausieren"
+    },
+    "sunriseDes": {
+      "en": "A new day is started. One can start praying Shachrit from now on",
+      "fr": "Un nouveau jour se lève. On peut commencer Shahrit",
+      "es": "De Ahora se puede Rezar Shajrit",
+      "de": "Ein neuer Tag hat begonnen. Man kann von nun an Schacharit beten."
+    },
+    "sunriseZmanTitle": {
+      "en": "Sunrise",
+      "fr": "Lever du Soleil",
+      "es": "Salida del Sol",
+      "de": "Sonnenaufgang"
+    },
+    "sunrise__0": {
+      "en": "Elevation adjusted sunrise time",
+      "he": "הנץ הנראה",
+      "fr": "Altitude ajustée à l’heure du lever du soleil",
+      "es": "Elevation adjusted sunrise time"
+    },
+    "sunrise__1": {
+      "en": "In a level region",
+      "he": "הנץ במישור",
+      "fr": "Au niveau de l’horizon",
+      "es": "In a level region"
+    },
+    "sunrise_set": {
+      "en": "Sunrise and Sunset",
+      "he": "זריחה ושקיעה",
+      "fr": "Lever et Coucher du Soleil",
+      "es": "Salida y Puesta del Sol",
+      "de": "Sonnenauf- und Sonnenuntergang"
+    },
+    "sunrise_set_title": {
+      "en": "Choose a Shita to calculate Sunrise and Sunset times",
+      "he": "בחר שיטה לחישוב זמני הזריחה והשקיעה",
+      "fr": "Choisissez la Méthode pour calculer le Lever et le Coucher du Soleil",
+      "es": "Que Shita Utiliza para Calcular la Salida y Puesta del Sol",
+      "de": "Wähle eine Schita aus, um die Zeiten für Sonnenauf- und Sonnenuntergang zu berechnen"
+    },
+    "sunsetDes": {
+      "en": "A new day begins",
+      "fr": "Un nouveau jour commence",
+      "es": "Comienza un Nuevo Día",
+      "de": "Ein neuer Tag beginnt"
+    },
+    "sunsetZmanTitle": {
+      "en": "Sunset",
+      "fr": "Coucher du soleil",
+      "es": "Puesta del Sol",
+      "de": "Sonnenuntergang"
+    },
+    "sunset_offset_explanation": {
+      "he": "בחר כמה דקות לפני השקיעה תרצה לקבל התראה",
+      "fr": "Choisissez combien de minutes avant le coucher du soleil vous souhaitez être notifié",
+      "es": "Elige cuántos minutos antes del atardecer deseas ser notificado",
+      "de": "Wählen Sie, wie viele Minuten vor Sonnenuntergang Sie benachrichtigt werden möchten"
+    },
+    "sunset_offset_label": {
+      "he": "הזכר לי לפני השקיעה",
+      "fr": "Me rappeler avant le coucher du soleil",
+      "es": "Recuérdame antes de la puesta del sol",
+      "de": "Erinnere mich vor Sonnenuntergang"
+    },
+    "sunset_reminder_text": {
+      "en": "Sunset is approaching",
+      "he": "השקיעה מתקרבת",
+      "fr": "Le coucher du soleil approche",
+      "es": "La puesta del sol se acerca",
+      "de": "Sonnenuntergang naht"
+    },
+    "sunset_reminder_title": {
+      "en": "Sunset Reminder",
+      "he": "תזכורת שקיעה",
+      "fr": "Rappel du coucher du soleil",
+      "es": "Recordatorio de puesta del sol",
+      "de": "Sonnenuntergang-Erinnerung"
+    },
+    "sunset_reminder_with_time": {
+      "en": "Sunset is at %@",
+      "he": "השקיעה בשעה %@",
+      "fr": "Le coucher du soleil est à %@",
+      "es": "La puesta del sol es a las %@",
+      "de": "Sonnenuntergang ist um %@"
+    },
+    "support_me": {
+      "en": "Me",
+      "he": "אני",
+      "fr": "Moi",
+      "de": "Ich"
+    },
+    "support_name": {
+      "en": "Orel Zion",
+      "he": "אוראל ציון",
+      "fr": "Orel Zion",
+      "de": "Orel Zion"
+    },
+    "system_managed": {
+      "en": "System Managed",
+      "he": "מנוהל על ידי המערכת"
+    },
+    "tahanun25Title": {
+      "en": "Vehu Rahum",
+      "fr": "Vehou Rahum",
+      "es": "Vehu Rahum",
+      "de": "Wehu Rachum"
+    },
+    "tahanunTitle": {
+      "en": "Tachanun",
+      "fr": "Tachanun",
+      "es": "Tajanun",
+      "de": "Tachanun"
+    },
+    "talPreference": {
+      "en": "Show Morid HaTal",
+      "he": "הצג מוריד הטל",
+      "fr": "Montrer Morid HaTal",
+      "de": "Zeige Morid HaTal"
+    },
+    "talitInstrustion": {
+      "en": "One shall hold the Talis with his two hands and bless:",
+      "he": "אחוז בטלית בשתי ידיך, וברך:",
+      "fr": "On tient le Talith avec les deux mains et on prie:",
+      "es": "Se toma  el tallit con las 2 manos y Bendice:",
+      "de": "Man sollte den Tallit mit beiden Händen halten und den Segenspruch sagen:"
+    },
+    "tamahnuTitle": {
+      "en": "Astonished of Trouble",
+      "he": "תמהנו מרעות",
+      "fr": "Astonished of Trouble",
+      "de": "Erstaunt vor Problemen"
+    },
+    "tamidTitle": {
+      "en": "Korban HaTamid",
+      "fr": "Sacrifice Quotidien",
+      "es": "Korban HaTamid",
+      "de": "Korban HaTamid"
+    },
+    "tanaEliyahuTitle": {
+      "en": "Tana Deve Eliyahu",
+      "fr": "Tana Deve Eliyahu",
+      "es": "Tana Deve Eliyahu",
+      "de": "Tana Dewe Elijahu"
+    },
+    "tchina": {
+      "en": "Tchina ",
+      "he": "תחינה ",
+      "fr": "Tchina ",
+      "de": "Tchina "
+    },
+    "tefilin": {
+      "fr": " \nלְשֵׁם יִחוּד קוּדְשָׁא בְּרִיךְ הוּא וּשְׁכִינְתֵּיהּ, בִּדְחִילוּ וּרְחִימוּ, וּרְחִימוּ וּדְחִילוּ, לְיַחֲדָא שֵׁם י\\\"ה בו\\\"ה בְּיִחוּדָא שְׁלִים (יהוה) בְּשֵׁם כָּל יִשְׂרָאֵל. הֲרֵינִי מוּכָן לְקַיֵּם מִצְוַת עֲשֵׂה לְהָנִיחַ תְּפִלִּין בְּיָדִי וּבְרֹאשִׁי, כְּמוֹ שֶׁצִּוָּנוּ יְהוָֹה אֱלֹהֵינוּ: וּקְשַׁרְתֶּם אתָם לְאות עַל יֶדְכֶם, וְהָיוּ לְטוטָפת בֵּין עֵינֵיכֶם. וְצִוָּנוּ הַקָּדושׁ בָּרוּךְ הוּא לְהָנִיחַ אַרְבַּע פַּרְשִׁיּות אֵלּוּ שֶׁיֵּשׁ בָּהֶם יִחוּד שְׁמו וִיצִיאַת מִצְרַיִם עַל הַזְּרועַ כְּנֶגֶד הַלֵּב, וְעַל הָרֹאשׁ כְּנֶגֶד הַמּחַ, כְּדֵי שֶׁנִּזְכּר נִסִּים וְנִפְלָאות שֶׁעָשָׂה עִמָּנוּ. וַהֲרֵינִי מוּכָן לְבָרֵךְ הַבְּרָכָה שֶׁתִּקְנוּ רַבּותֵינוּ זִכְרונָם לִבְרָכָה עַל מִצְוַת הַתְּפִלִּין, וַהֲרֵינִי מְכַוֵּן לִפְטר בִּבְרָכָה זו תְּפִלִּין שֶׁל יָד וּתְפִלִּין שֶׁל רֹאשׁ, וְיַעֲלֶה לְפָנֶיךָ יְהוָֹה אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ כְּאִלּוּ כִּוַּנְתִּי בְּכָל הַכַּוָּנות הָרְאוּיות לְכַוֵּן בַּהֲנָחַת הַתְּפִלִּין וּבַבְּרָכָה. וִיהִי נעַם אֲדנָי אֱלֹהֵינוּ עָלֵינוּ. וּמַעֲשֵׂה יָדֵינוּ כּונְנָה עָלֵינוּ. וּמַעֲשֵׂה יָדֵינוּ כּונְנֵהוּ:<br><br>\nבָּרוּךְ אַתָּה יְהוָֹה, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְמִצְותָיו וְצִוָּנוּ לְהָנִיחַ תְּפִלִּין:<br><br>\n<small>Si l׳on a été interrompu en parlant, on devra dire:<br></small>\nבָּרוּךְ אַתָּה יְהוָֹה, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְמִצְותָיו וְצִוָּנוּ עַל מִצְוַת תְּפִלִּין:\n<br><br>\n<small>Quand on enroule le Téfilin au doigt, on dit:</small>\n<br>\nוְאֵרַשְׂתִּיךְ לִי לְעוֹלָם. וְאֵרַשְׂתִּיךְ לִי בְּצֶדֶק וּבְמִשְׁפָּט וּבְחֶסֶד וּבְרַחֲמִים: וְאֵרַשְׂתִּיךְ לִי בֶּאֱמוּנָה. וְיָדַעַתְּ אֶת יְהוָֹה:\n"
+    },
+    "terms": {
+      "en": "By signing in you accept our Privacy Policy",
+      "fr": "En vous inscrivant vous acceptez notre Politique de Confidentialité",
+      "de": "Mit dem Registrieren sind Sie mit unseren Datenschutzbestimmungen einverstanden."
+    },
+    "text_set": {
+      "en": "Text Settings",
+      "fr": "Paramètres du Texte",
+      "es": "Configuraciones del Texto",
+      "de": "Titel Einstellungen"
+    },
+    "tfilaLedavidTitle": {
+      "en": "Tefila LeDavid",
+      "fr": "Tefila LeDavid",
+      "es": "Tefila LeDavid",
+      "de": "Tefila LeDavid"
+    },
+    "tfilaZmanTitle": {
+      "en": "Latest Shachrit",
+      "fr": "Dernier Shahrit",
+      "es": "Shajrit",
+      "de": "Letztes Schachrit"
+    },
+    "tfila_haderech_return": {
+      "en": "If you return at the same day, say:",
+      "he": "אם חוזר באותו יוֹם יאמר:",
+      "fr": "Si on rentre le même jour on dit:",
+      "es": "Si regresa el mismo dia, se dice:",
+      "de": "Wenn man am selben Tag wieder zurück kommt, sagt man:"
+    },
+    "tfilinRabeinuTam": {
+      "en": "Tfilin of Rabeinu Tam",
+      "fr": "Téfilin de Rabeinu Tam",
+      "es": "Tfilin de Rabeinu Tam",
+      "de": "Tfillin laut Rabeinu Tam"
+    },
+    "tfilinRosh": {
+      "en": "\n\n<small>(Touch and kiss the head Tefillin)</small>\n\n    ",
+      "he": "\n\n<small>(ימשמש בתפילין של ראש וינשק את אצבעותיו)</small>\n ",
+      "fr": "\n\n<small>(On touche puis on embrasse le Tefillin de la tête)</small>\n ",
+      "es": "\n\n<small>(Toca y Besa el tefilin de la cabeza)</small>\n ",
+      "de": "\n\n<small>(Man berührt und küsst den Tefillin am Kopf)</small>\n\n    "
+    },
+    "tfilinRoshInstruction": {
+      "en": "Before tightening the head Tfilin, one should bless",
+      "he": "לפני הידוק תפילין של ראש, ברך:",
+      "fr": "Avant de serrer le Téphiline de la tête, on dit la bénédiction",
+      "es": "Al ponerse el Tfilin de la cabeza dice:",
+      "de": "Vor dem Anziehen des Kopftfillin sagt man den Segenspruch"
+    },
+    "tfilinTitle": {
+      "en": "Putting on Tfilin",
+      "fr": "Mise des Téphilines",
+      "es": "Al Vestir el Tfilin",
+      "de": "Anziehen der Tfillin"
+    },
+    "tfilinYad": {
+      "en": "\n\n<small>(Touch and kiss the arm Tefillin)</small>\n\n    ",
+      "he": "\n\n<small>(ימשמש בתפילין של יד וינשק את אצבעותיו)</small>\n ",
+      "fr": "\n\n<small>(On touche puis on embrasse le Tefillin du bras)</small>\n ",
+      "es": "\n\n<small>(Toca y Besa el tefilin de la mano)</small>\n ",
+      "de": "\n\n<small>(Man berührt und küsst den Tefillin am Arm)</small>\n\n    "
+    },
+    "tfilinYadInstruction": {
+      "en": "After putting the hand Tfilin just before he tightens it, one should bless",
+      "he": "אחר שתניח תפילין של יד קודם שתהדק, ברך:",
+      "fr": "Après avoir mis le Téphiline de la main juste avant de le serrer, on dit la bénédiction",
+      "es": "Al ponerse el Tfilin de la mano, dice:",
+      "de": "Nachdem man den Armtfillin platziert hat, sagt man, bevor man es festzieht, den Segenspruch"
+    },
+    "theme__0": {
+      "en": "Light",
+      "he": "בהיר",
+      "fr": "Classique",
+      "es": "Classic"
+    },
+    "theme__1": {
+      "en": "Dark",
+      "he": "כהה",
+      "fr": "Sombre",
+      "es": "Dark"
+    },
+    "theme_values__0": {
+      "en": "0"
+    },
+    "theme_values__1": {
+      "en": "1"
+    },
+    "themes": {
+      "en": "Choose Theme",
+      "he": "ערכות נושא",
+      "fr": "Choisir un Thème",
+      "es": "Tema",
+      "de": "Wähle Thema"
+    },
+    "threeTimes": {
+      "en": "Say that three times",
+      "he": "ויאמר זה שלש פעמים",
+      "fr": "A répéter 3 fois",
+      "es": "Se repite 3 veces",
+      "de": "Man sagt drei mal:"
+    },
+    "tikunLeaTitle": {
+      "en": "Tikun Lea",
+      "he": "תיקון לאה",
+      "fr": "Tikun Lea",
+      "es": "Tikun Lea",
+      "de": "Tikun Lea"
+    },
+    "tikunRachelTitle": {
+      "en": "Tikun Rachel",
+      "he": "תיקון רחל",
+      "fr": "Tikun Rachel",
+      "es": "Tikun Rajel",
+      "de": "Tikun Rachel"
+    },
+    "tile_error": {
+      "en": "To use the tile you must first initialize the app",
+      "he": "על מנת להשתמש באריח יש לאתחל קודם את האפליקציה",
+      "fr": "Pour utiliser les tuiles vous devez d׳abord initialiser l׳application",
+      "de": "Um den Titel zu benutzen müssen Sie zuerst die App initialisieren"
+    },
+    "tile_name": {
+      "en": "Hebrew Date",
+      "he": "תאריך עברי",
+      "fr": "Date Hébraïque",
+      "de": "Hebräisches Datum"
+    },
+    "title_activity_locations": {
+      "en": "LocationsActivity"
+    },
+    "title_activity_login": {
+      "en": "Sign in",
+      "he": "התחבר",
+      "fr": "S׳identifier",
+      "de": "Einloggen"
+    },
+    "title_activity_main": {
+      "en": "MainActivity",
+      "de": "Hauptaktivität"
+    },
+    "title_section1": {
+      "en": "Section 1",
+      "de": "Teil 1"
+    },
+    "title_section2": {
+      "en": "Section 2",
+      "de": "Teil 2"
+    },
+    "title_section3": {
+      "en": "Section 3",
+      "de": "Teil 3"
+    },
+    "today": {
+      "en": "Today",
+      "he": "היום",
+      "fr": "Today",
+      "de": "Heute"
+    },
+    "torah": {
+      "en": "Reading of the Torah",
+      "fr": "Lecture de la Torah",
+      "es": "Lectura de la Tora",
+      "de": "Lesen der Torah"
+    },
+    "torahHahzaraTitle": {
+      "en": "Returning the Torah to the Ark",
+      "fr": "Retour du Rouleau de la Torah",
+      "es": "Regresando la Tora al Ejal",
+      "de": "Einheben der Torah in den Aron HaKodesch"
+    },
+    "track": {
+      "en": "Allow annonymous tracking of your Siddur usage",
+      "he": "אפשר מעקב אנונימי אחר שימושיך בסידור",
+      "fr": "Autoriser un suivi anonyme de votre usage du Siddur",
+      "es": "Permitir enviar información Anónima en Siddur",
+      "de": "Anonymes Tracking des Siddurs erlauben"
+    },
+    "track_title": {
+      "en": "Allow Tracking",
+      "he": "אפשר מעקב",
+      "fr": "Autoriser le Suivi",
+      "es": "Permitir información Anónima",
+      "de": "Tracking erlauben"
+    },
+    "tvilatKelimTitle": {
+      "en": "Before using new metal or glass utensils that might have been bought from a gentile -that  are intended for food or drink - they must be immersed in a mikveh. Upon immersing one should recite",
+      "he": "לפני שימוש בכלים ממתכת או זכוכית, אשר יש חשש כי יצאו מרשות גוי, ומשמשים לאכילה ושתיה. יש לברך זאת ולטבלם במקווה",
+      "fr": "Avant d׳utiliser un nouvel ustensile en métal ou en verre qui a pu être acheté à un non juif -et qui va être utilisé pour la nourriture ou une boisson- on doit l\\׳immerger dans un mikve. Au moment de l\\׳immersion on récite:",
+      "es": " Antes de utilizar los nuevos utensilios de metal o de vidrio, que han sido comprados a un gentil, los cuales están destinados para la comida o la bebida, hay qus sumergirlos a la mikve. Al sumergir uno debe recitar ",
+      "de": "Vor dem Gebrauch eines neuen Metall- oder Glasutensils, welches für Essen und Trinken gefertigt und möglicherweise von einem Nichtjuden gekauft wurde, müssen in einer Mikwah getunkt werden. Über das Eintauchen sagt man"
+    },
+    "tvilatKliTitle": {
+      "en": "If more than one utensil is immersed conclude with",
+      "he": "אם יש לו יותר מכלי אחד",
+      "fr": "Si plus d׳un ustensile est immergé, on conclut par",
+      "es": "Si sumerge mas de un utenzilio recita: ",
+      "de": "Wenn mehr als ein Gegenstand getunkt wird, fährt man hier fort"
+    },
+    "two_values__0": {
+      "en": "0"
+    },
+    "two_values__1": {
+      "en": "1"
+    },
+    "tzetKochav__0": {
+      "en": "Hacham Ovadia Yosef - 13.5 Minutes after Sunset",
+      "he": "הגרע יוסף - 13.5 דקות לאחר שקיעה",
+      "fr": "Hacham Ovadia Yosef - 13.5 Minutes après le Coucher du Soleil"
+    },
+    "tzetKochav__1": {
+      "en": "GRA - 18 Minutes after Sunset",
+      "he": "הגאון מוילנה - 18 דקות לאחר שקיעה",
+      "fr": "GRA - 18 Minutes après le Coucher du Soleil"
+    },
+    "tzetKochav__2": {
+      "en": "Baal Hatania - 24 Minutes after Sunset",
+      "he": "בעל התניא - 24 דקות לאחר שקיעה",
+      "fr": "Baal Hatania - 24 Minutes après le Coucher du Soleil"
+    },
+    "tzetKochav__3": {
+      "en": "Chazon Ish - 40 Minutes after Sunset",
+      "he": "חזון איש - 40 דקות לאחר שקיעה",
+      "fr": "Chazon Ish - 40 Minutes après le Coucher du Soleil"
+    },
+    "tzetKochav__4": {
+      "en": "Rabenu Tam - 72 Minutes after Sunset",
+      "he": "רבנו תם - 72 דקות לֹאחר שקיעה",
+      "fr": "Rabenu Tam - 72 Minutes après le Coucher du Soleil"
+    },
+    "tzetRabenuTamTitle": {
+      "en": "Nightfall Rabenu Tam",
+      "fr": "Tombée de la Nuit, Rabenu Tam",
+      "es": "Rabenu Tam",
+      "de": "Einbruch der Nacht nach Rabenu Tam"
+    },
+    "tzetZmanTitle": {
+      "en": "Nightfall",
+      "fr": "Tombée de la Nuit",
+      "es": "Anochecer",
+      "de": "Einbruch der Nacht"
+    },
+    "tzet_summary": {
+      "en": "Choose a Shita to calculate dusk time",
+      "he": "בחר שיטה לחישוב זמן צאת הכוכבים",
+      "fr": "Choisissez la Méthode de calcul du Crépuscule",
+      "es": "Que Shita utiliza para Calcular el Anochecer",
+      "de": "Wähle eine Schita aus, um die Zeit zur Abenddämmerung zu berechnen"
+    },
+    "tzet_title": {
+      "en": "Dusk (Tzet HaKochavim)",
+      "he": "צאת הכוכבים",
+      "fr": "Crépuscule (Tzet HaKochavim)",
+      "es": "Anochecer (Tzet HaKojavim)",
+      "de": "Abenddämmerung (Tzet HaKochawim)"
+    },
+    "uluTitle": {
+      "en": "Ulu Ushpizin",
+      "he": "עולו אושפיזין",
+      "de": "Ulu Ushpizin"
+    },
+    "use24": {
+      "en": "Use 24 hour format",
+      "he": "הראה זמנים בפורמט 24",
+      "fr": "Utiliser le format horaire 24h",
+      "es": "Use Formato de 24 Hrs",
+      "de": "Benutze 24 Stunden Format"
+    },
+    "use24Summary": {
+      "en": "Use 24 hour format (e.g. 13:56)",
+      "he": "הצג זמנים בפורמט 24 שעות (לדוג' 13:56)",
+      "fr": "Utiliser le format horaire 24h (ex: 13:56)",
+      "es": "Use Formato de 24 Hrs (Ejemplo 13:56)",
+      "de": "Benutze 24 Stunden Format (z.B. 13:56)"
+    },
+    "useAlways": {
+      "en": "Always use this location",
+      "he": "תמיד השתמש במיקום זה",
+      "fr": "Toujours utiliser cet emplacement",
+      "es": "Siempre Utilizar esta Ubucacion",
+      "de": "Immer diesen Ort benutzen"
+    },
+    "use_volume_help": {
+      "en": "Use the volume rocker to adjust scrolling speed",
+      "he": "השתמש במקשי הוליוֹם כדי לשלוט במהירות הגלילה",
+      "fr": "Utilisez les boutons de volume pour ajuster la vitesse de défilement",
+      "de": "Benutze den Lautstärkeregler um die Scroll-Geschwindigkeit einzustellen"
+    },
+    "user_not_logged_in": {
+      "en": "Not logged in",
+      "he": "חשבון לא נמצא",
+      "fr": "Vous n׳êtes pas connecté",
+      "de": "Nicht eingeloggt"
+    },
+    "user_not_logged_in_message": {
+      "en": "In order to make a purchase you must create an account first",
+      "he": "על מנת לבצע רכישה עליך ליצור קודם חשבון",
+      "fr": "Pour acheter, vous devez d׳abord créer un compte",
+      "de": "Um einen Kauf zu tätigen müssen Sie zuerst einen Account erstellen"
+    },
+    "using_old_location": {
+      "en": "Location could not be determined, using last saved location",
+      "he": "מיקום לא נמצא, משתמש במיקום השמור האחרון",
+      "de": "Standort konnte nicht festgestellt werden, letzter gespeicherter Ort wird benutzt"
+    },
+    "uvaTitle": {
+      "en": "Uva LeZion",
+      "fr": "Ouva LeZion",
+      "es": "Uva LeZion",
+      "de": "Uwa LeZion"
+    },
+    "vanenuPref": {
+      "en": "Add Va'anenu",
+      "he": "הראה ועננו",
+      "fr": "On ajoute Va׳anenu",
+      "es": "Agrega Va'anenu",
+      "de": "Füge Wa'anenu hinzu"
+    },
+    "vanenuSummery": {
+      "en": "Add Va'anenu (Prayer for Rain) to Shma Koleinu",
+      "he": "הוסף 'ועננו' (תפילה לעצירת גשמים) בשמע קולינו",
+      "fr": "On ajoute Va׳anenu (Prière pour la Pluie) au Shéma Koleinu",
+      "es": "Agrega Va'anenu (Rezo por la Lluvia) en el Shma Kolenu",
+      "de": "Füge Wa'anenu (Gebet für Regen) zum Schma Koleinu hinzu"
+    },
+    "version": {
+      "en": "App Version",
+      "he": "גרסה אפליקציה",
+      "fr": "Version",
+      "de": "App Version"
+    },
+    "veyitenTitle": {
+      "en": "Blessing Verses",
+      "he": "פסוקי ברכה",
+      "fr": "Pasoukim pour la fin de Shabbat",
+      "es": "Bendiciones",
+      "de": "Segen Verse"
+    },
+    "vibration_description": {
+      "en": "Vibrate when the notification arrives",
+      "he": "רטט כאשר ההתראה מגיעה",
+      "fr": "Vibrer lorsque la notification arrive",
+      "es": "Vibrar cuando llegue la notificación",
+      "de": "Vibrieren, wenn die Benachrichtigung eintrifft"
+    },
+    "vibration_label": {
+      "en": "Vibration",
+      "he": "רטט",
+      "fr": "Vibration",
+      "es": "Vibración",
+      "de": "Vibration"
+    },
+    "viduyHagadolTitle": {
+      "en": "The Great Confession",
+      "he": "וידוי הגדול",
+      "de": "Das lange Widui"
+    },
+    "viduyTitle": {
+      "en": "Confession",
+      "he": "וידוי",
+      "fr": "Vidouy (Confession)",
+      "es": "Ana",
+      "de": "Bekenntnis"
+    },
+    "wellcom_title": {
+      "en": "Wellcome to the Smart Siddur",
+      "fr": "\nBienvenue dans Smart Siddur\n",
+      "es": "\nBienvenidos a Smart Siddur    \n",
+      "de": "Willkommen beim Smart Siddur"
+    },
+    "wellcome": {
+      "en": "welcome",
+      "he": "ברוכים הבאים",
+      "fr": "Bienvenue",
+      "de": "Willkommen"
+    },
+    "wellcome_text": {
+      "en": "\n\n\nIn the next steps you'll be configuring your preferences, and have a short tutorial on\nthe siddur.\n\n\n Enjoy!",
+      "fr": "\n\n\n\nDans les étapes suivantes vous configurerez vos préférences et aurez un bref tutorial du Siddur.\n\n\n\nBonne Téfilah!\n",
+      "es": "\n\n\n\nEn los siguientes pasos usted podrá configurar su preferencias y tener un pequeño tutorial del Siddur.\n\n\n\nDisfrute!!\n",
+      "de": "\n\n\nIn den nächsten Schritten werden Sie Ihre Einstellungen konfigurieren und ein kurzes Tutorial für diesen Siddur erhalten.\n\n\n Viel Spaß!"
+    },
+    "whisper": {
+      "en": "\n\n<small>Whisper</small>\n\n    ",
+      "he": "\n    \n<small>יאמר בלחש</small>\n",
+      "fr": "<small>à voix basse</small>",
+      "es": "\n    \n<small>susurro</small>\n",
+      "de": "\n\n<small>Flüstern</small>\n\n    "
+    },
+    "why_login_btn": {
+      "en": "Why should I?",
+      "he": "למה שאעשה את זה?",
+      "fr": "Pourquoi créer un compte?",
+      "de": "Warum sollte ich?"
+    },
+    "why_login_text": {
+      "en": "By creating an account you are able to save your preferences and purchase status with this Siddur\n\n\nSigning up does NOT mean we can send you emails without your confirmation or that g-d forbid we will sell your email address\n    to any 3rd parties",
+      "he": "הרשמה לאפליקציה משמעה שתוכלו לשמור על ההגדרות שלכם ועל סטטוס הרכישה שלכם מכל מכשיר.\n\n זה בשום אופן לא אומר שנשלח לכם אימייל מבלי הסכמתכם או שנמכור חלילה את המידע הזה לחברות צד שלישי",
+      "fr": "En créant un compte, vous pourrez sauvegarder vos préférences et votre historique d׳achat de ce Siddur\n\n\nS׳enregistrer ne signifie PAS que nous vous enverrons des emails sans votre accord ni que, D.ieu nous en garde, nous vendrons votre adresse de messagerie\n    à une autre entité",
+      "de": "Mit der Erstellung eines Accounts sind Sie in der Lage Ihre Präferenzen und Einkauf-Status in diesem Siddur zu speichern\n\n\nAbonnieren heißt NICHT, dass wir Ihnen, ohne Ihr Einverständnis, Emails senden oder, dass G-tt behüte, wir Ihre Email-Adresse an Dritte verkaufen "
+    },
+    "woman_mode": {
+      "en": "I am a woman",
+      "he": "אני אשה",
+      "fr": "Je suis une femme",
+      "de": "Ich bin eine Frau"
+    },
+    "yaanchaTitle": {
+      "en": "God Will Answer",
+      "fr": "Hashem Répondra",
+      "es": "Hashem Contestara",
+      "de": "G-tt Wird Antworten"
+    },
+    "yagTitle": {
+      "en": "13 Attributes of Mercy",
+      "he": "י\\\"ג מידות",
+      "fr": "13 Attributs de Miséricorde",
+      "de": "13 Eigenschaften der Barmherzigkeit"
+    },
+    "yahShemaTitle": {
+      "en": "Lord Here Your Poor Ones",
+      "he": "יה שמע אביונך",
+      "fr": "Seigneur Ici sont Tes Pauvres",
+      "de": "Herr, hier sind deine Armen"
+    },
+    "yalezuTitle": {
+      "en": "Psalms to say before going to sleep",
+      "he": "פסוקים לומר לפני השינה",
+      "fr": "Psaumes à dire avant de dormir",
+      "es": "Salmos antes de Dormir",
+      "de": "Psalmen, die man for den Schlafengehen sagt"
+    },
+    "yazivTitle": {
+      "en": "Egypt Redemption",
+      "fr": "Libération d׳Egypte",
+      "es": "Redención de Egipto",
+      "de": "Erlösung aus Ägypten"
+    },
+    "yeheKevodTitle": {
+      "en": "Lord's Glory",
+      "fr": "Gloire de D.ieu",
+      "es": "La Gloria de Hashem",
+      "de": "Des Ewigen Ruhmes"
+    },
+    "yehiRazonTitle": {
+      "en": "Yehi Razon",
+      "fr": "Yehi Razon",
+      "es": "Yehi Razon",
+      "de": "Jehi Razon"
+    },
+    "yerushalyim_title": {
+      "en": "Jerusalem Day",
+      "fr": "Jour de Jérusalem",
+      "es": "El Día de Jerusalem",
+      "de": "Jerusalem Tag"
+    },
+    "yes": {
+      "en": "Yes",
+      "he": "כן",
+      "fr": "Oui",
+      "es": "Si",
+      "de": "Ja"
+    },
+    "yeshemTitle": {
+      "en": "Yehi Shem",
+      "fr": "Yehi Shem",
+      "es": "Yehi Shem",
+      "de": "Jehi Schem"
+    },
+    "yishtabachTitle": {
+      "en": "The Lord Will be Praised Forever",
+      "fr": "Treize Attributs Divins",
+      "es": "Hashem Sera Alabado Por Siempre",
+      "de": "Der Ewige wird ewig gelobt werden"
+    },
+    "yotserTitle": {
+      "en": "Yotser Or",
+      "fr": "Yotser Or",
+      "es": "Yotser Or",
+      "de": "Jotzer Or"
+    },
+    "zahalTitle": {
+      "en": "A Prayer for IDF",
+      "fr": "Prière pour Tsahal",
+      "es": "El Rezo por IDF",
+      "de": "Ein Gebet für die IDF"
+    },
+    "zchorTitle": {
+      "en": "Remember Your Mercy",
+      "he": "זכור רחמיך",
+      "fr": "Souviens-Toi de Ta Miséricorde",
+      "de": "Erinnere dich an deine Gnade"
+    },
+    "zimra": {
+      "en": "Psukei D'Zimra",
+      "fr": "Les Cantiques",
+      "es": "Psukei D'Zimra",
+      "de": "Psukei D'Simra"
+    },
+    "zimun": {
+      "fr": "\n\n<small>Si trois hommes ou plus mangent ensemble, l׳un d׳eux dit:</small><br />  הַב לָן וְנִבְרִיךְ לְמַלְכָּא עִלָּאָה קַדִּישָׁא <br />\n<small>Ils répondent:</small><br /> שָׁמַיִם <br />\n<small>Il dit:</small><br /> בִּרְשׁוּת מַלְכָּא עִלָּאָה קַדִּישָׁא, %1$@ וּבִרְשׁוּתְכֶם נְבָרֵך /<small>S\\׳il y a dix hommes:</small> אֱלֹהֵינוּ/ שֶׁאָכַלְנוּ מִשֶּׁלוֹ <br />\n<small>Ils répondent:</small><br /> בָּרוּךְ /<small>S\\׳il y dix hommes:</small> אֱלֹהֵינוּ/ שֶׁאָכַלְנוּ מִשֶּׁלוֹ וּבְטוּבוֹ חָיִינוּ <br />\n<small>A un mariage:</small><br /> בִּרְשׁוּת מַלְכָּא עִלָּאָה קַדִּישָׁא, וּבִרְשׁוּתְכֶם נְבָרֵך אֱלֹהֵינוּ שֶׁהַשִּׂמְחָה בִמְעוֹנוֹ שֶׁאָכַלְנוּ מִשֶּׁלוֹ <br />\n<small>Ils répondent:</small><br /> בָּרוּךְ אֱלֹהֵינוּ שֶׁהַשִּׂמְחָה בִמְעוֹנוֹ שֶׁאָכַלְנוּ מִשֶּׁלוֹ וּבְטוּבוֹ חָיִינוּ\n<br />\n\n"
+    },
+    "zimun_title": {
+      "en": "Zimun",
+      "fr": "Zimoun",
+      "es": "Zimun",
+      "de": "Simun"
+    },
+    "zizitDes": {
+      "en": "Sun is 11.5 degrees below horizon \nEarliest time to put on Zizit and Tfilin",
+      "fr": "Le Soleil est 11.5 degrés sous l’horizon \nHoraire le plus tôt pour le port des Tsitsits et Téphilines",
+      "es": "El Sol esta 11.5 grados bajo el Horizonte \nHorario mas temprano para Zizit y Tfilin",
+      "de": "Sonne ist 11,5 Grad unter dem Horizont \nFrüheste Zeit Tzizit und Tfillin anzuziehen"
+    },
+    "zizitKatanAshkenazInstruction": {
+      "en": "If you only put on Talit Katan, say:",
+      "he": "אם אינו לובש טלית גדול, רק טלית קטן, יאמר:",
+      "fr": "Si on porte juste le Talith Katan, on dit:",
+      "es": "Si solo se ve a poner el Talit Katan",
+      "de": "Wenn man nur Tallit Katan anzieht, sagt man:"
+    },
+    "zizitKatanTitle": {
+      "en": "Putting on the Tallit Katan",
+      "he": "סדר טלית קטן",
+      "fr": "On met le Talith Katan",
+      "es": " Al Ponerse el Talit Katan ",
+      "de": "Anziehen des Tallit Katan"
+    },
+    "zizitKissShma": {
+      "en": "\n\n<small>You should kiss the Talit</small>\n\n    ",
+      "he": "\n\n<small>יעביר הציצית על עיניו וינשק</small>\n ",
+      "fr": "\n\n<small>On embrasse le Talit</small>\n ",
+      "es": "\n\n<small>Se besa el Talit</small>\n ",
+      "de": "\n\n<small>Man sollte den Tallit küssen</small>\n\n    "
+    },
+    "zizitShmaEnd": {
+      "en": "\n\n<small>Pass the Talit on your eyes then kiss it and put it back</small>\n ",
+      "he": "\n\n<small>יעביר הציצית על עיניו, ינשק ויניח</small>\n ",
+      "fr": "\n\n<small>Mettez le Talith devant vos yeux, embrassez le, puis reposez le</small>\n ",
+      "de": "\n\n<small>Berühre die Augen mit den Zizit, küsse sie und lasse sie los.</small>\n "
+    },
+    "zizitTitle": {
+      "en": "Putting on Talit",
+      "fr": "Mise du Talit",
+      "es": "Al Vestir el Talit",
+      "de": "Anziehen des Tallit"
+    },
+    "zizitZmanTitle": {
+      "en": "Earliest Talis and Tfillin",
+      "fr": "1er Horaire pour le Talit et les Téphilines",
+      "es": "Talit and Tfilin",
+      "de": "Frühester Tallit and Tfillin"
+    },
+    "zman_klali_summary": {
+      "en": "Choose the genral Shita to calculate daily Zmanim like last time for Shma etc.",
+      "he": "בחר שיטה לחישוב זמני היוֹם כמו סוֹף זמן קריאת שמע וכדו'",
+      "fr": "Choisissez la Méthode Générale de Calcul des Horaires Quotidiens comme le dernier horaire pour le Shéma, etc.",
+      "es": "Escoja la Shita General para Calcular los Zmanim Diaros como horario de Shma, etc.",
+      "de": "Wähle die genrelle Schita aus, um tägliche Zmanim wie Letztes Schma etc. zu berechnen"
+    },
+    "zman_klali_title": {
+      "en": "General Shita",
+      "he": "זמני היוֹם",
+      "fr": "Méthode Générale",
+      "es": "Shita General",
+      "de": "Generelle Schita"
+    },
+    "zman_nightfall": {
+      "en": "Nightfall",
+      "he": "צאת הכוכבים",
+      "fr": "Tombée de la nuit",
+      "es": "Anochecer",
+      "de": "Einbruch der Nacht"
+    },
+    "zman_offset_explanation": {
+      "en": "Choose how many minutes before the zman you want to be notified",
+      "he": "בחר כמה דקות לפני הזמן תרצה לקבל התראה",
+      "fr": "Choisissez combien de minutes avant le zman vous souhaitez être notifié",
+      "es": "Elige cuántos minutos antes del zman quieres ser notificado",
+      "de": "Wählen Sie, wie viele Minuten vor dem Zman Sie benachrichtigt werden möchten"
+    },
+    "zman_offset_label": {
+      "en": "Remind me before",
+      "he": "הזכר לי לפני",
+      "fr": "Me rappeler avant",
+      "es": "Recuérdame antes",
+      "de": "Erinnere mich vorher"
+    },
+    "zman_reminder_title": {
+      "en": "Zman Reminder",
+      "he": "תזכורת זמן",
+      "fr": "Rappel de Zman",
+      "es": "Recordatorio de Zman",
+      "de": "Zman-Erinnerung"
+    },
+    "zman_reminder_with_time": {
+      "en": "%1$@ is at %2$@",
+      "he": "%1$@ בשעה %2$@",
+      "fr": "%1$@ est à %2$@",
+      "es": "%1$@ es a las %2$@",
+      "de": "%1$@ ist um %2$@"
+    },
+    "zman_shma_gra": {
+      "en": "End of Shma (GRA)",
+      "he": "סוף ק\\\"ש גר\\\"א",
+      "fr": "Fin du Shma (GRA)",
+      "es": "Fin del Shma (GRA)",
+      "de": "Ende Schma (GRA)"
+    },
+    "zman_shma_mga": {
+      "en": "End of Shma (MGA)",
+      "he": "סוף ק\\\"ש מג\\\"א",
+      "fr": "Fin du Shma (MGA)",
+      "es": "Fin del Shma (MGA)",
+      "de": "Ende Schma (MGA)"
+    },
+    "zman_sunrise": {
+      "en": "Sunrise",
+      "he": "הנץ החמה",
+      "fr": "Lever du soleil",
+      "es": "Amanecer",
+      "de": "Sonnenaufgang"
+    },
+    "zman_sunset": {
+      "en": "Sunset",
+      "he": "שקיעה",
+      "fr": "Coucher du soleil",
+      "es": "Puesta del sol",
+      "de": "Sonnenuntergang"
+    },
+    "zman_tfila_gra": {
+      "en": "End of Tefila (GRA)",
+      "he": "סוף תפילה גר\\\"א",
+      "fr": "Fin de Tefila (GRA)",
+      "es": "Fin de Tefilá (GRA)",
+      "de": "Ende Tefila (GRA)"
+    },
+    "zman_tfila_mga": {
+      "en": "End of Tefila (MGA)",
+      "he": "סוף תפילה מג\\\"א",
+      "fr": "Fin de Tefila (MGA)",
+      "es": "Fin de Tefilá (MGA)",
+      "de": "Ende Tefila (MGA)"
+    },
+    "zman_type_description": {
+      "en": "Get notified before halachic times",
+      "he": "קבל התראה לפני זמנים הלכתיים",
+      "fr": "Recevez des notifications avant les heures halakhiques",
+      "es": "Recibe notificaciones antes de horarios halájicos",
+      "de": "Benachrichtigung vor halachischen Zeiten"
+    },
+    "zman_type_explanation": {
+      "en": "Choose which halachic time you want to be reminded about",
+      "he": "בחר על איזה זמן הלכתי תרצה לקבל תזכורת",
+      "fr": "Choisissez l'heure halakhique pour laquelle vous souhaitez recevoir un rappel",
+      "es": "Elige sobre qué horario halájico quieres recibir recordatorio",
+      "de": "Wählen Sie, an welche halachische Zeit Sie erinnert werden möchten"
+    },
+    "zman_type_label": {
+      "en": "Select Zman",
+      "he": "בחר זמן",
+      "fr": "Sélectionner le Zman",
+      "es": "Seleccionar Zman",
+      "de": "Zman auswählen"
+    },
+    "zmanim": {
+      "en": "Zmanim",
+      "he": "זמני היוֹם",
+      "fr": "Horaires",
+      "es": "Zmanim",
+      "de": "Smanim"
+    },
+    "zmanim_pref": {
+      "en": "Zmanim Preferences",
+      "he": "הגדרות זמנים",
+      "fr": "Préférences d׳Horaires",
+      "es": "Preferencias de los Zmanim",
+      "de": "Smanim Vorlieben"
+    },
+    "zmanim_summery": {
+      "en": "Show Zmanim inside Tefilot where needed",
+      "he": "הראה זמנים בתוך התפילות כשצריך",
+      "fr": "Montrer les Horaires dans les Téfilot lorsque nécessaire",
+      "es": "Muestra los Zmanim dentro de la Tefila",
+      "de": "Zeige Smanim innerhalb der Tefillot wo notwendig"
+    },
+    "zmirot": {
+      "en": "Praises",
+      "he": "זמירות",
+      "de": "Lobgesänge"
+    },
+    "zomStartZmanTitle": {
+      "en": "Taanit Start",
+      "he": "כניסת הצום",
+      "fr": "Début des Taanit",
+      "es": "Taanit Start",
+      "de": "Taanit beginnt"
+    },
+    "zomZmanTitle": {
+      "en": "Taanit Ends",
+      "fr": "Fin de Taanit",
+      "es": "Termino de Ayuno",
+      "de": "Taanit endet"
+    }
+  }
+}

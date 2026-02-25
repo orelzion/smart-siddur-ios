@@ -1,5 +1,10 @@
 import Foundation
 
+private func localizedRuntimeValue(_ key: String, fallback: String) -> String {
+    let value = NSLocalizedString(key, comment: "")
+    return value == key ? fallback : value
+}
+
 /// Represents the state of the next prayer to be observed.
 ///
 /// This struct tracks which prayer is upcoming and provides information about
@@ -31,6 +36,7 @@ struct NextPrayerState: Equatable, Sendable {
 /// Each prayer has multiple time windows (9 total from spec). This struct represents
 /// a single milestone within that window, with halachic context and display text.
 struct PrayerMilestone: Equatable, Sendable {
+    let labelKey: String?
     /// Display name of the milestone (e.g., "Now", "In 30 min", "Too late")
     let name: String
     
@@ -43,6 +49,20 @@ struct PrayerMilestone: Equatable, Sendable {
     /// Halachic context explaining when this milestone is relevant
     /// (e.g., "Shacharit is in the best time window for complete prayer")
     let halachicDescription: String
+
+    init(
+        labelKey: String? = nil,
+        name: String,
+        hebrewName: String,
+        time: Date?,
+        halachicDescription: String
+    ) {
+        self.labelKey = labelKey
+        self.name = name
+        self.hebrewName = hebrewName
+        self.time = time
+        self.halachicDescription = halachicDescription
+    }
     
     static let empty = PrayerMilestone(
         name: "Loading",
@@ -50,6 +70,22 @@ struct PrayerMilestone: Equatable, Sendable {
         time: nil,
         halachicDescription: ""
     )
+
+    var displayName: String {
+        if let labelKey {
+            let localizedByKey = localizedRuntimeValue(labelKey, fallback: labelKey)
+            if localizedByKey != labelKey {
+                return localizedByKey
+            }
+        }
+
+        let localizedByName = localizedRuntimeValue(name, fallback: name)
+        if localizedByName != name {
+            return localizedByName
+        }
+
+        return RuntimeLocale.isHebrew ? hebrewName : name
+    }
 }
 
 /// Suggested prayer for the "Suggested For You" section of the home screen.
@@ -85,7 +121,7 @@ struct SuggestedItem: Identifiable, Equatable, Sendable {
         badgeText: String? = nil,
         description: String = ""
     ) {
-        self.id = "\(prayerType.rawValue)-\(title)-\(badgeText ?? "")"
+        self.id = "\(prayerType.rawValue)-\(badgeText ?? "")"
         self.icon = icon
         self.title = title
         self.hebrewTitle = hebrewTitle
@@ -100,6 +136,7 @@ struct SuggestedItem: Identifiable, Equatable, Sendable {
 /// These are special times like Shkia (sunset) or Tzet HaKochavim (nightfall)
 /// that mark prayer opportunities or transitions.
 struct SpecialZman: Equatable, Sendable {
+    let labelKey: String?
     /// Name of the zman (e.g., "Sunset", "Nightfall")
     let name: String
     
@@ -112,4 +149,34 @@ struct SpecialZman: Equatable, Sendable {
     /// Context explaining the significance of this zman
     /// (e.g., "Arvit can be said after Shkia until Tzet HaKochavim")
     let context: String
+
+    init(
+        labelKey: String? = nil,
+        name: String,
+        hebrewName: String,
+        time: Date?,
+        context: String
+    ) {
+        self.labelKey = labelKey
+        self.name = name
+        self.hebrewName = hebrewName
+        self.time = time
+        self.context = context
+    }
+
+    var displayName: String {
+        if let labelKey {
+            let localizedByKey = localizedRuntimeValue(labelKey, fallback: labelKey)
+            if localizedByKey != labelKey {
+                return localizedByKey
+            }
+        }
+
+        let localizedByName = localizedRuntimeValue(name, fallback: name)
+        if localizedByName != name {
+            return localizedByName
+        }
+
+        return RuntimeLocale.isHebrew ? hebrewName : name
+    }
 }
