@@ -191,12 +191,9 @@ final class HomeViewModel {
         var visible = Set(alwaysShown)
         visible.formUnion(prayerVisibilityService.visiblePrayers(in: context))
 
-        if jewishDay.isShabbat || jewishDay.isYomTov || jewishDay.isRoshChodesh {
+        // Show Musaf only for Rosh Chodesh
+        if jewishDay.isRoshChodesh || jewishDay.isCholHamoed {
             visible.insert(.musaf)
-        }
-
-        if jewishDay.parsha != nil {
-            visible.insert(.torahReading)
         }
 
         let order: [PrayerType] = [
@@ -224,3 +221,4 @@ final class HomeViewModel {
         return date >= tzet
     }
 }
+

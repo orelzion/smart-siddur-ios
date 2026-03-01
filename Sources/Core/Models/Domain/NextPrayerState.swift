@@ -40,35 +40,22 @@ struct PrayerMilestone: Equatable, Sendable {
     /// Display name of the milestone (e.g., "Now", "In 30 min", "Too late")
     let name: String
     
-    /// Hebrew display name of the milestone
-    let hebrewName: String
-    
     /// The zman (time) at which this milestone begins or is calculated
     let time: Date?
-    
-    /// Halachic context explaining when this milestone is relevant
-    /// (e.g., "Shacharit is in the best time window for complete prayer")
-    let halachicDescription: String
 
     init(
         labelKey: String? = nil,
         name: String,
-        hebrewName: String,
-        time: Date?,
-        halachicDescription: String
+        time: Date?
     ) {
         self.labelKey = labelKey
         self.name = name
-        self.hebrewName = hebrewName
         self.time = time
-        self.halachicDescription = halachicDescription
     }
     
     static let empty = PrayerMilestone(
         name: "Loading",
-        hebrewName: "טוען",
-        time: nil,
-        halachicDescription: ""
+        time: nil
     )
 
     var displayName: String {
@@ -84,7 +71,7 @@ struct PrayerMilestone: Equatable, Sendable {
             return localizedByName
         }
 
-        return RuntimeLocale.isHebrew ? hebrewName : name
+        return name
     }
 }
 

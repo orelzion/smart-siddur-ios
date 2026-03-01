@@ -100,27 +100,38 @@ struct NewHomeView: View {
                 .foregroundStyle(gold)
 
             TimelineView(.periodic(from: .now, by: 1)) { context in
-                Text(timeOrCountdownText(to: viewModel.nextPrayerState.currentMilestone.time, now: context.date))
-                    .font(.system(.title2, design: .rounded).weight(.bold))
-                    .foregroundStyle(primaryText)
-                    .monospacedDigit()
+                
+                HStack(spacing: 10) {
+                    Text(timeText(to: viewModel.nextPrayerState.currentMilestone.time, now: context.date))
+                        .font(.system(.title2, design: .rounded).weight(.bold))
+                        .foregroundStyle(primaryText)
+                        .monospacedDigit()
+                    
+                    if let countdown = remainingText(to: viewModel.nextPrayerState.currentMilestone.time, now: context.date) {
+                        HStack(spacing: 0) {
+                            Text("(")
+                            Image(systemName: "stopwatch.fill")
+                                .padding(.trailing, 0.5)
+                            Text("\(countdown))")
+                        }
+                        .font(.system(.caption, design: .rounded).weight(.bold))
+                        .monospacedDigit()
+                        .foregroundStyle(primaryText)
+                    }
+                }
             }
-
-            Text(viewModel.nextPrayerState.currentMilestone.halachicDescription)
-                .font(.subheadline)
-                .foregroundStyle(secondaryText)
 
             HStack(spacing: 10) {
                 if viewModel.nextPrayerState.isTransitional {
                     NavigationLink(destination: PrayerTextView(prayer: Prayer(type: .mincha))) {
-                        heroButton("Open Mincha")
+                        heroButton(Prayer(type: .mincha).displayName)
                     }
                     NavigationLink(destination: PrayerTextView(prayer: Prayer(type: .arvit))) {
-                        heroButton("Open Arvit")
+                        heroButton(Prayer(type: .arvit).displayName)
                     }
                 } else if let prayer = viewModel.nextPrayerState.prayer {
                     NavigationLink(destination: PrayerTextView(prayer: Prayer(type: prayer))) {
-                        heroButton("Open \(prayer.displayName)")
+                        heroButton(prayer.displayName)
                     }
                 }
             }
@@ -244,24 +255,25 @@ struct NewHomeView: View {
             .padding(.vertical, 9)
             .background(gold, in: .capsule)
     }
-
-    private func timeOrCountdownText(to target: Date?, now: Date) -> String {
+    
+    private func timeText(to target: Date?, now: Date) -> String {
         guard let target else { return "--:--:--" }
+
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        formatter.dateStyle = .none
+        return formatter.string(from: target)
+    }
+    
+    private func remainingText(to target: Date?, now: Date) -> String? {
+        guard let target else { return "--:--" }
         let remaining = Int(target.timeIntervalSince(now))
-        if remaining <= 0 {
-            return "00:00:00"
+        if remaining <= 0 || remaining >= 3600 {
+            return nil
         }
-
-        if remaining >= 3600 {
-            let formatter = DateFormatter()
-            formatter.timeStyle = .short
-            formatter.dateStyle = .none
-            return formatter.string(from: target)
-        }
-
-        let hours = remaining / 3600
+        
         let minutes = (remaining % 3600) / 60
         let seconds = remaining % 60
-        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+        return String(format: "%02d:%02d", minutes, seconds)
     }
 }

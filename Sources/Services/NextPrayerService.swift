@@ -61,9 +61,7 @@ final class NextPrayerService {
                 milestone: .init(
                     labelKey: "alotZmanTitle",
                     name: "Alot HaShachar",
-                    hebrewName: "עלות השחר",
-                    time: alotToday,
-                    halachicDescription: "Dawn"
+                    time: alotToday
                 )
             )
         }
@@ -74,9 +72,7 @@ final class NextPrayerService {
                 milestone: .init(
                     labelKey: "zman_sunrise",
                     name: "Netz HaChama",
-                    hebrewName: "נץ החמה",
-                    time: netzToday,
-                    halachicDescription: "Sunrise - earliest preferred Shacharit"
+                    time: netzToday
                 )
             )
         }
@@ -87,9 +83,7 @@ final class NextPrayerService {
                 milestone: .init(
                     labelKey: "zman_shma_gra",
                     name: "Sof Zman Kriat Shma",
-                    hebrewName: "סוף זמן קריאת שמע",
-                    time: sofShmaToday,
-                    halachicDescription: "Last time to recite Shma - GR\"A"
+                    time: sofShmaToday
                 )
             )
         }
@@ -100,9 +94,7 @@ final class NextPrayerService {
                 milestone: .init(
                     labelKey: "zman_tfila_gra",
                     name: "Sof Zman Tefila",
-                    hebrewName: "סוף זמן תפילה",
-                    time: sofTefilaToday,
-                    halachicDescription: "Last time for Amida - GR\"A"
+                    time: sofTefilaToday
                 )
             )
         }
@@ -112,9 +104,7 @@ final class NextPrayerService {
                 prayer: .shacharit,
                 milestone: .init(
                     name: "Chatzot HaYom",
-                    hebrewName: "חצות היום",
-                    time: chatzotToday,
-                    halachicDescription: "Midday - last time for Shacharit makeup"
+                    time: chatzotToday
                 )
             )
         }
@@ -125,9 +115,7 @@ final class NextPrayerService {
                 milestone: .init(
                     labelKey: "minchaBigZmanTitle",
                     name: "Mincha Gedola",
-                    hebrewName: "מנחה גדולה",
-                    time: minchaGedolaToday,
-                    halachicDescription: "Mincha begins in..."
+                    time: minchaGedolaToday
                 )
             )
         }
@@ -138,9 +126,7 @@ final class NextPrayerService {
                 milestone: .init(
                     labelKey: "zman_sunset",
                     name: "Shkia",
-                    hebrewName: "שקיעה",
-                    time: shkiaToday,
-                    halachicDescription: "Sunset"
+                    time: shkiaToday
                 )
             )
         }
@@ -151,9 +137,7 @@ final class NextPrayerService {
                 currentMilestone: .init(
                     labelKey: "zman_nightfall",
                     name: "Tzet HaKochavim",
-                    hebrewName: "צאת הכוכבים",
-                    time: tzetToday,
-                    halachicDescription: "Between Mincha & Arvit"
+                    time: tzetToday
                 ),
                 isTransitional: true,
                 alternativePrayer: .arvit
@@ -165,9 +149,7 @@ final class NextPrayerService {
                 prayer: .arvit,
                 milestone: .init(
                     name: "Chatzot Layla",
-                    hebrewName: "חצות לילה",
-                    time: chatzotLaylaToday,
-                    halachicDescription: "Halachic midnight"
+                    time: chatzotLaylaToday
                 )
             )
         }
@@ -178,9 +160,7 @@ final class NextPrayerService {
                 milestone: .init(
                     labelKey: "alotZmanTitle",
                     name: "Alot HaShachar",
-                    hebrewName: "עלות השחר",
-                    time: alotTomorrow,
-                    halachicDescription: "Dawn"
+                    time: alotTomorrow
                 )
             )
         }
@@ -216,9 +196,7 @@ final class NextPrayerService {
                 milestone: PrayerMilestone(
                     labelKey: "zman_sunrise",
                     name: "Netz HaChama",
-                    hebrewName: "נץ החמה",
-                    time: date,
-                    halachicDescription: "Sunrise - earliest preferred Shacharit"
+                    time: date
                 )
             )
         }
@@ -228,9 +206,7 @@ final class NextPrayerService {
                 milestone: PrayerMilestone(
                     labelKey: "zman_sunset",
                     name: "Shkia",
-                    hebrewName: "שקיעה",
-                    time: date,
-                    halachicDescription: "Sunset"
+                    time: date
                 )
             )
         }
@@ -238,9 +214,7 @@ final class NextPrayerService {
             prayer: .arvit,
             milestone: PrayerMilestone(
                 name: "Chatzot Layla",
-                hebrewName: "חצות לילה",
-                time: date,
-                halachicDescription: "Halachic midnight"
+                time: date
             )
         )
     }
