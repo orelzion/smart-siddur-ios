@@ -68,7 +68,7 @@ final class ZmanimViewModel {
         do {
             // Fetch user location
             guard let location = try await locationRepository.getSelectedLocation() else {
-                errorMessage = "No location set. Please set your location in Settings."
+                errorMessage = "No location set. chaging things. Please set your location in Settings."
                 isLoading = false
                 return
             }

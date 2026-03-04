@@ -25,7 +25,7 @@ struct DayDetailSheet: View {
                             .font(.title2.bold())
 
                         Text(formattedGregorianDate)
-                            .font(.subheadline)
+                            // .font(.subheadline)
                             .foregroundStyle(.secondary)
                     }
                 }
