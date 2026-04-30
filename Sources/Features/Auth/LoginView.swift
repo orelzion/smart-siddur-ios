@@ -107,7 +107,7 @@ struct LoginView: View {
                         hapticFeedback()
                         viewModel?.signInAnonymously()
                     } label: {
-                        Text("Continue without account")
+                        Text("Browse without signing in")
                             .font(.subheadline)
                             .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
                     }
