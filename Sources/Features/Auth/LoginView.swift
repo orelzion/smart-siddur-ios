@@ -107,7 +107,7 @@ struct LoginView: View {
                         hapticFeedback()
                         viewModel?.signInAnonymously()
                     } label: {
-                        Text("Continue as guest")
+                        Text("Continue as guest SB81-20260501-090926")
                             .font(.subheadline)
                             .foregroundStyle(Color(red: 0.85, green: 0.73, blue: 0.27))
                     }
