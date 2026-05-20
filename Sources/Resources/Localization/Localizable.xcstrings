@@ -204,7 +204,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sign in or register"
+            "value" : "Sign in or register test"
           }
         },
         "fr" : {
@@ -233,7 +233,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sign in"
+            "value" : "Sign in  test"
           }
         },
         "fr" : {
