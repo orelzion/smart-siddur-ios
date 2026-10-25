@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1B2C3D4E5F60718293A4B5C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60718293A4B5D /* Localizable.xcstrings */; };
 		0037917626E6D72F83FEE50B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B248124038FA5B8E8BCF9 /* LoginView.swift */; };
 		04606F4B99095758EE095A45 /* ZmanimOpinionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B03E5D6E0A814235CE3D9 /* ZmanimOpinionsView.swift */; };
 		048A0019B8D19526A8CBE19D /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C22762CA3FD74D37C7F3EC /* AppTheme.swift */; };
@@ -35,6 +34,7 @@
 		72E8A641C60B901B599E068A /* CalendarGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54EAA15EB64CB014D21243A /* CalendarGridView.swift */; };
 		78C11A5B7DEB088B03C26AC2 /* SettingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091EE7350B22B3AA91D8F59E /* SettingsRepository.swift */; };
 		85701BD138D50792AEF7D68F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0094A82EAB5AF180F650C087 /* AuthViewModel.swift */; };
+		8D6F19A42DD7C3F7280DCE6D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 9F76A0F872FF9038A69E2C01 /* Localizable.xcstrings */; };
 		93849A62923F1CCECBCD5BED /* ZmanRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5BF69A6053C5964DF11812 /* ZmanRowView.swift */; };
 		94C8253441C4AA88E1DDDBBD /* PrayerText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BA212441061AB578167D64 /* PrayerText.swift */; };
 		97583B985BFD39B623EA7772 /* ZmanimViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1853EE3C275561D121A355 /* ZmanimViewModel.swift */; };
@@ -61,6 +61,7 @@
 		E49CDA681BC9A1352A148543 /* PrayersMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189ADF8A8619B12C14B05840 /* PrayersMenuView.swift */; };
 		E6787D74BCBAAE6D224CA00D /* AttributedString+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DE5784B19C577C5F9439E6 /* AttributedString+HTML.swift */; };
 		E74120B368A2E6E2837AF6BA /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0934B84EE6AED7E5C3F73690 /* UserProfile.swift */; };
+		E8D3C0D7B9051D5ECF9603EE /* SnapshottingTests in Frameworks */ = {isa = PBXBuildFile; productRef = 8748022EACCD97365CEAE2F3 /* SnapshottingTests */; };
 		E974A913D311CBAB4F947532 /* ComponentExports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A081B3457B12C0DD5ADF02 /* ComponentExports.swift */; };
 		EA7761342A937F5F8E684CB2 /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FF0441106605277492A68D /* LocationPickerView.swift */; };
 		EB443D21F17499C889E42279 /* ZmanimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB23020C9205B50CB07A30 /* ZmanimView.swift */; };
@@ -69,8 +70,17 @@
 		FC6B9A431ECA984D7F5E8D22 /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9CCA4B3024E5BB1947737 /* TabContainerView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EF5F94F5045342863C0FE93D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5A915ED1BC5DDC1B87609C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50D70330E6EB9A16D2CA758C;
+			remoteInfo = SmartSiddur;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		A1B2C3D4E5F60718293A4B5D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		0094A82EAB5AF180F650C087 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		00FDAC25B3D12302DE67E3FE /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		01C865A793AF63FAAB5ADD55 /* JewishDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JewishDay.swift; sourceTree = "<group>"; };
@@ -104,6 +114,7 @@
 		8C2C550E8EC12715FEE7F711 /* ZmanimService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZmanimService.swift; sourceTree = "<group>"; };
 		8E3129614457AC2378B65F96 /* ZmanTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZmanTime.swift; sourceTree = "<group>"; };
 		9822BEDB5C40021594FCCE46 /* GeoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLocation.swift; sourceTree = "<group>"; };
+		9F76A0F872FF9038A69E2C01 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		A477F29649B330823AE01025 /* HebrewDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HebrewDateFormatter.swift; sourceTree = "<group>"; };
 		AAAC86919D109160AC4C0345 /* PrayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerService.swift; sourceTree = "<group>"; };
 		AB9287ABCEAB7EA9FD2666F9 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -123,11 +134,24 @@
 		F110AD93AABB1CBAF701C8B1 /* JewishCalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JewishCalendarService.swift; sourceTree = "<group>"; };
 		F3BA212441061AB578167D64 /* PrayerText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerText.swift; sourceTree = "<group>"; };
 		F7189D62DDF29D26F64996C9 /* NusachPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NusachPickerView.swift; sourceTree = "<group>"; };
+		F7B461099F244CC336D10472 /* SmartSiddurSnapshotTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SmartSiddurSnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7DE5784B19C577C5F9439E6 /* AttributedString+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedString+HTML.swift"; sourceTree = "<group>"; };
 		F7F458D54493DA75E7BCCBE0 /* NextPrayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPrayerService.swift; sourceTree = "<group>"; };
 		FB5B248124038FA5B8E8BCF9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FC5BF69A6053C5964DF11812 /* ZmanRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZmanRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		087ED136B850880BE2997C59 /* SnapshotTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = SnapshotTests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1B84E8FAF4887F3DA1CB7A06 /* Frameworks */ = {
@@ -141,25 +165,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A6CB240A9FA57365DFF0BCA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8D3C0D7B9051D5ECF9603EE /* SnapshottingTests in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A1B2C3D4E5F60718293A4B5E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A1B2C3D4E5F60718293A4B5F /* Localization */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		A1B2C3D4E5F60718293A4B5F /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				A1B2C3D4E5F60718293A4B5D /* Localizable.xcstrings */,
-			);
-			path = Localization;
-			sourceTree = "<group>";
-		};
 		0C51E0DDDDC4DB18C22EF0E8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,7 +200,7 @@
 				E82CDFC93C8087D07188A752 /* Data */,
 				0C51E0DDDDC4DB18C22EF0E8 /* Extensions */,
 				B83042DED4A4A75E99CFA1CD /* Features */,
-				A1B2C3D4E5F60718293A4B5E /* Resources */,
+				D812EE9FA8462455ED9936CF /* Resources */,
 				A7CBC73B308CFC20687348C7 /* Services */,
 				57FE214EAA70038262A9D74C /* UI */,
 			);
@@ -223,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				B6666431E5392E8AE5C1670F /* SmartSiddur.app */,
+				F7B461099F244CC336D10472 /* SmartSiddurSnapshotTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,6 +299,14 @@
 				E54B03E5D6E0A814235CE3D9 /* ZmanimOpinionsView.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		A1AC01E1D21F3F2132452BBC /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				9F76A0F872FF9038A69E2C01 /* Localizable.xcstrings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		A3804EDA58C498988A865113 /* Core */ = {
@@ -369,6 +394,14 @@
 			path = Theme;
 			sourceTree = "<group>";
 		};
+		D812EE9FA8462455ED9936CF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1AC01E1D21F3F2132452BBC /* Localization */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E031E33C59E48A5804B0A603 /* Prayers */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,6 +433,7 @@
 		E8F5001257A4B69709EF95DE = {
 			isa = PBXGroup;
 			children = (
+				087ED136B850880BE2997C59 /* SnapshotTests */,
 				25D046BD67F48E5A2976C1EB /* Sources */,
 				6855F6EE8021CCC1846DBCA1 /* Products */,
 			);
@@ -418,12 +452,36 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1A01226574F262610434FD80 /* SmartSiddurSnapshotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 921C3ADA8E6EDA523471B555 /* Build configuration list for PBXNativeTarget "SmartSiddurSnapshotTests" */;
+			buildPhases = (
+				8C84D9D171F734786C34759F /* Sources */,
+				B54B48244223B26EB715FA5E /* Resources */,
+				A6CB240A9FA57365DFF0BCA8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E398E865A6E64A9DAAC2C7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				087ED136B850880BE2997C59 /* SnapshotTests */,
+			);
+			name = SmartSiddurSnapshotTests;
+			packageProductDependencies = (
+				8748022EACCD97365CEAE2F3 /* SnapshottingTests */,
+			);
+			productName = SmartSiddurSnapshotTests;
+			productReference = F7B461099F244CC336D10472 /* SmartSiddurSnapshotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		50D70330E6EB9A16D2CA758C /* SmartSiddur */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CBF4A7124E356C8CFF4A2C7 /* Build configuration list for PBXNativeTarget "SmartSiddur" */;
 			buildPhases = (
 				D3AD1D648BEBE736C113F117 /* Sources */,
-				A1B2C3D4E5F60718293A4B60 /* Resources */,
+				42B9DD14FC0EE76432D7A9E0 /* Resources */,
 				1B84E8FAF4887F3DA1CB7A06 /* Frameworks */,
 			);
 			buildRules = (
@@ -449,47 +507,65 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 40112162CFBE6C0779A67127 /* Build configuration list for PBXProject "SmartSiddur" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
-				en,
-				he,
-				fr,
-				es,
 				de,
+				en,
+				es,
+				fr,
+				he,
 			);
 			mainGroup = E8F5001257A4B69709EF95DE;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				97126195E9BC30B53A1E3CDB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				6F6A56E8FE4C4FDDD3E156D8 /* XCRemoteSwiftPackageReference "KosherSwift" */,
+				F4FF2E2509C6A8735642D8F3 /* XCRemoteSwiftPackageReference "SnapshotPreviews" */,
 				DD526FB1F5B9D53E20EBFD65 /* XCRemoteSwiftPackageReference "supabase-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
+			productRefGroup = 6855F6EE8021CCC1846DBCA1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				50D70330E6EB9A16D2CA758C /* SmartSiddur */,
+				1A01226574F262610434FD80 /* SmartSiddurSnapshotTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A1B2C3D4E5F60718293A4B60 /* Resources */ = {
+		42B9DD14FC0EE76432D7A9E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1B2C3D4E5F60718293A4B5C /* Localizable.xcstrings in Resources */,
+				8D6F19A42DD7C3F7280DCE6D /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B54B48244223B26EB715FA5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8C84D9D171F734786C34759F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3AD1D648BEBE736C113F117 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -553,6 +629,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E398E865A6E64A9DAAC2C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50D70330E6EB9A16D2CA758C /* SmartSiddur */;
+			targetProxy = EF5F94F5045342863C0FE93D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		083C58767B5EFD9B0B72C7C6 /* Release */ = {
@@ -695,6 +779,24 @@
 			};
 			name = Debug;
 		};
+		8F1CEC564B3E033319F55E80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.karriapps.smartsiddurlite.snapshot-tests";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartSiddur.app/SmartSiddur";
+			};
+			name = Debug;
+		};
 		A1751C6D750D87C213F96D1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -709,6 +811,24 @@
 				SDKROOT = iphoneos;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D8381A8D233943F5C12BBDA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.karriapps.smartsiddurlite.snapshot-tests";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartSiddur.app/SmartSiddur";
 			};
 			name = Release;
 		};
@@ -729,6 +849,15 @@
 			buildConfigurations = (
 				11F81FE41CAE8B971CB3DAFD /* Debug */,
 				083C58767B5EFD9B0B72C7C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		921C3ADA8E6EDA523471B555 /* Build configuration list for PBXNativeTarget "SmartSiddurSnapshotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F1CEC564B3E033319F55E80 /* Debug */,
+				D8381A8D233943F5C12BBDA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -760,6 +889,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		F4FF2E2509C6A8735642D8F3 /* XCRemoteSwiftPackageReference "SnapshotPreviews" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/SnapshotPreviews";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -777,6 +914,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 97126195E9BC30B53A1E3CDB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		8748022EACCD97365CEAE2F3 /* SnapshottingTests */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4FF2E2509C6A8735642D8F3 /* XCRemoteSwiftPackageReference "SnapshotPreviews" */;
+			productName = SnapshottingTests;
 		};
 		C01B83C381A3E98C7CABA6B7 /* KosherSwift */ = {
 			isa = XCSwiftPackageProductDependency;
