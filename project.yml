@@ -21,6 +21,9 @@ packages:
   KosherSwift:
     url: https://github.com/Elyahu41/KosherSwift
     from: "1.0.0"
+  SnapshotPreviews:
+    url: https://github.com/getsentry/SnapshotPreviews
+    branch: main
 
 targets:
   SmartSiddur:
@@ -38,6 +41,13 @@ targets:
       path: Info.plist
       properties:
         CFBundleDisplayName: "SmartSiddur"
+        CFBundleLocalizations:
+          - en
+          - he
+          - fr
+          - es
+          - de
+        UIPrefersShowingLanguageSettings: true
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait
         UILaunchScreen: {}
@@ -57,3 +67,21 @@ targets:
         product: GoogleSignInSwift
       - package: KosherSwift
         product: KosherSwift
+
+  SmartSiddurSnapshotTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: SnapshotTests
+        type: syncedFolder
+    dependencies:
+      - target: SmartSiddur
+      - package: SnapshotPreviews
+        product: SnapshottingTests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.karriapps.smartsiddurlite.snapshot-tests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/SmartSiddur.app/SmartSiddur"
+        BUNDLE_LOADER: "$(TEST_HOST)"
