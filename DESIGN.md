@@ -83,7 +83,7 @@ components:
 x-stag:
   schema: 1
   platform: ios
-  peer: none
+  peer: ../SmartSiddur/DESIGN.md
   facts:
     ui_framework: { primary: swiftui }
     deployment_target: "17.0"
@@ -233,7 +233,7 @@ x-stag:
     - { kind: other, name: calendar-day-selection, width: 40, height: 40, radius: 9999, thickness: 1.3 }
     - { kind: icon, name: calendar-event-dot, width: 5, height: 5, radius: 9999 }
     - { kind: icon, name: login-mark, width: 72, height: 72 }
-    - { kind: icon, name: empty-state-symbol, width: 48, height: 48 }
+    - { kind: icon, name: notification-empty-state, width: 80, height: 80 }
     - { kind: bar, name: settings-row, height: 46 }
     - { kind: margin, name: screen-gutter, inset: 16 }
     - { kind: margin, name: auth-gutter, inset: 32 }
@@ -299,8 +299,8 @@ x-stag:
     - The redesign document proposes future Culmus prayer fonts, while Settings currently lists Frank Ruehl, David, Arial, and Times New Roman.
     - Typography has 23 roles because the screens use distinct semantic, fixed-size, and rounded styles.
   deviations:
-    rev: 1
-    peer_rev_seen: 1
+    rev: 2
+    peer_rev_seen: 2
     items:
       - id: dv-bar-size
         subject: bar-size
@@ -311,7 +311,7 @@ x-stag:
         follows: unknown
         reason: ""
         decided_by: designer
-        decided_on: 2026-10-25
+        decided_on: 2026-10-26
         stag_guess: likely_intentional
       - id: dv-card-radius
         subject: card-radius
@@ -322,7 +322,7 @@ x-stag:
         follows: unknown
         reason: ""
         decided_by: designer
-        decided_on: 2026-10-25
+        decided_on: 2026-10-26
         stag_guess: likely_accidental
       - id: dv-dark-mode
         subject: dark-mode
@@ -333,7 +333,7 @@ x-stag:
         follows: unknown
         reason: ""
         decided_by: designer
-        decided_on: 2026-10-25
+        decided_on: 2026-10-26
         stag_guess: open
       - id: dv-divider
         subject: divider
@@ -344,7 +344,7 @@ x-stag:
         follows: unknown
         reason: ""
         decided_by: designer
-        decided_on: 2026-10-25
+        decided_on: 2026-10-26
         stag_guess: open
       - id: dv-font-family
         subject: font-family
@@ -355,8 +355,19 @@ x-stag:
         follows: unknown
         reason: ""
         decided_by: designer
-        decided_on: 2026-10-25
+        decided_on: 2026-10-26
         stag_guess: likely_accidental
+      - id: dv-margin
+        subject: margin
+        kind: component
+        this: inset 16 (screen-gutter)
+        peer: width 16 (screen-margin)
+        status: open
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-10-26
+        stag_guess: open
       - id: dv-on-primary-color
         subject: on-primary-color
         kind: token
@@ -366,7 +377,7 @@ x-stag:
         follows: unknown
         reason: ""
         decided_by: designer
-        decided_on: 2026-10-25
+        decided_on: 2026-10-26
         stag_guess: likely_accidental
       - id: dv-on-surface-color
         subject: on-surface-color
@@ -377,29 +388,40 @@ x-stag:
         follows: unknown
         reason: ""
         decided_by: designer
-        decided_on: 2026-10-25
+        decided_on: 2026-10-26
         stag_guess: likely_accidental
-      - id: dv-outline-color
-        subject: outline-color
-        kind: token
-        this: "#00000014 (outline), dark #FFFFFF1F"
-        peer: "#79747E (outline), dark #938F99"
+      - id: dv-other-size
+        subject: other-size
+        kind: component
+        this: height 56 (calendar-cell)
+        peer: "width 40, height 40, radius 9999 (calendar-date-cell)"
         status: open
         follows: unknown
         reason: ""
         decided_by: designer
-        decided_on: 2026-10-25
+        decided_on: 2026-10-26
+        stag_guess: open
+      - id: dv-outline-color
+        subject: outline-color
+        kind: token
+        this: "#00000014 (outline), dark #FFFFFF1F"
+        peer: "#79747E (outline)"
+        status: open
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-10-26
         stag_guess: likely_accidental
       - id: dv-scrim-color
         subject: scrim-color
         kind: token
         this: "#0000004D (scrim), dark #0000004D"
-        peer: "#00000060 (scrim), dark #00000060"
+        peer: "#00000060 (scrim)"
         status: open
         follows: unknown
         reason: ""
         decided_by: designer
-        decided_on: 2026-10-25
+        decided_on: 2026-10-26
         stag_guess: likely_accidental
       - id: dv-theme-choice
         subject: theme-choice
@@ -410,18 +432,18 @@ x-stag:
         follows: unknown
         reason: ""
         decided_by: designer
-        decided_on: 2026-10-25
+        decided_on: 2026-10-26
         stag_guess: open
       - id: dv-type-scale
         subject: type-scale
         kind: token
         this: "23 roles, 9 to 34 pt, SF Pro, SF Pro Rounded"
-        peer: "28 roles, 8 to 30 sp, Alef, FontAwesome, Keter YG, Roboto, Taamey Frank CLM"
+        peer: "32 roles, 8 to 30 sp, Alef, FontAwesome, Roboto, Taamey Frank CLM"
         status: open
         follows: unknown
         reason: ""
         decided_by: designer
-        decided_on: 2026-10-25
+        decided_on: 2026-10-26
         stag_guess: open
   generated_from:
     at: 2026-10-26T08:08:27Z
