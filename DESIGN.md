@@ -83,7 +83,7 @@ components:
 x-stag:
   schema: 1
   platform: ios
-  peer: ../SmartSiddur/DESIGN.md
+  peer: none
   facts:
     ui_framework: { primary: swiftui }
     deployment_target: "17.0"
@@ -424,7 +424,7 @@ x-stag:
         decided_on: 2026-10-25
         stag_guess: open
   generated_from:
-    at: 2026-10-25T17:59:33Z
+    at: 2026-10-26T08:08:27Z
     inputs:
       - path: Info.plist
         sha256: 4862b53db77c1d8e59fa6ebe1e5669da8d203dda8562b23bb14086d77abfa503
