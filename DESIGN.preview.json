@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source_sha256": "340e3d9aec51d881058f10d5d3b49e227c2e85ac99db8a3536a062cc278f8d40",
-  "generated_at": "2026-10-26T08:42:02Z",
+  "generated_at": "2026-11-01T21:32:45Z",
   "screens": [
     {
       "name": "Home",
@@ -9,7 +9,7 @@
         "type": "column",
         "width": "fill",
         "height": "fill",
-        "align": "stretch",
+        "gap": 0,
         "children": [
           {
             "type": "statusBar",
@@ -24,12 +24,13 @@
             "padding": {
               "top": 12,
               "right": 16,
-              "bottom": 20,
+              "bottom": 24,
               "left": 16
             },
             "children": [
               {
                 "type": "column",
+                "width": "fill",
                 "gap": 18,
                 "align": "stretch",
                 "children": [
@@ -40,13 +41,13 @@
                     "children": [
                       {
                         "type": "text",
-                        "text": "Shalom, David",
+                        "text": "Shalom, Daniel",
                         "typeRole": "large-title-bold",
                         "color": "on-surface"
                       },
                       {
                         "type": "text",
-                        "text": "15 Cheshvan 5787 / October 26, 2026",
+                        "text": "21 Cheshvan 5787 / November 1, 2026",
                         "typeRole": "subheadline",
                         "color": "on-surface-variant"
                       }
@@ -76,18 +77,18 @@
                           },
                           {
                             "type": "text",
-                            "text": "Mincha Gedolah",
+                            "text": "Sunset",
                             "typeRole": "title3-semibold",
                             "color": "primary"
                           },
                           {
                             "type": "row",
-                            "gap": 8,
+                            "gap": 10,
                             "align": "center",
                             "children": [
                               {
                                 "type": "text",
-                                "text": "12:08 PM",
+                                "text": "16:52",
                                 "typeRole": "title2-rounded-bold",
                                 "color": "on-surface"
                               },
@@ -99,7 +100,7 @@
                               },
                               {
                                 "type": "text",
-                                "text": "(28:42)",
+                                "text": "(00:38)",
                                 "typeRole": "caption-rounded-bold",
                                 "color": "on-surface"
                               }
@@ -118,7 +119,7 @@
                             "children": [
                               {
                                 "type": "text",
-                                "text": "Open Mincha",
+                                "text": "Mincha",
                                 "typeRole": "subheadline-semibold",
                                 "color": "on-primary"
                               }
@@ -143,7 +144,12 @@
                         "type": "box",
                         "radius": 12,
                         "fill": "success-container",
-                        "padding": 8,
+                        "padding": {
+                          "top": 8,
+                          "right": 12,
+                          "bottom": 8,
+                          "left": 12
+                        },
                         "children": [
                           {
                             "type": "row",
@@ -158,7 +164,7 @@
                               },
                               {
                                 "type": "text",
-                                "text": "Say Mashiv Haruach during the winter season",
+                                "text": "Say Veten Tal Umatar in the Amidah",
                                 "typeRole": "subheadline-semibold",
                                 "color": "success",
                                 "maxLines": 2
@@ -186,6 +192,7 @@
                             "children": [
                               {
                                 "type": "column",
+                                "height": "fill",
                                 "gap": 8,
                                 "align": "start",
                                 "children": [
@@ -193,17 +200,16 @@
                                     "type": "row",
                                     "width": "fill",
                                     "distribute": "spaceBetween",
-                                    "align": "center",
                                     "children": [
                                       {
                                         "type": "icon",
-                                        "name": "sf:sun.max.fill",
+                                        "name": "sf:moon.stars.fill",
                                         "size": 18,
                                         "color": "primary"
                                       },
                                       {
                                         "type": "text",
-                                        "text": "NOW",
+                                        "text": "Tonight",
                                         "typeRole": "caption2-semibold",
                                         "color": "primary"
                                       }
@@ -211,7 +217,7 @@
                                   },
                                   {
                                     "type": "text",
-                                    "text": "Morning Blessings",
+                                    "text": "Bedtime Shema",
                                     "typeRole": "subheadline-semibold",
                                     "color": "on-surface",
                                     "maxLines": 2
@@ -234,18 +240,19 @@
                             "children": [
                               {
                                 "type": "column",
+                                "height": "fill",
                                 "gap": 8,
                                 "align": "start",
                                 "children": [
                                   {
                                     "type": "icon",
-                                    "name": "sf:book.closed.fill",
+                                    "name": "sf:sparkles",
                                     "size": 18,
                                     "color": "primary"
                                   },
                                   {
                                     "type": "text",
-                                    "text": "Daily Psalms",
+                                    "text": "Blessing for the New Moon",
                                     "typeRole": "subheadline-semibold",
                                     "color": "on-surface",
                                     "maxLines": 2
@@ -277,12 +284,12 @@
                           {
                             "type": "box",
                             "width": "fill",
-                            "height": 94,
+                            "height": 112,
                             "radius": 14,
                             "fill": "surface",
                             "border": {
                               "color": "primary-outline",
-                              "width": 1
+                              "width": 1.2
                             },
                             "padding": 12,
                             "children": [
@@ -310,7 +317,7 @@
                           {
                             "type": "box",
                             "width": "fill",
-                            "height": 94,
+                            "height": 112,
                             "radius": 14,
                             "fill": "surface",
                             "border": {
@@ -367,14 +374,14 @@
                 "selected": false
               }
             ],
-            "height": 54,
+            "height": 52,
             "background": "surface",
             "selectedColor": "primary",
             "unselectedColor": "on-surface-variant",
             "indicator": {
               "thickness": 2,
-              "radius": 9999,
-              "inset": 12
+              "radius": 2,
+              "inset": 18
             },
             "style": "both"
           },
@@ -391,7 +398,7 @@
         "type": "column",
         "width": "fill",
         "height": "fill",
-        "align": "stretch",
+        "gap": 0,
         "children": [
           {
             "type": "statusBar",
@@ -415,18 +422,19 @@
             "padding": {
               "top": 10,
               "right": 16,
-              "bottom": 16,
+              "bottom": 20,
               "left": 16
             },
             "children": [
               {
                 "type": "column",
+                "width": "fill",
                 "gap": 14,
                 "align": "stretch",
                 "children": [
                   {
                     "type": "row",
-                    "gap": 10,
+                    "gap": 12,
                     "align": "center",
                     "distribute": "spaceBetween",
                     "children": [
@@ -436,19 +444,18 @@
                         "height": 34,
                         "radius": 9999,
                         "fill": "surface",
-                        "align": "center",
                         "children": [
                           {
                             "type": "icon",
                             "name": "sf:chevron.left",
-                            "size": 15,
+                            "size": 17,
                             "color": "on-surface"
                           }
                         ]
                       },
                       {
                         "type": "text",
-                        "text": "Cheshvan 5787",
+                        "text": "November 2026",
                         "typeRole": "headline",
                         "color": "on-surface",
                         "align": "center"
@@ -464,9 +471,9 @@
                             "radius": 9999,
                             "fill": "surface",
                             "padding": {
-                              "top": 8,
+                              "top": 0,
                               "right": 10,
-                              "bottom": 8,
+                              "bottom": 0,
                               "left": 10
                             },
                             "children": [
@@ -484,12 +491,11 @@
                             "height": 34,
                             "radius": 9999,
                             "fill": "surface",
-                            "align": "center",
                             "children": [
                               {
                                 "type": "icon",
                                 "name": "sf:chevron.right",
-                                "size": 15,
+                                "size": 17,
                                 "color": "on-surface"
                               }
                             ]
@@ -499,49 +505,106 @@
                     ]
                   },
                   {
-                    "type": "box",
-                    "width": "fill",
-                    "radius": 12,
-                    "fill": "surface",
-                    "border": {
-                      "color": "outline",
-                      "width": 1
-                    },
-                    "padding": 3,
+                    "type": "column",
+                    "gap": 10,
                     "children": [
                       {
-                        "type": "row",
-                        "gap": 4,
-                        "align": "stretch",
+                        "type": "box",
+                        "width": "fill",
+                        "radius": 8,
+                        "fill": "surface",
+                        "border": {
+                          "color": "outline",
+                          "width": 1
+                        },
+                        "padding": 2,
                         "children": [
                           {
-                            "type": "box",
+                            "type": "row",
                             "width": "fill",
-                            "radius": 8,
-                            "padding": 8,
-                            "align": "center",
+                            "gap": 2,
                             "children": [
                               {
-                                "type": "text",
-                                "text": "Day",
-                                "typeRole": "subheadline-semibold",
-                                "color": "on-surface-variant"
+                                "type": "box",
+                                "width": "fill",
+                                "radius": 6,
+                                "padding": 7,
+                                "children": [
+                                  {
+                                    "type": "text",
+                                    "text": "Day",
+                                    "typeRole": "subheadline-semibold",
+                                    "color": "on-surface-variant",
+                                    "align": "center"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "box",
+                                "width": "fill",
+                                "radius": 6,
+                                "fill": "primary-container",
+                                "padding": 7,
+                                "children": [
+                                  {
+                                    "type": "text",
+                                    "text": "Month",
+                                    "typeRole": "subheadline-semibold",
+                                    "color": "on-surface",
+                                    "align": "center"
+                                  }
+                                ]
                               }
                             ]
-                          },
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "width": "fill",
+                        "radius": 8,
+                        "fill": "surface",
+                        "border": {
+                          "color": "outline",
+                          "width": 1
+                        },
+                        "padding": 2,
+                        "children": [
                           {
-                            "type": "box",
+                            "type": "row",
                             "width": "fill",
-                            "radius": 8,
-                            "fill": "primary-container",
-                            "padding": 8,
-                            "align": "center",
+                            "gap": 2,
                             "children": [
                               {
-                                "type": "text",
-                                "text": "Month",
-                                "typeRole": "subheadline-semibold",
-                                "color": "on-surface"
+                                "type": "box",
+                                "width": "fill",
+                                "radius": 6,
+                                "fill": "primary-container",
+                                "padding": 7,
+                                "children": [
+                                  {
+                                    "type": "text",
+                                    "text": "Gregorian",
+                                    "typeRole": "subheadline-semibold",
+                                    "color": "on-surface",
+                                    "align": "center"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "box",
+                                "width": "fill",
+                                "radius": 6,
+                                "padding": 7,
+                                "children": [
+                                  {
+                                    "type": "text",
+                                    "text": "Hebrew",
+                                    "typeRole": "subheadline-semibold",
+                                    "color": "on-surface-variant",
+                                    "align": "center"
+                                  }
+                                ]
                               }
                             ]
                           }
@@ -562,20 +625,22 @@
                     "children": [
                       {
                         "type": "row",
+                        "width": "fill",
                         "distribute": "spaceBetween",
                         "align": "center",
                         "children": [
                           {
                             "type": "text",
-                            "text": "ט״ו בחשון תשפ״ז",
+                            "text": "כ״א בחשוון תשפ״ז",
                             "typeRole": "title3-semibold",
                             "color": "on-surface"
                           },
                           {
                             "type": "text",
-                            "text": "October 26, 2026",
+                            "text": "November 1, 2026",
                             "typeRole": "title3-semibold",
-                            "color": "on-surface"
+                            "color": "on-surface",
+                            "align": "end"
                           }
                         ]
                       }
@@ -603,43 +668,43 @@
                             "children": [
                               {
                                 "type": "text",
-                                "text": "S",
+                                "text": "Sun",
                                 "typeRole": "caption2-bold",
                                 "color": "on-surface-variant"
                               },
                               {
                                 "type": "text",
-                                "text": "M",
+                                "text": "Mon",
                                 "typeRole": "caption2-bold",
                                 "color": "on-surface-variant"
                               },
                               {
                                 "type": "text",
-                                "text": "T",
+                                "text": "Tue",
                                 "typeRole": "caption2-bold",
                                 "color": "on-surface-variant"
                               },
                               {
                                 "type": "text",
-                                "text": "W",
+                                "text": "Wed",
                                 "typeRole": "caption2-bold",
                                 "color": "on-surface-variant"
                               },
                               {
                                 "type": "text",
-                                "text": "T",
+                                "text": "Thu",
                                 "typeRole": "caption2-bold",
                                 "color": "on-surface-variant"
                               },
                               {
                                 "type": "text",
-                                "text": "F",
+                                "text": "Fri",
                                 "typeRole": "caption2-bold",
                                 "color": "on-surface-variant"
                               },
                               {
                                 "type": "text",
-                                "text": "S",
+                                "text": "Sat",
                                 "typeRole": "caption2-bold",
                                 "color": "on-surface-variant"
                               }
@@ -653,235 +718,9 @@
                               {
                                 "type": "box",
                                 "width": 40,
-                                "height": 48,
-                                "align": "center",
-                                "children": [
-                                  {
-                                    "type": "column",
-                                    "gap": 2,
-                                    "align": "center",
-                                    "children": [
-                                      {
-                                        "type": "text",
-                                        "text": "18",
-                                        "typeRole": "body-rounded",
-                                        "color": "on-surface"
-                                      },
-                                      {
-                                        "type": "text",
-                                        "text": "ז׳",
-                                        "typeRole": "calendar-micro",
-                                        "color": "on-surface-variant"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "box",
-                                "width": 40,
-                                "height": 48,
-                                "align": "center",
-                                "children": [
-                                  {
-                                    "type": "column",
-                                    "gap": 2,
-                                    "align": "center",
-                                    "children": [
-                                      {
-                                        "type": "text",
-                                        "text": "19",
-                                        "typeRole": "body-rounded",
-                                        "color": "on-surface"
-                                      },
-                                      {
-                                        "type": "text",
-                                        "text": "ח׳",
-                                        "typeRole": "calendar-micro",
-                                        "color": "on-surface-variant"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "box",
-                                "width": 40,
-                                "height": 48,
-                                "align": "center",
-                                "children": [
-                                  {
-                                    "type": "column",
-                                    "gap": 2,
-                                    "align": "center",
-                                    "children": [
-                                      {
-                                        "type": "text",
-                                        "text": "20",
-                                        "typeRole": "body-rounded",
-                                        "color": "on-surface"
-                                      },
-                                      {
-                                        "type": "text",
-                                        "text": "ט׳",
-                                        "typeRole": "calendar-micro",
-                                        "color": "on-surface-variant"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "box",
-                                "width": 40,
-                                "height": 48,
-                                "align": "center",
-                                "children": [
-                                  {
-                                    "type": "column",
-                                    "gap": 2,
-                                    "align": "center",
-                                    "children": [
-                                      {
-                                        "type": "text",
-                                        "text": "21",
-                                        "typeRole": "body-rounded",
-                                        "color": "on-surface"
-                                      },
-                                      {
-                                        "type": "text",
-                                        "text": "י׳",
-                                        "typeRole": "calendar-micro",
-                                        "color": "on-surface-variant"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "box",
-                                "width": 40,
-                                "height": 48,
-                                "align": "center",
-                                "children": [
-                                  {
-                                    "type": "column",
-                                    "gap": 2,
-                                    "align": "center",
-                                    "children": [
-                                      {
-                                        "type": "text",
-                                        "text": "22",
-                                        "typeRole": "body-rounded",
-                                        "color": "on-surface"
-                                      },
-                                      {
-                                        "type": "text",
-                                        "text": "י״א",
-                                        "typeRole": "calendar-micro",
-                                        "color": "on-surface-variant"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "box",
-                                "width": 40,
-                                "height": 48,
-                                "align": "center",
-                                "children": [
-                                  {
-                                    "type": "column",
-                                    "gap": 2,
-                                    "align": "center",
-                                    "children": [
-                                      {
-                                        "type": "text",
-                                        "text": "23",
-                                        "typeRole": "body-rounded",
-                                        "color": "on-surface"
-                                      },
-                                      {
-                                        "type": "text",
-                                        "text": "י״ב",
-                                        "typeRole": "calendar-micro",
-                                        "color": "on-surface-variant"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "box",
-                                "width": 40,
-                                "height": 48,
-                                "align": "center",
-                                "children": [
-                                  {
-                                    "type": "column",
-                                    "gap": 2,
-                                    "align": "center",
-                                    "children": [
-                                      {
-                                        "type": "text",
-                                        "text": "24",
-                                        "typeRole": "body-rounded-bold",
-                                        "color": "calendar-shabbat"
-                                      },
-                                      {
-                                        "type": "box",
-                                        "width": 5,
-                                        "height": 5,
-                                        "radius": 9999,
-                                        "fill": "calendar-shabbat"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          {
-                            "type": "row",
-                            "distribute": "spaceAround",
-                            "align": "center",
-                            "children": [
-                              {
-                                "type": "box",
-                                "width": 40,
-                                "height": 48,
-                                "align": "center",
-                                "children": [
-                                  {
-                                    "type": "column",
-                                    "gap": 2,
-                                    "align": "center",
-                                    "children": [
-                                      {
-                                        "type": "text",
-                                        "text": "25",
-                                        "typeRole": "body-rounded",
-                                        "color": "calendar-rosh-chodesh"
-                                      },
-                                      {
-                                        "type": "box",
-                                        "width": 5,
-                                        "height": 5,
-                                        "radius": 9999,
-                                        "fill": "calendar-rosh-chodesh"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "box",
-                                "width": 40,
-                                "height": 48,
+                                "height": 40,
                                 "radius": 9999,
                                 "fill": "primary",
-                                "align": "center",
                                 "children": [
                                   {
                                     "type": "column",
@@ -890,13 +729,13 @@
                                     "children": [
                                       {
                                         "type": "text",
-                                        "text": "26",
+                                        "text": "1",
                                         "typeRole": "body-rounded-bold",
                                         "color": "surface"
                                       },
                                       {
                                         "type": "text",
-                                        "text": "ט״ו",
+                                        "text": "כ״א",
                                         "typeRole": "calendar-micro",
                                         "color": "surface"
                                       }
@@ -905,116 +744,237 @@
                                 ]
                               },
                               {
-                                "type": "box",
+                                "type": "column",
                                 "width": 40,
-                                "height": 48,
-                                "align": "center",
-                                "children": [
-                                  {
-                                    "type": "column",
-                                    "gap": 2,
-                                    "align": "center",
-                                    "children": [
-                                      {
-                                        "type": "text",
-                                        "text": "27",
-                                        "typeRole": "body-rounded",
-                                        "color": "warning"
-                                      },
-                                      {
-                                        "type": "box",
-                                        "width": 5,
-                                        "height": 5,
-                                        "radius": 9999,
-                                        "fill": "warning"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "box",
-                                "width": 40,
-                                "height": 48,
-                                "align": "center",
-                                "children": [
-                                  {
-                                    "type": "column",
-                                    "gap": 2,
-                                    "align": "center",
-                                    "children": [
-                                      {
-                                        "type": "text",
-                                        "text": "28",
-                                        "typeRole": "body-rounded",
-                                        "color": "error"
-                                      },
-                                      {
-                                        "type": "box",
-                                        "width": 5,
-                                        "height": 5,
-                                        "radius": 9999,
-                                        "fill": "error"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "box",
-                                "width": 40,
-                                "height": 48,
-                                "align": "center",
-                                "children": [
-                                  {
-                                    "type": "column",
-                                    "gap": 2,
-                                    "align": "center",
-                                    "children": [
-                                      {
-                                        "type": "text",
-                                        "text": "29",
-                                        "typeRole": "body-rounded",
-                                        "color": "calendar-chol-hamoed"
-                                      },
-                                      {
-                                        "type": "box",
-                                        "width": 5,
-                                        "height": 5,
-                                        "radius": 9999,
-                                        "fill": "calendar-chol-hamoed"
-                                      }
-                                    ]
-                                  }
-                                ]
-                              },
-                              {
-                                "type": "box",
-                                "width": 40,
-                                "height": 48,
+                                "height": 56,
+                                "gap": 2,
                                 "align": "center",
                                 "children": [
                                   {
                                     "type": "text",
-                                    "text": "30",
+                                    "text": "2",
                                     "typeRole": "body-rounded",
                                     "color": "on-surface"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "text": "כ״ב",
+                                    "typeRole": "calendar-micro",
+                                    "color": "on-surface-variant"
+                                  },
+                                  {
+                                    "type": "box",
+                                    "width": 5,
+                                    "height": 5,
+                                    "radius": 9999,
+                                    "fill": "calendar-rosh-chodesh"
                                   }
                                 ]
                               },
                               {
-                                "type": "box",
+                                "type": "column",
                                 "width": 40,
-                                "height": 48,
+                                "height": 56,
+                                "gap": 2,
                                 "align": "center",
                                 "children": [
                                   {
                                     "type": "text",
-                                    "text": "31",
-                                    "typeRole": "body-rounded-bold",
-                                    "color": "calendar-shabbat"
+                                    "text": "3",
+                                    "typeRole": "body-rounded",
+                                    "color": "on-surface"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "text": "כ״ג",
+                                    "typeRole": "calendar-micro",
+                                    "color": "on-surface-variant"
+                                  },
+                                  {
+                                    "type": "spacer",
+                                    "size": 5
                                   }
                                 ]
+                              },
+                              {
+                                "type": "column",
+                                "width": 40,
+                                "height": 56,
+                                "gap": 2,
+                                "align": "center",
+                                "children": [
+                                  {
+                                    "type": "text",
+                                    "text": "4",
+                                    "typeRole": "body-rounded",
+                                    "color": "on-surface"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "text": "כ״ד",
+                                    "typeRole": "calendar-micro",
+                                    "color": "on-surface-variant"
+                                  },
+                                  {
+                                    "type": "spacer",
+                                    "size": 5
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "column",
+                                "width": 40,
+                                "height": 56,
+                                "gap": 2,
+                                "align": "center",
+                                "children": [
+                                  {
+                                    "type": "text",
+                                    "text": "5",
+                                    "typeRole": "body-rounded",
+                                    "color": "error"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "text": "כ״ה",
+                                    "typeRole": "calendar-micro",
+                                    "color": "on-surface-variant"
+                                  },
+                                  {
+                                    "type": "box",
+                                    "width": 5,
+                                    "height": 5,
+                                    "radius": 9999,
+                                    "fill": "error"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "column",
+                                "width": 40,
+                                "height": 56,
+                                "gap": 2,
+                                "align": "center",
+                                "children": [
+                                  {
+                                    "type": "text",
+                                    "text": "6",
+                                    "typeRole": "body-rounded",
+                                    "color": "warning"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "text": "כ״ו",
+                                    "typeRole": "calendar-micro",
+                                    "color": "on-surface-variant"
+                                  },
+                                  {
+                                    "type": "box",
+                                    "width": 5,
+                                    "height": 5,
+                                    "radius": 9999,
+                                    "fill": "warning"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "column",
+                                "width": 40,
+                                "height": 56,
+                                "gap": 2,
+                                "align": "center",
+                                "children": [
+                                  {
+                                    "type": "text",
+                                    "text": "7",
+                                    "typeRole": "body-rounded-bold",
+                                    "color": "calendar-shabbat"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "text": "כ״ז",
+                                    "typeRole": "calendar-micro",
+                                    "color": "on-surface-variant"
+                                  },
+                                  {
+                                    "type": "box",
+                                    "width": 5,
+                                    "height": 5,
+                                    "radius": 9999,
+                                    "fill": "calendar-shabbat"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "row",
+                            "distribute": "spaceAround",
+                            "align": "center",
+                            "children": [
+                              {
+                                "type": "column",
+                                "width": 40,
+                                "height": 56,
+                                "gap": 2,
+                                "align": "center",
+                                "children": [
+                                  {
+                                    "type": "text",
+                                    "text": "8",
+                                    "typeRole": "body-rounded",
+                                    "color": "calendar-chol-hamoed"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "text": "כ״ח",
+                                    "typeRole": "calendar-micro",
+                                    "color": "on-surface-variant"
+                                  },
+                                  {
+                                    "type": "box",
+                                    "width": 5,
+                                    "height": 5,
+                                    "radius": 9999,
+                                    "fill": "calendar-chol-hamoed"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "text",
+                                "text": "9",
+                                "typeRole": "body-rounded",
+                                "color": "on-surface"
+                              },
+                              {
+                                "type": "text",
+                                "text": "10",
+                                "typeRole": "body-rounded",
+                                "color": "on-surface"
+                              },
+                              {
+                                "type": "text",
+                                "text": "11",
+                                "typeRole": "body-rounded",
+                                "color": "on-surface"
+                              },
+                              {
+                                "type": "text",
+                                "text": "12",
+                                "typeRole": "body-rounded",
+                                "color": "on-surface"
+                              },
+                              {
+                                "type": "text",
+                                "text": "13",
+                                "typeRole": "body-rounded",
+                                "color": "on-surface"
+                              },
+                              {
+                                "type": "text",
+                                "text": "14",
+                                "typeRole": "body-rounded-bold",
+                                "color": "calendar-shabbat"
                               }
                             ]
                           }
@@ -1024,7 +984,7 @@
                   },
                   {
                     "type": "column",
-                    "gap": 8,
+                    "gap": 10,
                     "align": "stretch",
                     "children": [
                       {
@@ -1053,24 +1013,28 @@
                         "fill": "surface",
                         "border": {
                           "color": "primary-outline",
-                          "width": 1
+                          "width": 1.2
                         },
-                        "padding": 12,
+                        "padding": {
+                          "top": 10,
+                          "right": 12,
+                          "bottom": 10,
+                          "left": 12
+                        },
                         "children": [
                           {
                             "type": "row",
                             "distribute": "spaceBetween",
-                            "align": "center",
                             "children": [
                               {
                                 "type": "text",
-                                "text": "Mincha Gedolah",
+                                "text": "Sunrise",
                                 "typeRole": "subheadline",
                                 "color": "on-surface"
                               },
                               {
                                 "type": "text",
-                                "text": "12:08 PM",
+                                "text": "06:03",
                                 "typeRole": "subheadline-semibold",
                                 "color": "primary"
                               }
@@ -1087,22 +1051,26 @@
                           "color": "outline",
                           "width": 1
                         },
-                        "padding": 12,
+                        "padding": {
+                          "top": 10,
+                          "right": 12,
+                          "bottom": 10,
+                          "left": 12
+                        },
                         "children": [
                           {
                             "type": "row",
                             "distribute": "spaceBetween",
-                            "align": "center",
                             "children": [
                               {
                                 "type": "text",
-                                "text": "Sunset",
+                                "text": "Latest Shema",
                                 "typeRole": "subheadline",
                                 "color": "on-surface"
                               },
                               {
                                 "type": "text",
-                                "text": "5:53 PM",
+                                "text": "08:43",
                                 "typeRole": "subheadline-semibold",
                                 "color": "primary"
                               }
@@ -1135,14 +1103,14 @@
                 "selected": false
               }
             ],
-            "height": 54,
+            "height": 52,
             "background": "surface",
             "selectedColor": "primary",
             "unselectedColor": "on-surface-variant",
             "indicator": {
               "thickness": 2,
-              "radius": 9999,
-              "inset": 12
+              "radius": 2,
+              "inset": 18
             },
             "style": "both"
           },
@@ -1159,7 +1127,7 @@
         "type": "column",
         "width": "fill",
         "height": "fill",
-        "align": "stretch",
+        "gap": 0,
         "children": [
           {
             "type": "statusBar",
@@ -1172,9 +1140,9 @@
             "height": "fill",
             "fill": "background",
             "padding": {
-              "top": 28,
+              "top": 24,
               "right": 32,
-              "bottom": 28,
+              "bottom": 40,
               "left": 32
             },
             "children": [
@@ -1184,23 +1152,19 @@
                 "height": "fill",
                 "gap": 24,
                 "align": "center",
-                "distribute": "center",
+                "distribute": "spaceAround",
                 "children": [
-                  {
-                    "type": "spacer",
-                    "size": 42
-                  },
-                  {
-                    "type": "icon",
-                    "name": "sf:book.fill",
-                    "size": 72,
-                    "color": "primary"
-                  },
                   {
                     "type": "column",
                     "gap": 12,
                     "align": "center",
                     "children": [
+                      {
+                        "type": "icon",
+                        "name": "sf:book.fill",
+                        "size": 72,
+                        "color": "primary"
+                      },
                       {
                         "type": "text",
                         "text": "Smart Siddur",
@@ -1218,10 +1182,6 @@
                     ]
                   },
                   {
-                    "type": "spacer",
-                    "size": 56
-                  },
-                  {
                     "type": "column",
                     "width": "fill",
                     "gap": 16,
@@ -1237,17 +1197,18 @@
                           "color": "auth-provider-outline",
                           "width": 1
                         },
-                        "align": "center",
                         "children": [
                           {
                             "type": "row",
+                            "height": "fill",
                             "gap": 8,
                             "align": "center",
+                            "distribute": "center",
                             "children": [
                               {
                                 "type": "icon",
                                 "name": "sf:apple.logo",
-                                "size": 21,
+                                "size": 22,
                                 "color": "surface"
                               },
                               {
@@ -1270,12 +1231,13 @@
                           "color": "auth-provider-outline",
                           "width": 1
                         },
-                        "align": "center",
                         "children": [
                           {
                             "type": "row",
+                            "height": "fill",
                             "gap": 8,
                             "align": "center",
+                            "distribute": "center",
                             "children": [
                               {
                                 "type": "icon",
@@ -1294,30 +1256,13 @@
                         ]
                       },
                       {
-                        "type": "box",
-                        "width": "fill",
-                        "padding": {
-                          "top": 8,
-                          "right": 8,
-                          "bottom": 8,
-                          "left": 8
-                        },
-                        "align": "center",
-                        "children": [
-                          {
-                            "type": "text",
-                            "text": "Continue without account",
-                            "typeRole": "subheadline-semibold",
-                            "color": "primary",
-                            "align": "center"
-                          }
-                        ]
+                        "type": "text",
+                        "text": "Continue without account",
+                        "typeRole": "subheadline-semibold",
+                        "color": "primary",
+                        "align": "center"
                       }
                     ]
-                  },
-                  {
-                    "type": "spacer",
-                    "size": 40
                   }
                 ]
               }
@@ -1336,7 +1281,7 @@
         "type": "column",
         "width": "fill",
         "height": "fill",
-        "align": "stretch",
+        "gap": 0,
         "children": [
           {
             "type": "statusBar",
@@ -1350,7 +1295,7 @@
               {
                 "type": "icon",
                 "name": "sf:chevron.left",
-                "size": 17,
+                "size": 18,
                 "color": "primary"
               }
             ],
@@ -1358,7 +1303,7 @@
               {
                 "type": "text",
                 "text": "TOC",
-                "typeRole": "subheadline-semibold",
+                "typeRole": "body",
                 "color": "primary"
               },
               {
@@ -1386,6 +1331,7 @@
             "children": [
               {
                 "type": "column",
+                "width": "fill",
                 "gap": 8,
                 "align": "stretch",
                 "children": [
@@ -1396,9 +1342,9 @@
                     "fill": "surface",
                     "border": {
                       "color": "outline",
-                      "width": 1
+                      "width": 0.5
                     },
-                    "padding": 12,
+                    "padding": 8,
                     "children": [
                       {
                         "type": "column",
@@ -1408,66 +1354,22 @@
                           {
                             "type": "text",
                             "text": "ברכות השחר",
-                            "typeRole": "label-semibold",
+                            "typeRole": "title3-semibold",
                             "color": "on-surface",
                             "align": "end"
                           },
                           {
+                            "type": "divider",
+                            "color": "outline",
+                            "thickness": 0.5
+                          },
+                          {
                             "type": "text",
-                            "text": "מודה אני לפניך מלך חי וקיים שהחזרת בי נשמתי בחמלה",
+                            "text": "מודה אני לפניך מלך חי וקיים שהחזרת בי נשמתי בחמלה רבה אמונתך",
                             "typeRole": "prayer-reading",
                             "color": "on-surface",
                             "align": "end",
-                            "maxLines": 3
-                          },
-                          {
-                            "type": "text",
-                            "text": "רבה אמונתך",
-                            "typeRole": "prayer-reading-bold",
-                            "color": "on-surface",
-                            "align": "end"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "type": "box",
-                    "width": "fill",
-                    "radius": 8,
-                    "fill": "surface",
-                    "border": {
-                      "color": "primary-outline",
-                      "width": 1
-                    },
-                    "padding": 12,
-                    "children": [
-                      {
-                        "type": "column",
-                        "gap": 8,
-                        "align": "end",
-                        "children": [
-                          {
-                            "type": "text",
-                            "text": "ברכות התורה",
-                            "typeRole": "label-semibold",
-                            "color": "on-surface",
-                            "align": "end"
-                          },
-                          {
-                            "type": "text",
-                            "text": "ברוך אתה ה׳ אלהינו מלך העולם אשר קדשנו במצותיו",
-                            "typeRole": "prayer-reading",
-                            "color": "on-surface",
-                            "align": "end",
-                            "maxLines": 3
-                          },
-                          {
-                            "type": "text",
-                            "text": "וצונו לעסוק בדברי תורה",
-                            "typeRole": "prayer-reading-bold",
-                            "color": "primary",
-                            "align": "end"
+                            "maxLines": 4
                           }
                         ]
                       }
@@ -1480,9 +1382,9 @@
                     "fill": "surface",
                     "border": {
                       "color": "outline",
-                      "width": 1
+                      "width": 0.5
                     },
-                    "padding": 12,
+                    "padding": 8,
                     "children": [
                       {
                         "type": "column",
@@ -1492,7 +1394,7 @@
                           {
                             "type": "text",
                             "text": "קריאת שמע",
-                            "typeRole": "label-semibold",
+                            "typeRole": "title3-semibold",
                             "color": "on-surface",
                             "align": "end"
                           },
@@ -1509,18 +1411,58 @@
                             "typeRole": "prayer-reading",
                             "color": "on-surface",
                             "align": "end"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "width": "fill",
+                    "radius": 8,
+                    "fill": "surface",
+                    "border": {
+                      "color": "primary-outline",
+                      "width": 1
+                    },
+                    "padding": 8,
+                    "children": [
+                      {
+                        "type": "column",
+                        "gap": 8,
+                        "align": "end",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "תפילת העמידה",
+                            "typeRole": "title3-semibold",
+                            "color": "primary",
+                            "align": "end"
                           },
                           {
                             "type": "text",
-                            "text": "ואהבת את ה׳ אלהיך בכל לבבך ובכל נפשך ובכל מאדך",
+                            "text": "אדני שפתי תפתח ופי יגיד תהלתך",
                             "typeRole": "prayer-reading",
                             "color": "on-surface",
-                            "align": "end",
-                            "maxLines": 3
+                            "align": "end"
                           },
                           {
                             "type": "text",
-                            "text": "(Repeat quietly)",
+                            "text": "ברוך אתה ה׳ אלהינו ואלהי אבותינו",
+                            "typeRole": "prayer-reading-bold",
+                            "color": "on-surface",
+                            "align": "end"
+                          },
+                          {
+                            "type": "text",
+                            "text": "אלהי אברהם אלהי יצחק ואלהי יעקב",
+                            "typeRole": "prayer-reading",
+                            "color": "on-surface",
+                            "align": "end"
+                          },
+                          {
+                            "type": "text",
+                            "text": "(Repeat)",
                             "typeRole": "caption",
                             "color": "on-surface-variant",
                             "align": "end"
@@ -1552,14 +1494,14 @@
                 "selected": false
               }
             ],
-            "height": 54,
+            "height": 52,
             "background": "surface",
             "selectedColor": "primary",
             "unselectedColor": "on-surface-variant",
             "indicator": {
               "thickness": 2,
-              "radius": 9999,
-              "inset": 12
+              "radius": 2,
+              "inset": 18
             },
             "style": "both"
           },
