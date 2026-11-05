@@ -1,0 +1,9 @@
+{
+  "appName": "smart-siddur-ios-new",
+  "platform": "ios",
+  "ios": {
+    "project": "SmartSiddur.xcodeproj",
+    "scheme": "SmartSiddur",
+    "simulator": "iPhone 17 Pro"
+  }
+}
