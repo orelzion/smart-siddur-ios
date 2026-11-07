@@ -1,11 +1,11 @@
 ---
 version: alpha
 name: SmartSiddur iOS
-description: Native iOS design foundation for a calm, focused siddur, with warm cream and deep navy appearances and restrained gold accents.
+description: Native iOS design foundation for a calm, focused siddur, with soft near-white and charcoal appearances and restrained teal accents.
 colors:
-  primary: "#DAB946"
+  primary: "#009688"
   on-primary: "#1A1A2E"
-  background: "#FAF8F5"
+  background: "#FFFBFE"
   background-end: "#FFFFFF"
   on-background: "#1A1A2E"
   surface: "#FFFFFF"
@@ -91,7 +91,7 @@ components:
 x-stag:
   schema: 1
   platform: ios
-  peer: none
+  peer: ../SmartSiddur/DESIGN.md
   facts:
     ui_framework: { primary: swiftui, swiftui_files: 24, uikit_only_files: 2 }
     deployment_target: "17.0"
@@ -106,10 +106,10 @@ x-stag:
     liquid_glass: false
     dynamic_color: true
     trap: "Color asset-style accessors exist, but there are no color assets and no screen uses those accessors."
-    migration: "Move toward native iOS structure with gold as the accent; consolidate duplicated screen-local cream/navy/gold values into one code-owned token layer."
+    migration: "Move toward native iOS structure with teal as the accent; consolidate duplicated screen-local near-white/charcoal/teal values into one code-owned token layer."
     confirmed:
-      overall_feel: "Calm, reverent, and focused — warm cream in light mode, deep navy in dark mode, with restrained gold accents."
-      canonical_style: "Use native iOS styling as the foundation; keep gold mainly as the app accent."
+      overall_feel: "Calm, reverent, and focused — soft near-white in light mode, charcoal in dark mode, with restrained teal accents."
+      canonical_style: "Use native iOS styling as the foundation; keep teal mainly as the app accent."
       appearance_direction: "Treat system/light/dark themes and prayer font customization as intended product behavior that future work should complete."
   themes:
     default: light
@@ -118,12 +118,12 @@ x-stag:
       - { id: light, kind: appearance }
       - { id: dark, kind: appearance }
   values:
-    colors.primary: { dark: "#DAB946" }
+    colors.primary: { dark: "#009688" }
     colors.on-primary: { dark: "#1A1A2E" }
-    colors.background: { dark: "#0F172A" }
+    colors.background: { dark: "#121212" }
     colors.background-end: { dark: "#020617" }
     colors.on-background: { dark: "#FFFFFF" }
-    colors.surface: { dark: "#FFFFFF14" }
+    colors.surface: { dark: "#1E1E1E" }
     colors.on-surface: { dark: "#FFFFFF" }
     colors.on-surface-secondary: { dark: "#B3B8C7" }
     colors.outline: { dark: "#FFFFFF1F" }
@@ -132,9 +132,9 @@ x-stag:
     colors.error: { dark: "#FF453A" }
     colors.scrim: { dark: "#0000004D" }
   bindings:
-    colors.primary: { native: "Color(red: 0.85, green: 0.73, blue: 0.27)", source: "Sources/Features/Home/NewHomeView.swift#gold" }
+    colors.primary: { native: "Color(red: 0.00, green: 0.59, blue: 0.53)", source: "Sources/Features/Home/NewHomeView.swift#gold" }
     colors.on-primary: { native: "Color.black.opacity(0.85)", source: "Sources/Features/Home/NewHomeView.swift#heroButton" }
-    colors.background: { native: "Color(red: 0.98, green: 0.97, blue: 0.96)", source: "Sources/Features/Home/NewHomeView.swift#backgroundGradient" }
+    colors.background: { native: "Color(red: 1.00, green: 0.98, blue: 1.00)", source: "Sources/Features/Home/NewHomeView.swift#backgroundGradient" }
     colors.background-end: { native: "Color.white", source: "Sources/Features/Home/NewHomeView.swift#backgroundGradient" }
     colors.on-background: { native: "Color(red: 0.10, green: 0.10, blue: 0.18)", source: "Sources/Features/Home/NewHomeView.swift#primaryText" }
     colors.surface: { native: "Color.white", source: "Sources/Features/Home/NewHomeView.swift#cardFill" }
@@ -160,11 +160,11 @@ x-stag:
   fonts:
     - { family: SF Pro, files: [], registered_via: system, preview: system, used_by: "App UI, prayer text, calendar, and settings" }
   examples:
-    - { screen: Home, path: Sources/Features/Home/NewHomeView.swift, shows: [adaptive background, gold accent, hero card, prayer tiles] }
+    - { screen: Home, path: Sources/Features/Home/NewHomeView.swift, shows: [adaptive background, teal accent, hero card, prayer tiles] }
     - { screen: Calendar, path: Sources/Features/Calendar/CalendarView.swift, shows: [native navigation, adaptive cards, calendar grid] }
-    - { screen: Settings, path: Sources/Features/Settings/SettingsView.swift, shows: [native grouped list, adaptive background, gold tint] }
+    - { screen: Settings, path: Sources/Features/Settings/SettingsView.swift, shows: [native grouped list, adaptive background, teal tint] }
     - { screen: Prayer Text, path: Sources/Features/Prayers/PrayerTextView.swift, shows: [content-first layout, RTL text, reading typography] }
-    - { screen: Sign In, path: Sources/Features/Auth/LoginView.swift, shows: [deep navy background, gold accent, 50-point actions] }
+    - { screen: Sign In, path: Sources/Features/Auth/LoginView.swift, shows: [charcoal background, teal accent, 50-point actions] }
   known_off_system:
     - { id: duplicated-color-literals, pattern: "Color(red:green:blue:)", count: 49, replacement: "Use one code-owned semantic color accessor." }
     - { id: raw-system-font-sizes, pattern: ".font(.system(size:))", count: 18, replacement: "Use semantic typography roles, except data-dense calendar details and user-selected prayer size." }
@@ -195,8 +195,8 @@ x-stag:
     error: error
     scrim: scrim
   usage:
-    primary: "Restrained gold for tint, selection, emphasis, and primary prayer actions."
-    background: "Warm cream start of the light appearance background."
+    primary: "Restrained teal for tint, selection, emphasis, and primary prayer actions."
+    background: "Soft near-white start of the light appearance background."
     background-end: "White end of the light appearance background."
     surface: "Native-feeling cards, rows, and reading surfaces."
     on-surface-secondary: "Supporting dates, locations, hints, and metadata."
@@ -211,7 +211,274 @@ x-stag:
     - "Login is always dark while authenticated screens adapt to system appearance."
     - "Typography roles merge rounded and monospaced variants with their matching size and weight to stay within a compact role set."
     - "The named prayer font options have no bundled files and are not yet connected to rendered prayer text."
-  deviations: none
+  deviations:
+    rev: 3
+    peer_rev_seen: 3
+    items:
+      - id: dv-bar-size
+        subject: bar-size
+        kind: component
+        this: height 46 (settings-row)
+        peer: height 48 (navigation-row)
+        status: intentional
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: likely_intentional
+      - id: dv-button-size
+        subject: button-size
+        kind: component
+        this: "height 50, radius 12 (authentication-action)"
+        peer: height 48 (legacy-location-action)
+        status: intentional
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: open
+      - id: dv-button-size-2
+        subject: button-size-2
+        kind: component
+        this: "radius 9999, inset 12 (gold-prayer-action)"
+        peer: height 48 (prayer-return)
+        status: intentional
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: open
+      - id: dv-card-radius
+        subject: card-radius
+        kind: token
+        this: 18 (card)
+        peer: 16 (card)
+        status: intentional
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: likely_accidental
+      - id: dv-dark-mode
+        subject: dark-mode
+        kind: behavior
+        this: follows the system setting
+        peer: "follows the system, and people can pick"
+        status: intentional
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: open
+      - id: dv-divider
+        subject: divider
+        kind: component
+        this: thickness 0.5 (legacy-card-outline)
+        peer: "height 1, thickness 1 (legacy-divider)"
+        status: intentional
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: open
+      - id: dv-field-fill
+        subject: field-fill
+        kind: token
+        this: "#4AC47F26 (success-container), dark #4AC47F26"
+        peer: "#F5F5F5 (surface-variant), dark #2D2D2D"
+        status: intentional
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: likely_accidental
+      - id: dv-font-family
+        subject: font-family
+        kind: token
+        this: SF Pro
+        peer: "Alef, FontAwesome, Keter YG, Roboto, Shofar, Taamey Frank CLM"
+        status: open
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: likely_accidental
+      - id: dv-icon-size
+        subject: icon-size
+        kind: component
+        this: "width 48, height 48 (empty-state)"
+        peer: "width 80, height 80 (notification-empty-state)"
+        status: intentional
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: open
+      - id: dv-margin
+        subject: margin
+        kind: component
+        this: inset 16 (screen-gutter)
+        peer: width 16 (screen-margin)
+        status: open
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: open
+      - id: dv-on-background-color
+        subject: on-background-color
+        kind: token
+        this: "#1A1A2E (on-background), dark #FFFFFF"
+        peer: "#1C1B1F (on-background), dark #FFFFFF"
+        status: intentional
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: likely_accidental
+      - id: dv-on-primary-color
+        subject: on-primary-color
+        kind: token
+        this: "#1A1A2E (on-primary), dark #1A1A2E"
+        peer: "#FFFFFF (on-primary), dark #FFFFFF"
+        status: open
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: likely_accidental
+      - id: dv-on-surface-color
+        subject: on-surface-color
+        kind: token
+        this: "#1A1A2E (on-surface), dark #FFFFFF"
+        peer: "#1C1B1F (on-surface), dark #FFFFFF"
+        status: open
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: likely_accidental
+      - id: dv-other-size
+        subject: other-size
+        kind: component
+        this: height 56 (calendar-cell)
+        peer: "width 40, height 40, radius 9999 (calendar-date-cell)"
+        status: open
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: open
+      - id: dv-outline-color
+        subject: outline-color
+        kind: token
+        this: "#00000014 (outline), dark #FFFFFF1F"
+        peer: "#79747E (outline)"
+        status: open
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: likely_accidental
+      - id: dv-prayer-body
+        subject: prayer-body
+        kind: token
+        this: "SF Pro 20 pt, weight 400 (prayer-body)"
+        peer: "Taamey Frank CLM 16 sp, weight 500 (prayer-body)"
+        status: intentional
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: likely_accidental
+      - id: dv-prayer-section
+        subject: prayer-section
+        kind: token
+        this: "SF Pro 18 pt, weight 600 (prayer-section)"
+        peer: "Roboto 10 sp, weight 700 (prayer-section)"
+        status: intentional
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: likely_intentional
+      - id: dv-scrim-color
+        subject: scrim-color
+        kind: token
+        this: "#0000004D (scrim), dark #0000004D"
+        peer: "#00000060 (scrim)"
+        status: open
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: likely_accidental
+      - id: dv-spacing-md
+        subject: spacing-md
+        kind: token
+        this: 10 (md)
+        peer: 16 (md)
+        status: accidental
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: open
+      - id: dv-spacing-sm
+        subject: spacing-sm
+        kind: token
+        this: 6 (sm)
+        peer: 12 (sm)
+        status: accidental
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: open
+      - id: dv-spacing-xs
+        subject: spacing-xs
+        kind: token
+        this: 4 (xs)
+        peer: 8 (xs)
+        status: accidental
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: open
+      - id: dv-spacing-xxs
+        subject: spacing-xxs
+        kind: token
+        this: 2 (xxs)
+        peer: 4 (xxs)
+        status: accidental
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: open
+      - id: dv-theme-choice
+        subject: theme-choice
+        kind: behavior
+        this: follows the system
+        peer: "follows the system, and people can pick"
+        status: intentional
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: open
+      - id: dv-type-scale
+        subject: type-scale
+        kind: token
+        this: "17 roles, 9 to 34 pt, SF Pro"
+        peer: "30 roles, 8 to 30 sp, Alef, FontAwesome, Roboto"
+        status: open
+        follows: unknown
+        reason: ""
+        decided_by: designer
+        decided_on: 2026-11-08
+        stag_guess: open
   generated_from:
     at: 2026-11-07T22:53:17Z
     inputs:
@@ -283,13 +550,13 @@ x-stag:
         sha256: 43dc158df765e75127c4308f42369f32b560d23d7e76130b652e6e924781a658
 ---
 ## Overview
-- Keep SmartSiddur calm, reverent, and focused: use warm cream in light mode, deep navy in dark mode, and restrained gold accents.
+- Keep SmartSiddur calm, reverent, and focused: use soft near-white in light mode, charcoal in dark mode, and restrained teal accents.
 - Start from native iOS navigation, controls, lists, typography, and accessibility behavior.
 - Let prayer content and timely information carry the hierarchy; keep decoration quiet.
 
 ## Colors
-- Use gold for app tint, selected states, brief emphasis, and primary prayer actions—not as a general text color.
-- Use warm cream-to-white backgrounds in light mode and the coded deep navy gradient in dark mode.
+- Use teal for app tint, selected states, brief emphasis, and primary prayer actions—not as a general text color.
+- Use soft near-white-to-white backgrounds in light mode and the coded charcoal gradient in dark mode.
 - Use adaptive semantic text and surface colors so every screen remains legible in both appearances.
 - Reserve green for positive seasonal status and red for errors or destructive meaning.
 
@@ -308,22 +575,22 @@ x-stag:
 ## Elevation & Depth
 - Create hierarchy with surface contrast and fine outlines before adding shadows.
 - Keep cards quiet and flat enough that content remains primary.
-- Use translucent dark surfaces only where the coded dark appearance calls for them.
+- Use charcoal surfaces only where the coded dark appearance calls for them.
 
 ## Shapes
 - Use 18-point corners for feature cards, 14-point corners for tiles, and 12-point corners for compact controls and badges.
 - Use capsules for short primary actions and small labels; use circles for calendar selections and icon-only controls.
 
 ## Components
-- Build new utility screens from native SwiftUI controls and grouped lists, tinted with the primary gold.
-- Keep primary prayer actions short, gold, capsule-shaped, and high contrast.
+- Build new utility screens from native SwiftUI controls and grouped lists, tinted with the primary teal.
+- Keep primary prayer actions short, teal, capsule-shaped, and high contrast.
 - Keep prayer tiles consistent at 112 points high with 12-point internal padding.
 - Apply theme selection at the app root and prayer typography preferences at the prayer reader when completing the appearance migration.
 
 ## Do's and Don'ts
-- Do reuse one semantic token source when touching duplicated cream, navy, gold, text, surface, or outline values.
+- Do reuse one semantic token source when touching duplicated near-white, charcoal, teal, text, surface, or outline values.
 - Do preserve system, light, and dark as intended user-selectable appearances.
 - Do keep sign-in recognizably part of the same system while respecting provider button requirements.
 - Don't introduce new hard-coded color copies or private typography scales.
-- Don't make every surface gold, glassy, or heavily elevated.
+- Don't make every surface teal, glassy, or heavily elevated.
 - Don't present the current Appearance controls as fully implemented until their choices affect the app.
