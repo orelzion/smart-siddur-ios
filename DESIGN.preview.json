@@ -1,0 +1,1282 @@
+{
+  "version": 1,
+  "source_sha256": "fd37acd68027faa7a5e6ee13564122b9367dad91c6094fa8d8c9cdbd01f5ef73",
+  "generated_at": "2026-11-07T22:56:33Z",
+  "screens": [
+    {
+      "name": "Home",
+      "root": {
+        "type": "column",
+        "gap": 0,
+        "width": "fill",
+        "height": "fill",
+        "children": [
+          {
+            "type": "statusBar",
+            "color": "on-background",
+            "background": "background"
+          },
+          {
+            "type": "box",
+            "width": "fill",
+            "height": "fill",
+            "fill": "background",
+            "padding": {
+              "top": 12,
+              "right": 16,
+              "bottom": 24,
+              "left": 16
+            },
+            "children": [
+              {
+                "type": "column",
+                "gap": 18,
+                "width": "fill",
+                "children": [
+                  {
+                    "type": "column",
+                    "gap": 6,
+                    "align": "start",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Good morning",
+                        "typeRole": "large-title-bold",
+                        "color": "on-background"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Sunday, 8 November · 17 Cheshvan 5787",
+                        "typeRole": "subheadline",
+                        "color": "on-surface-secondary"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "width": "fill",
+                    "radius": 18,
+                    "fill": "surface",
+                    "border": {
+                      "color": "primary",
+                      "width": 1
+                    },
+                    "padding": 16,
+                    "children": [
+                      {
+                        "type": "column",
+                        "gap": 12,
+                        "align": "start",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Next Prayer: Mincha",
+                            "typeRole": "headline",
+                            "color": "on-surface"
+                          },
+                          {
+                            "type": "text",
+                            "text": "Sunset",
+                            "typeRole": "title3-semibold",
+                            "color": "primary"
+                          },
+                          {
+                            "type": "row",
+                            "gap": 10,
+                            "align": "center",
+                            "children": [
+                              {
+                                "type": "text",
+                                "text": "4:43 PM",
+                                "typeRole": "title2-bold",
+                                "color": "on-surface"
+                              },
+                              {
+                                "type": "row",
+                                "gap": 4,
+                                "align": "center",
+                                "children": [
+                                  {
+                                    "type": "icon",
+                                    "name": "sf:stopwatch.fill",
+                                    "size": 12,
+                                    "color": "on-surface"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "text": "(18:24)",
+                                    "typeRole": "caption-bold",
+                                    "color": "on-surface"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "box",
+                            "radius": 9999,
+                            "fill": "primary",
+                            "padding": {
+                              "top": 9,
+                              "right": 12,
+                              "bottom": 9,
+                              "left": 12
+                            },
+                            "children": [
+                              {
+                                "type": "text",
+                                "text": "Mincha",
+                                "typeRole": "subheadline-semibold",
+                                "color": "on-primary"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "column",
+                    "gap": 12,
+                    "align": "start",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "Suggested For You",
+                        "typeRole": "headline",
+                        "color": "on-background"
+                      },
+                      {
+                        "type": "box",
+                        "radius": 12,
+                        "fill": "success-container",
+                        "padding": {
+                          "top": 8,
+                          "right": 12,
+                          "bottom": 8,
+                          "left": 12
+                        },
+                        "children": [
+                          {
+                            "type": "row",
+                            "gap": 8,
+                            "align": "center",
+                            "children": [
+                              {
+                                "type": "icon",
+                                "name": "sf:leaf.fill",
+                                "size": 16,
+                                "color": "success"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Seasonal addition: Mashiv Haruach",
+                                "typeRole": "subheadline-semibold",
+                                "color": "success",
+                                "maxLines": 2
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "row",
+                        "gap": 10,
+                        "width": "fill",
+                        "children": [
+                          {
+                            "type": "box",
+                            "width": "fill",
+                            "height": 112,
+                            "radius": 14,
+                            "fill": "surface",
+                            "border": {
+                              "color": "outline",
+                              "width": 1
+                            },
+                            "padding": 12,
+                            "children": [
+                              {
+                                "type": "column",
+                                "gap": 8,
+                                "align": "start",
+                                "children": [
+                                  {
+                                    "type": "icon",
+                                    "name": "sf:sun.max.fill",
+                                    "size": 18,
+                                    "color": "primary"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "text": "Morning Blessings",
+                                    "typeRole": "subheadline-semibold",
+                                    "color": "on-surface",
+                                    "maxLines": 2
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "box",
+                            "width": "fill",
+                            "height": 112,
+                            "radius": 14,
+                            "fill": "surface",
+                            "border": {
+                              "color": "outline",
+                              "width": 1
+                            },
+                            "padding": 12,
+                            "children": [
+                              {
+                                "type": "column",
+                                "gap": 8,
+                                "align": "start",
+                                "children": [
+                                  {
+                                    "type": "icon",
+                                    "name": "sf:book.closed.fill",
+                                    "size": 18,
+                                    "color": "primary"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "text": "Psalm for Sunday",
+                                    "typeRole": "subheadline-semibold",
+                                    "color": "on-surface",
+                                    "maxLines": 2
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "column",
+                    "gap": 12,
+                    "align": "start",
+                    "children": [
+                      {
+                        "type": "text",
+                        "text": "All Prayers",
+                        "typeRole": "headline",
+                        "color": "on-background"
+                      },
+                      {
+                        "type": "row",
+                        "gap": 10,
+                        "width": "fill",
+                        "children": [
+                          {
+                            "type": "box",
+                            "width": "fill",
+                            "height": 112,
+                            "radius": 14,
+                            "fill": "surface",
+                            "border": {
+                              "color": "outline",
+                              "width": 1
+                            },
+                            "padding": 12,
+                            "children": [
+                              {
+                                "type": "column",
+                                "gap": 8,
+                                "align": "start",
+                                "children": [
+                                  {
+                                    "type": "icon",
+                                    "name": "sf:sunrise.fill",
+                                    "size": 18,
+                                    "color": "primary"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "text": "Shacharit",
+                                    "typeRole": "subheadline-semibold",
+                                    "color": "on-surface"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "type": "box",
+                            "width": "fill",
+                            "height": 112,
+                            "radius": 14,
+                            "fill": "surface",
+                            "border": {
+                              "color": "primary",
+                              "width": 1
+                            },
+                            "padding": 12,
+                            "children": [
+                              {
+                                "type": "column",
+                                "gap": 8,
+                                "align": "start",
+                                "children": [
+                                  {
+                                    "type": "icon",
+                                    "name": "sf:sunset.fill",
+                                    "size": 18,
+                                    "color": "primary"
+                                  },
+                                  {
+                                    "type": "text",
+                                    "text": "Mincha",
+                                    "typeRole": "subheadline-semibold",
+                                    "color": "on-surface"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tabBar",
+            "items": [
+              {
+                "icon": "sf:house.fill",
+                "label": "Home",
+                "selected": true
+              },
+              {
+                "icon": "sf:calendar",
+                "label": "Calendar",
+                "selected": false
+              },
+              {
+                "icon": "sf:gearshape.fill",
+                "label": "Settings",
+                "selected": false
+              }
+            ],
+            "height": 50,
+            "background": "surface",
+            "selectedColor": "primary",
+            "unselectedColor": "on-surface-secondary",
+            "indicator": {
+              "thickness": 2,
+              "radius": 2,
+              "inset": 12
+            },
+            "style": "both"
+          },
+          {
+            "type": "gestureBar",
+            "color": "on-background"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Calendar",
+      "root": {
+        "type": "column",
+        "gap": 0,
+        "width": "fill",
+        "height": "fill",
+        "children": [
+          {
+            "type": "statusBar",
+            "color": "on-background",
+            "background": "background"
+          },
+          {
+            "type": "navBar",
+            "title": "Calendar",
+            "leading": [],
+            "trailing": [],
+            "height": 44,
+            "background": "background",
+            "foreground": "on-background"
+          },
+          {
+            "type": "box",
+            "width": "fill",
+            "height": "fill",
+            "fill": "background",
+            "padding": {
+              "top": 10,
+              "right": 16,
+              "bottom": 20,
+              "left": 16
+            },
+            "children": [
+              {
+                "type": "column",
+                "gap": 14,
+                "width": "fill",
+                "children": [
+                  {
+                    "type": "row",
+                    "gap": 12,
+                    "align": "center",
+                    "width": "fill",
+                    "children": [
+                      {
+                        "type": "box",
+                        "width": 34,
+                        "height": 34,
+                        "radius": 9999,
+                        "fill": "surface",
+                        "align": "center",
+                        "children": [
+                          {
+                            "type": "icon",
+                            "name": "sf:chevron.left",
+                            "size": 17,
+                            "color": "on-surface"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "November 2026",
+                        "typeRole": "headline",
+                        "color": "on-background",
+                        "align": "center"
+                      },
+                      {
+                        "type": "spacer",
+                        "size": 4
+                      },
+                      {
+                        "type": "box",
+                        "height": 34,
+                        "radius": 9999,
+                        "fill": "surface",
+                        "padding": {
+                          "right": 10,
+                          "left": 10
+                        },
+                        "align": "center",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Today",
+                            "typeRole": "caption-semibold",
+                            "color": "on-surface"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "width": 34,
+                        "height": 34,
+                        "radius": 9999,
+                        "fill": "surface",
+                        "align": "center",
+                        "children": [
+                          {
+                            "type": "icon",
+                            "name": "sf:chevron.right",
+                            "size": 17,
+                            "color": "on-surface"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "width": "fill",
+                    "radius": 8,
+                    "fill": "surface",
+                    "padding": 2,
+                    "children": [
+                      {
+                        "type": "row",
+                        "gap": 2,
+                        "width": "fill",
+                        "children": [
+                          {
+                            "type": "box",
+                            "width": "fill",
+                            "radius": 7,
+                            "padding": 7,
+                            "align": "center",
+                            "children": [
+                              {
+                                "type": "text",
+                                "text": "Day",
+                                "typeRole": "subheadline",
+                                "color": "on-surface-secondary"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "box",
+                            "width": "fill",
+                            "radius": 7,
+                            "fill": "primary",
+                            "padding": 7,
+                            "align": "center",
+                            "children": [
+                              {
+                                "type": "text",
+                                "text": "Month",
+                                "typeRole": "subheadline-semibold",
+                                "color": "on-primary"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "width": "fill",
+                    "radius": 8,
+                    "fill": "surface",
+                    "padding": 2,
+                    "children": [
+                      {
+                        "type": "row",
+                        "gap": 2,
+                        "width": "fill",
+                        "children": [
+                          {
+                            "type": "box",
+                            "width": "fill",
+                            "radius": 7,
+                            "fill": "primary",
+                            "padding": 7,
+                            "align": "center",
+                            "children": [
+                              {
+                                "type": "text",
+                                "text": "Gregorian",
+                                "typeRole": "subheadline-semibold",
+                                "color": "on-primary"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "box",
+                            "width": "fill",
+                            "radius": 7,
+                            "padding": 7,
+                            "align": "center",
+                            "children": [
+                              {
+                                "type": "text",
+                                "text": "Hebrew",
+                                "typeRole": "subheadline",
+                                "color": "on-surface-secondary"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "width": "fill",
+                    "radius": 18,
+                    "fill": "surface",
+                    "border": {
+                      "color": "outline",
+                      "width": 1
+                    },
+                    "padding": 14,
+                    "children": [
+                      {
+                        "type": "row",
+                        "width": "fill",
+                        "distribute": "spaceBetween",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "י״ז בחשוון תשפ״ז",
+                            "typeRole": "title3-semibold",
+                            "color": "on-surface"
+                          },
+                          {
+                            "type": "text",
+                            "text": "November 8, 2026",
+                            "typeRole": "title3-semibold",
+                            "color": "on-surface",
+                            "align": "end"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "width": "fill",
+                    "radius": 18,
+                    "fill": "surface",
+                    "border": {
+                      "color": "outline",
+                      "width": 1
+                    },
+                    "padding": 12,
+                    "children": [
+                      {
+                        "type": "column",
+                        "gap": 8,
+                        "children": [
+                          {
+                            "type": "row",
+                            "width": "fill",
+                            "distribute": "spaceAround",
+                            "children": [
+                              {
+                                "type": "text",
+                                "text": "Sun",
+                                "typeRole": "caption2-semibold",
+                                "color": "on-surface-secondary"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Mon",
+                                "typeRole": "caption2-semibold",
+                                "color": "on-surface-secondary"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Tue",
+                                "typeRole": "caption2-semibold",
+                                "color": "on-surface-secondary"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Wed",
+                                "typeRole": "caption2-semibold",
+                                "color": "on-surface-secondary"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Thu",
+                                "typeRole": "caption2-semibold",
+                                "color": "on-surface-secondary"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Fri",
+                                "typeRole": "caption2-semibold",
+                                "color": "on-surface-secondary"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Sat",
+                                "typeRole": "caption2-semibold",
+                                "color": "on-surface-secondary"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "row",
+                            "width": "fill",
+                            "distribute": "spaceAround",
+                            "children": [
+                              {
+                                "type": "text",
+                                "text": "1 · כ״א",
+                                "typeRole": "calendar-detail",
+                                "color": "on-surface",
+                                "align": "center"
+                              },
+                              {
+                                "type": "text",
+                                "text": "2 · כ״ב",
+                                "typeRole": "calendar-detail",
+                                "color": "on-surface",
+                                "align": "center"
+                              },
+                              {
+                                "type": "text",
+                                "text": "3 · כ״ג",
+                                "typeRole": "calendar-detail",
+                                "color": "on-surface",
+                                "align": "center"
+                              },
+                              {
+                                "type": "text",
+                                "text": "4 · כ״ד",
+                                "typeRole": "calendar-detail",
+                                "color": "on-surface",
+                                "align": "center"
+                              },
+                              {
+                                "type": "text",
+                                "text": "5 · כ״ה",
+                                "typeRole": "calendar-detail",
+                                "color": "on-surface",
+                                "align": "center"
+                              },
+                              {
+                                "type": "text",
+                                "text": "6 · כ״ו",
+                                "typeRole": "calendar-detail",
+                                "color": "on-surface",
+                                "align": "center"
+                              },
+                              {
+                                "type": "text",
+                                "text": "7 · כ״ז",
+                                "typeRole": "calendar-detail",
+                                "color": "on-surface",
+                                "align": "center"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "row",
+                            "width": "fill",
+                            "distribute": "spaceAround",
+                            "children": [
+                              {
+                                "type": "box",
+                                "width": 40,
+                                "height": 40,
+                                "radius": 9999,
+                                "fill": "primary",
+                                "align": "center",
+                                "children": [
+                                  {
+                                    "type": "text",
+                                    "text": "8 · י״ז",
+                                    "typeRole": "calendar-detail",
+                                    "color": "on-primary",
+                                    "align": "center"
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "text",
+                                "text": "9 · י״ח",
+                                "typeRole": "calendar-detail",
+                                "color": "on-surface",
+                                "align": "center"
+                              },
+                              {
+                                "type": "text",
+                                "text": "10 · י״ט",
+                                "typeRole": "calendar-detail",
+                                "color": "on-surface",
+                                "align": "center"
+                              },
+                              {
+                                "type": "text",
+                                "text": "11 · כ׳",
+                                "typeRole": "calendar-detail",
+                                "color": "on-surface",
+                                "align": "center"
+                              },
+                              {
+                                "type": "text",
+                                "text": "12 · כ״א",
+                                "typeRole": "calendar-detail",
+                                "color": "on-surface",
+                                "align": "center"
+                              },
+                              {
+                                "type": "text",
+                                "text": "13 · כ״ב",
+                                "typeRole": "calendar-detail",
+                                "color": "on-surface",
+                                "align": "center"
+                              },
+                              {
+                                "type": "text",
+                                "text": "14 · כ״ג",
+                                "typeRole": "calendar-detail",
+                                "color": "on-surface",
+                                "align": "center"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "width": "fill",
+                    "radius": 18,
+                    "fill": "surface",
+                    "border": {
+                      "color": "outline",
+                      "width": 1
+                    },
+                    "padding": 14,
+                    "children": [
+                      {
+                        "type": "column",
+                        "gap": 8,
+                        "align": "start",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "Day Info",
+                            "typeRole": "headline",
+                            "color": "on-surface"
+                          },
+                          {
+                            "type": "row",
+                            "width": "fill",
+                            "distribute": "spaceBetween",
+                            "children": [
+                              {
+                                "type": "text",
+                                "text": "Parsha",
+                                "typeRole": "subheadline",
+                                "color": "on-surface-secondary"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Vayera",
+                                "typeRole": "subheadline",
+                                "color": "on-surface"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "row",
+                            "width": "fill",
+                            "distribute": "spaceBetween",
+                            "children": [
+                              {
+                                "type": "text",
+                                "text": "Daf Yomi",
+                                "typeRole": "subheadline",
+                                "color": "on-surface-secondary"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Menachot 34",
+                                "typeRole": "subheadline",
+                                "color": "on-surface"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tabBar",
+            "items": [
+              {
+                "icon": "sf:house.fill",
+                "label": "Home",
+                "selected": false
+              },
+              {
+                "icon": "sf:calendar",
+                "label": "Calendar",
+                "selected": true
+              },
+              {
+                "icon": "sf:gearshape.fill",
+                "label": "Settings",
+                "selected": false
+              }
+            ],
+            "height": 50,
+            "background": "surface",
+            "selectedColor": "primary",
+            "unselectedColor": "on-surface-secondary",
+            "indicator": {
+              "thickness": 2,
+              "radius": 2,
+              "inset": 12
+            },
+            "style": "both"
+          },
+          {
+            "type": "gestureBar",
+            "color": "on-background"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Prayer Text",
+      "root": {
+        "type": "column",
+        "gap": 0,
+        "width": "fill",
+        "height": "fill",
+        "children": [
+          {
+            "type": "statusBar",
+            "color": "on-background",
+            "background": "surface"
+          },
+          {
+            "type": "navBar",
+            "title": "Shacharit",
+            "leading": [
+              {
+                "type": "icon",
+                "name": "sf:chevron.left",
+                "size": 18,
+                "color": "primary"
+              }
+            ],
+            "trailing": [
+              {
+                "type": "text",
+                "text": "TOC",
+                "typeRole": "body",
+                "color": "primary"
+              },
+              {
+                "type": "icon",
+                "name": "sf:arrow.clockwise",
+                "size": 17,
+                "color": "primary"
+              }
+            ],
+            "height": 44,
+            "background": "surface",
+            "foreground": "on-surface"
+          },
+          {
+            "type": "box",
+            "width": "fill",
+            "height": "fill",
+            "fill": "background-end",
+            "padding": 16,
+            "children": [
+              {
+                "type": "column",
+                "gap": 8,
+                "align": "stretch",
+                "children": [
+                  {
+                    "type": "box",
+                    "width": "fill",
+                    "radius": 8,
+                    "fill": "surface",
+                    "padding": {
+                      "top": 8,
+                      "right": 12,
+                      "bottom": 12,
+                      "left": 12
+                    },
+                    "children": [
+                      {
+                        "type": "column",
+                        "gap": 8,
+                        "align": "end",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "ברכות השחר",
+                            "typeRole": "prayer-section",
+                            "color": "on-surface",
+                            "align": "end"
+                          },
+                          {
+                            "type": "text",
+                            "text": "מודה אני לפניך מלך חי וקיים שהחזרת בי נשמתי בחמלה רבה אמונתך",
+                            "typeRole": "prayer-body",
+                            "color": "on-surface",
+                            "align": "end",
+                            "maxLines": 4
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "width": "fill",
+                    "radius": 8,
+                    "fill": "surface",
+                    "padding": {
+                      "top": 8,
+                      "right": 12,
+                      "bottom": 12,
+                      "left": 12
+                    },
+                    "children": [
+                      {
+                        "type": "column",
+                        "gap": 8,
+                        "align": "end",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "ברכות התורה",
+                            "typeRole": "prayer-section",
+                            "color": "on-surface",
+                            "align": "end"
+                          },
+                          {
+                            "type": "text",
+                            "text": "ברוך אתה ה׳ אלהינו מלך העולם אשר קדשנו במצותיו וצונו לעסוק בדברי תורה",
+                            "typeRole": "prayer-body",
+                            "color": "on-surface",
+                            "align": "end",
+                            "maxLines": 5
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "box",
+                    "width": "fill",
+                    "radius": 8,
+                    "fill": "surface",
+                    "padding": {
+                      "top": 8,
+                      "right": 12,
+                      "bottom": 12,
+                      "left": 12
+                    },
+                    "children": [
+                      {
+                        "type": "column",
+                        "gap": 8,
+                        "align": "end",
+                        "children": [
+                          {
+                            "type": "text",
+                            "text": "פסוקי דזמרה",
+                            "typeRole": "prayer-section",
+                            "color": "on-surface",
+                            "align": "end"
+                          },
+                          {
+                            "type": "text",
+                            "text": "ברוך שאמר והיה העולם ברוך הוא ברוך עושה בראשית",
+                            "typeRole": "prayer-body",
+                            "color": "on-surface",
+                            "align": "end",
+                            "maxLines": 4
+                          },
+                          {
+                            "type": "text",
+                            "text": "(Repeat)",
+                            "typeRole": "caption",
+                            "color": "on-surface-secondary",
+                            "align": "end"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "tabBar",
+            "items": [
+              {
+                "icon": "sf:house.fill",
+                "label": "Home",
+                "selected": true
+              },
+              {
+                "icon": "sf:calendar",
+                "label": "Calendar",
+                "selected": false
+              },
+              {
+                "icon": "sf:gearshape.fill",
+                "label": "Settings",
+                "selected": false
+              }
+            ],
+            "height": 50,
+            "background": "surface",
+            "selectedColor": "primary",
+            "unselectedColor": "on-surface-secondary",
+            "indicator": {
+              "thickness": 2,
+              "radius": 2,
+              "inset": 12
+            },
+            "style": "both"
+          },
+          {
+            "type": "gestureBar",
+            "color": "on-background"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sign In",
+      "root": {
+        "type": "column",
+        "gap": 0,
+        "width": "fill",
+        "height": "fill",
+        "children": [
+          {
+            "type": "statusBar",
+            "color": "on-background",
+            "background": "background"
+          },
+          {
+            "type": "box",
+            "width": "fill",
+            "height": "fill",
+            "fill": "background",
+            "padding": {
+              "top": 48,
+              "right": 32,
+              "bottom": 40,
+              "left": 32
+            },
+            "children": [
+              {
+                "type": "column",
+                "gap": 32,
+                "height": "fill",
+                "align": "center",
+                "distribute": "spaceBetween",
+                "children": [
+                  {
+                    "type": "spacer",
+                    "size": 24
+                  },
+                  {
+                    "type": "column",
+                    "gap": 12,
+                    "align": "center",
+                    "children": [
+                      {
+                        "type": "icon",
+                        "name": "sf:book.fill",
+                        "size": 72,
+                        "color": "primary"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Smart Siddur",
+                        "typeRole": "large-title-bold",
+                        "color": "on-background",
+                        "align": "center"
+                      },
+                      {
+                        "type": "text",
+                        "text": "Your personal siddur",
+                        "typeRole": "subheadline",
+                        "color": "on-surface-secondary",
+                        "align": "center"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "column",
+                    "gap": 16,
+                    "width": "fill",
+                    "children": [
+                      {
+                        "type": "box",
+                        "width": "fill",
+                        "height": 50,
+                        "radius": 12,
+                        "fill": "on-surface",
+                        "align": "center",
+                        "children": [
+                          {
+                            "type": "row",
+                            "gap": 8,
+                            "align": "center",
+                            "children": [
+                              {
+                                "type": "icon",
+                                "name": "sf:apple.logo",
+                                "size": 20,
+                                "color": "surface"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Sign in with Apple",
+                                "typeRole": "body-medium",
+                                "color": "surface"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "box",
+                        "width": "fill",
+                        "height": 50,
+                        "radius": 12,
+                        "fill": "surface",
+                        "border": {
+                          "color": "outline",
+                          "width": 1
+                        },
+                        "align": "center",
+                        "children": [
+                          {
+                            "type": "row",
+                            "gap": 8,
+                            "align": "center",
+                            "children": [
+                              {
+                                "type": "icon",
+                                "name": "sf:g.circle.fill",
+                                "size": 22,
+                                "color": "on-surface"
+                              },
+                              {
+                                "type": "text",
+                                "text": "Sign in with Google",
+                                "typeRole": "body-medium",
+                                "color": "on-surface"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "text",
+                        "text": "Continue without account",
+                        "typeRole": "subheadline",
+                        "color": "primary",
+                        "align": "center"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "spacer",
+                    "size": 8
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "gestureBar",
+            "color": "on-background"
+          }
+        ]
+      }
+    }
+  ]
+}
