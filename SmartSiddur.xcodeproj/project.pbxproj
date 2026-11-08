@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11111111111111111111110E /* Snapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11111111111111111111110F /* Snapshots.swift */; };
+		111111111111111111111101 /* SnapshottingTests in Frameworks */ = {isa = PBXBuildFile; productRef = 111111111111111111111102 /* SnapshottingTests */; };
 		A1B2C3D4E5F60718293A4B5C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60718293A4B5D /* Localizable.xcstrings */; };
 		0037917626E6D72F83FEE50B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5B248124038FA5B8E8BCF9 /* LoginView.swift */; };
 		04606F4B99095758EE095A45 /* ZmanimOpinionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B03E5D6E0A814235CE3D9 /* ZmanimOpinionsView.swift */; };
@@ -69,7 +71,19 @@
 		FC6B9A431ECA984D7F5E8D22 /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F9CCA4B3024E5BB1947737 /* TabContainerView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		11111111111111111111110D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5A915ED1BC5DDC1B87609C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50D70330E6EB9A16D2CA758C;
+			remoteInfo = SmartSiddur;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		11111111111111111111110F /* Snapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshots.swift; sourceTree = "<group>"; };
+		111111111111111111111103 /* SmartSiddurTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartSiddurTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B2C3D4E5F60718293A4B5D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		0094A82EAB5AF180F650C087 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		00FDAC25B3D12302DE67E3FE /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
@@ -130,6 +144,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		111111111111111111111104 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				111111111111111111111101 /* SnapshottingTests in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1B84E8FAF4887F3DA1CB7A06 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -144,6 +166,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		111111111111111111111110 /* SmartSiddurTests */ = {
+			isa = PBXGroup;
+			children = (
+				11111111111111111111110F /* Snapshots.swift */,
+			);
+			path = SmartSiddurTests;
+			sourceTree = "<group>";
+		};
 		A1B2C3D4E5F60718293A4B5E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				B6666431E5392E8AE5C1670F /* SmartSiddur.app */,
+				111111111111111111111103 /* SmartSiddurTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -401,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				25D046BD67F48E5A2976C1EB /* Sources */,
+				111111111111111111111110 /* SmartSiddurTests */,
 				6855F6EE8021CCC1846DBCA1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -418,6 +450,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		111111111111111111111105 /* SmartSiddurTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 111111111111111111111106 /* Build configuration list for PBXNativeTarget "SmartSiddurTests" */;
+			buildPhases = (
+				111111111111111111111107 /* Sources */,
+				111111111111111111111104 /* Frameworks */,
+				111111111111111111111108 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				111111111111111111111109 /* PBXTargetDependency */,
+			);
+			name = SmartSiddurTests;
+			packageProductDependencies = (
+				111111111111111111111102 /* SnapshottingTests */,
+			);
+			productName = SmartSiddurTests;
+			productReference = 111111111111111111111103 /* SmartSiddurTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		50D70330E6EB9A16D2CA758C /* SmartSiddur */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CBF4A7124E356C8CFF4A2C7 /* Build configuration list for PBXNativeTarget "SmartSiddur" */;
@@ -468,17 +521,26 @@
 				97126195E9BC30B53A1E3CDB /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				6F6A56E8FE4C4FDDD3E156D8 /* XCRemoteSwiftPackageReference "KosherSwift" */,
 				DD526FB1F5B9D53E20EBFD65 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				11111111111111111111110A /* XCRemoteSwiftPackageReference "SnapshotPreviews" */,
 			);
 			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				50D70330E6EB9A16D2CA758C /* SmartSiddur */,
+				111111111111111111111105 /* SmartSiddurTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		111111111111111111111108 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1B2C3D4E5F60718293A4B60 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -490,6 +552,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		111111111111111111111107 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11111111111111111111110E /* Snapshots.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3AD1D648BEBE736C113F117 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -554,7 +624,47 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		111111111111111111111109 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50D70330E6EB9A16D2CA758C /* SmartSiddur */;
+			targetProxy = 11111111111111111111110D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		11111111111111111111110B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karriapps.smartsiddurlite.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartSiddur.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartSiddur";
+			};
+			name = Debug;
+		};
+		11111111111111111111110C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karriapps.smartsiddurlite.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartSiddur.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SmartSiddur";
+			};
+			name = Release;
+		};
 		083C58767B5EFD9B0B72C7C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -715,6 +825,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		111111111111111111111106 /* Build configuration list for PBXNativeTarget "SmartSiddurTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11111111111111111111110B /* Debug */,
+				11111111111111111111110C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		3CBF4A7124E356C8CFF4A2C7 /* Build configuration list for PBXNativeTarget "SmartSiddur" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -736,6 +855,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		11111111111111111111110A /* XCRemoteSwiftPackageReference "SnapshotPreviews" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/SnapshotPreviews";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.4;
+			};
+		};
 		6F6A56E8FE4C4FDDD3E156D8 /* XCRemoteSwiftPackageReference "KosherSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Elyahu41/KosherSwift";
@@ -763,6 +890,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		111111111111111111111102 /* SnapshottingTests */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11111111111111111111110A /* XCRemoteSwiftPackageReference "SnapshotPreviews" */;
+			productName = SnapshottingTests;
+		};
 		03A14704CCEFAEDDB63CE41E /* Supabase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DD526FB1F5B9D53E20EBFD65 /* XCRemoteSwiftPackageReference "supabase-swift" */;
